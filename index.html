@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jalgaon Zone | Jalgaon News, History, Blogs & Deals</title>
+
+  <meta name="description"
+        content="Jalgaon Zone brings you Jalgaon news, history, famous places, local blogs, useful information and smart deals.">
+
+  <meta name="keywords"
+        content="Jalgaon, Jalgaon News, Jalgaon History, Jalgaon Blogs, Jalgaon Deals, Jalgaon Maharashtra, Jalgaon Tourism">
+
+  <meta name="author" content="Jalgaon Zone">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fa;
+      color: #171717;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #111111;
+    }
+
+    .logo span {
+      color: #f4511e;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: #333333;
+    }
+
+    nav a:hover {
+      color: #f4511e;
+    }
+
+    .menu {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 560px;
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.58),
+          rgba(0,0,0,0.58)
+        ),
+        url("images/jalgaon-hero.jpg") center/cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .location-tag {
+      display: inline-block;
+      background: #f4511e;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 75px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #ff7043;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 650px;
+      color: #eeeeee;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 21px;
+      border-radius: 7px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #f4511e;
+      color: white;
+    }
+
+    .btn-white {
+      background: white;
+      color: #111111;
+    }
+
+    /* SEARCH */
+
+    .search-area {
+      background: white;
+      padding: 22px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .search-box {
+      max-width: 700px;
+      margin: auto;
+      display: flex;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    .search-box button {
+      width: 60px;
+      border: none;
+      background: #f4511e;
+      color: white;
+      font-size: 19px;
+    }
+
+    /* GENERAL SECTION */
+
+    .section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      margin-bottom: 35px;
+    }
+
+    .section-title small {
+      color: #f4511e;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 5px;
+    }
+
+    .section-title p {
+      color: #707070;
+      max-width: 650px;
+      margin-top: 8px;
+    }
+
+    /* QUICK CATEGORIES */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+
+    .category {
+      background: white;
+      border: 1px solid #eeeeee;
+      padding: 23px 10px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .category:hover {
+      transform: translateY(-4px);
+      border-color: #f4511e;
+    }
+
+    .category .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .category h3 {
+      font-size: 15px;
+    }
+
+    /* NEWS */
+
+    .gray {
+      background: #eef0f3;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+    }
+
+    .news-image {
+      height: 190px;
+      background: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 65px;
+      overflow: hidden;
+    }
+
+    .news-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .news-card:first-child .news-image {
+      height: 260px;
+    }
+
+    .news-content {
+      padding: 20px;
+    }
+
+    .label {
+      color: #f4511e;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .news-content h3 {
+      font-size: 21px;
+      line-height: 1.3;
+      margin: 7px 0 10px;
+    }
+
+    .news-content p {
+      color: #6b6b6b;
+      font-size: 14px;
+    }
+
+    .read {
+      display: inline-block;
+      color: #f4511e;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    /* JALGAON INTRO */
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .intro-image {
+      min-height: 360px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+
+    .intro-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .intro h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      color: #626262;
+      margin-bottom: 14px;
+    }
+
+    .highlight {
+      background: #fff1eb;
+      border-left: 4px solid #f4511e;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* HISTORY */
+
+    .history-box {
+      background: #111111;
+      color: white;
+      border-radius: 15px;
+      padding: 45px;
+    }
+
+    .history-box h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .history-box p {
+      color: #dddddd;
+      max-width: 900px;
+      margin-bottom: 14px;
+    }
+
+    /* PLACES */
+
+    .places {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .place {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #eeeeee;
+    }
+
+    .place-image {
+      height: 170px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+    }
+
+    .place-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .place-content {
+      padding: 17px;
+    }
+
+    .place-content h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .place-content p {
+      color: #707070;
+      font-size: 14px;
+    }
+
+    /* BLOGS */
+
+    .blogs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .blog {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #eeeeee;
+    }
+
+    .blog-image {
+      height: 190px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-content h3 {
+      margin: 7px 0 10px;
+      line-height: 1.3;
+    }
+
+    .blog-content p {
+      color: #707070;
+      font-size: 14px;
+    }
+
+    /* DEALS */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #eeeeee;
+      overflow: hidden;
+    }
+
+    .product-image {
+      height: 210px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 75px;
+    }
+
+    .product-content {
+      padding: 18px;
+    }
+
+    .deal {
+      background: #111111;
+      color: white;
+      font-size: 10px;
+      padding: 5px 8px;
+      border-radius: 4px;
+    }
+
+    .product h3 {
+      margin: 12px 0 5px;
+      font-size: 18px;
+    }
+
+    .price {
+      font-size: 23px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .product p {
+      color: #777777;
+      font-size: 13px;
+    }
+
+    .buy {
+      display: block;
+      background: #f4511e;
+      color: white;
+      text-align: center;
+      padding: 11px;
+      border-radius: 7px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    /* DISCLOSURE */
+
+    .disclosure {
+      background: #fff3ed;
+      padding: 25px 0;
+    }
+
+    .disclosure strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .disclosure p {
+      color: #666666;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #111111;
+      color: white;
+      padding-top: 50px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 40px;
+    }
+
+    footer h2 {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #aaaaaa;
+    }
+
+    footer h3 {
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      display: block;
+      color: #bbbbbb;
+      margin-bottom: 7px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid #333333;
+      text-align: center;
+      padding: 20px;
+      color: #999999;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 950px) {
+
+      .categories {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .places,
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .news-card:first-child {
+        grid-column: span 2;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: 94%;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .news-grid,
+      .intro,
+      .blogs,
+      .places,
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .news-card:first-child {
+        grid-column: auto;
+      }
+
+      .intro-image {
+        min-height: 250px;
+      }
+
+      .history-box {
+        padding: 28px 20px;
+      }
+
+      .history-box h2 {
+        font-size: 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="container navbar">
+
+    <a href="#" class="logo">
+      Jalgaon <span>Zone</span>
+    </a>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+    <nav id="navMenu">
+
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#history">History</a>
+      <a href="#places">Places</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#deals">Deals</a>
+      <a href="#about">About</a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <span class="location-tag">
+        📍 JALGAON • MAHARASHTRA
+      </span>
+
+      <h1>
+        Welcome to<br>
+        <span>Jalgaon Zone</span>
+      </h1>
+
+      <p>
+        Discover Jalgaon — its news, history, culture,
+        famous places, local stories, useful information
+        and smart shopping deals.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#news" class="btn btn-primary">
+          Latest News
+        </a>
+
+        <a href="#about" class="btn btn-white">
+          Explore Jalgaon
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section class="search-area">
+
+  <div class="container">
+
+    <div class="search-box">
+
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search Jalgaon news, blogs, places..."
+        onkeyup="searchSite()"
+      >
+
+      <button>🔍</button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>EXPLORE</small>
+
+      <h2>Jalgaon Zone</h2>
+
+      <p>
+        Everything about Jalgaon in one place.
+      </p>
+
+    </div>
+
+
+    <div class="categories">
+
+      <a href="#news" class="category">
+        <div class="icon">📰</div>
+        <h3>Jalgaon News</h3>
+      </a>
+
+      <a href="#history" class="category">
+        <div class="icon">🏛️</div>
+        <h3>History</h3>
+      </a>
+
+      <a href="#about" class="category">
+        <div class="icon">⭐</div>
+        <h3>Why Famous</h3>
+      </a>
+
+      <a href="#places" class="category">
+        <div class="icon">📍</div>
+        <h3>Places</h3>
+      </a>
+
+      <a href="#blogs" class="category">
+        <div class="icon">✍️</div>
+        <h3>Blogs</h3>
+      </a>
+
+      <a href="#deals" class="category">
+        <div class="icon">🛒</div>
+        <h3>Deals</h3>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NEWS -->
+
+<section class="section gray" id="news">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>LATEST</small>
+
+      <h2>Jalgaon News</h2>
+
+      <p>
+        Local stories, updates and useful information
+        from Jalgaon.
+      </p>
+
+    </div>
+
+
+    <div class="news-grid">
+
+
+      <article class="news-card searchable">
+
+        <div class="news-image">
+          📰
+        </div>
+
+        <div class="news-content">
+
+          <span class="label">
+            JALGAON UPDATE
+          </span>
+
+          <h3>
+            Latest News & Updates from Jalgaon
+          </h3>
+
+          <p>
+            Jalgaon Zone will bring verified local
+            updates, civic information, events and
+            important developments.
+          </p>
+
+          <a href="#" class="read">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="news-card searchable">
+
+        <div class="news-image">
+          🌱
+        </div>
+
+        <div class="news-content">
+
+          <span class="label">
+            LOCAL
+          </span>
+
+          <h3>
+            Jalgaon Agriculture & Banana Updates
+          </h3>
+
+          <p>
+            Stories related to Jalgaon's famous
+            agricultural economy.
+          </p>
+
+          <a href="#" class="read">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="news-card searchable">
+
+        <div class="news-image">
+          📍
+        </div>
+
+        <div class="news-content">
+
+          <span class="label">
+            CITY
+          </span>
+
+          <h3>
+            What's Happening in Jalgaon?
+          </h3>
+
+          <p>
+            Local events, places and useful city information.
+          </p>
+
+          <a href="#" class="read">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT JALGAON -->
+
+<section class="section" id="about">
+
+  <div class="container">
+
+    <div class="intro">
+
+      <div class="intro-image">
+        📍
+      </div>
+
+
+      <div>
+
+        <small class="label">
+          KNOW JALGAON
+        </small>
+
+        <h2>
+          Why is Jalgaon Famous?
+        </h2>
+
+        <p>
+          Jalgaon is a district in Maharashtra known
+          for agriculture, culture, historical places
+          and religious destinations.
+        </p>
+
+        <p>
+          It is especially well known for banana
+          cultivation and is popularly associated with
+          the title "Banana Capital of India."
+        </p>
+
+        <p>
+          The region also has places such as
+          Unapdev, Padmalaya, Manudevi, Patanadevi,
+          Parola Fort and the Swinging Towers of Farkande.
+        </p>
+
+        <div class="highlight">
+
+          <strong>🍌 Did You Know?</strong>
+
+          <p>
+            Jalgaon is famous for its banana cultivation
+            and agricultural economy.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HISTORY -->
+
+<section class="section gray" id="history">
+
+  <div class="container">
+
+    <div class="history-box">
+
+      <h2>
+        🏛️ History of Jalgaon
+      </h2>
+
+      <p>
+        Jalgaon has a rich historical background connected
+        with the wider Khandesh region of Maharashtra.
+      </p>
+
+      <p>
+        The region has experienced the influence of
+        different kingdoms and political powers over
+        centuries, contributing to its diverse cultural
+        heritage.
+      </p>
+
+      <p>
+        Jalgaon also has an important connection with
+        India's freedom movement. Faizpur in Jalgaon
+        district hosted the Indian National Congress
+        session in 1936.
+      </p>
+
+      <a href="#" class="btn btn-primary">
+        Read Full History →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PLACES -->
+
+<section class="section" id="places">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>DISCOVER</small>
+
+      <h2>Famous Places in Jalgaon</h2>
+
+      <p>
+        Explore historical, religious and natural
+        attractions around Jalgaon district.
+      </p>
+
+    </div>
+
+
+    <div class="places">
+
+
+      <article class="place searchable">
+
+        <div class="place-image">
+          🏰
+        </div>
+
+        <div class="place-content">
+
+          <h3>Parola Fort</h3>
+
+          <p>
+            A historic fort associated with the
+            heritage of the region.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="place searchable">
+
+        <div class="place-image">
+          ♨️
+        </div>
+
+        <div class="place-content">
+
+          <h3>Unapdev</h3>
+
+          <p>
+            A natural and religious destination
+            near the Satpuda foothills.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="place searchable">
+
+        <div class="place-image">
+          🛕
+        </div>
+
+        <div class="place-content">
+
+          <h3>Padmalaya</h3>
+
+          <p>
+            A famous religious destination
+            associated with Lord Ganesha.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="place searchable">
+
+        <div class="place-image">
+          🏞️
+        </div>
+
+        <div class="place-content">
+
+          <h3>Manudevi Temple</h3>
+
+          <p>
+            A scenic religious destination
+            in the Satpuda ranges.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BLOGS -->
+
+<section class="section gray" id="blogs">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>JALGAON ZONE BLOG</small>
+
+      <h2>Jalgaon Blogs</h2>
+
+      <p>
+        Stories, guides, ideas and interesting facts
+        about Jalgaon.
+      </p>
+
+    </div>
+
+
+    <div class="blogs">
+
+
+      <article class="blog searchable">
+
+        <div class="blog-image">
+          🍌
+        </div>
+
+        <div class="blog-content">
+
+          <span class="label">
+            FOOD & AGRICULTURE
+          </span>
+
+          <h3>
+            Why Jalgaon is Famous for Bananas
+          </h3>
+
+          <p>
+            Discover the connection between Jalgaon
+            and banana cultivation.
+          </p>
+
+          <a href="#" class="read">
+            Read Blog →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="blog searchable">
+
+        <div class="blog-image">
+          🗺️
+        </div>
+
+        <div class="blog-content">
+
+          <span class="label">
+            TRAVEL
+          </span>
+
+          <h3>
+            Places to Visit in Jalgaon
+          </h3>
+
+          <p>
+            A beginner-friendly guide to exploring
+            Jalgaon district.
+          </p>
+
+          <a href="#" class="read">
+            Read Blog →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="blog searchable">
+
+        <div class="blog-image">
+          📸
+        </div>
+
+        <div class="blog-content">
+
+          <span class="label">
+            LOCAL LIFE
+          </span>
+
+          <h3>
+            Things You Should Know About Jalgaon
+          </h3>
+
+          <p>
+            Interesting facts and useful information
+            for locals and visitors.
+          </p>
+
+          <a href="#" class="read">
+            Read Blog →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DEALS -->
+
+<section class="section" id="deals">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>SHOP SMART</small>
+
+      <h2>Featured Affiliate Deals</h2>
+
+      <p>
+        Useful products recommended by Jalgaon Zone.
+      </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+      <article class="product">
+
+        <div class="product-image">
+          📱
+        </div>
+
+        <div class="product-content">
+
+          <span class="deal">
+            FEATURED
+          </span>
+
+          <h3>
+            Smartphone
+          </h3>
+
+          <div class="price">
+            ₹15,000*
+          </div>
+
+          <p>
+            Check the latest price and availability.
+          </p>
+
+          <!-- Replace this link with your affiliate link -->
+
+          <a
+            href="YOUR_AFFILIATE_LINK_HERE"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="buy"
+          >
+            Check Price →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="product">
+
+        <div class="product-image">
+          🎧
+        </div>
+
+        <div class="product-content">
+
+          <span class="deal">
+            POPULAR
+          </span>
+
+          <h3>
+            Wireless Earbuds
+          </h3>
+
+          <div class="price">
+            ₹999*
+          </div>
+
+          <p>
+            Affordable option for daily use.
+          </p>
+
+          <a
+            href="YOUR_AFFILIATE_LINK_HERE"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="buy"
+          >
+            Check Price →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="product">
+
+        <div class="product-image">
+          💻
+        </div>
+
+        <div class="product-content">
+
+          <span class="deal">
+            STUDENT PICK
+          </span>
+
+          <h3>
+            Laptop
+          </h3>
+
+          <div class="price">
+            ₹40,000*
+          </div>
+
+          <p>
+            Useful for students and everyday work.
+          </p>
+
+          <a
+            href="YOUR_AFFILIATE_LINK_HERE"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="buy"
+          >
+            Check Price →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="product">
+
+        <div class="product-image">
+          🎒
+        </div>
+
+        <div class="product-content">
+
+          <span class="deal">
+            STUDENT
+          </span>
+
+          <h3>
+            College Backpack
+          </h3>
+
+          <div class="price">
+            ₹799*
+          </div>
+
+          <p>
+            Practical choice for college students.
+          </p>
+
+          <a
+            href="YOUR_AFFILIATE_LINK_HERE"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="buy"
+          >
+            Check Price →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+    <p style="margin-top:15px;color:#777;font-size:12px;">
+      *Prices are examples and may change. Always verify the
+      current seller price before purchasing.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- AFFILIATE DISCLOSURE -->
+
+<section class="disclosure">
+
+  <div class="container">
+
+    <strong>
+      Affiliate Disclosure
+    </strong>
+
+    <p>
+      Jalgaon Zone may use affiliate links. If you purchase
+      something through an affiliate link, we may receive
+      a commission at no additional cost to you.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-grid">
+
+
+    <div>
+
+      <h2>
+        Jalgaon Zone
+      </h2>
+
+      <p>
+        Discover Jalgaon. Know Jalgaon. Shop Smart.
+      </p>
+
+      <p style="margin-top:12px;">
+        Jalgaon, Maharashtra, India
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Explore
+      </h3>
+
+      <a href="#news">Jalgaon News</a>
+      <a href="#history">History</a>
+      <a href="#places">Places</a>
+      <a href="#blogs">Blogs</a>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Information
+      </h3>
+
+      <a href="#deals">Deals</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Disclaimer</a>
+      <a href="#">Contact</a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 Jalgaon Zone.
+    All Rights Reserved.
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  function toggleMenu() {
+
+    const menu =
+      document.getElementById("navMenu");
+
+    menu.classList.toggle("active");
+
+  }
+
+
+  function searchSite() {
+
+    const query =
+      document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase();
+
+    const items =
+      document.querySelectorAll(".searchable");
+
+    items.forEach(function(item) {
+
+      const text =
+        item.innerText.toLowerCase();
+
+      if (text.includes(query)) {
+
+        item.style.display = "";
+
+      } else {
+
+        item.style.display = "none";
+
+      }
+
+    });
+
+  }
+
+</script>
+
+
+</body>
+</html>
