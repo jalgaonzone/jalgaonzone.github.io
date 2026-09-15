@@ -1,0 +1,55 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "news"
+    label: "Jalgaon News"
+    folder: "articles"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Jalgaon News"
+          - "Jalgaon City"
+          - "Maharashtra"
+          - "Politics"
+          - "Education"
+          - "Business"
+          - "Agriculture"
+          - "Crime"
+          - "Events"
+          - "Sports"
+
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+
+      - label: "Short Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "Jalgaon Zone"
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+
+      - label: "Article"
+        name: "body"
+        widget: "markdown"
