@@ -1,1 +1,65 @@
+backend:
+  name: github
+  repo: jalgaonzone/jalgaonzone.github.io
+  branch: main
 
+media_folder: "Images/uploads"
+public_folder: "/Images/uploads"
+
+site_url: "https://jalgaonzone.github.io"
+display_url: "https://jalgaonzone.github.io"
+
+publish_mode: simple
+
+collections:
+
+  - name: "news"
+    label: "📰 Jalgaon News"
+    folder: "articles"
+    create: true
+
+    slug: "{{slug}}"
+
+    format: "frontmatter"
+
+    fields:
+
+      - label: "📰 News Title"
+        name: "title"
+        widget: "string"
+
+      - label: "📂 Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Jalgaon News"
+          - "Jalgaon City"
+          - "Maharashtra"
+          - "Politics"
+          - "Education"
+          - "Business"
+          - "Agriculture"
+          - "Crime"
+          - "Events"
+          - "Sports"
+
+      - label: "🖼️ Featured Image"
+        name: "image"
+        widget: "image"
+
+      - label: "📝 Short Description"
+        name: "description"
+        widget: "text"
+
+      - label: "✍️ Author"
+        name: "author"
+        widget: "string"
+        default: "Jalgaon Zone"
+
+      - label: "📅 Publish Date"
+        name: "date"
+        widget: "datetime"
+
+      - label: "📄 Full Article"
+        name: "body"
+        widget: "markdown"
