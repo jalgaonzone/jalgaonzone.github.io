@@ -6,24 +6,22 @@ backend:
 media_folder: "Images/uploads"
 public_folder: "/Images/uploads"
 
-site_url: "https://jalgaonzone.github.io"
-display_url: "https://jalgaonzone.github.io"
+site_url: "https://endearing-toffee-e5a6d2.netlify.app"
+display_url: "https://endearing-toffee-e5a6d2.netlify.app"
 
 publish_mode: simple
 
 collections:
 
+  # 📰 JALGAON NEWS
   - name: "news"
     label: "📰 Jalgaon News"
     folder: "articles"
     create: true
-
     slug: "{{slug}}"
-
     format: "frontmatter"
 
     fields:
-
       - label: "📰 News Title"
         name: "title"
         widget: "string"
@@ -35,7 +33,6 @@ collections:
           - "Jalgaon News"
           - "Jalgaon City"
           - "Maharashtra"
-          - "Politics"
           - "Education"
           - "Business"
           - "Agriculture"
@@ -61,5 +58,138 @@ collections:
         widget: "datetime"
 
       - label: "📄 Full Article"
+        name: "body"
+        widget: "markdown"
+
+
+  # 📜 HISTORY
+  - name: "history"
+    label: "📜 Jalgaon History"
+    folder: "history"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+
+    fields:
+      - label: "📜 Title"
+        name: "title"
+        widget: "string"
+
+      - label: "🖼️ Featured Image"
+        name: "image"
+        widget: "image"
+
+      - label: "📝 Description"
+        name: "description"
+        widget: "text"
+
+      - label: "📅 Date"
+        name: "date"
+        widget: "datetime"
+
+      - label: "📄 History Content"
+        name: "body"
+        widget: "markdown"
+
+
+  # 📍 PLACES
+  - name: "places"
+    label: "📍 Jalgaon Places"
+    folder: "places"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+
+    fields:
+      - label: "📍 Place Name"
+        name: "title"
+        widget: "string"
+
+      - label: "🖼️ Featured Image"
+        name: "image"
+        widget: "image"
+
+      - label: "📍 Location"
+        name: "location"
+        widget: "string"
+
+      - label: "📝 Short Description"
+        name: "description"
+        widget: "text"
+
+      - label: "📄 Place Information"
+        name: "body"
+        widget: "markdown"
+
+
+  # ✍️ BLOGS
+  - name: "blogs"
+    label: "✍️ Jalgaon Blogs"
+    folder: "blogs"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+
+    fields:
+      - label: "✍️ Blog Title"
+        name: "title"
+        widget: "string"
+
+      - label: "🖼️ Featured Image"
+        name: "image"
+        widget: "image"
+
+      - label: "👤 Author"
+        name: "author"
+        widget: "string"
+        default: "Jalgaon Zone"
+
+      - label: "📅 Publish Date"
+        name: "date"
+        widget: "datetime"
+
+      - label: "📝 Short Description"
+        name: "description"
+        widget: "text"
+
+      - label: "📄 Blog Content"
+        name: "body"
+        widget: "markdown"
+
+
+  # 🛍️ DEALS
+  - name: "deals"
+    label: "🛍️ Jalgaon Deals"
+    folder: "deals"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+
+    fields:
+      - label: "🛍️ Deal/Product Name"
+        name: "title"
+        widget: "string"
+
+      - label: "🖼️ Product Image"
+        name: "image"
+        widget: "image"
+
+      - label: "💰 Price"
+        name: "price"
+        widget: "string"
+
+      - label: "🏷️ Category"
+        name: "category"
+        widget: "string"
+
+      - label: "📝 Description"
+        name: "description"
+        widget: "text"
+
+      - label: "🔗 Product Link"
+        name: "link"
+        widget: "string"
+
+      - label: "📄 Deal Details"
         name: "body"
         widget: "markdown"
