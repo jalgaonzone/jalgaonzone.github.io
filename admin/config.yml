@@ -14,52 +14,35 @@ publish_mode: simple
 collections:
 
   # 📰 JALGAON NEWS
-  - name: "news"
-    label: "📰 Jalgaon News"
+    - name: "news"
+    label: "Jalgaon News"
     folder: "articles"
     create: true
     slug: "{{slug}}"
-    format: "frontmatter"
-
     fields:
-      - label: "📰 News Title"
-        name: "title"
-        widget: "string"
+      - { label: "News Title", name: "title", widget: "string", required: true }
 
-      - label: "📂 Category"
+      - label: "Category"
         name: "category"
         widget: "select"
         options:
-          - "Jalgaon News"
-          - "Jalgaon City"
-          - "Maharashtra"
+          - "Jalgaon"
+          - "Politics"
           - "Education"
-          - "Business"
-          - "Agriculture"
-          - "Crime"
-          - "Events"
           - "Sports"
+          - "Business"
+          - "Entertainment"
+          - "Local News"
+        default: "Jalgaon"
+        required: true
 
-      - label: "🖼️ Featured Image"
-        name: "image"
-        widget: "image"
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
 
-      - label: "📝 Short Description"
-        name: "description"
-        widget: "text"
+      - { label: "Short Description", name: "description", widget: "text", required: true }
 
-      - label: "✍️ Author"
-        name: "author"
-        widget: "string"
-        default: "Jalgaon Zone"
+      - { label: "Article Content", name: "body", widget: "markdown", required: true }
 
-      - label: "📅 Publish Date"
-        name: "date"
-        widget: "datetime"
-
-      - label: "📄 Full Article"
-        name: "body"
-        widget: "markdown"
+      - { label: "Publish Date", name: "date", widget: "datetime", required: true }
 
 
   # 📜 HISTORY
