@@ -16,86 +16,83 @@ collections:
 
   - name: "home"
     label: "Home Page"
-    files:
+    folder: "content/home"
+    create: true
+    slug: "home"
+    identifier_field: "site_name"
+    extension: "yml"
+    format: "yaml"
 
-      - name: "homepage"
-        label: "Edit Home Page"
-        file: "content/home.yml"
+    fields:
 
-        fields:
+      - label: "Website Name"
+        name: "site_name"
+        widget: "string"
 
-          - label: "Website Name"
-            name: "site_name"
-            widget: "string"
-            default: "Jalgaon Zone"
+      - label: "Hero Title"
+        name: "hero_title"
+        widget: "string"
 
-          - label: "Hero Title"
-            name: "hero_title"
-            widget: "string"
-            default: "Welcome to Jalgaon Zone"
+      - label: "Hero Description"
+        name: "hero_description"
+        widget: "text"
 
-          - label: "Hero Description"
-            name: "hero_description"
-            widget: "text"
+      - label: "Hero Image"
+        name: "hero_image"
+        widget: "image"
+        required: false
 
-          - label: "Hero Image"
-            name: "hero_image"
-            widget: "image"
-            required: false
+      - label: "Search Placeholder"
+        name: "search_placeholder"
+        widget: "string"
 
-          - label: "Search Placeholder"
-            name: "search_placeholder"
-            widget: "string"
-            default: "Search Jalgaon news, blogs, places..."
+      - label: "News Section Title"
+        name: "news_title"
+        widget: "string"
 
-          - label: "News Section Title"
-            name: "news_title"
-            widget: "string"
-            default: "Latest Jalgaon News"
+      - label: "News Section Description"
+        name: "news_description"
+        widget: "text"
 
-          - label: "News Section Description"
-            name: "news_description"
-            widget: "text"
+      - label: "History Title"
+        name: "history_title"
+        widget: "string"
 
-          - label: "History Title"
-            name: "history_title"
-            widget: "string"
+      - label: "History Description"
+        name: "history_description"
+        widget: "text"
 
-          - label: "History Description"
-            name: "history_description"
-            widget: "text"
+      - label: "Places Title"
+        name: "places_title"
+        widget: "string"
 
-          - label: "Places Title"
-            name: "places_title"
-            widget: "string"
+      - label: "Places Description"
+        name: "places_description"
+        widget: "text"
 
-          - label: "Places Description"
-            name: "places_description"
-            widget: "text"
+      - label: "Blogs Title"
+        name: "blogs_title"
+        widget: "string"
 
-          - label: "Blogs Title"
-            name: "blogs_title"
-            widget: "string"
+      - label: "Blogs Description"
+        name: "blogs_description"
+        widget: "text"
 
-          - label: "Blogs Description"
-            name: "blogs_description"
-            widget: "text"
+      - label: "Deals Title"
+        name: "deals_title"
+        widget: "string"
 
-          - label: "Deals Title"
-            name: "deals_title"
-            widget: "string"
+      - label: "Deals Description"
+        name: "deals_description"
+        widget: "text"
 
-          - label: "Deals Description"
-            name: "deals_description"
-            widget: "text"
+      - label: "About Title"
+        name: "about_title"
+        widget: "string"
 
-          - label: "About Title"
-            name: "about_title"
-            widget: "string"
-
-          - label: "About Description"
-            name: "about_description"
-            widget: "text"
+      - label: "About Description"
+        name: "about_description"
+        widget: "text"
 
 
   # =========================
