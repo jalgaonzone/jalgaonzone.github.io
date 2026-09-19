@@ -173,17 +173,29 @@ function parseMarkdown(text) {
   let data = {};
   let body = text;
 
-  if (text.startsWith("---")) {
+  // Remove BOM if present
+  text = text.replace(/^\uFEFF/, "");
 
-    const parts = text.split("---");
+  if (text.trim().startsWith("---")) {
 
-    if (parts.length >= 3) {
+    const lines = text.trim().split(/\r?\n/);
 
-      const frontMatter = parts[1].trim();
+    let endIndex = -1;
 
-      body = parts.slice(2).join("---").trim();
+    for (let i = 1; i < lines.length; i++) {
+      if (lines[i].trim() === "---") {
+        endIndex = i;
+        break;
+      }
+    }
 
-      frontMatter.split("\n").forEach(line => {
+    if (endIndex !== -1) {
+
+      const frontMatterLines = lines.slice(1, endIndex);
+
+      body = lines.slice(endIndex + 1).join("\n").trim();
+
+      frontMatterLines.forEach(line => {
 
         const index = line.indexOf(":");
 
@@ -212,7 +224,10 @@ function imageUrl(image) {
 
   if (!image) return "";
 
-  if (image.startsWith("http")) {
+  if (
+    image.startsWith("http://") ||
+    image.startsWith("https://")
+  ) {
     return image;
   }
 
@@ -236,7 +251,8 @@ async function loadArticle() {
 
   try {
 
-    const filename = decodeURIComponent(fileParam);
+    // URLSearchParams already decodes the parameter.
+    const filename = fileParam;
 
     const rawUrl =
       "https://raw.githubusercontent.com/" +
@@ -244,17 +260,31 @@ async function loadArticle() {
       "/" +
       BRANCH +
       "/" +
-      folderParam +
+      encodeURIComponent(folderParam) +
       "/" +
       encodeURIComponent(filename);
 
-    const response = await fetch(rawUrl);
+    console.log("Loading article:");
+    console.log(rawUrl);
+
+    const response = await fetch(rawUrl, {
+      cache: "no-cache"
+    });
 
     if (!response.ok) {
-      throw new Error("Article not found");
+      throw new Error(
+        "GitHub returned " +
+        response.status +
+        " " +
+        response.statusText
+      );
     }
 
     const markdown = await response.text();
+
+    if (!markdown.trim()) {
+      throw new Error("Article file is empty");
+    }
 
     const parsed = parseMarkdown(markdown);
 
@@ -279,7 +309,6 @@ async function loadArticle() {
     } else {
 
       document.getElementById("date").style.display = "none";
-
     }
 
     if (data.image) {
@@ -289,6 +318,10 @@ async function loadArticle() {
       cover.src = imageUrl(data.image);
 
       cover.style.display = "block";
+
+      cover.onerror = function() {
+        this.style.display = "none";
+      };
     }
 
     document.getElementById("content").innerHTML =
@@ -300,9 +333,16 @@ async function loadArticle() {
 
   } catch (error) {
 
-    console.error(error);
+    console.error("ARTICLE ERROR:", error);
 
     document.getElementById("loading").style.display = "none";
+
+    document.getElementById("error").innerHTML =
+      "<h2>Article load nahi ho raha</h2>" +
+      "<p>GitHub article file check karo.</p>" +
+      "<small>" +
+      error.message +
+      "</small>";
 
     document.getElementById("error").style.display = "block";
   }
