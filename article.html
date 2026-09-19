@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jalgaon Zone Article</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    header .logo {
+      max-width: 900px;
+      margin: auto;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #f4511e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    article {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .category {
+      display: inline-block;
+      background: #f4511e;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 1.25;
+      margin: 10px 0;
+    }
+
+    .date {
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .cover {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 15px 0 25px;
+    }
+
+    .content {
+      font-size: 18px;
+    }
+
+    .content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .content h2,
+    .content h3 {
+      margin-top: 28px;
+    }
+
+    .error {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      color: #c00;
+    }
+
+    @media (max-width: 600px) {
+      article {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .content {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jalgaon Zone</div>
+</header>
+
+<main class="container">
+
+  <a href="/" class="back">← Back to Jalgaon Zone</a>
+
+  <div id="loading">
+    Article loading...
+  </div>
+
+  <article id="article" style="display:none;">
+
+    <div id="category" class="category"></div>
+
+    <h1 id="title"></h1>
+
+    <div id="date" class="date"></div>
+
+    <img id="cover" class="cover" style="display:none;">
+
+    <div id="content" class="content"></div>
+
+  </article>
+
+  <div id="error" class="error" style="display:none;">
+    Article not found.
+  </div>
+
+</main>
+
+<script>
+
+const REPO = "jalgaonzone/jalgaonzone.github.io";
+const BRANCH = "main";
+
+const params = new URLSearchParams(window.location.search);
+
+const fileParam = params.get("file");
+const folderParam = params.get("folder") || "articles";
+
+
+function parseMarkdown(text) {
+
+  let data = {};
+  let body = text;
+
+  if (text.startsWith("---")) {
+
+    const parts = text.split("---");
+
+    if (parts.length >= 3) {
+
+      const frontMatter = parts[1].trim();
+
+      body = parts.slice(2).join("---").trim();
+
+      frontMatter.split("\n").forEach(line => {
+
+        const index = line.indexOf(":");
+
+        if (index === -1) return;
+
+        const key = line.slice(0, index).trim();
+
+        let value = line.slice(index + 1).trim();
+
+        value = value.replace(/^["']|["']$/g, "");
+
+        data[key] = value;
+
+      });
+    }
+  }
+
+  return {
+    data,
+    body
+  };
+}
+
+
+function imageUrl(image) {
+
+  if (!image) return "";
+
+  if (image.startsWith("http")) {
+    return image;
+  }
+
+  if (image.startsWith("/")) {
+    return image;
+  }
+
+  return "/" + image;
+}
+
+
+async function loadArticle() {
+
+  if (!fileParam) {
+
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("error").style.display = "block";
+
+    return;
+  }
+
+  try {
+
+    const filename = decodeURIComponent(fileParam);
+
+    const rawUrl =
+      "https://raw.githubusercontent.com/" +
+      REPO +
+      "/" +
+      BRANCH +
+      "/" +
+      folderParam +
+      "/" +
+      encodeURIComponent(filename);
+
+    const response = await fetch(rawUrl);
+
+    if (!response.ok) {
+      throw new Error("Article not found");
+    }
+
+    const markdown = await response.text();
+
+    const parsed = parseMarkdown(markdown);
+
+    const data = parsed.data;
+    const body = parsed.body;
+
+    document.title =
+      (data.title || "Article") +
+      " | Jalgaon Zone";
+
+    document.getElementById("title").textContent =
+      data.title || "Jalgaon Zone";
+
+    document.getElementById("category").textContent =
+      data.category || "Jalgaon";
+
+    if (data.date) {
+
+      document.getElementById("date").textContent =
+        "Published: " + data.date;
+
+    } else {
+
+      document.getElementById("date").style.display = "none";
+
+    }
+
+    if (data.image) {
+
+      const cover = document.getElementById("cover");
+
+      cover.src = imageUrl(data.image);
+
+      cover.style.display = "block";
+    }
+
+    document.getElementById("content").innerHTML =
+      marked.parse(body);
+
+    document.getElementById("loading").style.display = "none";
+
+    document.getElementById("article").style.display = "block";
+
+  } catch (error) {
+
+    console.error(error);
+
+    document.getElementById("loading").style.display = "none";
+
+    document.getElementById("error").style.display = "block";
+  }
+}
+
+
+loadArticle();
+
+</script>
+
+</body>
+</html>
