@@ -4,10 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jalgaon Zone</title>
+<title>Jalgaon Zone | Jalgaon News, History, Places, Blogs & Deals</title>
 
 <meta name="description"
-content="Jalgaon Zone - Jalgaon News, History, Places, Blogs and Deals">
+content="Jalgaon Zone brings you Jalgaon news, history, famous places, blogs, local information and useful deals.">
+
+<meta name="keywords"
+content="Jalgaon News, Jalgaon History, Jalgaon Places, Jalgaon Blogs, Jalgaon Deals, Maharashtra">
 
 <style>
 *{
@@ -16,268 +19,502 @@ content="Jalgaon Zone - Jalgaon News, History, Places, Blogs and Deals">
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#f5f5f5;
-  color:#222;
+  background:#f4f8fc;
+  color:#172033;
   line-height:1.6;
 }
 
+/* ================= HEADER ================= */
+
 header{
-  background:#111;
-  color:#fff;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 2px 12px rgba(0,0,0,.3);
+  background:#062b55;
+  box-shadow:0 3px 18px rgba(0,0,0,.18);
 }
 
 .navbar{
   max-width:1200px;
   margin:auto;
-  padding:15px 20px;
+  padding:14px 20px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-  font-size:26px;
-  font-weight:bold;
-  color:#ff5a1f;
+  color:white;
+  font-size:25px;
+  font-weight:800;
+  text-decoration:none;
 }
 
 .logo span{
-  color:#fff;
+  color:#38a9ff;
 }
 
-.nav-menu{
+.nav-links{
   display:flex;
-  gap:20px;
-  list-style:none;
+  gap:22px;
+  align-items:center;
 }
 
-.nav-menu a{
-  color:#fff;
+.nav-links a{
+  color:white;
   text-decoration:none;
-  font-weight:bold;
+  font-size:14px;
+  font-weight:600;
 }
 
-.nav-menu a:hover{
-  color:#ff5a1f;
+.nav-links a:hover{
+  color:#4db5ff;
+}
+
+.admin-btn{
+  background:#1687e8;
+  padding:9px 15px;
+  border-radius:8px;
 }
 
 .menu-btn{
   display:none;
-  font-size:28px;
+  color:white;
+  font-size:27px;
   cursor:pointer;
 }
 
-.hero{
-  min-height:450px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:#fff;
-  padding:40px 20px;
+/* ================= HERO ================= */
 
+.hero{
+  min-height:580px;
   background:
-  linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),
-  url("Images/jalgaon.jpg") center/cover;
+    linear-gradient(rgba(3,30,60,.72),rgba(3,30,60,.68)),
+    url("Images/jalgaon.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:70px 20px;
 }
 
 .hero-content{
-  width:100%;
   max-width:850px;
 }
 
+.hero-badge{
+  display:inline-block;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.3);
+  padding:7px 15px;
+  border-radius:30px;
+  margin-bottom:20px;
+  font-size:13px;
+}
+
 .hero h1{
-  font-size:50px;
-  margin-bottom:15px;
+  font-size:58px;
+  line-height:1.1;
+  margin-bottom:20px;
+  font-weight:800;
 }
 
 .hero p{
   font-size:20px;
-  margin-bottom:28px;
+  opacity:.95;
+  margin-bottom:30px;
 }
 
-.search-box{
-  max-width:700px;
+.hero-search{
+  max-width:650px;
   margin:auto;
   display:flex;
-  background:#fff;
-  border-radius:8px;
-  overflow:hidden;
+  background:white;
+  border-radius:50px;
+  padding:6px;
+  box-shadow:0 10px 35px rgba(0,0,0,.25);
 }
 
-.search-box input{
+.hero-search input{
   flex:1;
   border:0;
-  outline:none;
-  padding:16px;
-  font-size:16px;
+  outline:0;
+  padding:15px 20px;
+  border-radius:50px;
+  font-size:15px;
 }
 
-.search-box button{
+.hero-search button{
   border:0;
-  background:#ff5a1f;
-  color:#fff;
+  background:#1687e8;
+  color:white;
   padding:0 25px;
+  border-radius:50px;
   cursor:pointer;
   font-weight:bold;
 }
 
-section{
+/* ================= GENERAL ================= */
+
+.container{
   max-width:1200px;
   margin:auto;
-  padding:60px 20px;
+  padding:70px 20px;
 }
 
-.section-title{
+.section-head{
   text-align:center;
-  margin-bottom:35px;
+  max-width:750px;
+  margin:0 auto 40px;
 }
 
-.section-title h2{
-  font-size:32px;
-  margin-bottom:8px;
+.section-head h2{
+  font-size:35px;
+  color:#062b55;
+  margin-bottom:10px;
 }
 
-.section-title span{
-  color:#ff5a1f;
+.section-head p{
+  color:#667085;
 }
 
-.grid{
+.section-label{
+  color:#1687e8;
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:25px;
 }
 
 .card{
-  background:#fff;
-  border-radius:12px;
+  background:white;
+  border-radius:15px;
   overflow:hidden;
-  box-shadow:0 3px 15px rgba(0,0,0,.1);
+  box-shadow:0 5px 20px rgba(15,50,90,.08);
+  border:1px solid #e4edf6;
   transition:.25s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(15,50,90,.15);
 }
 
-.card img{
+.card-img{
   width:100%;
   height:210px;
   object-fit:cover;
   display:block;
+  background:#dbeaf7;
 }
 
 .card-content{
   padding:20px;
 }
 
-.category{
-  display:inline-block;
-  background:#ff5a1f;
-  color:#fff;
-  border-radius:20px;
-  padding:4px 11px;
+.card-category{
+  color:#1687e8;
   font-size:12px;
-  margin-bottom:10px;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 .card h3{
+  color:#092f59;
   font-size:20px;
-  margin-bottom:9px;
+  margin:7px 0;
 }
 
 .card p{
-  color:#666;
+  color:#667085;
+  font-size:14px;
 }
 
-.date{
-  color:#888;
-  font-size:13px;
-  margin-top:12px;
-}
-
-.loading{
-  grid-column:1/-1;
-  text-align:center;
-  background:#fff;
-  padding:40px;
-  border-radius:10px;
-}
-
-.error{
-  grid-column:1/-1;
-  text-align:center;
-  padding:30px;
-}
-
-.about{
-  max-width:none;
-  background:#111;
-  color:#fff;
-}
-
-.about-inner{
-  max-width:1000px;
-  margin:auto;
-  text-align:center;
-  padding:60px 20px;
-}
-
-.admin-btn{
+.read-more{
   display:inline-block;
-  margin-top:25px;
-  padding:12px 24px;
-  border-radius:6px;
-  background:#ff5a1f;
-  color:#fff;
+  margin-top:15px;
+  color:#1687e8;
   text-decoration:none;
   font-weight:bold;
+  font-size:14px;
 }
 
-footer{
-  background:#080808;
-  color:#aaa;
-  text-align:center;
+/* ================= FEATURED ================= */
+
+.featured{
+  background:#eaf5ff;
+}
+
+.featured-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:30px;
+}
+
+.featured-box{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 6px 25px rgba(0,0,0,.08);
+}
+
+.featured-box img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+}
+
+.featured-text{
   padding:25px;
 }
 
-@media(max-width:768px){
+.featured-text h3{
+  font-size:28px;
+  color:#062b55;
+}
+
+/* ================= INFO SECTIONS ================= */
+
+.info-section{
+  background:white;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.info-box{
+  padding:30px;
+  background:#f7fbff;
+  border:1px solid #dcecf9;
+  border-radius:16px;
+}
+
+.info-box h3{
+  color:#062b55;
+  margin-bottom:10px;
+}
+
+.info-box p{
+  color:#667085;
+}
+
+/* ================= DEALS ================= */
+
+.deals{
+  background:#062b55;
+  color:white;
+}
+
+.deals .section-head h2{
+  color:white;
+}
+
+.deals .section-head p{
+  color:#c9d8e8;
+}
+
+.deals .card{
+  background:#0b3b6e;
+  border-color:#1a558b;
+}
+
+.deals .card h3{
+  color:white;
+}
+
+.deals .card p{
+  color:#c9d8e8;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:#eef6fd;
+}
+
+.about-box{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  background:white;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 5px 25px rgba(0,0,0,.06);
+}
+
+.about-box h2{
+  color:#062b55;
+  margin-bottom:15px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#031b36;
+  color:#b9c8d8;
+  padding:50px 20px 20px;
+}
+
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-logo{
+  color:white;
+  font-size:25px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.footer-logo span{
+  color:#38a9ff;
+}
+
+footer h4{
+  color:white;
+  margin-bottom:12px;
+}
+
+footer a{
+  color:#b9c8d8;
+  text-decoration:none;
+  display:block;
+  margin:6px 0;
+}
+
+.copyright{
+  max-width:1200px;
+  margin:35px auto 0;
+  padding-top:20px;
+  border-top:1px solid #173b5d;
+  text-align:center;
+  font-size:13px;
+}
+
+/* ================= LOADING ================= */
+
+.loading{
+  text-align:center;
+  padding:30px;
+  color:#667085;
+}
+
+.empty{
+  text-align:center;
+  padding:30px;
+  color:#667085;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:62px;
+    left:0;
+    width:100%;
+    background:#062b55;
+    padding:20px;
+    flex-direction:column;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
 
   .menu-btn{
     display:block;
   }
 
-  .nav-menu{
-    display:none;
-    position:absolute;
-    top:65px;
-    left:0;
-    width:100%;
-    background:#111;
-    flex-direction:column;
-    padding:20px;
-  }
-
-  .nav-menu.active{
-    display:flex;
+  .hero{
+    min-height:520px;
   }
 
   .hero h1{
-    font-size:36px;
+    font-size:40px;
   }
 
   .hero p{
     font-size:17px;
   }
 
-  .grid{
+  .cards,
+  .info-grid{
     grid-template-columns:1fr;
+  }
+
+  .featured-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:500px){
+
+  .navbar{
+    padding:12px 15px;
+  }
+
+  .logo{
+    font-size:21px;
+  }
+
+  .hero{
+    padding:55px 15px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero-search{
+    flex-direction:column;
+    background:transparent;
+    box-shadow:none;
+    gap:8px;
+  }
+
+  .hero-search input{
+    padding:14px;
+  }
+
+  .hero-search button{
+    padding:13px;
+  }
+
+  .container{
+    padding:50px 15px;
+  }
+
+  .section-head h2{
+    font-size:29px;
   }
 }
 </style>
@@ -285,1033 +522,734 @@ footer{
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
+  <div class="navbar">
 
-<div class="navbar">
+    <a href="#home" class="logo">
+      Jalgaon <span>Zone</span>
+    </a>
 
-<div class="logo" id="siteLogo">
-Jalgaon <span>Zone</span>
-</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#history">History</a>
+      <a href="#places">Places</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#deals">Deals</a>
+      <a href="#about">About</a>
+      <a href="/admin/" class="admin-btn">Admin Login</a>
+    </nav>
 
-<ul class="nav-menu" id="navMenu">
-
-<li><a href="#home">Home</a></li>
-<li><a href="#news">News</a></li>
-<li><a href="#history">History</a></li>
-<li><a href="#places">Places</a></li>
-<li><a href="#blogs">Blogs</a></li>
-<li><a href="#deals">Deals</a></li>
-<li><a href="#about">About</a></li>
-
-</ul>
-
-</div>
-
+  </div>
 </header>
 
-
-<!-- ================= HOME ================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-content">
+  <div class="hero-content">
 
-<h1 id="heroTitle">
-Welcome to Jalgaon Zone
-</h1>
+    <div class="hero-badge">
+      Explore • Discover • Stay Updated
+    </div>
 
-<p id="heroDescription">
-Jalgaon News, History, Places, Blogs & Smart Deals
-</p>
+    <h1 id="heroTitle">
+      Welcome to Jalgaon Zone
+    </h1>
 
-<div class="search-box">
+    <p id="heroDescription">
+      Jalgaon News, History, Places, Blogs & Smart Deals
+    </p>
 
-<input
-id="searchInput"
-type="text"
-placeholder="Search Jalgaon news, blogs, places..."
-onkeyup="searchSite()">
+    <div class="hero-search">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Jalgaon news, blogs, places..."
+        onkeyup="searchSite()"
+      >
 
-<button onclick="searchSite()">
-Search
-</button>
+      <button onclick="searchSite()">
+        Search
+      </button>
+    </div>
 
-</div>
-
-</div>
+  </div>
 
 </section>
-
 
 <!-- ================= NEWS ================= -->
 
-<section id="news">
+<section class="container" id="news">
 
-<div class="section-title">
+  <div class="section-head">
 
-<h2 id="newsTitle">
-Latest <span>Jalgaon News</span>
-</h2>
+    <div class="section-label">
+      Latest Updates
+    </div>
 
-<p id="newsDescription">
-Latest articles published through Jalgaon Zone
-</p>
+    <h2 id="newsTitle">
+      Latest Jalgaon News
+    </h2>
 
-</div>
+    <p id="newsDescription">
+      Get the latest news, updates, and important happenings from Jalgaon and nearby areas.
+    </p>
 
-<div class="grid" id="newsGrid">
+  </div>
 
-<div class="loading">
-Loading latest news...
-</div>
-
-</div>
+  <div class="cards" id="newsCards">
+    <div class="loading">Loading latest news...</div>
+  </div>
 
 </section>
-
 
 <!-- ================= HISTORY ================= -->
 
-<section id="history">
+<section class="info-section" id="history">
 
-<div class="section-title">
+  <div class="container">
 
-<h2 id="historyTitle">
-Jalgaon <span>History</span>
-</h2>
+    <div class="section-head">
 
-<p id="historyDescription">
-Discover the history of Jalgaon.
-</p>
+      <div class="section-label">
+        Heritage
+      </div>
 
-</div>
+      <h2 id="historyTitle">
+        Jalgaon History
+      </h2>
 
-<div class="grid" id="historyGrid">
+      <p id="historyDescription">
+        Explore the rich history, culture, heritage, and important historical places of Jalgaon.
+      </p>
 
-<div class="loading">
-Loading history...
-</div>
+    </div>
 
-</div>
+    <div class="cards" id="historyCards">
+      <div class="loading">Loading history...</div>
+    </div>
+
+  </div>
 
 </section>
-
 
 <!-- ================= PLACES ================= -->
 
-<section id="places">
+<section class="container" id="places">
 
-<div class="section-title">
+  <div class="section-head">
 
-<h2 id="placesTitle">
-Famous <span>Places</span>
-</h2>
+    <div class="section-label">
+      Explore Jalgaon
+    </div>
 
-<p id="placesDescription">
-Explore famous places around Jalgaon.
-</p>
+    <h2 id="placesTitle">
+      Famous Places in Jalgaon
+    </h2>
 
-</div>
+    <p id="placesDescription">
+      Discover famous tourist attractions, temples, forts, nature spots, and hidden gems in and around Jalgaon.
+    </p>
 
-<div class="grid" id="placesGrid">
+  </div>
 
-<div class="loading">
-Loading places...
-</div>
-
-</div>
+  <div class="cards" id="placesCards">
+    <div class="loading">Loading places...</div>
+  </div>
 
 </section>
-
 
 <!-- ================= BLOGS ================= -->
 
-<section id="blogs">
+<section class="featured" id="blogs">
 
-<div class="section-title">
+  <div class="container">
 
-<h2 id="blogsTitle">
-Jalgaon <span>Blogs</span>
-</h2>
+    <div class="section-head">
 
-<p id="blogsDescription">
-Stories, guides and local experiences.
-</p>
+      <div class="section-label">
+        Stories & Guides
+      </div>
 
-</div>
+      <h2 id="blogsTitle">
+        Jalgaon Blogs
+      </h2>
 
-<div class="grid" id="blogsGrid">
+      <p id="blogsDescription">
+        Read local stories, travel guides, useful information, experiences, and interesting blogs from Jalgaon.
+      </p>
 
-<div class="loading">
-Loading blogs...
-</div>
+    </div>
 
-</div>
+    <div class="cards" id="blogCards">
+      <div class="loading">Loading blogs...</div>
+    </div>
+
+  </div>
 
 </section>
-
 
 <!-- ================= DEALS ================= -->
 
-<section id="deals">
+<section class="deals" id="deals">
 
-<div class="section-title">
+  <div class="container">
 
-<h2 id="dealsTitle">
-Local <span>Deals</span>
-</h2>
+    <div class="section-head">
 
-<p id="dealsDescription">
-Useful products and offers.
-</p>
+      <div class="section-label">
+        Smart Shopping
+      </div>
 
-</div>
+      <h2 id="dealsTitle">
+        Local Deals & Offers
+      </h2>
 
-<div class="grid" id="dealsGrid">
+      <p id="dealsDescription">
+        Discover useful products, special offers, local deals, discounts, and smart shopping opportunities.
+      </p>
 
-<div class="loading">
-Loading deals...
-</div>
+    </div>
 
-</div>
+    <div class="cards" id="dealCards">
+      <div class="loading">Loading deals...</div>
+    </div>
+
+  </div>
 
 </section>
-
 
 <!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
-<div class="about-inner">
+  <div class="container">
 
-<h2 id="aboutTitle">
-About Jalgaon Zone
-</h2>
+    <div class="about-box">
 
-<p id="aboutDescription">
-Jalgaon Zone is a local digital platform focused on Jalgaon news,
-history, places, blogs and useful deals.
-</p>
+      <div class="section-label">
+        About Us
+      </div>
 
-<a href="/admin/" class="admin-btn">
-Admin Login
-</a>
+      <h2 id="aboutTitle">
+        About Jalgaon Zone
+      </h2>
 
-</div>
+      <p id="aboutDescription">
+        Jalgaon Zone is a local digital platform bringing you Jalgaon news, history, famous places, blogs, useful information, and smart deals.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<p>
-© 2026 Jalgaon Zone. All Rights Reserved.
-</p>
+  <div class="footer-grid">
+
+    <div>
+      <div class="footer-logo">
+        Jalgaon <span>Zone</span>
+      </div>
+
+      <p>
+        Your local digital guide for Jalgaon news,
+        history, places, blogs and useful deals.
+      </p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#history">History</a>
+      <a href="#places">Places</a>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <a href="#blogs">Blogs</a>
+      <a href="#deals">Deals</a>
+      <a href="#about">About</a>
+      <a href="/admin/">Admin Login</a>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © <span id="year"></span> Jalgaon Zone. All Rights Reserved.
+  </div>
 
 </footer>
 
-
 <script>
 
-/* ==========================================
-   SETTINGS
-========================================== */
+/* ================= CONFIG ================= */
 
-const REPO =
-"jalgaonzone/jalgaonzone.github.io";
+const REPO = "jalgaonzone/jalgaonzone.github.io";
+const BRANCH = "main";
 
-const BRANCH =
-"main";
+const RAW =
+"https://raw.githubusercontent.com/" +
+REPO +
+"/" +
+BRANCH +
+"/";
 
+const API =
+"https://api.github.com/repos/" +
+REPO +
+"/contents/";
 
-/* ==========================================
-   MOBILE MENU
-========================================== */
+/* ================= MENU ================= */
 
 function toggleMenu(){
 
-document
-.getElementById("navMenu")
-.classList.toggle("active");
+  document
+    .getElementById("navLinks")
+    .classList.toggle("show");
 
 }
 
+/* ================= IMAGE ================= */
 
-/* ==========================================
-   ESCAPE HTML
-========================================== */
+function getImage(image, fallback){
+
+  if(!image){
+    return fallback;
+  }
+
+  image = image.trim();
+
+  if(image.startsWith("http")){
+    return image;
+  }
+
+  if(image.startsWith("/")){
+    return image;
+  }
+
+  return "/" + image;
+}
+
+/* ================= MARKDOWN ================= */
+
+function parseMarkdown(text){
+
+  const data = {};
+  let body = text;
+
+  if(text.startsWith("---")){
+
+    const parts = text.split("---");
+
+    if(parts.length >= 3){
+
+      const front = parts[1];
+
+      body = parts.slice(2).join("---");
+
+      front.split("\n").forEach(line => {
+
+        const index = line.indexOf(":");
+
+        if(index === -1) return;
+
+        const key = line
+          .substring(0,index)
+          .trim();
+
+        let value = line
+          .substring(index+1)
+          .trim();
+
+        value = value
+          .replace(/^["']|["']$/g,"");
+
+        data[key] = value;
+
+      });
+
+    }
+
+  }
+
+  return {
+    data,
+    body
+  };
+
+}
+
+/* ================= LOAD COLLECTION ================= */
+
+async function loadCollection(folder, target, fallbackImage){
+
+  const container =
+    document.getElementById(target);
+
+  try{
+
+    const response =
+      await fetch(API + folder);
+
+    if(!response.ok){
+      throw new Error("GitHub API error");
+    }
+
+    const files =
+      await response.json();
+
+    const markdownFiles =
+      files.filter(file =>
+        file.name.endsWith(".md")
+      );
+
+    if(markdownFiles.length === 0){
+
+      container.innerHTML =
+        `<div class="empty">
+          No content available yet.
+        </div>`;
+
+      return;
+
+    }
+
+    const items = [];
+
+    for(const file of markdownFiles){
+
+      try{
+
+        const r =
+          await fetch(file.download_url);
+
+        const text =
+          await r.text();
+
+        const parsed =
+          parseMarkdown(text);
+
+        items.push({
+          ...parsed.data,
+          body: parsed.body,
+          url: file.html_url
+        });
+
+      }catch(e){
+
+        console.log(e);
+
+      }
+
+    }
+
+    container.innerHTML = "";
+
+    items.slice(0,6).forEach(item => {
+
+      const title =
+        item.title ||
+        "Jalgaon Update";
+
+      const description =
+        item.description ||
+        stripMarkdown(item.body || "")
+          .substring(0,150);
+
+      const image =
+        getImage(
+          item.image,
+          fallbackImage
+        );
+
+      const category =
+        item.category ||
+        folder;
+
+      const card =
+        document.createElement("article");
+
+      card.className = "card";
+
+      card.innerHTML = `
+
+        <img
+          class="card-img"
+          src="${image}"
+          alt="${escapeHTML(title)}"
+          onerror="this.src='${fallbackImage}'"
+        >
+
+        <div class="card-content">
+
+          <div class="card-category">
+            ${escapeHTML(category)}
+          </div>
+
+          <h3>
+            ${escapeHTML(title)}
+          </h3>
+
+          <p>
+            ${escapeHTML(description)}
+          </p>
+
+          <a
+            href="${fileSafeUrl(item.url)}"
+            target="_blank"
+            class="read-more"
+          >
+            Read More →
+          </a>
+
+        </div>
+
+      `;
+
+      container.appendChild(card);
+
+    });
+
+  }catch(error){
+
+    console.error(error);
+
+    container.innerHTML =
+      `<div class="empty">
+        Content will appear here after publishing from Admin.
+      </div>`;
+
+  }
+
+}
+
+/* ================= HELPERS ================= */
+
+function stripMarkdown(text){
+
+  return text
+    .replace(/[#*_>`]/g,"")
+    .replace(/\[(.*?)\]\(.*?\)/g,"$1")
+    .replace(/\n+/g," ")
+    .trim();
+
+}
 
 function escapeHTML(text){
 
-return String(text || "")
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
+  return String(text)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
 
 }
 
+function fileSafeUrl(url){
 
-/* ==========================================
-   FRONTMATTER
-========================================== */
-
-function parseFrontMatter(markdown){
-
-const result={};
-
-const match =
-markdown.match(/^---\s*([\s\S]*?)\s*---/);
-
-if(!match){
-return result;
-}
-
-match[1]
-.split("\n")
-.forEach(line=>{
-
-const index=line.indexOf(":");
-
-if(index===-1){
-return;
-}
-
-const key=
-line.substring(0,index).trim();
-
-let value=
-line.substring(index+1).trim();
-
-value=value
-.replace(/^["']|["']$/g,"")
-.trim();
-
-result[key]=value;
-
-});
-
-return result;
+  return url || "#";
 
 }
 
-
-/* ==========================================
-   DATE
-========================================== */
-
-function formatDate(date){
-
-if(!date){
-return "";
-}
-
-const d=new Date(date);
-
-if(isNaN(d.getTime())){
-return date;
-}
-
-return d.toLocaleDateString(
-"en-IN",
-{
-day:"2-digit",
-month:"short",
-year:"numeric"
-}
-);
-
-}
-
-
-/* ==========================================
-   IMAGE
-========================================== */
-
-function imagePath(image){
-
-if(!image){
-return "/Images/jalgaon.jpg";
-}
-
-image=image.trim();
-
-if(image.startsWith("http")){
-return image;
-}
-
-if(!image.startsWith("/")){
-image="/"+image;
-}
-
-return image;
-
-}
-
-
-/* ==========================================
-   LOAD HOME CMS
-========================================== */
+/* ================= HOME YAML ================= */
 
 async function loadHome(){
 
-try{
+  try{
 
-const url =
-`https://raw.githubusercontent.com/${REPO}/${BRANCH}/content/home.yml?x=${Date.now()}`;
+    const url =
+      RAW +
+      "content/home.yml?x=" +
+      Date.now();
 
-const response=
-await fetch(url,{
-cache:"no-store"
-});
+    const response =
+      await fetch(url);
 
-if(!response.ok){
-return;
-}
+    if(!response.ok){
+      return;
+    }
 
-const text=
-await response.text();
+    const text =
+      await response.text();
 
-const data=
-parseFrontMatterLikeYAML(text);
+    const home = {};
 
+    text.split("\n").forEach(line => {
 
-/* Website name */
+      const index =
+        line.indexOf(":");
 
-if(data.site_name){
+      if(index === -1) return;
 
-document.title=
-data.site_name;
+      const key =
+        line.substring(0,index).trim();
 
-document.getElementById(
-"siteLogo"
-).innerHTML=
-escapeHTML(data.site_name)
-.replace(
-" ",
-' <span>'
-)
-+ "</span>";
+      let value =
+        line.substring(index+1).trim();
 
-}
+      value =
+        value.replace(/^["']|["']$/g,"");
 
+      home[key] = value;
 
-/* Hero */
+    });
 
-if(data.hero_title){
+    setText("heroTitle",home.hero_title);
+    setText("heroDescription",home.hero_description);
 
-document.getElementById(
-"heroTitle"
-).textContent=
-data.hero_title;
+    setText("newsTitle",home.news_title);
+    setText("newsDescription",home.news_description);
 
-}
+    setText("historyTitle",home.history_title);
+    setText("historyDescription",home.history_description);
 
-if(data.hero_description){
+    setText("placesTitle",home.places_title);
+    setText("placesDescription",home.places_description);
 
-document.getElementById(
-"heroDescription"
-).textContent=
-data.hero_description;
+    setText("blogsTitle",home.blogs_title);
+    setText("blogsDescription",home.blogs_description);
 
-}
+    setText("dealsTitle",home.deals_title);
+    setText("dealsDescription",home.deals_description);
 
+    setText("aboutTitle",home.about_title);
+    setText("aboutDescription",home.about_description);
 
-/* Hero image */
+    if(home.search_placeholder){
 
-if(data.hero_image){
+      document
+        .getElementById("searchInput")
+        .placeholder =
+        home.search_placeholder;
 
-document.querySelector(
-".hero"
-).style.backgroundImage=
-`linear-gradient(
-rgba(0,0,0,.55),
-rgba(0,0,0,.7)
-),
-url("${imagePath(data.hero_image)}")`;
+    }
 
-}
+    if(home.hero_image){
 
+      document
+        .querySelector(".hero")
+        .style.backgroundImage =
+        `linear-gradient(rgba(3,30,60,.72),rgba(3,30,60,.68)),url("${home.hero_image}")`;
 
-/* Search */
+    }
 
-if(data.search_placeholder){
+  }catch(error){
 
-document.getElementById(
-"searchInput"
-).placeholder=
-data.search_placeholder;
+    console.log("Home content:",error);
+
+  }
 
 }
-
-
-/* Sections */
-
-setText(
-"newsTitle",
-data.news_title
-);
-
-setText(
-"newsDescription",
-data.news_description
-);
-
-setText(
-"historyTitle",
-data.history_title
-);
-
-setText(
-"historyDescription",
-data.history_description
-);
-
-setText(
-"placesTitle",
-data.places_title
-);
-
-setText(
-"placesDescription",
-data.places_description
-);
-
-setText(
-"blogsTitle",
-data.blogs_title
-);
-
-setText(
-"blogsDescription",
-data.blogs_description
-);
-
-setText(
-"dealsTitle",
-data.deals_title
-);
-
-setText(
-"dealsDescription",
-data.deals_description
-);
-
-setText(
-"aboutTitle",
-data.about_title
-);
-
-setText(
-"aboutDescription",
-data.about_description
-);
-
-}catch(error){
-
-console.log(
-"Home CMS:",
-error
-);
-
-}
-
-}
-
-
-/* ==========================================
-   SIMPLE YAML READER
-========================================== */
-
-function parseFrontMatterLikeYAML(text){
-
-const data={};
-
-text
-.split("\n")
-.forEach(line=>{
-
-const index=line.indexOf(":");
-
-if(index===-1){
-return;
-}
-
-const key=
-line.substring(0,index).trim();
-
-let value=
-line.substring(index+1).trim();
-
-value=value
-.replace(/^["']|["']$/g,"")
-.trim();
-
-if(key){
-data[key]=value;
-}
-
-});
-
-return data;
-
-}
-
-
-/* ==========================================
-   SET TEXT
-========================================== */
 
 function setText(id,value){
 
-if(!value){
-return;
-}
+  if(value){
 
-const element=
-document.getElementById(id);
+    const element =
+      document.getElementById(id);
 
-if(!element){
-return;
-}
+    if(element){
+      element.textContent = value;
+    }
 
-
-/*
-Keep orange span on section headings
-*/
-
-if(
-id.endsWith("Title") &&
-[
-"newsTitle",
-"historyTitle",
-"placesTitle",
-"blogsTitle",
-"dealsTitle"
-].includes(id)
-){
-
-const words=value.split(" ");
-
-if(words.length>1){
-
-const last=
-words.pop();
-
-element.innerHTML=
-escapeHTML(words.join(" "))
-+
-' <span>'
-+
-escapeHTML(last)
-+
-'</span>';
-
-}else{
-
-element.textContent=value;
+  }
 
 }
 
-}else{
-
-element.textContent=value;
-
-}
-
-}
-
-
-/* ==========================================
-   LOAD COLLECTION
-========================================== */
-
-async function loadCollection(
-folder,
-gridId,
-type
-){
-
-const grid=
-document.getElementById(gridId);
-
-try{
-
-const apiURL=
-`https://api.github.com/repos/${REPO}/contents/${folder}?ref=${BRANCH}&x=${Date.now()}`;
-
-const response=
-await fetch(apiURL,{
-cache:"no-store"
-});
-
-if(!response.ok){
-
-throw new Error(
-"Folder unavailable"
-);
-
-}
-
-const files=
-await response.json();
-
-if(
-!Array.isArray(files)
-){
-
-throw new Error(
-"No files"
-);
-
-}
-
-const items=[];
-
-
-for(
-const file of files
-){
-
-if(
-!file.name
-.toLowerCase()
-.endsWith(".md")
-){
-continue;
-}
-
-
-try{
-
-const articleResponse=
-await fetch(
-file.download_url+
-"?x="+Date.now(),
-{
-cache:"no-store"
-}
-);
-
-if(!articleResponse.ok){
-continue;
-}
-
-const markdown=
-await articleResponse.text();
-
-const data=
-parseFrontMatter(markdown);
-
-if(!data.title){
-continue;
-}
-
-
-/* Body text */
-
-let body=
-markdown
-.replace(/^---[\s\S]*?---/,"")
-.replace(/[#*_>`]/g," ")
-.replace(/\n+/g," ")
-.trim();
-
-
-/* Description */
-
-let description=
-data.description ||
-body.substring(0,180);
-
-
-/* Save */
-
-items.push({
-
-title:data.title,
-
-category:
-data.category ||
-type,
-
-image:
-data.image,
-
-description:
-
-description,
-
-date:
-data.date,
-
-link:
-data.link,
-
-file:
-file.name
-
-});
-
-}catch(e){
-
-console.log(
-"Skipping:",
-file.name
-);
-
-}
-
-}
-
-
-/* Sort news by date */
-
-if(type==="News"){
-
-items.sort(
-(a,b)=>
-new Date(b.date||0)
--
-new Date(a.date||0)
-);
-
-}
-
-
-/* Clear */
-
-grid.innerHTML="";
-
-
-if(items.length===0){
-
-grid.innerHTML=`
-
-<div class="error">
-
-<h3>No ${escapeHTML(type)} available</h3>
-
-<p>
-Add content from Admin CMS.
-</p>
-
-</div>
-
-`;
-
-return;
-
-}
-
-
-/* Cards */
-
-items.forEach(item=>{
-
-const card=
-document.createElement("article");
-
-card.className=
-"card searchable";
-
-
-let extra="";
-
-
-if(item.date){
-
-extra=`
-<div class="date">
-${escapeHTML(
-formatDate(item.date)
-)}
-</div>
-`;
-
-}
-
-
-if(type==="Deals" && item.link){
-
-extra+=`
-
-<a
-href="${escapeHTML(item.link)}"
-target="_blank"
-rel="noopener"
-class="admin-btn"
->
-View Deal
-</a>
-
-`;
-
-}
-
-
-card.innerHTML=`
-
-<img
-src="${escapeHTML(
-imagePath(item.image)
-)}"
-alt="${escapeHTML(item.title)}"
-loading="lazy"
-onerror="this.src='/Images/jalgaon.jpg'"
->
-
-<div class="card-content">
-
-<span class="category">
-${escapeHTML(
-item.category
-)}
-</span>
-
-<h3>
-${escapeHTML(item.title)}
-</h3>
-
-<p>
-${escapeHTML(
-item.description
-)}
-</p>
-
-${extra}
-
-</div>
-
-`;
-
-
-grid.appendChild(card);
-
-});
-
-
-}catch(error){
-
-console.log(
-type,
-error
-);
-
-grid.innerHTML=`
-
-<div class="error">
-
-<h3>
-${escapeHTML(type)} temporarily unavailable
-</h3>
-
-</div>
-
-`;
-
-}
-
-}
-
-
-/* ==========================================
-   SEARCH
-========================================== */
+/* ================= SEARCH ================= */
 
 function searchSite(){
 
-const input=
-document.getElementById(
-"searchInput"
-);
+  const input =
+    document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
 
-const query=
-input.value
-.toLowerCase()
-.trim();
+  if(!input) return;
 
-const cards=
-document.querySelectorAll(
-".searchable"
-);
+  const cards =
+    document.querySelectorAll(".card");
 
-cards.forEach(card=>{
+  let found = false;
 
-const text=
-card.innerText
-.toLowerCase();
+  cards.forEach(card => {
 
-if(
-text.includes(query)
-){
+    const text =
+      card.innerText.toLowerCase();
 
-card.style.display="";
+    if(text.includes(input)){
 
-}else{
+      card.style.display = "block";
+      found = true;
 
-card.style.display="none";
+    }else{
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+  if(!found){
+
+    alert(
+      "No matching content found."
+    );
+
+  }
 
 }
 
-});
+/* ================= START ================= */
 
-}
+document.getElementById("year")
+  .textContent =
+  new Date().getFullYear();
 
-
-/* ==========================================
-   START EVERYTHING
-========================================== */
-
-document.addEventListener(
-"DOMContentLoaded",
-async function(){
-
-/*
-Load Home CMS
-*/
-
-await loadHome();
-
-
-/*
-Load all CMS sections
-*/
+loadHome();
 
 loadCollection(
-"articles",
-"newsGrid",
-"News"
+  "articles",
+  "newsCards",
+  "/Images/news.jpg"
 );
 
 loadCollection(
-"history",
-"historyGrid",
-"History"
+  "history",
+  "historyCards",
+  "/Images/history.jpg"
 );
 
 loadCollection(
-"places",
-"placesGrid",
-"Places"
+  "places",
+  "placesCards",
+  "/Images/places.jpg"
 );
 
 loadCollection(
-"blogs",
-"blogsGrid",
-"Blogs"
+  "blogs",
+  "blogCards",
+  "/Images/blogs.jpg"
 );
 
 loadCollection(
-"deals",
-"dealsGrid",
-"Deals"
+  "deals",
+  "dealCards",
+  "/Images/deals.jpg"
 );
-
-});
 
 </script>
 
