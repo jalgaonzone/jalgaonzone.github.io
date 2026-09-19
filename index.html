@@ -1,383 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Jalgaon Zone | Jalgaon News, Blogs, Places & Deals</title>
-
-<meta name="description"
-content="Jalgaon Zone - Jalgaon news, history, famous places, blogs, local information and useful deals.">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f7fb;
-  color:#172033;
-}
-
-/* HEADER */
-header{
-  background:#062b55;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 3px 15px rgba(0,0,0,.2);
-}
-
-.navbar{
-  max-width:1200px;
-  margin:auto;
-  padding:15px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  color:white;
-  text-decoration:none;
-  font-size:25px;
-  font-weight:bold;
-}
-
-.logo span{
-  color:#38a9ff;
-}
-
-.nav-links{
-  display:flex;
-  gap:20px;
-  align-items:center;
-}
-
-.nav-links a{
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:bold;
-}
-
-.admin{
-  background:#1687e8;
-  padding:9px 14px;
-  border-radius:7px;
-}
-
-/* HERO */
-.hero{
-  min-height:560px;
-  background:
-    linear-gradient(rgba(3,30,60,.70),rgba(3,30,60,.70)),
-    url("Images/jalgaon.jpg") center/cover no-repeat;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  padding:60px 20px;
-}
-
-.hero-content{
-  max-width:850px;
-}
-
-.hero h1{
-  font-size:56px;
-  margin-bottom:18px;
-}
-
-.hero p{
-  font-size:19px;
-  margin-bottom:30px;
-}
-
-.search{
-  max-width:650px;
-  margin:auto;
-  background:white;
-  padding:6px;
-  border-radius:50px;
-  display:flex;
-}
-
-.search input{
-  flex:1;
-  border:0;
-  outline:0;
-  padding:15px 20px;
-  font-size:15px;
-  border-radius:50px;
-}
-
-.search button{
-  border:0;
-  background:#1687e8;
-  color:white;
-  padding:0 25px;
-  border-radius:50px;
-  font-weight:bold;
-}
-
-/* SECTIONS */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 20px;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.section-title h2{
-  color:#062b55;
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-.section-title p{
-  color:#667085;
-}
-
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
-
-.card{
-  background:white;
-  border-radius:15px;
-  overflow:hidden;
-  border:1px solid #e1e8f0;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-}
-
-.card-img{
-  width:100%;
-  height:210px;
-  object-fit:cover;
-  background:#dcecff;
-}
-
-.card-content{
-  padding:20px;
-}
-
-.card h3{
-  color:#062b55;
-  margin-bottom:8px;
-}
-
-.card p{
-  color:#667085;
-  font-size:14px;
-}
-
-.read{
-  display:inline-block;
-  margin-top:15px;
-  color:#1687e8;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-/* INFO */
-.info{
-  background:white;
-}
-
-.info-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
-
-.info-box{
-  background:#f5faff;
-  border:1px solid #d9eafa;
-  padding:30px;
-  border-radius:15px;
-}
-
-.info-box h3{
-  color:#062b55;
-  margin-bottom:10px;
-}
-
-.info-box p{
-  color:#667085;
-}
-
-/* DEALS */
-.deals{
-  background:#062b55;
-}
-
-.deals h2{
-  color:white;
-}
-
-.deals .section-title p{
-  color:#cbd9e8;
-}
-
-.deals .card{
-  background:#0b3b6e;
-  border-color:#1c588e;
-}
-
-.deals .card h3{
-  color:white;
-}
-
-.deals .card p{
-  color:#cbd9e8;
-}
-
-/* ABOUT */
-.about{
-  background:#eef6fd;
-}
-
-.about-box{
-  max-width:900px;
-  margin:auto;
-  background:white;
-  padding:40px;
-  border-radius:18px;
-  text-align:center;
-  box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-
-.about-box h2{
-  color:#062b55;
-  margin-bottom:15px;
-}
-
-.about-box p{
-  color:#667085;
-}
-
-/* FOOTER */
-footer{
-  background:#031b36;
-  color:#b9c8d8;
-  text-align:center;
-  padding:30px 20px;
-}
-
-footer strong{
-  color:white;
-}
-
-/* MOBILE */
-@media(max-width:800px){
-
-  .nav-links{
-    display:none;
-  }
-
-  .navbar{
-    justify-content:center;
-  }
-
-  .hero{
-    min-height:500px;
-  }
-
-  .hero h1{
-    font-size:40px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  .cards,
-  .info-grid{
-    grid-template-columns:1fr;
-  }
-
-  .container{
-    padding:50px 15px;
-  }
-
-  .section-title h2{
-    font-size:30px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="navbar">
-
-    <a href="#" class="logo">
-      Jalgaon <span>Zone</span>
-    </a>
-
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#history">History</a>
-      <a href="#places">Places</a>
-      <a href="#blogs">Blogs</a>
-      <a href="#deals">Deals</a>
-      <a href="#about">About</a>
-      <a href="/admin/" class="admin">Admin</a>
-    </nav>
-
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-
-  <div class="hero-content">
-
-    <h1>Jalgaon Zone</h1>
-
-    <p>
-      Jalgaon News, History, Places, Blogs & Useful Deals
-    </p>
-
-    <div class="search">
-      <input
-        type="text"
-        placeholder="Search Jalgaon news, blogs, places..."
-        id="searchInput">
-
-      <button onclick="searchSite()">
-        Search
-      </button>
-    </div>
-
-  </div>
-
-</section>
-
 <!-- NEWS -->
 <section class="container" id="news">
 
@@ -388,283 +8,75 @@ footer strong{
 
   <div class="cards">
 
+    <!-- Agriculture News -->
     <div class="card">
-      <img src="Images/jalgaon.jpg" class="card-img">
+      <img
+        src="https://content.jdmagicbox.com/comp/def_content/organic-farms/organic-farms-4-organic-farms-4-9hl2y.jpg"
+        class="card-img"
+        alt="Jalgaon Agriculture News">
 
       <div class="card-content">
-        <h3>Jalgaon Latest News</h3>
+
+        <h3>शेतकऱ्यांसाठी खुशखबर! सूक्ष्म सिंचनासाठी मिळणार ९०% पर्यंत अनुदान</h3>
 
         <p>
-          Read the latest news and updates from Jalgaon.
+          जळगाव जिल्ह्यातील पात्र शेतकऱ्यांसाठी सूक्ष्म सिंचन योजनेअंतर्गत
+          ९०% पर्यंत अनुदानाची माहिती आणि अर्ज प्रक्रिया.
+        </p>
+
+        <a
+          href="article.html?folder=articles&file=%E0%A4%B6%E0%A5%87%E0%A4%A4%E0%A4%95%E0%A4%B0%E0%A5%8D%E2%AF%E0%A4%BE%E0%A4%82%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80-%E0%A4%96%E0%A5%81%E0%A4%B6%E0%A4%96%E0%A4%AC%E0%A4%B0-%E0%A4%B8%E0%A5%82%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE-%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%9A%E0%A4%A8%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80-%E0%A4%AE%E0%A4%BF%E0%A4%B3%E0%A4%A3%E0%A4%BE%E0%A4%B0-%E0%A5%AF%E0%A5%A6-%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%82%E0%A4%A4-%E0%A4%85%E0%A4%A8%E0%A5%81%E0%A4%A6%E0%A4%BE%E0%A4%A8-%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C-%E0%A4%95%E0%A5%81%E0%A4%A0%E0%A5%87-%E0%A4%86%E0%A4%A3%E0%A4%BF-%E0%A4%95%E0%A4%B8%E0%A4%BE-%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%9A%E0%A4%BE.md"
+          class="read">
+          Read More →
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Local Updates -->
+    <div class="card">
+      <img
+        src="Images/jalgaon.jpg"
+        class="card-img"
+        alt="Jalgaon Local Updates">
+
+      <div class="card-content">
+
+        <h3>Jalgaon Local Updates</h3>
+
+        <p>
+          जळगाव जिल्ह्यातील स्थानिक बातम्या आणि महत्त्वाच्या अपडेट्स.
         </p>
 
         <a href="#" class="read">
           Read More →
         </a>
+
       </div>
     </div>
 
+    <!-- Jalgaon Information -->
     <div class="card">
-      <img src="Images/jalgaon.jpg" class="card-img">
+      <img
+        src="Images/jalgaon.jpg"
+        class="card-img"
+        alt="Jalgaon Information">
 
       <div class="card-content">
-        <h3>Local Updates</h3>
 
-        <p>
-          Important local information from Jalgaon district.
-        </p>
-
-        <a href="#" class="read">
-          Read More →
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="Images/jalgaon.jpg" class="card-img">
-
-      <div class="card-content">
         <h3>Jalgaon Information</h3>
 
         <p>
-          Discover useful information about Jalgaon.
+          जळगाव जिल्ह्याची माहिती, इतिहास, शेती आणि पर्यटनाबद्दल जाणून घ्या.
         </p>
 
         <a href="#" class="read">
           Read More →
         </a>
+
       </div>
     </div>
 
   </div>
 
 </section>
-
-<!-- HISTORY -->
-<section class="info" id="history">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Jalgaon History</h2>
-      <p>Discover the history and heritage of Jalgaon.</p>
-    </div>
-
-    <div class="info-grid">
-
-      <div class="info-box">
-        <h3>Jalgaon</h3>
-        <p>
-          Explore the history, culture and development of Jalgaon.
-        </p>
-      </div>
-
-      <div class="info-box">
-        <h3>Banana Capital</h3>
-        <p>
-          Jalgaon is widely known for its large-scale banana cultivation.
-        </p>
-      </div>
-
-      <div class="info-box">
-        <h3>Heritage</h3>
-        <p>
-          Discover forts, temples and historical places around Jalgaon.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- PLACES -->
-<section class="container" id="places">
-
-  <div class="section-title">
-    <h2>Famous Places</h2>
-    <p>Explore popular destinations around Jalgaon.</p>
-  </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="Images/jalgaon.jpg" class="card-img">
-
-      <div class="card-content">
-        <h3>Unapdev</h3>
-        <p>Explore the natural and religious significance of Unapdev.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="Images/jalgaon.jpg" class="card-img">
-
-      <div class="card-content">
-        <h3>Padmalaya</h3>
-        <p>A famous religious destination near Jalgaon.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="Images/jalgaon.jpg" class="card-img">
-
-      <div class="card-content">
-        <h3>Parola Fort</h3>
-        <p>Discover the historic Parola Fort.</p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- BLOGS -->
-<section class="info" id="blogs">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Jalgaon Blogs</h2>
-      <p>Stories, guides and useful information about Jalgaon.</p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="card-content">
-          <h3>Jalgaon Travel Guide</h3>
-          <p>
-            Explore places, food and experiences around Jalgaon.
-          </p>
-          <a href="#" class="read">Read Blog →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <h3>Things To Do</h3>
-          <p>
-            Interesting things to explore in Jalgaon.
-          </p>
-          <a href="#" class="read">Read Blog →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <h3>Local Stories</h3>
-          <p>
-            Stories and information from the Jalgaon region.
-          </p>
-          <a href="#" class="read">Read Blog →</a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- DEALS -->
-<section class="deals" id="deals">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Deals & Offers</h2>
-      <p>Useful products and offers for our visitors.</p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="card-content">
-          <h3>Featured Deal</h3>
-          <p>
-            Useful products and offers will appear here.
-          </p>
-          <a href="#" class="read">View Deal →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <h3>Online Offers</h3>
-          <p>
-            Discover useful online offers.
-          </p>
-          <a href="#" class="read">View Deal →</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <h3>Recommended</h3>
-          <p>
-            Recommended products and services.
-          </p>
-          <a href="#" class="read">View Deal →</a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-
-  <div class="container">
-
-    <div class="about-box">
-
-      <h2>About Jalgaon Zone</h2>
-
-      <p>
-        Jalgaon Zone is a local information platform covering
-        Jalgaon news, history, famous places, blogs and useful deals.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-
-  <p>
-    © 2026 <strong>Jalgaon Zone</strong>. All Rights Reserved.
-  </p>
-
-</footer>
-
-<script>
-
-function searchSite(){
-
-  const query =
-    document.getElementById("searchInput")
-    .value
-    .trim()
-    .toLowerCase();
-
-  if(!query){
-    alert("Please enter something to search.");
-    return;
-  }
-
-  alert(
-    "Search system will be connected to Jalgaon Zone articles soon."
-  );
-}
-
-</script>
-
-</body>
-</html>
