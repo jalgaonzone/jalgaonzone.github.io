@@ -30,8 +30,6 @@ body{
   line-height:1.6;
 }
 
-/* ================= HEADER ================= */
-
 header{
   position:sticky;
   top:0;
@@ -89,8 +87,6 @@ header{
   font-size:27px;
   cursor:pointer;
 }
-
-/* ================= HERO ================= */
 
 .hero{
   min-height:580px;
@@ -161,8 +157,6 @@ header{
   font-weight:bold;
 }
 
-/* ================= GENERAL ================= */
-
 .container{
   max-width:1200px;
   margin:auto;
@@ -192,8 +186,6 @@ header{
   font-size:13px;
   letter-spacing:1px;
 }
-
-/* ================= CARDS ================= */
 
 .cards{
   display:grid;
@@ -254,8 +246,6 @@ header{
   font-size:14px;
 }
 
-/* ================= FEATURED ================= */
-
 .featured{
   background:#eaf5ff;
 }
@@ -288,8 +278,6 @@ header{
   color:#062b55;
 }
 
-/* ================= INFO SECTIONS ================= */
-
 .info-section{
   background:white;
 }
@@ -315,8 +303,6 @@ header{
 .info-box p{
   color:#667085;
 }
-
-/* ================= DEALS ================= */
 
 .deals{
   background:#062b55;
@@ -344,8 +330,6 @@ header{
   color:#c9d8e8;
 }
 
-/* ================= ABOUT ================= */
-
 .about{
   background:#eef6fd;
 }
@@ -364,8 +348,6 @@ header{
   color:#062b55;
   margin-bottom:15px;
 }
-
-/* ================= FOOTER ================= */
 
 footer{
   background:#031b36;
@@ -413,8 +395,6 @@ footer a{
   font-size:13px;
 }
 
-/* ================= LOADING ================= */
-
 .loading{
   text-align:center;
   padding:30px;
@@ -426,8 +406,6 @@ footer a{
   padding:30px;
   color:#667085;
 }
-
-/* ================= MOBILE ================= */
 
 @media(max-width:850px){
 
@@ -522,8 +500,6 @@ footer a{
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
   <div class="navbar">
 
@@ -547,8 +523,6 @@ footer a{
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-
 <section class="hero" id="home">
 
   <div class="hero-content">
@@ -566,6 +540,7 @@ footer a{
     </p>
 
     <div class="hero-search">
+
       <input
         type="text"
         id="searchInput"
@@ -576,13 +551,12 @@ footer a{
       <button onclick="searchSite()">
         Search
       </button>
+
     </div>
 
   </div>
 
 </section>
-
-<!-- ================= NEWS ================= -->
 
 <section class="container" id="news">
 
@@ -607,8 +581,6 @@ footer a{
   </div>
 
 </section>
-
-<!-- ================= HISTORY ================= -->
 
 <section class="info-section" id="history">
 
@@ -638,8 +610,6 @@ footer a{
 
 </section>
 
-<!-- ================= PLACES ================= -->
-
 <section class="container" id="places">
 
   <div class="section-head">
@@ -663,8 +633,6 @@ footer a{
   </div>
 
 </section>
-
-<!-- ================= BLOGS ================= -->
 
 <section class="featured" id="blogs">
 
@@ -694,8 +662,6 @@ footer a{
 
 </section>
 
-<!-- ================= DEALS ================= -->
-
 <section class="deals" id="deals">
 
   <div class="container">
@@ -724,8 +690,6 @@ footer a{
 
 </section>
 
-<!-- ================= ABOUT ================= -->
-
 <section class="about" id="about">
 
   <div class="container">
@@ -750,13 +714,12 @@ footer a{
 
 </section>
 
-<!-- ================= FOOTER ================= -->
-
 <footer>
 
   <div class="footer-grid">
 
     <div>
+
       <div class="footer-logo">
         Jalgaon <span>Zone</span>
       </div>
@@ -765,22 +728,29 @@ footer a{
         Your local digital guide for Jalgaon news,
         history, places, blogs and useful deals.
       </p>
+
     </div>
 
     <div>
+
       <h4>Quick Links</h4>
+
       <a href="#home">Home</a>
       <a href="#news">News</a>
       <a href="#history">History</a>
       <a href="#places">Places</a>
+
     </div>
 
     <div>
+
       <h4>Explore</h4>
+
       <a href="#blogs">Blogs</a>
       <a href="#deals">Deals</a>
       <a href="#about">About</a>
       <a href="/admin/">Admin Login</a>
+
     </div>
 
   </div>
@@ -792,8 +762,6 @@ footer a{
 </footer>
 
 <script>
-
-/* ================= CONFIG ================= */
 
 const REPO = "jalgaonzone/jalgaonzone.github.io";
 const BRANCH = "main";
@@ -810,7 +778,6 @@ const API =
 REPO +
 "/contents/";
 
-/* ================= MENU ================= */
 
 function toggleMenu(){
 
@@ -820,7 +787,6 @@ function toggleMenu(){
 
 }
 
-/* ================= IMAGE ================= */
 
 function getImage(image, fallback){
 
@@ -841,7 +807,6 @@ function getImage(image, fallback){
   return "/" + image;
 }
 
-/* ================= MARKDOWN ================= */
 
 function parseMarkdown(text){
 
@@ -864,16 +829,14 @@ function parseMarkdown(text){
 
         if(index === -1) return;
 
-        const key = line
-          .substring(0,index)
-          .trim();
+        const key =
+          line.substring(0,index).trim();
 
-        let value = line
-          .substring(index+1)
-          .trim();
+        let value =
+          line.substring(index+1).trim();
 
-        value = value
-          .replace(/^["']|["']$/g,"");
+        value =
+          value.replace(/^["']|["']$/g,"");
 
         data[key] = value;
 
@@ -890,7 +853,6 @@ function parseMarkdown(text){
 
 }
 
-/* ================= LOAD COLLECTION ================= */
 
 async function loadCollection(folder, target, fallbackImage){
 
@@ -911,7 +873,7 @@ async function loadCollection(folder, target, fallbackImage){
 
     const markdownFiles =
       files.filter(file =>
-        file.name.endsWith(".md")
+        file.name.toLowerCase().endsWith(".md")
       );
 
     if(markdownFiles.length === 0){
@@ -941,9 +903,22 @@ async function loadCollection(folder, target, fallbackImage){
           parseMarkdown(text);
 
         items.push({
+
           ...parsed.data,
+
           body: parsed.body,
-          url: file.html_url
+
+          /* IMPORTANT:
+             Open our website article page,
+             NOT GitHub
+          */
+
+          url:
+            "/article.html?folder=" +
+            encodeURIComponent(folder) +
+            "&file=" +
+            encodeURIComponent(file.name)
+
         });
 
       }catch(e){
@@ -1007,7 +982,6 @@ async function loadCollection(folder, target, fallbackImage){
 
           <a
             href="${fileSafeUrl(item.url)}"
-            target="_blank"
             class="read-more"
           >
             Read More →
@@ -1034,7 +1008,6 @@ async function loadCollection(folder, target, fallbackImage){
 
 }
 
-/* ================= HELPERS ================= */
 
 function stripMarkdown(text){
 
@@ -1046,6 +1019,7 @@ function stripMarkdown(text){
 
 }
 
+
 function escapeHTML(text){
 
   return String(text)
@@ -1056,13 +1030,13 @@ function escapeHTML(text){
 
 }
 
+
 function fileSafeUrl(url){
 
   return url || "#";
 
 }
 
-/* ================= HOME YAML ================= */
 
 async function loadHome(){
 
@@ -1152,6 +1126,7 @@ async function loadHome(){
 
 }
 
+
 function setText(id,value){
 
   if(value){
@@ -1167,7 +1142,6 @@ function setText(id,value){
 
 }
 
-/* ================= SEARCH ================= */
 
 function searchSite(){
 
@@ -1213,7 +1187,6 @@ function searchSite(){
 
 }
 
-/* ================= START ================= */
 
 document.getElementById("year")
   .textContent =
