@@ -10,16 +10,109 @@ publish_mode: simple
 
 collections:
 
+  # =========================
+  # HOME PAGE
+  # =========================
+
+  - name: "home"
+    label: "Home Page"
+    files:
+
+      - name: "homepage"
+        label: "Edit Home Page"
+        file: "content/home.yml"
+
+        fields:
+
+          - label: "Website Name"
+            name: "site_name"
+            widget: "string"
+            default: "Jalgaon Zone"
+
+          - label: "Hero Title"
+            name: "hero_title"
+            widget: "string"
+            default: "Welcome to Jalgaon Zone"
+
+          - label: "Hero Description"
+            name: "hero_description"
+            widget: "text"
+
+          - label: "Hero Image"
+            name: "hero_image"
+            widget: "image"
+            required: false
+
+          - label: "Search Placeholder"
+            name: "search_placeholder"
+            widget: "string"
+            default: "Search Jalgaon news, blogs, places..."
+
+          - label: "News Section Title"
+            name: "news_title"
+            widget: "string"
+            default: "Latest Jalgaon News"
+
+          - label: "News Section Description"
+            name: "news_description"
+            widget: "text"
+
+          - label: "History Title"
+            name: "history_title"
+            widget: "string"
+
+          - label: "History Description"
+            name: "history_description"
+            widget: "text"
+
+          - label: "Places Title"
+            name: "places_title"
+            widget: "string"
+
+          - label: "Places Description"
+            name: "places_description"
+            widget: "text"
+
+          - label: "Blogs Title"
+            name: "blogs_title"
+            widget: "string"
+
+          - label: "Blogs Description"
+            name: "blogs_description"
+            widget: "text"
+
+          - label: "Deals Title"
+            name: "deals_title"
+            widget: "string"
+
+          - label: "Deals Description"
+            name: "deals_description"
+            widget: "text"
+
+          - label: "About Title"
+            name: "about_title"
+            widget: "string"
+
+          - label: "About Description"
+            name: "about_description"
+            widget: "text"
+
+
+  # =========================
+  # NEWS
+  # =========================
+
   - name: "news"
     label: "Jalgaon News"
     folder: "articles"
     create: true
     slug: "{{slug}}"
+
     fields:
+
       - label: "News Title"
         name: "title"
         widget: "string"
-        required: true
 
       - label: "Category"
         name: "category"
@@ -32,8 +125,6 @@ collections:
           - "Business"
           - "Entertainment"
           - "Local News"
-        default: "Jalgaon"
-        required: true
 
       - label: "Featured Image"
         name: "image"
@@ -43,55 +134,120 @@ collections:
       - label: "Short Description"
         name: "description"
         widget: "text"
-        required: true
 
       - label: "Article Content"
         name: "body"
         widget: "markdown"
-        required: true
 
       - label: "Publish Date"
         name: "date"
         widget: "datetime"
-        required: true
+
+
+  # =========================
+  # HISTORY
+  # =========================
 
   - name: "history"
     label: "History"
     folder: "history"
     create: true
     slug: "{{slug}}"
+
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Content", name: "body", widget: "markdown" }
+
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Content"
+        name: "body"
+        widget: "markdown"
+
+
+  # =========================
+  # PLACES
+  # =========================
 
   - name: "places"
     label: "Places"
     folder: "places"
     create: true
     slug: "{{slug}}"
+
     fields:
-      - { label: "Place Name", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "body", widget: "markdown" }
+
+      - label: "Place Name"
+        name: "title"
+        widget: "string"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Description"
+        name: "body"
+        widget: "markdown"
+
+
+  # =========================
+  # BLOGS
+  # =========================
 
   - name: "blogs"
     label: "Blogs"
     folder: "blogs"
     create: true
     slug: "{{slug}}"
+
     fields:
-      - { label: "Blog Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Content", name: "body", widget: "markdown" }
+
+      - label: "Blog Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Content"
+        name: "body"
+        widget: "markdown"
+
+
+  # =========================
+  # DEALS
+  # =========================
 
   - name: "deals"
     label: "Deals"
     folder: "deals"
     create: true
     slug: "{{slug}}"
+
     fields:
-      - { label: "Deal Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Deal Link", name: "link", widget: "string", required: false }
+
+      - label: "Deal Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Deal Link"
+        name: "link"
+        widget: "string"
+        required: false
