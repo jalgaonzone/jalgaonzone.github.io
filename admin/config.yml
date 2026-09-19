@@ -2,7 +2,6 @@ backend:
   name: github
   repo: jalgaonzone/jalgaonzone.github.io
   branch: main
-  use_graphql: true
 
 media_folder: "Images/uploads"
 public_folder: "/Images/uploads"
