@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="mr">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Jalgaon Zone</title>
 
+<meta
+name="description"
+content="Jalgaon Zone - Jalgaon News, Agriculture, History, Tourism and Local Information"
+>
+
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 *{
     box-sizing:border-box;
@@ -15,139 +26,363 @@
     padding:0;
 }
 
+
+/* =========================
+   BODY
+========================= */
+
 body{
-    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+
+    font-family:
+    Arial,
+    "Noto Sans Devanagari",
+    sans-serif;
+
     background:#f5f5f5;
+
     color:#222;
+
     line-height:1.8;
+
 }
+
+
+/* =========================
+   HEADER
+========================= */
 
 header{
+
     background:#111;
+
     color:white;
+
     padding:18px 20px;
+
 }
+
 
 .nav{
+
     max-width:1000px;
+
     margin:auto;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
 }
+
 
 .logo{
+
     font-size:25px;
+
     font-weight:bold;
+
 }
+
 
 .logo span{
+
     color:#f4511e;
+
 }
+
 
 .home{
+
     color:white;
+
     text-decoration:none;
+
+    font-weight:bold;
+
 }
+
 
 .home:hover{
+
     color:#f4511e;
+
 }
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .container{
+
     max-width:900px;
+
     margin:35px auto;
+
     padding:0 15px;
+
 }
+
+
+/* =========================
+   ARTICLE CARD
+========================= */
 
 .article{
+
     background:white;
+
     border-radius:12px;
+
     overflow:hidden;
-    box-shadow:0 4px 20px rgba(0,0,0,.1);
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,.10);
+
 }
+
+
+/* =========================
+   ARTICLE IMAGE
+========================= */
 
 .article img{
+
     width:100%;
+
     max-height:500px;
+
     object-fit:cover;
+
     display:block;
+
 }
+
+
+/* =========================
+   ARTICLE CONTENT
+========================= */
 
 .content{
+
     padding:30px;
+
 }
+
 
 .category{
+
     color:#f4511e;
+
     font-weight:bold;
+
     font-size:15px;
+
+    margin-bottom:5px;
+
 }
+
 
 h1{
+
     font-size:38px;
+
     line-height:1.4;
-    margin:12px 0;
+
+    margin:10px 0;
+
 }
+
 
 .date{
+
     color:#777;
+
     margin-bottom:25px;
+
+    font-size:14px;
+
 }
+
 
 h2{
+
     margin-top:25px;
+
     margin-bottom:8px;
+
+    color:#111;
+
+    font-size:24px;
+
 }
+
 
 p{
+
     margin:12px 0;
+
 }
+
 
 ul{
+
     margin:15px 0;
+
     padding-left:25px;
+
 }
+
 
 li{
+
     margin:6px 0;
+
 }
+
+
+/* =========================
+   BACK BUTTON
+========================= */
 
 .back{
+
     display:inline-block;
+
     margin-top:30px;
+
     color:#f4511e;
+
     font-weight:bold;
+
     text-decoration:none;
+
 }
+
 
 .back:hover{
+
     text-decoration:underline;
+
 }
+
+
+/* =========================
+   ERROR
+========================= */
 
 .error{
+
     background:white;
+
     padding:40px;
+
     text-align:center;
+
     border-radius:12px;
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,.08);
+
 }
 
-footer{
-    margin-top:50px;
-    background:#111;
-    color:#ccc;
-    text-align:center;
-    padding:25px;
+
+.error h2{
+
+    margin-top:0;
+
 }
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    margin-top:50px;
+
+    background:#111;
+
+    color:#ccc;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+footer strong{
+
+    color:#f4511e;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
-    h1{
-        font-size:27px;
+    .nav{
+
+        gap:15px;
+
     }
 
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+
+    .home{
+
+        font-size:14px;
+
+    }
+
+
+    .container{
+
+        margin:20px auto;
+
+        padding:0 10px;
+
+    }
+
+
+    h1{
+
+        font-size:27px;
+
+    }
+
+
+    h2{
+
+        font-size:21px;
+
+    }
+
+
     .content{
+
         padding:20px;
+
+    }
+
+
+    .article img{
+
+        max-height:350px;
+
     }
 
 }
@@ -156,24 +391,43 @@ footer{
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <div class="nav">
 
         <div class="logo">
+
             Jalgaon <span>Zone</span>
+
         </div>
 
-        <a href="index.html" class="home">
+
+        <a
+            href="index.html"
+            class="home"
+        >
+
             ← Home
+
         </a>
 
     </div>
 
 </header>
 
+
+
+<!-- =========================
+     ARTICLE CONTAINER
+========================= -->
 
 <div class="container">
 
@@ -182,26 +436,36 @@ footer{
 </div>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-    © 2026 Jalgaon Zone
+    © 2026 <strong>Jalgaon Zone</strong>
+
+    <br>
+
+    Jalgaon • Maharashtra • India
 
 </footer>
+
 
 
 <script>
 
 
-/* =========================================
-   ARTICLES
-========================================= */
+/* =====================================================
+   ARTICLE DATABASE
+===================================================== */
 
 const articles = {
 
 
-    /* =====================================
-       AGRICULTURE
-    ===================================== */
+    /* =================================================
+       AGRICULTURE ARTICLE
+    ================================================= */
 
     agriculture: {
 
@@ -214,7 +478,11 @@ const articles = {
         date:
         "16 September 2026",
 
-        /* ROOT FOLDER IMAGE */
+        /*
+         IMPORTANT:
+         This file exists in GitHub root
+        */
+
         image:
         "agriculture.png",
 
@@ -230,6 +498,7 @@ const articles = {
             किती अनुदान मिळू शकते?
             </h2>
 
+
             <p>
             पात्रता, प्रवर्ग आणि लागू योजनांनुसार
             अनुदानाचे प्रमाण बदलू शकते. काही
@@ -239,18 +508,35 @@ const articles = {
 
 
             <h2>
+            सूक्ष्म सिंचन म्हणजे काय?
+            </h2>
+
+
+            <p>
+            ठिबक सिंचन आणि तुषार सिंचन यांसारख्या
+            पद्धतींच्या माध्यमातून पिकांना आवश्यक
+            प्रमाणात पाणी देण्याची पद्धत म्हणजे
+            सूक्ष्म सिंचन.
+            </p>
+
+
+            <h2>
             अर्ज कुठे करायचा?
             </h2>
 
+
             <p>
-            अर्जासाठी महाराष्ट्राच्या MahaDBT Farmer
-            Portal चा वापर केला जातो.
+            महाराष्ट्रातील संबंधित कृषी योजनांसाठी
+            MahaDBT Farmer Portal चा वापर केला जाऊ शकतो.
+            अर्ज करण्यापूर्वी सध्याची योजना आणि
+            पात्रता अधिकृत पोर्टलवर तपासणे आवश्यक आहे.
             </p>
 
 
             <h2>
             आवश्यक कागदपत्रे
             </h2>
+
 
             <ul>
 
@@ -281,19 +567,21 @@ const articles = {
             महत्त्वाची सूचना
             </h2>
 
+
             <p>
-            अनुदानाची टक्केवारी आणि पात्रतेचे नियम
-            बदलू शकतात. अर्ज करण्यापूर्वी अधिकृत
-            कृषी विभागाची माहिती तपासा.
+            अनुदानाची टक्केवारी, पात्रता आणि
+            कागदपत्रांचे नियम योजनेनुसार बदलू शकतात.
+            अर्ज करण्यापूर्वी संबंधित अधिकृत कृषी
+            विभागाची अद्ययावत माहिती तपासा.
             </p>
 
         `
     },
 
 
-    /* =====================================
-       OXYGEN PARK
-    ===================================== */
+    /* =================================================
+       OXYGEN PARK ARTICLE
+    ================================================= */
 
     oxygen: {
 
@@ -306,9 +594,14 @@ const articles = {
         date:
         "20 September 2026",
 
-        /* ROOT FOLDER IMAGE */
+        /*
+         IMPORTANT:
+         Your actual GitHub filename is:
+         oxygen-park-newspng.jpg
+        */
+
         image:
-        "oxygen-park-news.png",
+        "oxygen-park-newspng.jpg",
 
         content: `
 
@@ -323,6 +616,7 @@ const articles = {
             ऑक्सिजन पार्कचा उपक्रम
             </h2>
 
+
             <p>
             GPS मित्र परिवाराच्या माध्यमातून
             पर्यावरण संवर्धन आणि हरित परिसर
@@ -335,17 +629,33 @@ const articles = {
             पर्यावरण संवर्धनाचे महत्त्व
             </h2>
 
+
             <p>
             वृक्षारोपण आणि हरित क्षेत्र वाढवणे
-            पर्यावरणासाठी महत्त्वाचे आहे. अशा
-            उपक्रमांमुळे नागरिकांमध्ये पर्यावरणाबाबत
-            जागरूकता निर्माण होण्यास मदत होऊ शकते.
+            पर्यावरणासाठी महत्त्वाचे आहे.
+            अशा उपक्रमांमुळे नागरिकांमध्ये
+            पर्यावरणाबाबत जागरूकता निर्माण
+            होण्यास मदत होऊ शकते.
+            </p>
+
+
+            <h2>
+            स्थानिक सहभाग
+            </h2>
+
+
+            <p>
+            अशा पर्यावरणपूरक उपक्रमांच्या
+            यशासाठी स्थानिक नागरिकांचा सहभाग,
+            वृक्षांची देखभाल आणि परिसराची
+            स्वच्छता महत्त्वाची ठरते.
             </p>
 
 
             <h2>
             Jalgaon Zone
             </h2>
+
 
             <p>
             जळगाव जिल्ह्यातील स्थानिक बातम्या,
@@ -360,11 +670,15 @@ const articles = {
 };
 
 
-/* =========================================
+
+/* =====================================================
    LOAD ARTICLE
-========================================= */
+===================================================== */
 
 function loadArticle(){
+
+
+    /* GET URL */
 
     const params =
     new URLSearchParams(
@@ -372,18 +686,27 @@ function loadArticle(){
     );
 
 
+    /* GET ID */
+
     const id =
     params.get("id");
 
+
+    /* ARTICLE BOX */
 
     const box =
     document.getElementById("article");
 
 
-    console.log("Article ID:", id);
+    console.log(
+        "Article ID:",
+        id
+    );
 
 
-    /* NO ID */
+    /* =================================================
+       NO ID
+    ================================================= */
 
     if(!id){
 
@@ -400,10 +723,12 @@ function loadArticle(){
                 </p>
 
                 <a
-                href="index.html"
-                class="back"
+                    href="index.html"
+                    class="back"
                 >
-                ← Home
+
+                    ← Home
+
                 </a>
 
             </div>
@@ -411,16 +736,23 @@ function loadArticle(){
         `;
 
         return;
+
     }
 
 
-    /* FIND ARTICLE */
+
+    /* =================================================
+       FIND ARTICLE
+    ================================================= */
 
     const data =
     articles[id];
 
 
-    /* ARTICLE NOT FOUND */
+
+    /* =================================================
+       ARTICLE DOES NOT EXIST
+    ================================================= */
 
     if(!data){
 
@@ -437,10 +769,12 @@ function loadArticle(){
                 </p>
 
                 <a
-                href="index.html"
-                class="back"
+                    href="index.html"
+                    class="back"
                 >
-                ← Home
+
+                    ← Home
+
                 </a>
 
             </div>
@@ -448,51 +782,74 @@ function loadArticle(){
         `;
 
         return;
+
     }
 
 
-    /* PAGE TITLE */
+
+    /* =================================================
+       CHANGE PAGE TITLE
+    ================================================= */
 
     document.title =
     data.title +
     " | Jalgaon Zone";
 
 
-    /* DISPLAY ARTICLE */
+
+    /* =================================================
+       DISPLAY ARTICLE
+    ================================================= */
 
     box.innerHTML = `
 
         <article class="article">
 
+
             <img
                 src="${data.image}"
                 alt="${data.title}"
-                onerror="this.style.display='none';"
+                onerror="showImageError(this)"
             >
+
 
             <div class="content">
 
+
                 <div class="category">
+
                     ${data.category}
+
                 </div>
+
 
                 <h1>
+
                     ${data.title}
+
                 </h1>
 
+
                 <div class="date">
+
                     Published:
                     ${data.date}
+
                 </div>
 
+
                 ${data.content}
+
 
                 <a
                     href="index.html"
                     class="back"
                 >
+
                     ← Back to Jalgaon Zone
+
                 </a>
+
 
             </div>
 
@@ -503,11 +860,61 @@ function loadArticle(){
 }
 
 
-/* START */
+
+/* =====================================================
+   IMAGE ERROR
+===================================================== */
+
+function showImageError(image){
+
+    image.style.display = "none";
+
+
+    const message =
+    document.createElement("div");
+
+
+    message.style.padding =
+    "20px";
+
+
+    message.style.textAlign =
+    "center";
+
+
+    message.style.background =
+    "#fff3f0";
+
+
+    message.style.color =
+    "#d84315";
+
+
+    message.innerHTML = `
+        Image could not be loaded.
+        Please check the filename in GitHub.
+    `;
+
+
+    image.parentNode.insertBefore(
+        message,
+        image
+    );
+
+}
+
+
+
+/* =====================================================
+   START WEBSITE
+===================================================== */
 
 loadArticle();
 
+
 </script>
 
+
 </body>
+
 </html>
