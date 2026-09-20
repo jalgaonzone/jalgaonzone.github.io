@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="mr">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jalgaon Zone Article</title>
+<title>Jalgaon Zone</title>
 
 <style>
-
-/* =========================
-   BASIC
-========================= */
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -23,26 +15,20 @@
 
 body{
     font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:#f5f6f8;
+    background:#f5f5f5;
     color:#222;
     line-height:1.8;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
 header{
     background:#111;
     color:white;
+    padding:18px 20px;
 }
 
-.navbar{
-    max-width:1100px;
+.nav{
+    max-width:1000px;
     margin:auto;
-    padding:18px 20px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -60,772 +46,284 @@ header{
 .home{
     color:white;
     text-decoration:none;
-    font-weight:bold;
 }
 
-.home:hover{
-    color:#f4511e;
-}
-
-
-/* =========================
-   ARTICLE
-========================= */
-
-.article-container{
+.container{
     max-width:900px;
-    margin:40px auto;
-    padding:0 20px;
+    margin:35px auto;
+    padding:0 15px;
 }
 
 .article{
     background:white;
     border-radius:12px;
     overflow:hidden;
-
-    box-shadow:
-    0 4px 20px rgba(0,0,0,.08);
+    box-shadow:0 4px 20px rgba(0,0,0,.1);
 }
 
-.article-image{
+.article img{
     width:100%;
-    max-height:480px;
+    max-height:500px;
     object-fit:cover;
     display:block;
 }
 
-.article-content{
-    padding:35px;
+.content{
+    padding:30px;
 }
 
-
-/* CATEGORY */
-
 .category{
-    display:inline-block;
-
-    background:#fff0ea;
     color:#f4511e;
-
-    padding:5px 12px;
-
-    border-radius:20px;
-
-    font-size:13px;
     font-weight:bold;
 }
 
-
-/* TITLE */
-
-.article-title{
+h1{
     font-size:38px;
-    line-height:1.35;
-
-    margin:15px 0;
-}
-
-
-/* DATE */
-
-.meta{
-    color:#777;
-    font-size:14px;
-
-    margin-bottom:25px;
-}
-
-
-/* CONTENT */
-
-.article-content h2{
-    font-size:27px;
-
-    margin-top:28px;
-    margin-bottom:10px;
-}
-
-.article-content h3{
-    font-size:22px;
-
-    margin-top:22px;
-    margin-bottom:8px;
-}
-
-.article-content p{
+    line-height:1.4;
     margin:12px 0;
 }
 
-.article-content ul,
-.article-content ol{
-    padding-left:25px;
-
-    margin:15px 0;
+.date{
+    color:#777;
+    margin-bottom:25px;
 }
 
-.article-content li{
-    margin:7px 0;
+h2{
+    margin-top:25px;
+    margin-bottom:8px;
 }
 
-
-/* BACK BUTTON */
+p{
+    margin:12px 0;
+}
 
 .back{
     display:inline-block;
-
     margin-top:30px;
-
     color:#f4511e;
-
     font-weight:bold;
-
     text-decoration:none;
 }
 
-.back:hover{
-    text-decoration:underline;
-}
-
-
-/* ERROR */
-
 .error{
     background:white;
-
     padding:40px;
-
-    border-radius:12px;
-
     text-align:center;
-
-    box-shadow:
-    0 4px 20px rgba(0,0,0,.08);
+    border-radius:12px;
 }
-
-
-/* FOOTER */
 
 footer{
     margin-top:50px;
-
     background:#111;
-
     color:#ccc;
-
     text-align:center;
-
-    padding:30px 20px;
+    padding:25px;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:700px){
-
-    .navbar{
-        padding:15px;
+@media(max-width:600px){
+    h1{
+        font-size:27px;
     }
 
-    .article-title{
-        font-size:28px;
+    .content{
+        padding:20px;
     }
-
-    .article-content{
-        padding:22px;
-    }
-
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
+    <div class="nav">
+        <div class="logo">
+            Jalgaon <span>Zone</span>
+        </div>
 
-<div class="navbar">
-
-<div class="logo">
-Jalgaon <span>Zone</span>
-</div>
-
-<a
-href="index.html"
-class="home"
->
-← Home
-</a>
-
-</div>
-
+        <a href="index.html" class="home">
+            ← Home
+        </a>
+    </div>
 </header>
 
+<div class="container">
 
-
-<!-- =========================
-     ARTICLE AREA
-========================= -->
-
-<main class="article-container">
-
-<div id="articleArea">
-
-<div class="error">
-
-<h2>
-Loading article...
-</h2>
-
-<p>
-कृपया थोडा वेळ प्रतीक्षा करा.
-</p>
+<div id="article"></div>
 
 </div>
-
-</div>
-
-</main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
-
-<p>
-© 2026 Jalgaon Zone
-</p>
-
+    © 2026 Jalgaon Zone
 </footer>
-
-
 
 <script>
 
-/*
-================================================
-JALGAON ZONE ARTICLE SYSTEM
-================================================
-
-IMPORTANT:
-
-अब किसी articles folder की जरूरत नहीं है।
-
-Agriculture:
-article.html?id=agriculture
-
-Oxygen Park:
-article.html?id=oxygen
-
-================================================
-*/
-
-
 const articles = {
 
-
-/* =========================================
-   AGRICULTURE ARTICLE
-========================================= */
-
-agriculture: {
-
-title:
-"शेतकऱ्यांसाठी खुशखबर! सूक्ष्म सिंचनासाठी मिळणार ९०% पर्यंत अनुदान; अर्ज कुठे आणि कसा करायचा?",
-
-category:
-"Agriculture",
-
-date:
-"16 September 2026",
-
-image:
-"images/jalgaon.jpg",
-
-content: `
-
-<p>
-सूक्ष्म सिंचनाचा वापर करणाऱ्या पात्र शेतकऱ्यांसाठी
-अनुदानाची योजना उपलब्ध आहे.
-</p>
-
-<p>
-या योजनेअंतर्गत पात्रतेनुसार शेतकऱ्यांना ठिबक आणि
-तुषार सिंचनासाठी आर्थिक सहाय्य मिळू शकते.
-</p>
-
-
-<h2>
-किती अनुदान मिळू शकते?
-</h2>
-
-<p>
-अनुदानाची रक्कम शेतकऱ्याची जमीनधारणा, प्रवर्ग आणि
-लागू असलेल्या योजनांनुसार बदलू शकते.
-</p>
-
-<p>
-काही पात्र प्रकरणांमध्ये विविध योजनांच्या अतिरिक्त
-लाभामुळे एकूण सहाय्य ९०% पर्यंत जाऊ शकते.
-</p>
-
-
-<h2>
-अर्ज कुठे करायचा?
-</h2>
-
-<p>
-अर्ज करण्यासाठी महाराष्ट्राच्या MahaDBT Farmer Portal
-चा वापर केला जातो.
-</p>
-
-<p>
-अर्ज करण्यापूर्वी शेतकऱ्यांनी आपली Farmer ID,
-आधार आणि बँक खात्याशी संबंधित माहिती तयार ठेवावी.
-</p>
-
-
-<h2>
-आवश्यक कागदपत्रे
-</h2>
-
-<ul>
-
-<li>
-7/12 उतारा
-</li>
-
-<li>
-8-A उतारा
-</li>
-
-<li>
-आधार कार्ड
-</li>
-
-<li>
-बँक पासबुक
-</li>
-
-<li>
-Farmer ID
-</li>
-
-<li>
-आधार प्रमाणीकरण
-</li>
-
-<li>
-सिंचन सुविधेशी संबंधित माहिती
-</li>
-
-</ul>
-
-
-<p>
-अंतिम कागदपत्रे आणि पात्रता संबंधित विभागाच्या
-सध्याच्या नियमांनुसार तपासावी.
-</p>
-
-
-<h2>
-अर्ज प्रक्रिया
-</h2>
-
-<ol>
-
-<li>
-MahaDBT Farmer Portal वर जा.
-</li>
-
-<li>
-Farmer ID ने लॉगिन करा.
-</li>
-
-<li>
-संबंधित सूक्ष्म सिंचन योजना निवडा.
-</li>
-
-<li>
-आवश्यक माहिती भरा.
-</li>
-
-<li>
-आवश्यक कागदपत्रे आणि माहिती जमा करा.
-</li>
-
-<li>
-अर्ज सबमिट करा.
-</li>
-
-<li>
-पुढील प्रक्रियेची माहिती SMS किंवा पोर्टलवर
-मिळू शकते.
-</li>
-
-</ol>
-
-
-<h2>
-महत्त्वाची सूचना
-</h2>
-
-<p>
-अनुदानाची टक्केवारी, पात्रता, कागदपत्रे आणि अंतिम
-नियम वेळोवेळी बदलू शकतात.
-</p>
-
-<p>
-अर्ज करण्यापूर्वी महाराष्ट्र कृषी विभाग किंवा
-MahaDBT Farmer Portal वर उपलब्ध अधिकृत माहिती तपासा.
-</p>
-
-
-<h2>
-Jalgaon Zone
-</h2>
-
-<p>
-Jalgaon Zone वर आम्ही जळगाव आणि महाराष्ट्राशी
-संबंधित स्थानिक बातम्या, शेती, इतिहास, पर्यटन
-आणि उपयोगी माहिती प्रकाशित करतो.
-</p>
-
-`
-
-},
-
-
-
-/* =========================================
-   OXYGEN PARK ARTICLE
-========================================= */
-
-oxygen: {
-
-title:
-"पाळधीत ऑक्सिजन पार्कचे भूमीपूजन",
-
-category:
-"Jalgaon News",
-
-date:
-"20 September 2026",
-
-image:
-"images/oxygen-park-news.png",
-
-content: `
-
-<p>
-जळगाव जिल्ह्यातील पाळधी खुर्द येथे ऑक्सिजन पार्क
-निर्मितीच्या उपक्रमाची सुरुवात करण्यात आली.
-</p>
-
-
-<h2>
-ऑक्सिजन पार्कचा उपक्रम
-</h2>
-
-<p>
-GPS मित्र परिवाराच्या माध्यमातून पर्यावरण संवर्धन
-आणि हरित परिसर निर्माण करण्याच्या उद्देशाने हा
-उपक्रम राबविण्यात येत आहे.
-</p>
-
-<p>
-या उपक्रमामुळे परिसरामध्ये अधिक झाडे लावण्यास
-आणि पर्यावरणाबाबत जनजागृती करण्यास मदत होऊ शकते.
-</p>
-
-
-<h2>
-पर्यावरण संवर्धनाचे महत्त्व
-</h2>
-
-<p>
-आजच्या काळात वाढते शहरीकरण आणि प्रदूषण लक्षात
-घेता वृक्षारोपण आणि हरित क्षेत्र वाढवणे महत्त्वाचे आहे.
-</p>
-
-<p>
-ऑक्सिजन पार्कसारख्या उपक्रमांमुळे नागरिकांमध्ये
-पर्यावरण संवर्धनाबाबत जागरूकता निर्माण करण्यास
-मदत होऊ शकते.
-</p>
-
-
-<h2>
-Jalgaon Zone
-</h2>
-
-<p>
-जळगाव जिल्ह्यातील स्थानिक बातम्या, इतिहास,
-पर्यटन, शेती आणि महत्त्वाची माहिती मिळवण्यासाठी
-Jalgaon Zone ला भेट देत रहा.
-</p>
-
-`
-
-}
+    agriculture: {
+        title: "शेतकऱ्यांसाठी खुशखबर! सूक्ष्म सिंचनासाठी मिळणार ९०% पर्यंत अनुदान",
+        category: "Agriculture",
+        date: "16 September 2026",
+        image: "images/jalgaon.jpg",
+
+        content: `
+            <p>
+            सूक्ष्म सिंचनाचा वापर करणाऱ्या पात्र शेतकऱ्यांसाठी
+            अनुदानाची योजना उपलब्ध आहे.
+            </p>
+
+            <h2>किती अनुदान मिळू शकते?</h2>
+
+            <p>
+            पात्रता, प्रवर्ग आणि लागू योजनांनुसार अनुदानाचे
+            प्रमाण बदलू शकते. काही प्रकरणांमध्ये अतिरिक्त
+            लाभामुळे मोठ्या प्रमाणात आर्थिक सहाय्य मिळू शकते.
+            </p>
+
+            <h2>अर्ज कुठे करायचा?</h2>
+
+            <p>
+            अर्जासाठी महाराष्ट्राच्या MahaDBT Farmer Portal
+            चा वापर केला जातो.
+            </p>
+
+            <h2>आवश्यक कागदपत्रे</h2>
+
+            <ul>
+                <li>आधार कार्ड</li>
+                <li>7/12 उतारा</li>
+                <li>8-A उतारा</li>
+                <li>बँक पासबुक</li>
+                <li>Farmer ID</li>
+            </ul>
+
+            <h2>महत्त्वाची सूचना</h2>
+
+            <p>
+            अनुदानाची टक्केवारी आणि पात्रतेचे नियम बदलू शकतात.
+            अर्ज करण्यापूर्वी अधिकृत कृषी विभागाची माहिती तपासा.
+            </p>
+        `
+    },
+
+    oxygen: {
+        title: "पाळधीत ऑक्सिजन पार्कचे भूमीपूजन",
+        category: "Jalgaon News",
+        date: "20 September 2026",
+        image: "images/oxygen-park-news.png",
+
+        content: `
+            <p>
+            जळगाव जिल्ह्यातील पाळधी खुर्द येथे ऑक्सिजन पार्क
+            निर्मितीच्या उपक्रमाची सुरुवात करण्यात आली.
+            </p>
+
+            <h2>ऑक्सिजन पार्कचा उपक्रम</h2>
+
+            <p>
+            GPS मित्र परिवाराच्या माध्यमातून पर्यावरण संवर्धन
+            आणि हरित परिसर निर्माण करण्याच्या उद्देशाने हा
+            उपक्रम राबविण्यात येत आहे.
+            </p>
+
+            <h2>पर्यावरण संवर्धनाचे महत्त्व</h2>
+
+            <p>
+            वृक्षारोपण आणि हरित क्षेत्र वाढवणे पर्यावरणासाठी
+            महत्त्वाचे आहे. अशा उपक्रमांमुळे नागरिकांमध्ये
+            पर्यावरणाबाबत जागरूकता निर्माण होण्यास मदत होऊ शकते.
+            </p>
+        `
+    }
 
 };
 
 
-
-/* =========================================
-   LOAD ARTICLE
-========================================= */
-
 function loadArticle(){
 
-    const params =
-    new URLSearchParams(
+    const params = new URLSearchParams(
         window.location.search
     );
 
+    const id = params.get("id");
 
-    const id =
-    params.get("id");
+    const box = document.getElementById("article");
 
-
-    const area =
-    document.getElementById(
-        "articleArea"
-    );
-
-
-    /*
-    No ID
-    */
+    console.log("Article ID:", id);
 
     if(!id){
 
-        showError(
-            "Article Not Found",
-            "कृपया Home page वरून article उघडा."
-        );
+        box.innerHTML = `
+            <div class="error">
+                <h2>Article Not Found</h2>
+                <p>URL मध्ये article ID नाही.</p>
+                <a href="index.html" class="back">
+                    ← Home
+                </a>
+            </div>
+        `;
 
         return;
     }
 
+    const data = articles[id];
 
-    /*
-    Find article
-    */
+    if(!data){
 
-    const article =
-    articles[id];
-
-
-    /*
-    Article doesn't exist
-    */
-
-    if(!article){
-
-        showError(
-            "Article Not Found",
-            "हा article उपलब्ध नाही."
-        );
+        box.innerHTML = `
+            <div class="error">
+                <h2>Article Not Found</h2>
+                <p>हा article उपलब्ध नाही.</p>
+                <a href="index.html" class="back">
+                    ← Home
+                </a>
+            </div>
+        `;
 
         return;
     }
 
+    document.title = data.title + " | Jalgaon Zone";
 
-    /*
-    Change browser title
-    */
+    box.innerHTML = `
 
-    document.title =
-    article.title +
-    " | Jalgaon Zone";
+        <article class="article">
 
+            <img
+                src="${data.image}"
+                alt="${data.title}"
+                onerror="this.style.display='none';"
+            >
 
-    /*
-    Display article
-    */
+            <div class="content">
 
-    area.innerHTML = `
+                <div class="category">
+                    ${data.category}
+                </div>
 
-    <article class="article">
+                <h1>
+                    ${data.title}
+                </h1>
 
+                <div class="date">
+                    Published: ${data.date}
+                </div>
 
-        <img
+                ${data.content}
 
-        src="${article.image}"
-
-        class="article-image"
-
-        alt="${escapeHTML(
-            article.title
-        )}"
-
-        onerror="
-        this.style.display='none'
-        "
-
-        >
-
-
-        <div class="article-content">
-
-
-            <span class="category">
-
-            ${escapeHTML(
-                article.category
-            )}
-
-            </span>
-
-
-            <h1 class="article-title">
-
-            ${escapeHTML(
-                article.title
-            )}
-
-            </h1>
-
-
-            <div class="meta">
-
-            Published:
-            ${escapeHTML(
-                article.date
-            )}
+                <a href="index.html" class="back">
+                    ← Back to Jalgaon Zone
+                </a>
 
             </div>
 
-
-            ${article.content}
-
-
-            <a
-
-            href="index.html"
-
-            class="back"
-
-            >
-
-            ← Back to Jalgaon Zone
-
-            </a>
-
-
-        </div>
-
-
-    </article>
-
+        </article>
     `;
-
 }
-
-
-
-/* =========================================
-   ERROR MESSAGE
-========================================= */
-
-function showError(
-    title,
-    message
-){
-
-    document.getElementById(
-        "articleArea"
-    ).innerHTML = `
-
-    <div class="error">
-
-        <h2>
-        ${escapeHTML(title)}
-        </h2>
-
-        <p>
-        ${escapeHTML(message)}
-        </p>
-
-        <a
-
-        href="index.html"
-
-        class="back"
-
-        >
-
-        ← Go Home
-
-        </a>
-
-    </div>
-
-    `;
-
-}
-
-
-
-/* =========================================
-   SECURITY
-========================================= */
-
-function escapeHTML(text){
-
-    return String(text)
-
-    .replace(
-        /&/g,
-        "&amp;"
-    )
-
-    .replace(
-        /</g,
-        "&lt;"
-    )
-
-    .replace(
-        />/g,
-        "&gt;"
-    )
-
-    .replace(
-        /"/g,
-        "&quot;"
-    )
-
-    .replace(
-        /'/g,
-        "&#039;"
-    );
-
-}
-
-
-
-/* =========================================
-   START
-========================================= */
 
 loadArticle();
 
 </script>
 
-
 </body>
-
 </html>
