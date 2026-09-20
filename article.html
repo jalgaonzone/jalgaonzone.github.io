@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 
 <head>
 
@@ -17,167 +17,171 @@ content="width=device-width, initial-scale=1.0"
 <style>
 
 *{
-    box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f4f5f7;
-    color:#222;
-    line-height:1.7;
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  background:#f5f6f8;
+  color:#222;
+  line-height:1.8;
 }
 
 header{
-    background:#111;
-    color:white;
-    padding:18px 20px;
-    position:sticky;
-    top:0;
-    z-index:100;
+  background:#111;
+  color:white;
 }
 
-.header-inner{
-    max-width:1000px;
-    margin:auto;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.navbar{
+  max-width:1100px;
+  margin:auto;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-    font-size:25px;
-    font-weight:bold;
+  font-size:25px;
+  font-weight:bold;
 }
 
 .logo span{
-    color:#f4511e;
+  color:#f4511e;
 }
 
 .home{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+  color:white;
+  text-decoration:none;
 }
 
 .home:hover{
-    color:#f4511e;
+  color:#f4511e;
 }
 
-.container{
-    max-width:950px;
-    margin:40px auto;
-    padding:0 18px;
+.article-container{
+  max-width:900px;
+  margin:40px auto;
+  padding:0 20px;
 }
 
 .article{
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 25px rgba(0,0,0,.08);
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 
-.back{
-    display:inline-block;
-    margin-bottom:20px;
-    color:#f4511e;
-    text-decoration:none;
-    font-weight:bold;
+.article-image{
+  width:100%;
+  max-height:480px;
+  object-fit:cover;
+  display:block;
+}
+
+.article-content{
+  padding:35px;
 }
 
 .category{
-    display:inline-block;
-    background:#f4511e;
-    color:white;
-    padding:6px 13px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:bold;
+  display:inline-block;
+  background:#fff0ea;
+  color:#f4511e;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
 }
 
-h1{
-    font-size:42px;
-    line-height:1.25;
-    margin:18px 0 10px;
+.article-title{
+  font-size:38px;
+  line-height:1.3;
+  margin:15px 0;
 }
 
-.date{
-    color:#777;
-    margin-bottom:25px;
+.meta{
+  color:#777;
+  margin-bottom:25px;
+  font-size:14px;
 }
 
-.cover{
-    width:100%;
-    max-height:520px;
-    object-fit:cover;
-    border-radius:12px;
-    margin-bottom:30px;
+.article-content h1{
+  font-size:32px;
+  margin:25px 0 10px;
 }
 
-.content{
-    font-size:18px;
+.article-content h2{
+  font-size:26px;
+  margin:25px 0 10px;
 }
 
-.content h2{
-    margin-top:30px;
+.article-content h3{
+  font-size:21px;
+  margin:20px 0 8px;
 }
 
-.content h3{
-    margin-top:25px;
+.article-content p{
+  margin:12px 0;
 }
 
-.content img{
-    max-width:100%;
-    height:auto;
-    border-radius:10px;
+.article-content ul,
+.article-content ol{
+  padding-left:25px;
+  margin:15px 0;
 }
 
-.content a{
-    color:#f4511e;
+.article-content li{
+  margin:7px 0;
 }
 
-.loading,
+.article-content img{
+  max-width:100%;
+  border-radius:8px;
+}
+
+.back{
+  display:inline-block;
+  margin-top:30px;
+  color:#f4511e;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.back:hover{
+  text-decoration:underline;
+}
+
 .error{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.error{
-    color:#b00000;
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 
 footer{
-    text-align:center;
-    background:#111;
-    color:#aaa;
-    padding:30px;
-    margin-top:50px;
+  margin-top:50px;
+  background:#111;
+  color:#ccc;
+  text-align:center;
+  padding:30px 20px;
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
 
-    .header-inner{
-        gap:10px;
-    }
+  .navbar{
+    padding:15px;
+  }
 
-    .logo{
-        font-size:21px;
-    }
+  .article-title{
+    font-size:28px;
+  }
 
-    h1{
-        font-size:29px;
-    }
-
-    .article{
-        padding:20px;
-    }
-
-    .content{
-        font-size:16px;
-    }
+  .article-content{
+    padding:22px;
+  }
 
 }
 
@@ -190,14 +194,14 @@ footer{
 
 <header>
 
-<div class="header-inner">
+<div class="navbar">
 
 <div class="logo">
 Jalgaon <span>Zone</span>
 </div>
 
 <a href="index.html" class="home">
-Home
+← Home
 </a>
 
 </div>
@@ -205,70 +209,17 @@ Home
 </header>
 
 
-<main class="container">
+<main class="article-container">
 
-<a href="index.html" class="back">
-← Back to Jalgaon Zone
-</a>
+<div id="articleArea">
 
+<div class="error">
 
-<div id="loading" class="loading">
+<h2>Loading article...</h2>
 
-Article loading...
+<p>कृपया थोडा वेळ प्रतीक्षा करा.</p>
 
 </div>
-
-
-<article
-id="article"
-class="article"
-style="display:none;"
->
-
-<div
-id="category"
-class="category"
->
-</div>
-
-
-<h1 id="title"></h1>
-
-
-<div
-id="date"
-class="date"
-></div>
-
-
-<img
-id="cover"
-class="cover"
-style="display:none;"
->
-
-
-<div
-id="content"
-class="content"
-></div>
-
-</article>
-
-
-<div
-id="error"
-class="error"
-style="display:none;"
->
-
-<h2>Article load nahi ho raha</h2>
-
-<p>
-Please article filename aur GitHub folder check karo.
-</p>
-
-<p id="errorText"></p>
 
 </div>
 
@@ -276,10 +227,6 @@ Please article filename aur GitHub folder check karo.
 
 
 <footer>
-
-<p>
-<strong>Jalgaon Zone</strong>
-</p>
 
 <p>
 © 2026 Jalgaon Zone
@@ -290,327 +237,327 @@ Please article filename aur GitHub folder check karo.
 
 <script>
 
-const params =
-new URLSearchParams(
-window.location.search
-);
+/*
+========================================
+ARTICLE SYSTEM
+========================================
 
-const fileParam =
-params.get("file");
+URL:
 
+article.html?id=agriculture
 
-function parseMarkdown(text){
+article.html?id=oxygen
 
-    text =
-    text.replace(/^\uFEFF/, "");
+*/
 
-    let data = {};
+const articles = {
 
-    let body = text;
+  agriculture: "agriculture.md",
 
+  oxygen: "oxygen-park.md"
 
-    if(text.trim().startsWith("---")){
-
-        const lines =
-        text.trim().split(/\r?\n/);
-
-        let endIndex = -1;
-
-
-        for(
-            let i = 1;
-            i < lines.length;
-            i++
-        ){
-
-            if(
-                lines[i].trim() === "---"
-            ){
-
-                endIndex = i;
-                break;
-
-            }
-
-        }
-
-
-        if(endIndex !== -1){
-
-            const frontMatter =
-            lines.slice(
-                1,
-                endIndex
-            );
-
-            body =
-            lines
-            .slice(endIndex + 1)
-            .join("\n")
-            .trim();
-
-
-            frontMatter.forEach(line => {
-
-                const index =
-                line.indexOf(":");
-
-                if(index === -1){
-                    return;
-                }
-
-                const key =
-                line
-                .slice(0,index)
-                .trim();
-
-
-                let value =
-                line
-                .slice(index + 1)
-                .trim();
-
-
-                value =
-                value.replace(
-                    /^["']|["']$/g,
-                    ""
-                );
-
-
-                data[key] = value;
-
-            });
-
-        }
-
-    }
-
-
-    return {
-        data:data,
-        body:body
-    };
-
-}
-
-
-function imageUrl(image){
-
-    if(!image){
-        return "";
-    }
-
-    if(
-        image.startsWith("http://") ||
-        image.startsWith("https://")
-    ){
-
-        return image;
-
-    }
-
-
-    if(image.startsWith("/")){
-
-        return image;
-
-    }
-
-
-    return image;
-
-}
+};
 
 
 async function loadArticle(){
 
-    if(!fileParam){
+  const params =
+  new URLSearchParams(window.location.search);
 
-        showError(
-            "Article filename URL मध्ये मिळाले नाही."
-        );
+  const id =
+  params.get("id");
 
-        return;
+
+  const area =
+  document.getElementById("articleArea");
+
+
+  if(!id){
+
+    showError(
+      "Article ID missing",
+      "कृपया योग्य article link वापरा."
+    );
+
+    return;
+  }
+
+
+  const file =
+  articles[id];
+
+
+  if(!file){
+
+    showError(
+      "Article Not Found",
+      "हा article उपलब्ध नाही."
+    );
+
+    return;
+  }
+
+
+  try{
+
+    const response =
+    await fetch(
+      "articles/" + file + "?v=" + Date.now()
+    );
+
+
+    if(!response.ok){
+
+      throw new Error(
+        "HTTP " + response.status
+      );
+
+    }
+
+
+    const text =
+    await response.text();
+
+
+    if(!text.trim()){
+
+      throw new Error(
+        "Article file is empty"
+      );
 
     }
 
 
-    try{
-
-        /*
-        IMPORTANT:
-        Article आता GitHub Pages च्या
-        local articles folder मधून load होईल.
-        */
-
-        const articleUrl =
-        "articles/" +
-        encodeURIComponent(fileParam);
+    const data =
+    parseMarkdown(text);
 
 
-        console.log(
-            "Loading:",
-            articleUrl
-        );
+    document.title =
+    data.title + " | Jalgaon Zone";
 
 
-        const response =
-        await fetch(
-            articleUrl,
-            {
-                cache:"no-cache"
-            }
-        );
+    let imageHTML = "";
 
+    if(data.image){
 
-        if(!response.ok){
-
-            throw new Error(
-                "HTTP " +
-                response.status +
-                " - Article file सापडली नाही."
-            );
-
-        }
-
-
-        const markdown =
-        await response.text();
-
-
-        if(!markdown.trim()){
-
-            throw new Error(
-                "Article file empty आहे."
-            );
-
-        }
-
-
-        const parsed =
-        parseMarkdown(markdown);
-
-
-        const data =
-        parsed.data;
-
-        const body =
-        parsed.body;
-
-
-        document.title =
-        (data.title || "Article") +
-        " | Jalgaon Zone";
-
-
-        document
-        .getElementById("title")
-        .textContent =
-        data.title ||
-        "Jalgaon Zone";
-
-
-        document
-        .getElementById("category")
-        .textContent =
-        data.category ||
-        "Jalgaon";
-
-
-        if(data.date){
-
-            document
-            .getElementById("date")
-            .textContent =
-            "Published: " +
-            data.date;
-
-        }else{
-
-            document
-            .getElementById("date")
-            .style.display =
-            "none";
-
-        }
-
-
-        if(data.image){
-
-            const cover =
-            document
-            .getElementById("cover");
-
-
-            cover.src =
-            imageUrl(data.image);
-
-
-            cover.style.display =
-            "block";
-
-
-            cover.onerror =
-            function(){
-
-                this.style.display =
-                "none";
-
-            };
-
-        }
-
-
-        document
-        .getElementById("content")
-        .innerHTML =
-        marked.parse(body);
-
-
-        document
-        .getElementById("loading")
-        .style.display =
-        "none";
-
-
-        document
-        .getElementById("article")
-        .style.display =
-        "block";
-
-
-    }catch(error){
-
-        console.error(error);
-
-        showError(
-            error.message
-        );
+      imageHTML = `
+        <img
+          src="${data.image}"
+          class="article-image"
+          alt="${escapeHTML(data.title)}"
+          onerror="this.style.display='none'"
+        >
+      `;
 
     }
+
+
+    area.innerHTML = `
+
+      <article class="article">
+
+        ${imageHTML}
+
+        <div class="article-content">
+
+          <span class="category">
+            ${escapeHTML(data.category)}
+          </span>
+
+          <h1 class="article-title">
+            ${escapeHTML(data.title)}
+          </h1>
+
+          <div class="meta">
+            Published: ${escapeHTML(data.date)}
+          </div>
+
+          <div class="article-body">
+            ${marked.parse(data.body)}
+          </div>
+
+          <a
+            href="index.html"
+            class="back"
+          >
+            ← Back to Jalgaon Zone
+          </a>
+
+        </div>
+
+      </article>
+
+    `;
+
+  }
+
+  catch(error){
+
+    console.error(error);
+
+    showError(
+      "Article Load Failed",
+      "Article file सापडत नाही. GitHub मध्ये articles folder आणि filename तपासा."
+    );
+
+  }
 
 }
 
 
-function showError(message){
+function parseMarkdown(text){
 
-    document
-    .getElementById("loading")
-    .style.display =
-    "none";
-
-
-    document
-    .getElementById("error")
-    .style.display =
-    "block";
+  let title = "";
+  let category = "";
+  let date = "";
+  let image = "";
+  let body = text;
 
 
-    document
-    .getElementById("errorText")
-    .textContent =
-    message;
+  /*
+  Front matter:
+
+  ---
+  title: "..."
+  category: "..."
+  date: "..."
+  image: "..."
+  ---
+  */
+
+  const match =
+  text.match(
+    /^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/m
+  );
+
+
+  if(match){
+
+    const frontMatter =
+    match[1];
+
+    body =
+    match[2];
+
+
+    const titleMatch =
+    frontMatter.match(
+      /^title:\s*["']?([\s\S]*?)["']?\s*$/m
+    );
+
+    const categoryMatch =
+    frontMatter.match(
+      /^category:\s*["']?([\s\S]*?)["']?\s*$/m
+    );
+
+    const dateMatch =
+    frontMatter.match(
+      /^date:\s*["']?([\s\S]*?)["']?\s*$/m
+    );
+
+    const imageMatch =
+    frontMatter.match(
+      /^image:\s*["']?([\s\S]*?)["']?\s*$/m
+    );
+
+
+    title =
+    titleMatch
+      ? titleMatch[1].trim()
+      : "";
+
+    category =
+    categoryMatch
+      ? categoryMatch[1].trim()
+      : "";
+
+    date =
+    dateMatch
+      ? dateMatch[1].trim()
+      : "";
+
+    image =
+    imageMatch
+      ? imageMatch[1].trim()
+      : "";
+
+  }
+
+
+  /*
+  Fallback:
+  If title is not in front matter,
+  use first # heading.
+  */
+
+  if(!title){
+
+    const heading =
+    body.match(/^#\s+(.+)$/m);
+
+    if(heading){
+      title =
+      heading[1].trim();
+    }
+
+  }
+
+
+  if(!category){
+    category = "Jalgaon Zone";
+  }
+
+
+  if(!date){
+    date = "Jalgaon Zone";
+  }
+
+
+  return {
+    title,
+    category,
+    date,
+    image,
+    body
+  };
+
+}
+
+
+function showError(title,message){
+
+  document.getElementById("articleArea").innerHTML = `
+
+    <div class="error">
+
+      <h2>${escapeHTML(title)}</h2>
+
+      <p>${escapeHTML(message)}</p>
+
+      <br>
+
+      <a
+        href="index.html"
+        class="back"
+      >
+        ← Go Home
+      </a>
+
+    </div>
+
+  `;
+
+}
+
+
+function escapeHTML(text){
+
+  return String(text)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 
 }
 
