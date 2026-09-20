@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Jalgaon Zone</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -48,6 +50,10 @@ header{
     text-decoration:none;
 }
 
+.home:hover{
+    color:#f4511e;
+}
+
 .container{
     max-width:900px;
     margin:35px auto;
@@ -75,6 +81,7 @@ header{
 .category{
     color:#f4511e;
     font-weight:bold;
+    font-size:15px;
 }
 
 h1{
@@ -97,12 +104,25 @@ p{
     margin:12px 0;
 }
 
+ul{
+    margin:15px 0;
+    padding-left:25px;
+}
+
+li{
+    margin:6px 0;
+}
+
 .back{
     display:inline-block;
     margin-top:30px;
     color:#f4511e;
     font-weight:bold;
     text-decoration:none;
+}
+
+.back:hover{
+    text-decoration:underline;
 }
 
 .error{
@@ -121,6 +141,7 @@ footer{
 }
 
 @media(max-width:600px){
+
     h1{
         font-size:27px;
     }
@@ -128,14 +149,19 @@ footer{
     .content{
         padding:20px;
     }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
     <div class="nav">
+
         <div class="logo">
             Jalgaon <span>Zone</span>
         </div>
@@ -143,147 +169,296 @@ footer{
         <a href="index.html" class="home">
             ← Home
         </a>
+
     </div>
+
 </header>
+
 
 <div class="container">
 
-<div id="article"></div>
+    <div id="article"></div>
 
 </div>
 
+
 <footer>
+
     © 2026 Jalgaon Zone
+
 </footer>
+
 
 <script>
 
+
+/* =========================================
+   ARTICLES
+========================================= */
+
 const articles = {
 
+
+    /* =====================================
+       AGRICULTURE
+    ===================================== */
+
     agriculture: {
-        title: "शेतकऱ्यांसाठी खुशखबर! सूक्ष्म सिंचनासाठी मिळणार ९०% पर्यंत अनुदान",
-        category: "Agriculture",
-        date: "16 September 2026",
-        image: "images/jalgaon.jpg",
+
+        title:
+        "शेतकऱ्यांसाठी खुशखबर! सूक्ष्म सिंचनासाठी मिळणार ९०% पर्यंत अनुदान",
+
+        category:
+        "Agriculture",
+
+        date:
+        "16 September 2026",
+
+        /* ROOT FOLDER IMAGE */
+        image:
+        "agriculture.png",
 
         content: `
-            <p>
-            सूक्ष्म सिंचनाचा वापर करणाऱ्या पात्र शेतकऱ्यांसाठी
-            अनुदानाची योजना उपलब्ध आहे.
-            </p>
-
-            <h2>किती अनुदान मिळू शकते?</h2>
 
             <p>
-            पात्रता, प्रवर्ग आणि लागू योजनांनुसार अनुदानाचे
-            प्रमाण बदलू शकते. काही प्रकरणांमध्ये अतिरिक्त
-            लाभामुळे मोठ्या प्रमाणात आर्थिक सहाय्य मिळू शकते.
+            सूक्ष्म सिंचनाचा वापर करणाऱ्या पात्र
+            शेतकऱ्यांसाठी अनुदानाची योजना उपलब्ध आहे.
             </p>
 
-            <h2>अर्ज कुठे करायचा?</h2>
+
+            <h2>
+            किती अनुदान मिळू शकते?
+            </h2>
 
             <p>
-            अर्जासाठी महाराष्ट्राच्या MahaDBT Farmer Portal
-            चा वापर केला जातो.
+            पात्रता, प्रवर्ग आणि लागू योजनांनुसार
+            अनुदानाचे प्रमाण बदलू शकते. काही
+            प्रकरणांमध्ये अतिरिक्त लाभामुळे मोठ्या
+            प्रमाणात आर्थिक सहाय्य मिळू शकते.
             </p>
 
-            <h2>आवश्यक कागदपत्रे</h2>
+
+            <h2>
+            अर्ज कुठे करायचा?
+            </h2>
+
+            <p>
+            अर्जासाठी महाराष्ट्राच्या MahaDBT Farmer
+            Portal चा वापर केला जातो.
+            </p>
+
+
+            <h2>
+            आवश्यक कागदपत्रे
+            </h2>
 
             <ul>
-                <li>आधार कार्ड</li>
-                <li>7/12 उतारा</li>
-                <li>8-A उतारा</li>
-                <li>बँक पासबुक</li>
-                <li>Farmer ID</li>
+
+                <li>
+                आधार कार्ड
+                </li>
+
+                <li>
+                7/12 उतारा
+                </li>
+
+                <li>
+                8-A उतारा
+                </li>
+
+                <li>
+                बँक पासबुक
+                </li>
+
+                <li>
+                Farmer ID
+                </li>
+
             </ul>
 
-            <h2>महत्त्वाची सूचना</h2>
+
+            <h2>
+            महत्त्वाची सूचना
+            </h2>
 
             <p>
-            अनुदानाची टक्केवारी आणि पात्रतेचे नियम बदलू शकतात.
-            अर्ज करण्यापूर्वी अधिकृत कृषी विभागाची माहिती तपासा.
+            अनुदानाची टक्केवारी आणि पात्रतेचे नियम
+            बदलू शकतात. अर्ज करण्यापूर्वी अधिकृत
+            कृषी विभागाची माहिती तपासा.
             </p>
+
         `
     },
 
+
+    /* =====================================
+       OXYGEN PARK
+    ===================================== */
+
     oxygen: {
-        title: "पाळधीत ऑक्सिजन पार्कचे भूमीपूजन",
-        category: "Jalgaon News",
-        date: "20 September 2026",
-        image: "images/oxygen-park-news.png",
+
+        title:
+        "पाळधीत ऑक्सिजन पार्कचे भूमीपूजन",
+
+        category:
+        "Jalgaon News",
+
+        date:
+        "20 September 2026",
+
+        /* ROOT FOLDER IMAGE */
+        image:
+        "oxygen-park-news.png",
 
         content: `
+
             <p>
-            जळगाव जिल्ह्यातील पाळधी खुर्द येथे ऑक्सिजन पार्क
-            निर्मितीच्या उपक्रमाची सुरुवात करण्यात आली.
+            जळगाव जिल्ह्यातील पाळधी खुर्द येथे
+            ऑक्सिजन पार्क निर्मितीच्या उपक्रमाची
+            सुरुवात करण्यात आली.
             </p>
 
-            <h2>ऑक्सिजन पार्कचा उपक्रम</h2>
+
+            <h2>
+            ऑक्सिजन पार्कचा उपक्रम
+            </h2>
 
             <p>
-            GPS मित्र परिवाराच्या माध्यमातून पर्यावरण संवर्धन
-            आणि हरित परिसर निर्माण करण्याच्या उद्देशाने हा
+            GPS मित्र परिवाराच्या माध्यमातून
+            पर्यावरण संवर्धन आणि हरित परिसर
+            निर्माण करण्याच्या उद्देशाने हा
             उपक्रम राबविण्यात येत आहे.
             </p>
 
-            <h2>पर्यावरण संवर्धनाचे महत्त्व</h2>
+
+            <h2>
+            पर्यावरण संवर्धनाचे महत्त्व
+            </h2>
 
             <p>
-            वृक्षारोपण आणि हरित क्षेत्र वाढवणे पर्यावरणासाठी
-            महत्त्वाचे आहे. अशा उपक्रमांमुळे नागरिकांमध्ये
-            पर्यावरणाबाबत जागरूकता निर्माण होण्यास मदत होऊ शकते.
+            वृक्षारोपण आणि हरित क्षेत्र वाढवणे
+            पर्यावरणासाठी महत्त्वाचे आहे. अशा
+            उपक्रमांमुळे नागरिकांमध्ये पर्यावरणाबाबत
+            जागरूकता निर्माण होण्यास मदत होऊ शकते.
             </p>
+
+
+            <h2>
+            Jalgaon Zone
+            </h2>
+
+            <p>
+            जळगाव जिल्ह्यातील स्थानिक बातम्या,
+            शेती, इतिहास, पर्यटन आणि महत्त्वाची
+            माहिती मिळवण्यासाठी Jalgaon Zone ला
+            भेट देत रहा.
+            </p>
+
         `
     }
 
 };
 
 
+/* =========================================
+   LOAD ARTICLE
+========================================= */
+
 function loadArticle(){
 
-    const params = new URLSearchParams(
+    const params =
+    new URLSearchParams(
         window.location.search
     );
 
-    const id = params.get("id");
 
-    const box = document.getElementById("article");
+    const id =
+    params.get("id");
+
+
+    const box =
+    document.getElementById("article");
+
 
     console.log("Article ID:", id);
+
+
+    /* NO ID */
 
     if(!id){
 
         box.innerHTML = `
+
             <div class="error">
-                <h2>Article Not Found</h2>
-                <p>URL मध्ये article ID नाही.</p>
-                <a href="index.html" class="back">
-                    ← Home
+
+                <h2>
+                Article Not Found
+                </h2>
+
+                <p>
+                URL मध्ये article ID नाही.
+                </p>
+
+                <a
+                href="index.html"
+                class="back"
+                >
+                ← Home
                 </a>
+
             </div>
+
         `;
 
         return;
     }
 
-    const data = articles[id];
+
+    /* FIND ARTICLE */
+
+    const data =
+    articles[id];
+
+
+    /* ARTICLE NOT FOUND */
 
     if(!data){
 
         box.innerHTML = `
+
             <div class="error">
-                <h2>Article Not Found</h2>
-                <p>हा article उपलब्ध नाही.</p>
-                <a href="index.html" class="back">
-                    ← Home
+
+                <h2>
+                Article Not Found
+                </h2>
+
+                <p>
+                हा article उपलब्ध नाही.
+                </p>
+
+                <a
+                href="index.html"
+                class="back"
+                >
+                ← Home
                 </a>
+
             </div>
+
         `;
 
         return;
     }
 
-    document.title = data.title + " | Jalgaon Zone";
+
+    /* PAGE TITLE */
+
+    document.title =
+    data.title +
+    " | Jalgaon Zone";
+
+
+    /* DISPLAY ARTICLE */
 
     box.innerHTML = `
 
@@ -306,20 +481,29 @@ function loadArticle(){
                 </h1>
 
                 <div class="date">
-                    Published: ${data.date}
+                    Published:
+                    ${data.date}
                 </div>
 
                 ${data.content}
 
-                <a href="index.html" class="back">
+                <a
+                    href="index.html"
+                    class="back"
+                >
                     ← Back to Jalgaon Zone
                 </a>
 
             </div>
 
         </article>
+
     `;
+
 }
+
+
+/* START */
 
 loadArticle();
 
