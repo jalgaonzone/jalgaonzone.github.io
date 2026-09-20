@@ -5,267 +5,178 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-<title>Article | Jalgaon Zone</title>
+<title>Jalgaon Zone Article</title>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <style>
 
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-body {
-
-    margin: 0;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background: #f5f6f8;
-
-    color: #222;
-
-    line-height: 1.7;
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f5f7;
+    color:#222;
+    line-height:1.7;
 }
 
-
-/* HEADER */
-
-header {
-
-    background: #111;
-
-    color: white;
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
-    box-shadow:
-        0 3px 15px rgba(0,0,0,0.2);
+header{
+    background:#111;
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-.header-inner {
+.header-inner{
+    max-width:1000px;
+    margin:auto;
 
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 16px 20px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.logo {
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 25px;
-
-    font-weight: bold;
+.logo{
+    font-size:25px;
+    font-weight:bold;
 }
 
-.logo span {
-
-    color: #f4511e;
+.logo span{
+    color:#f4511e;
 }
 
-.home-link {
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: bold;
+.home{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.home-link:hover {
-
-    color: #f4511e;
+.home:hover{
+    color:#f4511e;
 }
 
-
-/* CONTAINER */
-
-.container {
-
-    max-width: 900px;
-
-    margin: auto;
-
-    padding: 45px 20px;
+.container{
+    max-width:950px;
+    margin:40px auto;
+    padding:0 18px;
 }
 
-
-/* ARTICLE */
-
-article {
-
-    background: white;
-
-    padding: 35px;
-
-    border-radius: 16px;
-
-    box-shadow:
-        0 4px 20px rgba(0,0,0,0.08);
+.article{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
 }
 
-.category {
-
-    display: inline-block;
-
-    background: #f4511e;
-
-    color: white;
-
-    padding: 5px 12px;
-
-    border-radius: 20px;
-
-    font-size: 13px;
+.back{
+    display:inline-block;
+    margin-bottom:20px;
+    color:#f4511e;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-h1 {
-
-    font-size: 40px;
-
-    line-height: 1.25;
-
-    margin: 15px 0 10px;
+.category{
+    display:inline-block;
+    background:#f4511e;
+    color:white;
+    padding:6px 13px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
 }
 
-.date {
-
-    color: #777;
-
-    margin-bottom: 20px;
-
-    font-size: 14px;
+h1{
+    font-size:42px;
+    line-height:1.25;
+    margin:18px 0 10px;
 }
 
-.cover {
-
-    width: 100%;
-
-    max-height: 520px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-
-    margin: 15px 0 25px;
+.date{
+    color:#777;
+    margin-bottom:25px;
 }
 
-.content {
-
-    font-size: 18px;
+.cover{
+    width:100%;
+    max-height:520px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:30px;
 }
 
-.content h2 {
-
-    margin-top: 35px;
-
-    font-size: 28px;
+.content{
+    font-size:18px;
 }
 
-.content h3 {
-
-    margin-top: 25px;
+.content h2{
+    margin-top:30px;
 }
 
-.content p {
-
-    margin-bottom: 18px;
+.content h3{
+    margin-top:25px;
 }
 
-.content img {
-
-    width: 100%;
-
-    max-width: 100%;
-
-    height: auto;
-
-    border-radius: 12px;
-
-    margin: 15px 0;
+.content img{
+    max-width:100%;
+    height:auto;
+    border-radius:10px;
 }
 
-.content a {
-
-    color: #f4511e;
-
-    font-weight: bold;
+.content a{
+    color:#f4511e;
 }
 
-.loading {
-
-    text-align: center;
-
-    padding: 60px;
-
-    background: white;
-
-    border-radius: 15px;
+.loading,
+.error{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
 }
 
-.error {
-
-    background: white;
-
-    padding: 35px;
-
-    border-radius: 15px;
-
-    text-align: center;
-
-    color: #b00020;
+.error{
+    color:#b00000;
 }
 
+footer{
+    text-align:center;
+    background:#111;
+    color:#aaa;
+    padding:30px;
+    margin-top:50px;
+}
 
-/* MOBILE */
+@media(max-width:600px){
 
-@media(max-width:600px) {
-
-    article {
-
-        padding: 22px;
-
+    .header-inner{
+        gap:10px;
     }
 
-    h1 {
-
-        font-size: 29px;
-
+    .logo{
+        font-size:21px;
     }
 
-    .content {
-
-        font-size: 16px;
-
+    h1{
+        font-size:29px;
     }
 
-    .header-inner {
+    .article{
+        padding:20px;
+    }
 
-        padding: 14px;
-
+    .content{
+        font-size:16px;
     }
 
 }
@@ -274,7 +185,6 @@ h1 {
 
 </head>
 
-
 <body>
 
 
@@ -282,19 +192,12 @@ h1 {
 
 <div class="header-inner">
 
-<a
-    href="index.html"
-    class="logo"
->
+<div class="logo">
 Jalgaon <span>Zone</span>
-</a>
+</div>
 
-
-<a
-    href="index.html"
-    class="home-link"
->
-← Home
+<a href="index.html" class="home">
+Home
 </a>
 
 </div>
@@ -302,161 +205,129 @@ Jalgaon <span>Zone</span>
 </header>
 
 
-
 <main class="container">
 
+<a href="index.html" class="back">
+← Back to Jalgaon Zone
+</a>
 
-<div
-    id="loading"
-    class="loading"
->
-Loading article...
+
+<div id="loading" class="loading">
+
+Article loading...
+
 </div>
-
 
 
 <article
-    id="article"
-    style="display:none;"
+id="article"
+class="article"
+style="display:none;"
 >
-
 
 <div
-    id="category"
-    class="category"
+id="category"
+class="category"
 >
-Jalgaon
 </div>
 
 
-<h1
-    id="title"
->
-</h1>
+<h1 id="title"></h1>
 
 
 <div
-    id="date"
-    class="date"
->
-</div>
+id="date"
+class="date"
+></div>
 
 
 <img
-    id="cover"
-    class="cover"
-    style="display:none;"
+id="cover"
+class="cover"
+style="display:none;"
 >
 
 
 <div
-    id="content"
-    class="content"
->
-</div>
-
+id="content"
+class="content"
+></div>
 
 </article>
 
 
-
 <div
-    id="error"
-    class="error"
-    style="display:none;"
+id="error"
+class="error"
+style="display:none;"
 >
 
-<h2>
-Article load nahi ho raha
-</h2>
+<h2>Article load nahi ho raha</h2>
 
 <p>
-Please article file check karo.
+Please article filename aur GitHub folder check karo.
 </p>
 
-<p id="errorMessage"></p>
+<p id="errorText"></p>
 
 </div>
-
 
 </main>
 
 
+<footer>
+
+<p>
+<strong>Jalgaon Zone</strong>
+</p>
+
+<p>
+© 2026 Jalgaon Zone
+</p>
+
+</footer>
+
 
 <script>
 
-
-/* =========================
-   SETTINGS
-========================= */
-
-const REPO =
-    "jalgaonzone/jalgaonzone.github.io";
-
-const BRANCH =
-    "main";
-
-
-/* =========================
-   URL PARAMETER
-========================= */
-
 const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
+new URLSearchParams(
+window.location.search
+);
 
 const fileParam =
-    params.get("file");
+params.get("file");
 
 
-/* =========================
-   PARSE MARKDOWN
-========================= */
+function parseMarkdown(text){
 
-function parseMarkdown(text) {
+    text =
+    text.replace(/^\uFEFF/, "");
 
     let data = {};
 
     let body = text;
 
 
-    text =
-        text.replace(
-            /^\uFEFF/,
-            ""
-        );
-
-
-    if (
-        text
-        .trim()
-        .startsWith("---")
-    ) {
+    if(text.trim().startsWith("---")){
 
         const lines =
-            text
-            .trim()
-            .split(/\r?\n/);
-
+        text.trim().split(/\r?\n/);
 
         let endIndex = -1;
 
 
-        for (
+        for(
             let i = 1;
             i < lines.length;
             i++
-        ) {
+        ){
 
-            if (
-                lines[i].trim()
-                === "---"
-            ) {
+            if(
+                lines[i].trim() === "---"
+            ){
 
                 endIndex = i;
-
                 break;
 
             }
@@ -464,59 +335,52 @@ function parseMarkdown(text) {
         }
 
 
-        if (endIndex !== -1) {
+        if(endIndex !== -1){
 
             const frontMatter =
-                lines.slice(
-                    1,
-                    endIndex
-                );
-
+            lines.slice(
+                1,
+                endIndex
+            );
 
             body =
-                lines
-                .slice(
-                    endIndex + 1
-                )
-                .join("\n")
+            lines
+            .slice(endIndex + 1)
+            .join("\n")
+            .trim();
+
+
+            frontMatter.forEach(line => {
+
+                const index =
+                line.indexOf(":");
+
+                if(index === -1){
+                    return;
+                }
+
+                const key =
+                line
+                .slice(0,index)
                 .trim();
 
 
-            frontMatter.forEach(
-                function(line) {
-
-                    const index =
-                        line.indexOf(":");
-
-
-                    if (index === -1)
-                        return;
+                let value =
+                line
+                .slice(index + 1)
+                .trim();
 
 
-                    const key =
-                        line
-                        .slice(0,index)
-                        .trim();
+                value =
+                value.replace(
+                    /^["']|["']$/g,
+                    ""
+                );
 
 
-                    let value =
-                        line
-                        .slice(index + 1)
-                        .trim();
+                data[key] = value;
 
-
-                    value =
-                        value.replace(
-                            /^["']|["']$/g,
-                            ""
-                        );
-
-
-                    data[key] =
-                        value;
-
-                }
-            );
+            });
 
         }
 
@@ -524,36 +388,30 @@ function parseMarkdown(text) {
 
 
     return {
-        data: data,
-        body: body
+        data:data,
+        body:body
     };
 
 }
 
 
-/* =========================
-   IMAGE PATH
-========================= */
+function imageUrl(image){
 
-function imageUrl(image) {
-
-    if (!image)
+    if(!image){
         return "";
+    }
 
-
-    if (
+    if(
         image.startsWith("http://") ||
         image.startsWith("https://")
-    ) {
+    ){
 
         return image;
 
     }
 
 
-    if (
-        image.startsWith("/")
-    ) {
+    if(image.startsWith("/")){
 
         return image;
 
@@ -565,17 +423,12 @@ function imageUrl(image) {
 }
 
 
-/* =========================
-   LOAD ARTICLE
-========================= */
+async function loadArticle(){
 
-async function loadArticle() {
-
-
-    if (!fileParam) {
+    if(!fileParam){
 
         showError(
-            "Article filename missing."
+            "Article filename URL मध्ये मिळाले नाही."
         );
 
         return;
@@ -583,179 +436,153 @@ async function loadArticle() {
     }
 
 
-    try {
+    try{
 
+        /*
+        IMPORTANT:
+        Article आता GitHub Pages च्या
+        local articles folder मधून load होईल.
+        */
 
-        const rawUrl =
-            "https://raw.githubusercontent.com/" +
-            REPO +
-            "/" +
-            BRANCH +
-            "/articles/" +
-            encodeURIComponent(
-                fileParam
-            );
+        const articleUrl =
+        "articles/" +
+        encodeURIComponent(fileParam);
 
 
         console.log(
-            "Article URL:",
-            rawUrl
+            "Loading:",
+            articleUrl
         );
 
 
         const response =
-            await fetch(
-                rawUrl,
-                {
-                    cache: "no-cache"
-                }
-            );
+        await fetch(
+            articleUrl,
+            {
+                cache:"no-cache"
+            }
+        );
 
 
-        if (!response.ok) {
+        if(!response.ok){
 
             throw new Error(
-                "GitHub returned " +
-                response.status
+                "HTTP " +
+                response.status +
+                " - Article file सापडली नाही."
             );
 
         }
 
 
         const markdown =
-            await response.text();
+        await response.text();
 
 
-        if (!markdown.trim()) {
+        if(!markdown.trim()){
 
             throw new Error(
-                "Article file is empty."
+                "Article file empty आहे."
             );
 
         }
 
 
         const parsed =
-            parseMarkdown(
-                markdown
-            );
+        parseMarkdown(markdown);
 
 
         const data =
-            parsed.data;
-
+        parsed.data;
 
         const body =
-            parsed.body;
+        parsed.body;
 
-
-        /* TITLE */
 
         document.title =
-            (
-                data.title ||
-                "Article"
-            ) +
-            " | Jalgaon Zone";
+        (data.title || "Article") +
+        " | Jalgaon Zone";
 
 
         document
         .getElementById("title")
         .textContent =
-            data.title ||
-            "Jalgaon Zone";
+        data.title ||
+        "Jalgaon Zone";
 
-
-        /* CATEGORY */
 
         document
         .getElementById("category")
         .textContent =
-            data.category ||
-            "Jalgaon";
+        data.category ||
+        "Jalgaon";
 
 
-        /* DATE */
-
-        if (data.date) {
+        if(data.date){
 
             document
             .getElementById("date")
             .textContent =
-                "Published: " +
-                data.date;
+            "Published: " +
+            data.date;
 
-        } else {
+        }else{
 
             document
             .getElementById("date")
             .style.display =
-                "none";
+            "none";
 
         }
 
 
-        /* COVER */
-
-        if (data.image) {
+        if(data.image){
 
             const cover =
-                document
-                .getElementById("cover");
+            document
+            .getElementById("cover");
 
 
             cover.src =
-                imageUrl(
-                    data.image
-                );
+            imageUrl(data.image);
 
 
             cover.style.display =
-                "block";
+            "block";
 
 
             cover.onerror =
-                function() {
+            function(){
 
-                    this.style.display =
-                        "none";
+                this.style.display =
+                "none";
 
-                };
+            };
 
         }
 
-
-        /* CONTENT */
 
         document
         .getElementById("content")
         .innerHTML =
-            marked.parse(body);
+        marked.parse(body);
 
-
-        /* SHOW */
 
         document
         .getElementById("loading")
         .style.display =
-            "none";
+        "none";
 
 
         document
         .getElementById("article")
         .style.display =
-            "block";
+        "block";
 
 
-    }
+    }catch(error){
 
-    catch(error) {
-
-        console.error(
-            "ARTICLE ERROR:",
-            error
-        );
-
+        console.error(error);
 
         showError(
             error.message
@@ -766,28 +593,24 @@ async function loadArticle() {
 }
 
 
-/* =========================
-   ERROR
-========================= */
-
-function showError(message) {
+function showError(message){
 
     document
     .getElementById("loading")
     .style.display =
-        "none";
+    "none";
 
 
     document
     .getElementById("error")
     .style.display =
-        "block";
+    "block";
 
 
     document
-    .getElementById("errorMessage")
+    .getElementById("errorText")
     .textContent =
-        message;
+    message;
 
 }
 
@@ -795,7 +618,6 @@ function showError(message) {
 loadArticle();
 
 </script>
-
 
 </body>
 
