@@ -9,26 +9,30 @@
 content="width=device-width, initial-scale=1.0">
 
 <title>
-Jalgaon Zone | जळगाव न्यूज, इतिहास, शेती आणि माहिती
+Jalgaon Zone | जळगाव न्यूज, शेती, इतिहास आणि पर्यटन
 </title>
 
 <meta name="description"
 content="Jalgaon Zone वर जळगाव जिल्ह्यातील बातम्या, शेती, इतिहास, पर्यटन, स्थानिक माहिती आणि उपयोगी लेख वाचा.">
 
 <meta name="keywords"
-content="Jalgaon News, Jalgaon, जळगाव बातम्या, जळगाव न्यूज, Maharashtra, Agriculture, Jalgaon History">
+content="Jalgaon News, Jalgaon, जळगाव बातम्या, जळगाव न्यूज, Agriculture, History, Tourism">
 
 
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -38,21 +42,21 @@ body{
     "Noto Sans Devanagari",
     sans-serif;
 
-    background:#f5f6f8;
+    background:#f6f7f9;
 
-    color:#222;
+    color:#161616;
 
     line-height:1.6;
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header{
 
-    background:#111;
+    background:#0d0d0d;
 
     color:white;
 
@@ -63,16 +67,16 @@ header{
     z-index:1000;
 
     box-shadow:
-    0 2px 10px rgba(0,0,0,.25);
+    0 4px 20px rgba(0,0,0,.25);
 }
 
 .navbar{
 
-    max-width:1200px;
+    max-width:1250px;
 
     margin:auto;
 
-    padding:15px 20px;
+    padding:14px 20px;
 
     display:flex;
 
@@ -80,74 +84,115 @@ header{
 
     justify-content:space-between;
 
-    gap:20px;
+    gap:25px;
 }
+
+
+/* LOGO */
 
 .logo{
 
-    font-size:25px;
+    font-size:27px;
 
-    font-weight:bold;
+    font-weight:800;
 
     white-space:nowrap;
+
+    letter-spacing:-.5px;
 }
 
 .logo span{
 
-    color:#f4511e;
+    color:#ff5722;
 }
+
+
+/* NAVIGATION */
 
 nav{
 
     display:flex;
 
-    gap:18px;
+    align-items:center;
 
-    flex-wrap:wrap;
+    gap:22px;
 
-    justify-content:flex-end;
+    overflow-x:auto;
+
+    scrollbar-width:none;
+}
+
+nav::-webkit-scrollbar{
+    display:none;
 }
 
 nav a{
 
-    color:white;
+    color:#eee;
 
     text-decoration:none;
 
     font-size:15px;
+
+    font-weight:500;
+
+    white-space:nowrap;
+
+    padding:8px 0;
+
+    position:relative;
 
     transition:.2s;
 }
 
 nav a:hover{
 
-    color:#f4511e;
+    color:#ff5722;
+}
+
+nav a:hover::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:2px;
+
+    background:#ff5722;
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
 
-    min-height:420px;
+    min-height:560px;
 
     display:flex;
 
     align-items:center;
 
-    justify-content:center;
+    position:relative;
 
-    text-align:center;
+    overflow:hidden;
 
-    padding:50px 20px;
+    color:white;
 
     background:
 
     linear-gradient(
-        rgba(0,0,0,.62),
-        rgba(0,0,0,.62)
+        90deg,
+        rgba(0,0,0,.82) 0%,
+        rgba(0,0,0,.62) 45%,
+        rgba(0,0,0,.25) 100%
     ),
 
     url("jalgaon.jpg");
@@ -155,108 +200,373 @@ nav a:hover{
     background-size:cover;
 
     background-position:center;
-
-    color:white;
 }
 
 .hero-content{
 
-    max-width:850px;
+    width:100%;
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:70px 25px;
+}
+
+.hero-small{
+
+    color:#ff5722;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+}
+
+.hero-small::before{
+
+    content:"";
+
+    display:inline-block;
+
+    width:38px;
+
+    height:3px;
+
+    background:#ff5722;
+
+    margin-right:12px;
+
+    vertical-align:middle;
 }
 
 .hero h1{
 
-    font-size:52px;
+    font-size:68px;
 
-    margin-bottom:15px;
+    line-height:1.05;
 
-    line-height:1.3;
+    margin-bottom:25px;
+
+    max-width:700px;
+
+    letter-spacing:-2px;
 }
 
 .hero h1 span{
 
-    color:#f4511e;
+    color:#ff5722;
 }
 
 .hero p{
 
-    font-size:19px;
+    max-width:680px;
 
-    margin-bottom:25px;
+    font-size:21px;
+
+    line-height:1.7;
+
+    color:#f2f2f2;
+
+    margin-bottom:30px;
 }
+
+
+/* HERO BUTTON */
 
 .btn{
 
-    display:inline-block;
+    display:inline-flex;
 
-    background:#f4511e;
+    align-items:center;
+
+    gap:15px;
+
+    background:#ff5722;
 
     color:white;
 
-    padding:12px 25px;
+    padding:15px 27px;
 
-    border-radius:7px;
+    border-radius:10px;
 
     text-decoration:none;
 
+    font-size:17px;
+
     font-weight:bold;
 
-    transition:.2s;
+    box-shadow:
+    0 8px 25px rgba(255,87,34,.35);
+
+    transition:.25s;
 }
 
 .btn:hover{
 
-    background:#d63d0b;
+    background:#e64a19;
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
 
-/* =========================
+/* =====================================================
+   HERO CATEGORY SHORTCUTS
+===================================================== */
+
+.hero-categories{
+
+    display:flex;
+
+    gap:28px;
+
+    margin-top:38px;
+
+    flex-wrap:wrap;
+}
+
+.hero-category{
+
+    text-decoration:none;
+
+    color:white;
+
+    text-align:center;
+
+    min-width:90px;
+}
+
+.hero-icon{
+
+    width:55px;
+
+    height:55px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    font-size:26px;
+
+    background:#ff5722;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.25);
+
+    margin-bottom:7px;
+}
+
+.hero-category:nth-child(2) .hero-icon{
+    background:#35b94b;
+}
+
+.hero-category:nth-child(3) .hero-icon{
+    background:#ffad00;
+}
+
+.hero-category:nth-child(4) .hero-icon{
+    background:#168ee8;
+}
+
+.hero-category:nth-child(5) .hero-icon{
+    background:#913eea;
+}
+
+.hero-category strong{
+
+    display:block;
+
+    font-size:16px;
+}
+
+.hero-category small{
+
+    color:#ddd;
+
+    font-size:12px;
+}
+
+
+/* =====================================================
    SEARCH
-========================= */
+===================================================== */
+
+.search-wrapper{
+
+    max-width:1100px;
+
+    margin:-35px auto 0;
+
+    padding:0 20px;
+
+    position:relative;
+
+    z-index:5;
+}
 
 .search-box{
 
-    max-width:800px;
+    background:white;
 
-    margin:30px auto;
+    border-radius:50px;
 
-    padding:0 20px;
+    padding:8px;
+
+    display:flex;
+
+    align-items:center;
+
+    box-shadow:
+    0 8px 35px rgba(0,0,0,.12);
 }
 
 .search-box input{
 
-    width:100%;
+    flex:1;
 
-    padding:15px 18px;
-
-    border:1px solid #ddd;
-
-    border-radius:30px;
-
-    font-size:16px;
+    border:none;
 
     outline:none;
 
+    padding:15px 20px;
+
+    font-size:17px;
+
+    background:transparent;
+
+    min-width:0;
+}
+
+.search-button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff5722;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   CATEGORY CARDS
+===================================================== */
+
+.categories{
+
+    max-width:1200px;
+
+    margin:55px auto 20px;
+
+    padding:0 20px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:18px;
+}
+
+.category-card{
+
+    text-decoration:none;
+
+    color:#111;
+
     background:white;
 
-    box-shadow:
-    0 2px 8px rgba(0,0,0,.05);
-}
+    border-radius:18px;
 
-.search-box input:focus{
+    padding:25px 15px;
 
-    border-color:#f4511e;
+    text-align:center;
 
     box-shadow:
-    0 0 0 3px rgba(244,81,30,.1);
+    0 5px 20px rgba(0,0,0,.06);
+
+    transition:.25s;
+}
+
+.category-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.12);
+}
+
+.category-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 14px;
+
+    font-size:28px;
+
+    background:#fff0eb;
+}
+
+.category-card:nth-child(2) .category-icon{
+    background:#e8f8e9;
+}
+
+.category-card:nth-child(3) .category-icon{
+    background:#fff7df;
+}
+
+.category-card:nth-child(4) .category-icon{
+    background:#e8f4ff;
+}
+
+.category-card:nth-child(5) .category-icon{
+    background:#f3e9ff;
+}
+
+.category-card h3{
+
+    font-size:19px;
+
+    margin-bottom:5px;
+}
+
+.category-card p{
+
+    color:#666;
+
+    font-size:14px;
 }
 
 
-/* =========================
+/* =====================================================
    SECTIONS
-========================= */
+===================================================== */
 
 section{
 
@@ -264,32 +574,51 @@ section{
 
     margin:auto;
 
-    padding:55px 20px;
+    padding:70px 20px;
 }
 
 .section-title{
 
     text-align:center;
 
-    margin-bottom:35px;
+    margin-bottom:40px;
 }
 
-.section-title h2{
+.section-label{
 
-    font-size:32px;
+    color:#ff5722;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
 
     margin-bottom:5px;
 }
 
+.section-title h2{
+
+    font-size:40px;
+
+    line-height:1.2;
+
+    margin-bottom:10px;
+}
+
 .section-title p{
 
-    color:#666;
+    color:#777;
+
+    font-size:17px;
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* =====================================================
+   NEWS CARDS
+===================================================== */
 
 .cards{
 
@@ -298,7 +627,7 @@ section{
     grid-template-columns:
     repeat(
         auto-fit,
-        minmax(280px,1fr)
+        minmax(290px,1fr)
     );
 
     gap:25px;
@@ -308,29 +637,29 @@ section{
 
     background:white;
 
-    border-radius:12px;
+    border-radius:18px;
 
     overflow:hidden;
 
     box-shadow:
-    0 4px 15px rgba(0,0,0,.08);
+    0 5px 22px rgba(0,0,0,.07);
 
     transition:.25s;
 }
 
 .card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-7px);
 
     box-shadow:
-    0 8px 22px rgba(0,0,0,.13);
+    0 14px 35px rgba(0,0,0,.13);
 }
 
 .card img{
 
     width:100%;
 
-    height:210px;
+    height:230px;
 
     object-fit:cover;
 
@@ -339,47 +668,51 @@ section{
 
 .card-content{
 
-    padding:20px;
+    padding:23px;
 }
 
 .category{
 
     display:inline-block;
 
-    background:#fff0ea;
+    background:#fff0eb;
 
     color:#f4511e;
 
-    padding:5px 10px;
+    padding:6px 12px;
 
-    border-radius:15px;
+    border-radius:20px;
 
     font-size:12px;
 
     font-weight:bold;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .card h3{
 
-    font-size:21px;
-
-    margin-bottom:10px;
+    font-size:22px;
 
     line-height:1.45;
+
+    margin-bottom:10px;
 }
 
 .card p{
 
     color:#666;
 
-    margin-bottom:15px;
+    margin-bottom:17px;
 }
 
 .read-more{
 
-    display:inline-block;
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
 
     color:#f4511e;
 
@@ -394,132 +727,238 @@ section{
 }
 
 
-/* =========================
-   INFO BOX
-========================= */
+/* =====================================================
+   INFO
+===================================================== */
 
 .info{
 
     background:white;
 
-    border-radius:12px;
+    border-radius:18px;
 
-    padding:30px;
+    padding:32px;
 
     box-shadow:
-    0 4px 15px rgba(0,0,0,.06);
+    0 5px 20px rgba(0,0,0,.06);
 }
 
 .info h3{
+
+    font-size:24px;
 
     margin:
     20px 0 8px;
 }
 
 .info h3:first-child{
-
     margin-top:0;
 }
 
+.info p{
+    color:#555;
+}
 
-/* =========================
+
+/* =====================================================
    PLACES
-========================= */
+===================================================== */
 
 .places{
 
     display:grid;
 
     grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(220px,1fr)
-    );
+    repeat(4,1fr);
 
     gap:20px;
 }
 
 .place{
 
-    background:#111;
+    min-height:180px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #171717,
+        #292929
+    );
 
     color:white;
 
     padding:25px;
 
-    border-radius:10px;
+    border-radius:17px;
 
-    transition:.2s;
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    transition:.25s;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.1);
 }
 
 .place:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-6px);
+}
+
+.place-icon{
+
+    font-size:30px;
+
+    margin-bottom:auto;
 }
 
 .place h3{
 
-    color:#f4511e;
+    color:#ff5722;
 
-    margin-bottom:8px;
+    font-size:22px;
+
+    margin-bottom:6px;
+}
+
+.place p{
+
+    color:#ddd;
+
+    font-size:14px;
 }
 
 
-/* =========================
+/* =====================================================
+   BLOG CARDS
+===================================================== */
+
+.blog-card{
+
+    min-height:220px;
+}
+
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
 
-    background:#111;
+    background:#0d0d0d;
 
-    color:#ccc;
+    color:#aaa;
 
-    padding:40px 20px;
+    padding:55px 20px;
 
     text-align:center;
+
+    margin-top:30px;
 }
 
 footer h2{
 
     color:white;
 
+    font-size:28px;
+
     margin-bottom:10px;
 }
 
 footer h2 span{
 
-    color:#f4511e;
+    color:#ff5722;
 }
 
 footer p{
 
-    margin:5px 0;
+    margin:7px 0;
+
+    font-size:14px;
+}
+
+.footer-line{
+
+    max-width:500px;
+
+    height:1px;
+
+    background:#333;
+
+    margin:25px auto;
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
-@media(max-width:700px){
+@media(max-width:900px){
 
     .navbar{
 
+        align-items:center;
+
         flex-direction:column;
 
-        gap:12px;
-
-        padding:15px;
+        gap:10px;
     }
 
     nav{
 
-        justify-content:center;
+        width:100%;
 
-        gap:12px;
+        justify-content:flex-start;
 
-        text-align:center;
+        padding-bottom:4px;
+    }
+
+    .hero{
+
+        min-height:570px;
+
+        background-position:center;
+    }
+
+    .hero h1{
+
+        font-size:55px;
+    }
+
+    .categories{
+
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .places{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .navbar{
+
+        padding:13px 15px;
+    }
+
+    .logo{
+
+        font-size:25px;
+    }
+
+    nav{
+
+        gap:18px;
     }
 
     nav a{
@@ -529,24 +968,139 @@ footer p{
 
     .hero{
 
-        min-height:350px;
+        min-height:650px;
 
-        padding:40px 20px;
+        background:
+
+        linear-gradient(
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.58)
+        ),
+
+        url("jalgaon.jpg");
+
+        background-size:cover;
+
+        background-position:center;
+    }
+
+    .hero-content{
+
+        padding:55px 20px;
+    }
+
+    .hero-small{
+
+        font-size:19px;
     }
 
     .hero h1{
 
-        font-size:38px;
+        font-size:43px;
+
+        letter-spacing:-1px;
     }
 
     .hero p{
 
-        font-size:16px;
+        font-size:17px;
+    }
+
+    .hero-categories{
+
+        gap:12px;
+
+        justify-content:space-between;
+    }
+
+    .hero-category{
+
+        min-width:55px;
+    }
+
+    .hero-icon{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:22px;
+    }
+
+    .hero-category strong{
+
+        font-size:13px;
+    }
+
+    .hero-category small{
+
+        display:none;
+    }
+
+    .search-wrapper{
+
+        margin:-30px auto 0;
+
+        padding:0 14px;
+    }
+
+    .search-box input{
+
+        font-size:14px;
+
+        padding:14px 12px;
+    }
+
+    .search-button{
+
+        width:48px;
+
+        height:48px;
+    }
+
+    .categories{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:12px;
+
+        margin-top:40px;
+    }
+
+    .category-card{
+
+        padding:20px 10px;
+    }
+
+    .category-card h3{
+
+        font-size:17px;
+    }
+
+    .category-card p{
+
+        font-size:12px;
+    }
+
+    section{
+
+        padding:55px 15px;
     }
 
     .section-title h2{
 
-        font-size:28px;
+        font-size:30px;
+    }
+
+    .section-title p{
+
+        font-size:15px;
+    }
+
+    .card img{
+
+        height:210px;
     }
 
     .card h3{
@@ -554,29 +1108,61 @@ footer p{
         font-size:19px;
     }
 
+    .places{
+
+        grid-template-columns:
+        1fr 1fr;
+
+        gap:12px;
+    }
+
+    .place{
+
+        min-height:170px;
+
+        padding:18px;
+    }
+
+    .place h3{
+
+        font-size:18px;
+    }
+
+    .info{
+
+        padding:22px;
+    }
+
 }
 
 
-@media(max-width:450px){
+@media(max-width:400px){
 
     .hero h1{
 
-        font-size:32px;
+        font-size:37px;
     }
 
-    .logo{
+    .hero-categories{
 
-        font-size:22px;
+        gap:7px;
     }
 
-    nav{
+    .hero-category{
 
-        gap:9px;
+        min-width:48px;
     }
 
-    nav a{
+    .categories{
 
-        font-size:13px;
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .places{
+
+        grid-template-columns:
+        1fr;
     }
 
 }
@@ -589,9 +1175,9 @@ footer p{
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
@@ -606,33 +1192,19 @@ footer p{
 
     <nav>
 
-        <a href="#home">
-            Home
-        </a>
+        <a href="#home">Home</a>
 
-        <a href="#news">
-            News
-        </a>
+        <a href="#news">News</a>
 
-        <a href="#agriculture">
-            Agriculture
-        </a>
+        <a href="#agriculture">Agriculture</a>
 
-        <a href="#history">
-            History
-        </a>
+        <a href="#history">History</a>
 
-        <a href="#places">
-            Places
-        </a>
+        <a href="#places">Places</a>
 
-        <a href="#blogs">
-            Blogs
-        </a>
+        <a href="#blogs">Blogs</a>
 
-        <a href="#about">
-            About
-        </a>
+        <a href="#about">About</a>
 
     </nav>
 
@@ -642,9 +1214,9 @@ footer p{
 
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section
 class="hero"
@@ -653,10 +1225,15 @@ id="home"
 
 <div class="hero-content">
 
+    <div class="hero-small">
+        Welcome to
+    </div>
+
+
     <h1>
 
-        Welcome to
-        <span>Jalgaon Zone</span>
+        Jalgaon
+        <span>Zone</span>
 
     </h1>
 
@@ -676,8 +1253,95 @@ id="home"
     >
 
         Latest Articles
-
+        →
+    
     </a>
+
+
+    <div class="hero-categories">
+
+
+        <a
+        href="#news"
+        class="hero-category"
+        >
+
+            <div class="hero-icon">
+                📰
+            </div>
+
+            <strong>News</strong>
+
+            <small>बातम्या</small>
+
+        </a>
+
+
+        <a
+        href="#agriculture"
+        class="hero-category"
+        >
+
+            <div class="hero-icon">
+                🌱
+            </div>
+
+            <strong>Agriculture</strong>
+
+            <small>शेती</small>
+
+        </a>
+
+
+        <a
+        href="#history"
+        class="hero-category"
+        >
+
+            <div class="hero-icon">
+                🏛️
+            </div>
+
+            <strong>History</strong>
+
+            <small>इतिहास</small>
+
+        </a>
+
+
+        <a
+        href="#places"
+        class="hero-category"
+        >
+
+            <div class="hero-icon">
+                📍
+            </div>
+
+            <strong>Places</strong>
+
+            <small>पर्यटन</small>
+
+        </a>
+
+
+        <a
+        href="#blogs"
+        class="hero-category"
+        >
+
+            <div class="hero-icon">
+                ✍️
+            </div>
+
+            <strong>Blogs</strong>
+
+            <small>लेख</small>
+
+        </a>
+
+
+    </div>
 
 </div>
 
@@ -685,108 +1349,193 @@ id="home"
 
 
 
-<!-- =========================
+<!-- =====================================================
      SEARCH
-========================= -->
+===================================================== -->
 
-<div class="search-box">
+<div class="search-wrapper">
 
-<input
+    <div class="search-box">
 
-type="text"
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Jalgaon news, agriculture, history, places..."
+        onkeyup="searchArticles()"
+        >
 
-id="searchInput"
+        <button
+        class="search-button"
+        onclick="focusSearch()"
+        >
+            🔍
+        </button>
 
-placeholder=
-"Search Jalgaon news, agriculture, history, places..."
-
-onkeyup="searchArticles()"
-
->
+    </div>
 
 </div>
 
 
 
-<!-- =========================
-     NEWS
-========================= -->
+<!-- =====================================================
+     CATEGORY CARDS
+===================================================== -->
+
+<div class="categories">
+
+
+    <a
+    href="#news"
+    class="category-card"
+    >
+
+        <div class="category-icon">
+            📰
+        </div>
+
+        <h3>News</h3>
+
+        <p>
+            ताज्या बातम्या
+        </p>
+
+    </a>
+
+
+    <a
+    href="#agriculture"
+    class="category-card"
+    >
+
+        <div class="category-icon">
+            🌱
+        </div>
+
+        <h3>Agriculture</h3>
+
+        <p>
+            शेतीविषयक माहिती
+        </p>
+
+    </a>
+
+
+    <a
+    href="#history"
+    class="category-card"
+    >
+
+        <div class="category-icon">
+            🏛️
+        </div>
+
+        <h3>History</h3>
+
+        <p>
+            इतिहास आणि वारसा
+        </p>
+
+    </a>
+
+
+    <a
+    href="#places"
+    class="category-card"
+    >
+
+        <div class="category-icon">
+            📍
+        </div>
+
+        <h3>Places</h3>
+
+        <p>
+            पर्यटन स्थळे
+        </p>
+
+    </a>
+
+
+    <a
+    href="#blogs"
+    class="category-card"
+    >
+
+        <div class="category-icon">
+            ✍️
+        </div>
+
+        <h3>Blogs</h3>
+
+        <p>
+            लेख आणि कथा
+        </p>
+
+    </a>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     LATEST NEWS
+===================================================== -->
 
 <section id="news">
 
 
 <div class="section-title">
 
-    <h2>
+    <div class="section-label">
         Latest News
+    </div>
+
+    <h2>
+        जिल्ह्यातील ताज्या बातम्या
     </h2>
 
     <p>
-        जळगाव जिल्ह्यातील ताज्या बातम्या
+        जळगाव जिल्ह्यातील महत्त्वाच्या आणि
+        स्थानिक घडामोडी
     </p>
 
 </div>
 
 
-<div
-class="cards"
-id="articleCards"
->
+<div class="cards" id="articleCards">
 
 
-<!-- =========================
-     OXYGEN PARK
-========================= -->
+<!-- OXYGEN -->
 
 <div class="card article-card">
 
-
     <img
-
     src="oxygen-park-news.png"
-
     alt="पाळधीत ऑक्सिजन पार्कचे भूमीपूजन"
-
     >
-
 
     <div class="card-content">
 
-
         <span class="category">
-
             Jalgaon News
-
         </span>
 
-
         <h3>
-
             पाळधीत ऑक्सिजन पार्कचे भूमीपूजन
-
         </h3>
 
-
         <p>
-
             पाळधी खुर्द येथे ऑक्सिजन पार्क
             निर्मितीच्या उपक्रमाची सुरुवात.
-
         </p>
 
-
         <a
-
         href="article.html?id=oxygen"
-
         class="read-more"
-
         >
-
             Read More →
-
         </a>
-
 
     </div>
 
@@ -794,153 +1543,46 @@ id="articleCards"
 
 
 
-<!-- =========================
-     AGRICULTURE
-========================= -->
+<!-- AGRICULTURE -->
 
 <div class="card article-card">
 
-
     <img
-
     src="agriculture.png"
-
     alt="शेतकरी आणि सूक्ष्म सिंचन"
-
     >
-
 
     <div class="card-content">
 
-
         <span class="category">
-
             Agriculture
-
         </span>
 
-
         <h3>
-
             शेतकऱ्यांसाठी खुशखबर!
             सूक्ष्म सिंचनासाठी मिळणार
             ९०% पर्यंत अनुदान
-
         </h3>
 
-
         <p>
-
             सूक्ष्म सिंचनासाठी उपलब्ध
             अनुदान आणि अर्ज प्रक्रियेबाबत माहिती.
-
         </p>
 
-
         <a
-
         href="article.html?id=agriculture"
-
         class="read-more"
-
         >
-
             Read More →
-
         </a>
-
 
     </div>
 
 </div>
 
 
-</div>
 
-</section>
-
-
-
-<!-- =========================
-     AGRICULTURE
-========================= -->
-
-<section id="agriculture">
-
-
-<div class="section-title">
-
-    <h2>
-        Agriculture
-    </h2>
-
-    <p>
-        जळगाव आणि महाराष्ट्रातील
-        शेतीविषयक माहिती
-    </p>
-
-</div>
-
-
-<div class="info">
-
-
-    <h3>
-        जळगाव आणि शेती
-    </h3>
-
-
-    <p>
-
-        जळगाव जिल्हा केळी उत्पादनासाठी
-        प्रसिद्ध आहे. जिल्ह्यात केळी,
-        कापूस, ज्वारी, मका आणि इतर
-        विविध पिकांची लागवड केली जाते.
-
-    </p>
-
-
-    <p>
-
-        Jalgaon Zone वर शेतकऱ्यांसाठी
-        योजना, शेतीविषयक माहिती,
-        कृषी बातम्या आणि उपयोगी
-        मार्गदर्शन प्रकाशित केले जाईल.
-
-    </p>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     HISTORY
-========================= -->
-
-<section id="history">
-
-
-<div class="section-title">
-
-    <h2>
-        Jalgaon History
-    </h2>
-
-    <p>
-        जळगावचा इतिहास आणि वारसा
-    </p>
-
-</div>
-
-
-<!-- =========================
-     HISTORY ARTICLE CARD
-========================= -->
-
-<div class="cards">
+<!-- HISTORY -->
 
 <div class="card article-card">
 
@@ -964,8 +1606,126 @@ id="articleCards"
         <p>
             प्राचीन खानदेशापासून आधुनिक
             जळगावपर्यंतचा ऐतिहासिक प्रवास,
-            फैजपूर अधिवेशन, संस्कृती आणि
-            जळगावच्या वारशाची माहिती.
+            संस्कृती आणि वारशाची माहिती.
+        </p>
+
+        <a
+        href="article.html?id=history"
+        class="read-more"
+        >
+            Read Full History →
+        </a>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AGRICULTURE
+===================================================== -->
+
+<section id="agriculture">
+
+
+<div class="section-title">
+
+    <div class="section-label">
+        Agriculture
+    </div>
+
+    <h2>
+        जळगाव आणि शेती
+    </h2>
+
+    <p>
+        जळगाव आणि महाराष्ट्रातील शेतीविषयक माहिती
+    </p>
+
+</div>
+
+
+<div class="info">
+
+    <h3>
+        जळगावची शेती
+    </h3>
+
+    <p>
+        जळगाव जिल्हा केळी उत्पादनासाठी
+        प्रसिद्ध आहे. जिल्ह्यात केळी,
+        कापूस, ज्वारी, मका आणि इतर
+        विविध पिकांची लागवड केली जाते.
+    </p>
+
+    <p>
+        Jalgaon Zone वर शेतकऱ्यांसाठी
+        योजना, शेतीविषयक माहिती,
+        कृषी बातम्या आणि उपयोगी
+        मार्गदर्शन प्रकाशित केले जाईल.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HISTORY
+===================================================== -->
+
+<section id="history">
+
+
+<div class="section-title">
+
+    <div class="section-label">
+        History
+    </div>
+
+    <h2>
+        जळगावचा इतिहास
+    </h2>
+
+    <p>
+        जळगावचा इतिहास आणि सांस्कृतिक वारसा
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card article-card">
+
+    <img
+    src="Jalgaon city.jpeg"
+    alt="जळगाव शहराचा इतिहास"
+    >
+
+    <div class="card-content">
+
+        <span class="category">
+            Jalgaon History
+        </span>
+
+        <h3>
+            जळगावचा इतिहास:
+            खानदेशाच्या मातीपासून
+            आधुनिक जळगावपर्यंत
+        </h3>
+
+        <p>
+            प्राचीन खानदेश, फैजपूर अधिवेशन,
+            संस्कृती, शेती आणि जळगावच्या
+            ऐतिहासिक वारशाची माहिती.
         </p>
 
         <a
@@ -981,51 +1741,34 @@ id="articleCards"
 
 </div>
 
-</div>
-
-
 
 <br><br>
 
 
-<!-- =========================
-     SHORT HISTORY INFO
-========================= -->
-
 <div class="info">
-
 
     <h3>
         जळगाव जिल्हा
     </h3>
 
-
     <p>
-
         जळगाव महाराष्ट्राच्या खानदेश
         प्रदेशातील महत्त्वाचा जिल्हा आहे.
         ऐतिहासिक, सांस्कृतिक आणि कृषी
         क्षेत्रात जिल्ह्याचे विशेष महत्त्व आहे.
-
     </p>
-
 
     <h3>
         फैजपूर अधिवेशन
     </h3>
 
-
     <p>
-
         1936 मध्ये फैजपूर येथे भारतीय
         राष्ट्रीय काँग्रेसचे अधिवेशन झाले.
         ग्रामीण भागात झालेल्या या ऐतिहासिक
-        अधिवेशनामुळे फैजपूरचे भारतीय
-        स्वातंत्र्य चळवळीच्या इतिहासात
-        महत्त्वाचे स्थान आहे.
-
+        अधिवेशनामुळे फैजपूरला स्वातंत्र्य
+        चळवळीच्या इतिहासात महत्त्वाचे स्थान मिळाले.
     </p>
-
 
 </div>
 
@@ -1033,22 +1776,26 @@ id="articleCards"
 
 
 
-<!-- =========================
+<!-- =====================================================
      PLACES
-========================= -->
+===================================================== -->
 
 <section id="places">
 
 
 <div class="section-title">
 
+    <div class="section-label">
+        Tourism
+    </div>
+
     <h2>
         Famous Places
     </h2>
 
     <p>
-        जळगाव जिल्ह्यातील पर्यटन
-        आणि ऐतिहासिक ठिकाणे
+        जळगाव जिल्ह्यातील पर्यटन आणि
+        ऐतिहासिक ठिकाणे
     </p>
 
 </div>
@@ -1057,68 +1804,76 @@ id="articleCards"
 <div class="places">
 
 
-    <div class="place">
+<div class="place">
 
-        <h3>
-            Unapdev
-        </h3>
-
-        <p>
-
-            नैसर्गिक गरम पाण्याच्या
-            झऱ्यासाठी प्रसिद्ध ठिकाण.
-
-        </p>
-
+    <div class="place-icon">
+        ♨️
     </div>
 
+    <h3>
+        Unapdev
+    </h3>
 
-    <div class="place">
+    <p>
+        नैसर्गिक गरम पाण्याच्या
+        झऱ्यासाठी प्रसिद्ध ठिकाण.
+    </p>
 
-        <h3>
-            Padmalaya
-        </h3>
+</div>
 
-        <p>
 
-            गणपती मंदिर आणि धार्मिक
-            पर्यटनासाठी प्रसिद्ध.
+<div class="place">
 
-        </p>
-
+    <div class="place-icon">
+        🛕
     </div>
 
+    <h3>
+        Padmalaya
+    </h3>
 
-    <div class="place">
+    <p>
+        गणपती मंदिर आणि धार्मिक
+        पर्यटनासाठी प्रसिद्ध.
+    </p>
 
-        <h3>
-            Manudevi
-        </h3>
+</div>
 
-        <p>
 
-            सातपुडा परिसरातील प्रसिद्ध
-            धार्मिक आणि निसर्गरम्य ठिकाण.
+<div class="place">
 
-        </p>
-
+    <div class="place-icon">
+        🌄
     </div>
 
+    <h3>
+        Manudevi
+    </h3>
 
-    <div class="place">
+    <p>
+        सातपुडा परिसरातील प्रसिद्ध
+        धार्मिक आणि निसर्गरम्य ठिकाण.
+    </p>
 
-        <h3>
-            Parola Fort
-        </h3>
+</div>
 
-        <p>
 
-            जळगाव जिल्ह्यातील
-            ऐतिहासिक किल्ला.
+<div class="place">
 
-        </p>
-
+    <div class="place-icon">
+        🏰
     </div>
+
+    <h3>
+        Parola Fort
+    </h3>
+
+    <p>
+        जळगाव जिल्ह्यातील
+        ऐतिहासिक किल्ला.
+    </p>
+
+</div>
 
 
 </div>
@@ -1127,14 +1882,18 @@ id="articleCards"
 
 
 
-<!-- =========================
+<!-- =====================================================
      BLOGS
-========================= -->
+===================================================== -->
 
 <section id="blogs">
 
 
 <div class="section-title">
+
+    <div class="section-label">
+        Blogs
+    </div>
 
     <h2>
         Jalgaon Blogs
@@ -1150,66 +1909,58 @@ id="articleCards"
 <div class="cards">
 
 
-    <div class="card">
+<div class="card blog-card">
 
+    <div class="card-content">
 
-        <div class="card-content">
+        <span class="category">
+            Blog
+        </span>
 
+        <h3>
+            जळगाव का प्रसिद्ध आहे?
+        </h3>
 
-            <span class="category">
-                Blog
-            </span>
+        <p>
+            केळी उत्पादनापासून इतिहास
+            आणि पर्यटनापर्यंत जळगावची
+            खास ओळख.
+        </p>
 
-
-            <h3>
-                जळगाव का प्रसिद्ध आहे?
-            </h3>
-
-
-            <p>
-
-                केळी उत्पादनापासून इतिहास
-                आणि पर्यटनापर्यंत जळगावची
-                खास ओळख.
-
-            </p>
-
-
-        </div>
+        <a href="#about" class="read-more">
+            Read More →
+        </a>
 
     </div>
 
-
-    <div class="card">
-
-
-        <div class="card-content">
+</div>
 
 
-            <span class="category">
-                Tourism
-            </span>
+<div class="card blog-card">
 
+    <div class="card-content">
 
-            <h3>
+        <span class="category">
+            Tourism
+        </span>
 
-                जळगावमधील भेट देण्यासारखी
-                ठिकाणे
+        <h3>
+            जळगावमधील भेट देण्यासारखी
+            ठिकाणे
+        </h3>
 
-            </h3>
+        <p>
+            जिल्ह्यातील प्रसिद्ध पर्यटन
+            आणि धार्मिक ठिकाणांची माहिती.
+        </p>
 
-
-            <p>
-
-                जिल्ह्यातील प्रसिद्ध पर्यटन
-                आणि धार्मिक ठिकाणांची माहिती.
-
-            </p>
-
-
-        </div>
+        <a href="#places" class="read-more">
+            Explore Places →
+        </a>
 
     </div>
+
+</div>
 
 
 </div>
@@ -1218,24 +1969,31 @@ id="articleCards"
 
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
 <section id="about">
 
 
 <div class="section-title">
 
+    <div class="section-label">
+        About Us
+    </div>
+
     <h2>
         About Jalgaon Zone
     </h2>
+
+    <p>
+        जळगावसाठी एक स्थानिक डिजिटल प्लॅटफॉर्म
+    </p>
 
 </div>
 
 
 <div class="info">
-
 
     <p>
 
@@ -1251,10 +2009,6 @@ id="articleCards"
 
     </p>
 
-
-    <br>
-
-
     <p>
 
         आमचा उद्देश स्थानिक माहिती
@@ -1263,51 +2017,43 @@ id="articleCards"
 
     </p>
 
-
 </div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
-
     <h2>
-
-        Jalgaon
-        <span>Zone</span>
-
+        Jalgaon <span>Zone</span>
     </h2>
 
-
     <p>
-
-        Jalgaon News • Agriculture •
-        History • Tourism • Blogs
-
+        Jalgaon News • Agriculture • History • Tourism • Blogs
     </p>
 
+    <div class="footer-line"></div>
 
     <p>
-
-        © 2026 Jalgaon Zone.
-        All Rights Reserved.
-
+        © 2026 Jalgaon Zone. All Rights Reserved.
     </p>
 
+    <p>
+        Jalgaon • Maharashtra • India
+    </p>
 
 </footer>
 
 
 
-<!-- =========================
+<!-- =====================================================
      SEARCH SCRIPT
-========================= -->
+===================================================== -->
 
 <script>
 
@@ -1338,15 +2084,22 @@ function searchArticles(){
 
             card.style.display = "";
 
-        }
-
-        else{
+        }else{
 
             card.style.display = "none";
 
         }
 
     });
+
+}
+
+
+function focusSearch(){
+
+    document
+    .getElementById("searchInput")
+    .focus();
 
 }
 
