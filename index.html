@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
 <meta name="google-site-verification"
@@ -21,7 +20,6 @@ content="Jalgaon Zone वर जळगाव जिल्ह्यातील �
 
 <meta name="keywords"
 content="Jalgaon News, Jalgaon, जळगाव बातम्या, जळगाव न्यूज, Agriculture, History, Tourism">
-
 
 <style>
 
@@ -40,17 +38,20 @@ html{
 }
 
 body{
-
     font-family:
     Arial,
     "Noto Sans Devanagari",
     sans-serif;
 
-    background:#f6f7f9;
-
+    background:#f5f6f8;
     color:#161616;
-
     line-height:1.6;
+}
+
+img{
+    display:block;
+    max-width:100%;
+    background:#eeeeee;
 }
 
 
@@ -59,70 +60,41 @@ body{
 ===================================================== */
 
 header{
-
     background:#0d0d0d;
-
     color:white;
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
-    box-shadow:
-    0 4px 20px rgba(0,0,0,.25);
+    box-shadow:0 4px 18px rgba(0,0,0,.22);
 }
 
 .navbar{
-
     max-width:1250px;
-
     margin:auto;
-
-    padding:14px 20px;
+    min-height:64px;
+    padding:0 20px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     gap:25px;
 }
 
-
-/* LOGO */
-
 .logo{
-
-    font-size:27px;
-
+    font-size:25px;
     font-weight:800;
-
     white-space:nowrap;
-
-    letter-spacing:-.5px;
 }
 
 .logo span{
-
     color:#ff5722;
 }
 
-
-/* NAVIGATION */
-
 nav{
-
     display:flex;
-
     align-items:center;
-
-    gap:22px;
-
+    gap:23px;
     overflow-x:auto;
-
     scrollbar-width:none;
 }
 
@@ -131,43 +103,26 @@ nav::-webkit-scrollbar{
 }
 
 nav a{
-
     color:#eee;
-
     text-decoration:none;
-
-    font-size:15px;
-
+    font-size:14px;
     font-weight:500;
-
     white-space:nowrap;
-
-    padding:8px 0;
-
+    padding:7px 0;
     position:relative;
-
-    transition:.2s;
 }
 
 nav a:hover{
-
     color:#ff5722;
 }
 
 nav a:hover::after{
-
     content:"";
-
     position:absolute;
-
     left:0;
-
     right:0;
-
     bottom:0;
-
     height:2px;
-
     background:#ff5722;
 }
 
@@ -177,192 +132,128 @@ nav a:hover::after{
 ===================================================== */
 
 .hero{
-
     min-height:560px;
-
     display:flex;
-
     align-items:center;
-
     position:relative;
-
     overflow:hidden;
-
     color:white;
 
     background:
-
     linear-gradient(
         90deg,
-        rgba(0,0,0,.82) 0%,
-        rgba(0,0,0,.62) 45%,
-        rgba(0,0,0,.25) 100%
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.58),
+        rgba(0,0,0,.20)
     ),
-
     url("jalgaon.jpg");
 
     background-size:cover;
-
     background-position:center;
 }
 
 .hero-content{
-
     width:100%;
-
     max-width:1250px;
-
     margin:auto;
-
-    padding:70px 25px;
+    padding:80px 25px;
 }
 
 .hero-small{
-
     color:#ff5722;
-
-    font-size:25px;
-
+    font-size:21px;
     font-weight:bold;
-
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
 .hero-small::before{
-
     content:"";
-
     display:inline-block;
-
-    width:38px;
-
+    width:35px;
     height:3px;
-
     background:#ff5722;
-
-    margin-right:12px;
-
+    margin-right:10px;
     vertical-align:middle;
 }
 
 .hero h1{
-
     font-size:68px;
-
     line-height:1.05;
-
-    margin-bottom:25px;
-
+    margin-bottom:22px;
     max-width:700px;
-
     letter-spacing:-2px;
 }
 
 .hero h1 span{
-
     color:#ff5722;
 }
 
 .hero p{
-
     max-width:680px;
-
-    font-size:21px;
-
+    font-size:20px;
     line-height:1.7;
-
     color:#f2f2f2;
-
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
 
-
-/* HERO BUTTON */
-
 .btn{
-
     display:inline-flex;
-
     align-items:center;
-
-    gap:15px;
+    gap:12px;
 
     background:#ff5722;
-
     color:white;
 
-    padding:15px 27px;
-
+    padding:14px 25px;
     border-radius:10px;
 
     text-decoration:none;
-
-    font-size:17px;
-
+    font-size:16px;
     font-weight:bold;
 
-    box-shadow:
-    0 8px 25px rgba(255,87,34,.35);
+    box-shadow:0 8px 25px rgba(255,87,34,.30);
 
     transition:.25s;
 }
 
 .btn:hover{
-
     background:#e64a19;
-
     transform:translateY(-3px);
 }
 
 
 /* =====================================================
-   HERO CATEGORY SHORTCUTS
+   HERO CATEGORIES
 ===================================================== */
 
 .hero-categories{
-
     display:flex;
-
-    gap:28px;
-
-    margin-top:38px;
-
+    gap:24px;
+    margin-top:35px;
     flex-wrap:wrap;
 }
 
 .hero-category{
-
     text-decoration:none;
-
     color:white;
-
     text-align:center;
-
-    min-width:90px;
+    min-width:80px;
 }
 
 .hero-icon{
-
-    width:55px;
-
-    height:55px;
-
+    width:54px;
+    height:54px;
     margin:auto;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    border-radius:16px;
-
-    font-size:26px;
+    border-radius:15px;
+    font-size:25px;
 
     background:#ff5722;
-
-    box-shadow:
-    0 8px 20px rgba(0,0,0,.25);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 
     margin-bottom:7px;
 }
@@ -384,17 +275,13 @@ nav a:hover::after{
 }
 
 .hero-category strong{
-
     display:block;
-
-    font-size:16px;
+    font-size:14px;
 }
 
 .hero-category small{
-
     color:#ddd;
-
-    font-size:12px;
+    font-size:11px;
 }
 
 
@@ -403,67 +290,47 @@ nav a:hover::after{
 ===================================================== */
 
 .search-wrapper{
-
-    max-width:1100px;
-
+    max-width:1080px;
     margin:-35px auto 0;
-
     padding:0 20px;
-
     position:relative;
-
     z-index:5;
 }
 
 .search-box{
-
     background:white;
-
     border-radius:50px;
-
-    padding:8px;
+    padding:7px;
 
     display:flex;
-
     align-items:center;
 
-    box-shadow:
-    0 8px 35px rgba(0,0,0,.12);
+    box-shadow:0 8px 35px rgba(0,0,0,.12);
 }
 
 .search-box input{
-
     flex:1;
-
     border:none;
-
     outline:none;
 
-    padding:15px 20px;
+    padding:14px 20px;
 
-    font-size:17px;
-
+    font-size:16px;
     background:transparent;
-
     min-width:0;
 }
 
 .search-button{
-
-    width:55px;
-
-    height:55px;
+    width:52px;
+    height:52px;
 
     border:none;
-
     border-radius:50%;
 
     background:#ff5722;
-
     color:white;
 
-    font-size:22px;
-
+    font-size:20px;
     cursor:pointer;
 }
 
@@ -473,67 +340,49 @@ nav a:hover::after{
 ===================================================== */
 
 .categories{
-
     max-width:1200px;
-
-    margin:55px auto 20px;
-
+    margin:50px auto 10px;
     padding:0 20px;
 
     display:grid;
-
-    grid-template-columns:
-    repeat(5,1fr);
-
+    grid-template-columns:repeat(5,1fr);
     gap:18px;
 }
 
 .category-card{
-
     text-decoration:none;
-
     color:#111;
 
     background:white;
-
     border-radius:18px;
 
-    padding:25px 15px;
+    padding:24px 14px;
 
     text-align:center;
 
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.06);
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
 
     transition:.25s;
 }
 
 .category-card:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:
-    0 12px 30px rgba(0,0,0,.12);
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
 }
 
 .category-icon{
-
-    width:65px;
-
-    height:65px;
+    width:62px;
+    height:62px;
 
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    margin:0 auto 14px;
+    margin:0 auto 12px;
 
-    font-size:28px;
-
+    font-size:27px;
     background:#fff0eb;
 }
 
@@ -554,179 +403,128 @@ nav a:hover::after{
 }
 
 .category-card h3{
-
-    font-size:19px;
-
-    margin-bottom:5px;
+    font-size:18px;
+    margin-bottom:4px;
 }
 
 .category-card p{
-
-    color:#666;
-
-    font-size:14px;
+    color:#777;
+    font-size:13px;
 }
 
 
 /* =====================================================
-   GENERAL SECTIONS
+   GENERAL SECTION
 ===================================================== */
 
 section{
-
     max-width:1200px;
-
     margin:auto;
-
     padding:70px 20px;
 }
 
 .section-title{
-
     text-align:center;
-
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
 .section-label{
-
     color:#ff5722;
-
     font-weight:bold;
-
-    font-size:15px;
-
+    font-size:14px;
     text-transform:uppercase;
-
     letter-spacing:1px;
-
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
 
 .section-title h2{
-
-    font-size:40px;
-
-    line-height:1.2;
-
-    margin-bottom:10px;
+    font-size:38px;
+    line-height:1.25;
+    margin-bottom:8px;
 }
 
 .section-title p{
-
     color:#777;
-
-    font-size:17px;
+    font-size:16px;
 }
 
 
 /* =====================================================
-   NEWS CARDS
+   CARDS
 ===================================================== */
 
 .cards{
-
     display:grid;
-
     grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(290px,1fr)
-    );
+    repeat(auto-fit,minmax(290px,1fr));
 
     gap:25px;
 }
 
 .card{
-
     background:white;
-
     border-radius:18px;
-
     overflow:hidden;
 
-    box-shadow:
-    0 5px 22px rgba(0,0,0,.07);
+    box-shadow:0 5px 22px rgba(0,0,0,.07);
 
     transition:.25s;
 }
 
 .card:hover{
-
-    transform:translateY(-7px);
-
-    box-shadow:
-    0 14px 35px rgba(0,0,0,.13);
+    transform:translateY(-6px);
+    box-shadow:0 14px 35px rgba(0,0,0,.13);
 }
 
 .card img{
-
     width:100%;
-
     height:230px;
-
     object-fit:cover;
-
-    display:block;
 }
 
 .card-content{
-
     padding:23px;
 }
 
 .category{
-
     display:inline-block;
 
     background:#fff0eb;
-
     color:#f4511e;
 
-    padding:6px 12px;
-
+    padding:5px 11px;
     border-radius:20px;
 
-    font-size:12px;
-
+    font-size:11px;
     font-weight:bold;
 
-    margin-bottom:12px;
+    margin-bottom:11px;
 }
 
 .card h3{
-
-    font-size:22px;
-
+    font-size:21px;
     line-height:1.45;
-
-    margin-bottom:10px;
+    margin-bottom:9px;
 }
 
 .card p{
-
     color:#666;
-
-    margin-bottom:17px;
+    font-size:14px;
+    margin-bottom:16px;
 }
 
 .read-more{
-
     display:inline-flex;
-
     align-items:center;
-
-    gap:7px;
+    gap:6px;
 
     color:#f4511e;
-
     font-weight:bold;
-
     text-decoration:none;
+    font-size:14px;
 }
 
 .read-more:hover{
-
     text-decoration:underline;
 }
 
@@ -736,23 +534,17 @@ section{
 ===================================================== */
 
 .info{
-
     background:white;
-
     border-radius:18px;
 
-    padding:32px;
+    padding:30px;
 
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.06);
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
 }
 
 .info h3{
-
-    font-size:24px;
-
-    margin:
-    20px 0 8px;
+    font-size:23px;
+    margin:20px 0 8px;
 }
 
 .info h3:first-child{
@@ -761,6 +553,7 @@ section{
 
 .info p{
     color:#555;
+    font-size:15px;
 }
 
 
@@ -769,365 +562,259 @@ section{
 ===================================================== */
 
 .places{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
 .place{
-
     height:285px;
-
     position:relative;
-
     overflow:hidden;
 
     border-radius:18px;
 
     background:#151515;
-
     color:white;
 
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.12);
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
 
-    transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+    transition:.3s;
 }
 
 .place:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:
-    0 18px 38px rgba(0,0,0,.18);
+    transform:translateY(-7px);
+    box-shadow:0 18px 38px rgba(0,0,0,.18);
 }
 
-
-/* Place image */
-
 .place-image{
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
 
-    display:block;
-
-    transition:
-    transform .5s ease;
+    transition:.5s;
 }
 
 .place:hover .place-image{
-
     transform:scale(1.08);
 }
 
-
-/* Dark gradient */
-
 .place::after{
-
     content:"";
-
     position:absolute;
-
     inset:0;
 
     background:
     linear-gradient(
         to top,
-        rgba(0,0,0,.92) 0%,
-        rgba(0,0,0,.55) 42%,
-        rgba(0,0,0,.05) 100%
+        rgba(0,0,0,.92),
+        rgba(0,0,0,.50) 45%,
+        rgba(0,0,0,.05)
     );
 
     pointer-events:none;
 }
 
-
-/* Place content */
-
 .place-content{
-
     position:absolute;
-
     left:0;
-
     right:0;
-
     bottom:0;
 
     z-index:2;
 
-    padding:22px;
+    padding:21px;
 }
 
 .place-icon{
-
-    font-size:25px;
-
-    margin-bottom:5px;
+    font-size:24px;
+    margin-bottom:4px;
 }
 
 .place h3{
-
     color:white;
-
-    font-size:22px;
-
-    margin-bottom:5px;
+    font-size:21px;
+    margin-bottom:4px;
 }
 
 .place p{
-
     color:#ddd;
-
-    font-size:13px;
-
+    font-size:12px;
     line-height:1.5;
-
     margin:0;
 }
 
 .place-arrow{
-
     position:absolute;
-
-    right:18px;
-
-    bottom:18px;
+    right:17px;
+    bottom:17px;
 
     z-index:3;
 
-    width:38px;
-
-    height:38px;
+    width:37px;
+    height:37px;
 
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     background:#ff5722;
-
     color:white;
 
-    font-size:20px;
-
+    font-size:19px;
     font-weight:bold;
 }
 
 
 /* =====================================================
-   PROFESSIONAL BLOG SECTION
+   BLOG SECTION
 ===================================================== */
 
 .blog-section{
-
     background:#fff;
+    max-width:none;
+    padding-left:max(20px,calc((100% - 1160px)/2));
+    padding-right:max(20px,calc((100% - 1160px)/2));
 }
 
 .blog-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:25px;
 }
 
 .blog-card{
-
     background:white;
-
     border-radius:18px;
-
     overflow:hidden;
 
-    box-shadow:
-    0 7px 28px rgba(0,0,0,.08);
+    box-shadow:0 7px 28px rgba(0,0,0,.08);
 
     transition:.3s;
 }
 
 .blog-card:hover{
-
-    transform:translateY(-7px);
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.14);
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.14);
 }
 
 .blog-image{
-
     width:100%;
-
     height:230px;
-
     object-fit:cover;
-
-    display:block;
 }
 
 .blog-content{
-
     padding:24px;
 }
 
 .blog-category{
-
     display:inline-block;
 
     background:#fff0e9;
-
     color:#f4511e;
 
-    padding:7px 13px;
-
+    padding:6px 12px;
     border-radius:20px;
 
-    font-size:12px;
-
+    font-size:11px;
     font-weight:bold;
 
     margin-bottom:10px;
 }
 
 .blog-content h3{
-
-    font-size:23px;
-
+    font-size:22px;
     line-height:1.45;
-
-    margin-bottom:10px;
+    margin-bottom:9px;
 }
 
 .blog-content p{
-
     color:#666;
-
-    margin-bottom:18px;
-
+    margin-bottom:17px;
     line-height:1.7;
+    font-size:14px;
 }
 
 
 /* =====================================================
-   PROFESSIONAL ABOUT
+   ABOUT
 ===================================================== */
 
 .about-box{
-
     background:
-
     linear-gradient(
         120deg,
         #fff5ef,
         #ffffff
     );
 
-    border-radius:25px;
+    border-radius:24px;
 
-    padding:48px;
+    padding:45px;
 
     display:grid;
+    grid-template-columns:1fr 1fr;
 
-    grid-template-columns:
-    1fr 1fr;
-
-    gap:45px;
-
+    gap:40px;
     align-items:center;
 
     overflow:hidden;
 
-    box-shadow:
-    0 8px 30px rgba(0,0,0,.06);
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
 }
 
 .about-content .section-label{
-
     text-align:left;
-
-    margin-bottom:8px;
 }
 
 .about-content h2{
-
-    font-size:38px;
-
+    font-size:37px;
     line-height:1.2;
-
-    margin-bottom:18px;
+    margin-bottom:16px;
 }
 
 .about-content p{
-
     color:#555;
-
-    font-size:16px;
-
+    font-size:15px;
     line-height:1.8;
-
-    margin-bottom:12px;
+    margin-bottom:11px;
 }
 
 .about-button{
-
     display:inline-flex;
-
     align-items:center;
-
     gap:10px;
 
     background:#ff5722;
-
     color:white;
 
     text-decoration:none;
 
-    padding:13px 22px;
-
+    padding:12px 21px;
     border-radius:10px;
 
     font-weight:bold;
-
-    margin-top:10px;
+    margin-top:9px;
 
     transition:.25s;
 }
 
 .about-button:hover{
-
     background:#e64a19;
-
     transform:translateY(-3px);
 }
 
 .about-image{
-
     width:100%;
-
-    height:330px;
+    height:320px;
 
     object-fit:cover;
-
     border-radius:20px;
 
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.12);
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
 }
 
 
@@ -1136,48 +823,79 @@ section{
 ===================================================== */
 
 footer{
-
     background:#0d0d0d;
-
     color:#aaa;
 
-    padding:55px 20px;
-
+    padding:50px 20px;
     text-align:center;
 
-    margin-top:30px;
+    margin-top:20px;
 }
 
 footer h2{
-
     color:white;
-
-    font-size:28px;
-
-    margin-bottom:10px;
+    font-size:27px;
+    margin-bottom:9px;
 }
 
 footer h2 span{
-
     color:#ff5722;
 }
 
 footer p{
-
-    margin:7px 0;
-
-    font-size:14px;
+    margin:6px 0;
+    font-size:13px;
 }
 
 .footer-line{
-
     max-width:500px;
-
     height:1px;
 
     background:#333;
 
-    margin:25px auto;
+    margin:22px auto;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:900px){
+
+    .navbar{
+        min-height:58px;
+        padding:0 15px;
+        gap:15px;
+    }
+
+    nav{
+        gap:18px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:560px;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .categories{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .places{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-box{
+        grid-template-columns:1fr;
+    }
 }
 
 
@@ -1185,373 +903,377 @@ footer p{
    MOBILE
 ===================================================== */
 
-@media(max-width:900px){
-
-    .navbar{
-
-        align-items:center;
-
-        flex-direction:column;
-
-        gap:10px;
-    }
-
-    nav{
-
-        width:100%;
-
-        justify-content:flex-start;
-
-        padding-bottom:4px;
-    }
-
-    .hero{
-
-        min-height:570px;
-
-        background-position:center;
-    }
-
-    .hero h1{
-
-        font-size:55px;
-    }
-
-    .categories{
-
-        grid-template-columns:
-        repeat(3,1fr);
-    }
-
-    .places{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .about-box{
-
-        grid-template-columns:1fr;
-    }
-
-}
-
-
 @media(max-width:600px){
 
-    .navbar{
+    body{
+        background:#f5f6f8;
+    }
 
-        padding:13px 15px;
+    /* HEADER */
+
+    .navbar{
+        min-height:52px;
+        padding:0 14px;
+
+        flex-direction:column;
+        align-items:stretch;
+
+        gap:0;
     }
 
     .logo{
-
-        font-size:25px;
+        font-size:20px;
+        padding:7px 0 4px;
+        text-align:left;
     }
 
     nav{
+        width:100%;
+        gap:20px;
 
-        gap:18px;
+        padding:2px 0 6px;
+
+        justify-content:flex-start;
     }
 
     nav a{
-
-        font-size:14px;
+        font-size:11px;
     }
 
-    .hero{
 
-        min-height:650px;
+    /* HERO */
+
+    .hero{
+        min-height:620px;
 
         background:
-
         linear-gradient(
             rgba(0,0,0,.72),
             rgba(0,0,0,.58)
         ),
-
         url("jalgaon.jpg");
 
         background-size:cover;
-
         background-position:center;
     }
 
     .hero-content{
-
         padding:55px 20px;
     }
 
     .hero-small{
-
-        font-size:19px;
-    }
-
-    .hero h1{
-
-        font-size:43px;
-
-        letter-spacing:-1px;
-    }
-
-    .hero p{
-
         font-size:17px;
     }
 
-    .hero-categories{
+    .hero-small::before{
+        width:25px;
+    }
 
-        gap:12px;
+    .hero h1{
+        font-size:44px;
+        letter-spacing:-1px;
+        margin-bottom:17px;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:1.65;
+        margin-bottom:23px;
+    }
+
+    .btn{
+        padding:12px 20px;
+        font-size:14px;
+    }
+
+    .hero-categories{
+        margin-top:30px;
+        gap:10px;
 
         justify-content:space-between;
+        flex-wrap:nowrap;
     }
 
     .hero-category{
-
-        min-width:55px;
+        min-width:50px;
     }
 
     .hero-icon{
+        width:45px;
+        height:45px;
 
-        width:48px;
-
-        height:48px;
-
-        font-size:22px;
+        border-radius:13px;
+        font-size:20px;
     }
 
     .hero-category strong{
-
-        font-size:13px;
+        font-size:12px;
     }
 
     .hero-category small{
-
         display:none;
     }
 
-    .search-wrapper{
 
-        margin:-30px auto 0;
+    /* SEARCH */
+
+    .search-wrapper{
+        margin:-27px auto 0;
+        padding:0 14px;
+    }
+
+    .search-box{
+        padding:5px;
+    }
+
+    .search-box input{
+        font-size:13px;
+        padding:13px 12px;
+    }
+
+    .search-button{
+        width:45px;
+        height:45px;
+        font-size:18px;
+    }
+
+
+    /* CATEGORY */
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+
+        margin-top:35px;
 
         padding:0 14px;
     }
 
-    .search-box input{
-
-        font-size:14px;
-
-        padding:14px 12px;
-    }
-
-    .search-button{
-
-        width:48px;
-
-        height:48px;
-    }
-
-    .categories{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-        gap:12px;
-
-        margin-top:40px;
-    }
-
     .category-card{
+        padding:19px 9px;
+        border-radius:15px;
+    }
 
-        padding:20px 10px;
+    .category-icon{
+        width:55px;
+        height:55px;
+        font-size:24px;
     }
 
     .category-card h3{
-
-        font-size:17px;
+        font-size:16px;
     }
 
     .category-card p{
+        font-size:11px;
+    }
 
+
+    /* SECTIONS */
+
+    section{
+        padding:52px 14px;
+    }
+
+    .section-title{
+        margin-bottom:27px;
+    }
+
+    .section-label{
         font-size:12px;
     }
 
-    section{
-
-        padding:55px 15px;
-    }
-
     .section-title h2{
-
-        font-size:30px;
+        font-size:29px;
     }
 
     .section-title p{
+        font-size:13px;
+    }
+
+
+    /* CARDS */
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .card{
+        border-radius:15px;
+    }
+
+    .card img{
+        height:205px;
+    }
+
+    .card-content{
+        padding:20px;
+    }
+
+    .card h3{
+        font-size:19px;
+    }
+
+    .card p{
+        font-size:13px;
+    }
+
+
+    /* INFO */
+
+    .info{
+        padding:22px;
+        border-radius:15px;
+    }
+
+    .info h3{
+        font-size:20px;
+    }
+
+    .info p{
+        font-size:13px;
+    }
+
+
+    /* PLACES */
+
+    .places{
+        grid-template-columns:1fr 1fr;
+        gap:11px;
+    }
+
+    .place{
+        height:220px;
+        border-radius:14px;
+    }
+
+    .place-content{
+        padding:14px;
+    }
+
+    .place-icon{
+        font-size:20px;
+    }
+
+    .place h3{
+        font-size:16px;
+    }
+
+    .place p{
+        font-size:10px;
+        padding-right:22px;
+    }
+
+    .place-arrow{
+        width:30px;
+        height:30px;
+
+        right:10px;
+        bottom:10px;
 
         font-size:15px;
     }
 
-    .card img{
 
-        height:210px;
+    /* BLOG */
+
+    .blog-section{
+        padding-left:14px;
+        padding-right:14px;
     }
 
-    .card h3{
-
-        font-size:19px;
+    .blog-grid{
+        grid-template-columns:1fr;
+        gap:17px;
     }
 
-
-    /* MOBILE PLACES */
-
-    .places{
-
-        grid-template-columns:
-        1fr 1fr;
-
-        gap:12px;
-    }
-
-    .place{
-
-        height:225px;
-
+    .blog-card{
         border-radius:15px;
     }
 
-    .place-content{
-
-        padding:15px;
-    }
-
-    .place h3{
-
-        font-size:17px;
-    }
-
-    .place p{
-
-        font-size:11px;
-
-        padding-right:25px;
-    }
-
-    .place-icon{
-
-        font-size:21px;
-    }
-
-    .place-arrow{
-
-        width:32px;
-
-        height:32px;
-
-        right:12px;
-
-        bottom:12px;
-
-        font-size:17px;
-    }
-
-
-    /* MOBILE BLOG */
-
-    .blog-grid{
-
-        grid-template-columns:1fr;
-
-        gap:18px;
-    }
-
     .blog-image{
-
-        height:205px;
+        height:200px;
     }
 
     .blog-content{
-
         padding:20px;
     }
 
     .blog-content h3{
-
         font-size:19px;
     }
 
+    .blog-content p{
+        font-size:13px;
+    }
 
-    /* MOBILE ABOUT */
+
+    /* ABOUT */
 
     .about-box{
-
         padding:25px;
-
         gap:25px;
+        border-radius:18px;
     }
 
     .about-content h2{
-
-        font-size:30px;
+        font-size:29px;
     }
 
     .about-content p{
-
-        font-size:14px;
+        font-size:13px;
     }
 
     .about-image{
-
-        height:230px;
+        height:220px;
+        border-radius:15px;
     }
 
 
-    .info{
+    /* FOOTER */
 
-        padding:22px;
+    footer{
+        padding:40px 15px;
     }
 
-}
-
-
-@media(max-width:400px){
-
-    .hero h1{
-
-        font-size:37px;
+    footer h2{
+        font-size:24px;
     }
 
-    .hero-categories{
-
-        gap:7px;
+    footer p{
+        font-size:12px;
     }
-
-    .hero-category{
-
-        min-width:48px;
-    }
-
-    .categories{
-
-        grid-template-columns:
-        1fr 1fr;
-    }
-
-    .places{
-
-        grid-template-columns:
-        1fr 1fr;
-    }
-
 }
 
 
 /* =====================================================
-   IMAGE FALLBACK
+   VERY SMALL MOBILE
 ===================================================== */
 
-img{
+@media(max-width:380px){
 
-    background:#eeeeee;
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero-categories{
+        gap:5px;
+    }
+
+    .hero-category{
+        min-width:45px;
+    }
+
+    .hero-icon{
+        width:42px;
+        height:42px;
+    }
+
+    .places{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
 </style>
@@ -1571,11 +1293,8 @@ img{
 <div class="navbar">
 
     <div class="logo">
-
         Jalgaon <span>Zone</span>
-
     </div>
-
 
     <nav>
 
@@ -1616,37 +1335,26 @@ id="home"
         Welcome to
     </div>
 
-
     <h1>
-
         Jalgaon
         <span>Zone</span>
-
     </h1>
 
-
     <p>
-
         जळगाव जिल्ह्यातील बातम्या,
         शेती, इतिहास, पर्यटन आणि
         उपयोगी माहिती एका ठिकाणी.
-
     </p>
-
 
     <a
     href="#news"
     class="btn"
     >
-
-        Latest Articles
-        →
-
+        Latest Articles →
     </a>
 
 
     <div class="hero-categories">
-
 
         <a
         href="#news"
@@ -1658,7 +1366,6 @@ id="home"
             </div>
 
             <strong>News</strong>
-
             <small>बातम्या</small>
 
         </a>
@@ -1674,7 +1381,6 @@ id="home"
             </div>
 
             <strong>Agriculture</strong>
-
             <small>शेती</small>
 
         </a>
@@ -1690,7 +1396,6 @@ id="home"
             </div>
 
             <strong>History</strong>
-
             <small>इतिहास</small>
 
         </a>
@@ -1706,7 +1411,6 @@ id="home"
             </div>
 
             <strong>Places</strong>
-
             <small>पर्यटन</small>
 
         </a>
@@ -1722,11 +1426,9 @@ id="home"
             </div>
 
             <strong>Blogs</strong>
-
             <small>लेख</small>
 
         </a>
-
 
     </div>
 
@@ -1770,7 +1472,6 @@ id="home"
 
 <div class="categories">
 
-
     <a
     href="#news"
     class="category-card"
@@ -1782,9 +1483,7 @@ id="home"
 
         <h3>News</h3>
 
-        <p>
-            ताज्या बातम्या
-        </p>
+        <p>ताज्या बातम्या</p>
 
     </a>
 
@@ -1800,9 +1499,7 @@ id="home"
 
         <h3>Agriculture</h3>
 
-        <p>
-            शेतीविषयक माहिती
-        </p>
+        <p>शेतीविषयक माहिती</p>
 
     </a>
 
@@ -1818,9 +1515,7 @@ id="home"
 
         <h3>History</h3>
 
-        <p>
-            इतिहास आणि वारसा
-        </p>
+        <p>इतिहास आणि वारसा</p>
 
     </a>
 
@@ -1836,9 +1531,7 @@ id="home"
 
         <h3>Places</h3>
 
-        <p>
-            पर्यटन स्थळे
-        </p>
+        <p>पर्यटन स्थळे</p>
 
     </a>
 
@@ -1854,12 +1547,9 @@ id="home"
 
         <h3>Blogs</h3>
 
-        <p>
-            लेख आणि कथा
-        </p>
+        <p>लेख आणि कथा</p>
 
     </a>
-
 
 </div>
 
@@ -1870,7 +1560,6 @@ id="home"
 ===================================================== -->
 
 <section id="news">
-
 
 <div class="section-title">
 
@@ -1890,7 +1579,10 @@ id="home"
 </div>
 
 
-<div class="cards" id="articleCards">
+<div
+class="cards"
+id="articleCards"
+>
 
 
 <!-- OXYGEN -->
@@ -2020,7 +1712,6 @@ id="home"
 
 <section id="agriculture">
 
-
 <div class="section-title">
 
     <div class="section-label">
@@ -2069,7 +1760,6 @@ id="home"
 ===================================================== -->
 
 <section id="history">
-
 
 <div class="section-title">
 
@@ -2164,7 +1854,7 @@ id="home"
 
 
 <!-- =====================================================
-     PROFESSIONAL FAMOUS PLACES
+     PLACES
 ===================================================== -->
 
 <section id="places">
@@ -2189,8 +1879,6 @@ id="home"
 
 <div class="places">
 
-
-<!-- UNAPDEV -->
 
 <div class="place">
 
@@ -2224,7 +1912,6 @@ id="home"
 </div>
 
 
-<!-- PADMALAYA -->
 
 <div class="place">
 
@@ -2258,7 +1945,6 @@ id="home"
 </div>
 
 
-<!-- MANUDEVI -->
 
 <div class="place">
 
@@ -2292,7 +1978,6 @@ id="home"
 </div>
 
 
-<!-- PAROLA -->
 
 <div class="place">
 
@@ -2333,14 +2018,13 @@ id="home"
 
 
 <!-- =====================================================
-     PROFESSIONAL BLOGS
+     BLOGS
 ===================================================== -->
 
 <section
 id="blogs"
 class="blog-section"
 >
-
 
 <div class="section-title">
 
@@ -2454,7 +2138,6 @@ class="blog-section"
 
 <section id="about">
 
-
 <div class="about-box">
 
 
@@ -2492,19 +2175,14 @@ class="blog-section"
 
     </p>
 
-
     <a
     href="#home"
     class="about-button"
     >
-
-        Explore Jalgaon
-        →
-
+        Explore Jalgaon →
     </a>
 
 </div>
-
 
 
 <div>
