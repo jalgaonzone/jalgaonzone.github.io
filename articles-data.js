@@ -25,6 +25,15 @@ const articles = [
         image: "Jalgaon city.jpeg",
         description: "जळगाव जिल्ह्याचा इतिहास, भौगोलिक माहिती आणि महत्त्वाची माहिती.",
         link: "article.html?id=history"
+    },
+
+    {
+        id: "banana-news",
+        title: "जळगावच्या केळी उत्पादकांसाठी नवीन माहिती",
+        category: "Agriculture",
+        image: "banana-news.jpg",
+        description: "जळगाव जिल्ह्यातील केळी उत्पादकांसाठी महत्त्वाची माहिती.",
+        link: "article.html?id=banana-news"
     }
 
 ];
