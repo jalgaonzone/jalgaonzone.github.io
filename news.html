@@ -5,7 +5,8 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
 content="Jalgaon Zone वर जळगाव जिल्ह्यातील ताज्या बातम्या, स्थानिक घडामोडी आणि महत्त्वाची माहिती वाचा.">
@@ -1457,6 +1458,13 @@ footer p{
 
 
 <!-- =====================================================
+     ARTICLE DATA
+===================================================== -->
+
+<script src="articles-data.js"></script>
+
+
+<!-- =====================================================
      SEARCH SCRIPT
 ===================================================== -->
 
@@ -1486,7 +1494,7 @@ function searchNews(){
             (
                 card.innerText +
                 " " +
-                card.dataset.search
+                (card.dataset.search || "")
             )
             .toLowerCase();
 
