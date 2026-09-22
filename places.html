@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Jalgaon Places | जळगावमधील प्रसिद्ध ठिकाणे
+</title>
+
+<meta
+name="description"
+content="जळगाव जिल्ह्यातील प्रसिद्ध पर्यटन, धार्मिक आणि ऐतिहासिक ठिकाणांची माहिती."
+>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:#111;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    color:#f4511e;
+    text-decoration:none;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:white;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#f4511e;
+}
+
+
+/* HERO */
+
+.hero{
+
+    min-height:380px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:40px 20px;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.65)
+    ),
+
+    url("Jalgaon city.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+
+/* CONTAINER */
+
+.container{
+    max-width:1150px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+
+/* PLACES GRID */
+
+.places-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(270px,1fr));
+
+    gap:25px;
+
+}
+
+
+/* PLACE CARD */
+
+.place-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 3px 12px
+    rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+.place-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 8px 20px
+    rgba(0,0,0,.15);
+
+}
+
+.place-card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+}
+
+.place-content{
+
+    padding:22px;
+
+}
+
+.place-content h3{
+
+    color:#f4511e;
+
+    margin-bottom:8px;
+
+}
+
+.place-content p{
+
+    color:#555;
+
+    margin-bottom:12px;
+
+}
+
+.place-type{
+
+    display:inline-block;
+
+    background:#f4511e;
+
+    color:white;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+}
+
+
+/* INFO */
+
+.info{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    margin-top:40px;
+
+    box-shadow:
+    0 3px 12px
+    rgba(0,0,0,.08);
+
+}
+
+.info h2{
+
+    color:#f4511e;
+
+    margin-bottom:12px;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    margin-top:60px;
+
+}
+
+footer p{
+    margin:5px 0;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<a
+href="index.html"
+class="logo"
+>
+Jalgaon <span>Zone</span>
+</a>
+
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="news.html">
+News
+</a>
+
+<a href="agriculture.html">
+Agriculture
+</a>
+
+<a href="history.html">
+History
+</a>
+
+<a href="places.html">
+Places
+</a>
+
+<a href="blogs.html">
+Blogs
+</a>
+
+<a href="about.html">
+About
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>
+📍 Famous Places in Jalgaon
+</h1>
+
+<p>
+जळगाव जिल्ह्यातील प्रसिद्ध पर्यटन,
+धार्मिक आणि ऐतिहासिक ठिकाणे
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+Explore Jalgaon
+</h2>
+
+<p>
+जळगावमध्ये भेट देण्यासारखी प्रसिद्ध ठिकाणे
+</p>
+
+</div>
+
+
+
+<div class="places-grid">
+
+
+<!-- UNAPDEV -->
+
+<div class="place-card">
+
+<img
+src="Jalgaon city.jpeg"
+alt="Unapdev"
+>
+
+<div class="place-content">
+
+<span class="place-type">
+Tourism
+</span>
+
+<h3>
+Unapdev
+</h3>
+
+<p>
+
+उनपदेव हे जळगाव जिल्ह्यातील
+प्रसिद्ध नैसर्गिक आणि पर्यटन
+स्थळांपैकी एक आहे.
+
+येथील गरम पाण्याच्या
+झऱ्यामुळे हे ठिकाण
+विशेष ओळखले जाते.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- PADMALAYA -->
+
+<div class="place-card">
+
+<img
+src="Jalgaon city.jpeg"
+alt="Padmalaya"
+>
+
+<div class="place-content">
+
+<span class="place-type">
+Religious
+</span>
+
+<h3>
+Padmalaya
+</h3>
+
+<p>
+
+पद्मालय हे जळगाव जिल्ह्यातील
+प्रसिद्ध धार्मिक स्थळ आहे.
+
+येथील गणपती मंदिरासाठी
+हे ठिकाण प्रसिद्ध आहे.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- MANUDEVI -->
+
+<div class="place-card">
+
+<img
+src="Jalgaon city.jpeg"
+alt="Manudevi"
+>
+
+<div class="place-content">
+
+<span class="place-type">
+Religious
+</span>
+
+<h3>
+Manudevi
+</h3>
+
+<p>
+
+मनुदेवी हे जळगाव जिल्ह्यातील
+प्रसिद्ध धार्मिक आणि
+निसर्गरम्य ठिकाण आहे.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- PATANADEVI -->
+
+<div class="place-card">
+
+<img
+src="Jalgaon city.jpeg"
+alt="Patanadevi"
+>
+
+<div class="place-content">
+
+<span class="place-type">
+Historical
+</span>
+
+<h3>
+Patanadevi
+</h3>
+
+<p>
+
+पाटणादेवी हे ऐतिहासिक
+आणि धार्मिक महत्त्व असलेले
+प्रसिद्ध ठिकाण आहे.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- PAROLA FORT -->
+
+<div class="place-card">
+
+<img
+src="Jalgaon city.jpeg"
+alt="Parola Fort"
+>
+
+<div class="place-content">
+
+<span class="place-type">
+Historical
+</span>
+
+<h3>
+Parola Fort
+</h3>
+
+<p>
+
+परोळा किल्ला हा जळगाव
+जिल्ह्यातील प्रसिद्ध
+ऐतिहासिक किल्ल्यांपैकी एक आहे.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- FARKANDE -->
+
+<div class="place-card">
+
+<img
+src="Jalgaon city.jpeg"
+alt="Farkande Swinging Towers"
+>
+
+<div class="place-content">
+
+<span class="place-type">
+Historical
+</span>
+
+<h3>
+Farkande Swinging Towers
+</h3>
+
+<p>
+
+फारकांडे येथील झुलते मनोरे
+हे जळगाव जिल्ह्यातील
+विशेष ऐतिहासिक वास्तूंपैकी
+एक म्हणून ओळखले जातात.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- FAIZPUR -->
+
+<div class="place-card">
+
+<img
+src="Jalgaon city.jpeg"
+alt="Faizpur"
+>
+
+<div class="place-content">
+
+<span class="place-type">
+History
+</span>
+
+<h3>
+Faizpur
+</h3>
+
+<p>
+
+फैजपूर हे ऐतिहासिकदृष्ट्या
+महत्त्वाचे ठिकाण आहे.
+1936 मध्ये येथे भारतीय
+राष्ट्रीय काँग्रेसचे अधिवेशन झाले.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- INFO -->
+
+<div class="info">
+
+<h2>
+जळगावला भेट देताना
+</h2>
+
+<p>
+
+जळगाव जिल्ह्यात धार्मिक,
+ऐतिहासिक आणि नैसर्गिक
+ठिकाणांची विविधता पाहायला
+मिळते.
+
+Jalgaon Zone वर भविष्यात
+प्रत्येक ठिकाणाची स्वतंत्र
+सविस्तर माहिती, इतिहास,
+प्रवास मार्ग आणि इतर
+उपयुक्त माहिती प्रकाशित
+केली जाईल.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<strong>Jalgaon Zone</strong>
+</p>
+
+<p>
+Jalgaon News • Agriculture • History • Places • Blogs
+</p>
+
+<p>
+© 2026 Jalgaon Zone
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
