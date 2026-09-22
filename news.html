@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Jalgaon Zone वर जळगाव जिल्ह्यातील ताज्या बातम्या, स्थानिक घडामोडी आणि महत्त्वाची माहिती वाचा.">
+
+<meta name="keywords"
+content="Jalgaon News, जळगाव बातम्या, Jalgaon latest news, जळगाव न्यूज">
+
+<title>Jalgaon News | जळगावच्या ताज्या बातम्या</title>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    Arial,
+    "Noto Sans Devanagari",
+    sans-serif;
+
+    background:#f6f7f9;
+
+    color:#161616;
+
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    background:#0d0d0d;
+
+    color:white;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,.25);
+}
+
+.navbar{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:14px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
+}
+
+
+/* LOGO */
+
+.logo{
+
+    font-size:27px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+    letter-spacing:-.5px;
+}
+
+.logo span{
+
+    color:#ff5722;
+}
+
+
+/* NAVIGATION */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+}
+
+nav::-webkit-scrollbar{
+    display:none;
+}
+
+nav a{
+
+    color:#eee;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    white-space:nowrap;
+
+    padding:8px 0;
+
+    position:relative;
+
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#ff5722;
+}
+
+nav a.active{
+    color:#ff5722;
+}
+
+nav a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:2px;
+
+    background:#ff5722;
+}
+
+
+/* =====================================================
+   PAGE HERO
+===================================================== */
+
+.page-hero{
+
+    min-height:350px;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.25)
+    ),
+
+    url("jalgaon.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.page-hero-content{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:70px 25px;
+}
+
+.page-label{
+
+    color:#ff5722;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:8px;
+}
+
+.page-hero h1{
+
+    font-size:55px;
+
+    line-height:1.15;
+
+    margin-bottom:15px;
+}
+
+.page-hero h1 span{
+    color:#ff5722;
+}
+
+.page-hero p{
+
+    max-width:700px;
+
+    font-size:18px;
+
+    color:#eee;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-wrapper{
+
+    max-width:1050px;
+
+    margin:-30px auto 0;
+
+    padding:0 20px;
+
+    position:relative;
+
+    z-index:5;
+}
+
+.search-box{
+
+    background:white;
+
+    border-radius:50px;
+
+    padding:8px;
+
+    display:flex;
+
+    align-items:center;
+
+    box-shadow:
+    0 8px 35px rgba(0,0,0,.12);
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:15px 20px;
+
+    font-size:16px;
+
+    background:transparent;
+
+    min-width:0;
+}
+
+.search-button{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff5722;
+
+    color:white;
+
+    font-size:21px;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:75px 20px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:45px;
+}
+
+.section-label{
+
+    color:#ff5722;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:6px;
+}
+
+.section-title h2{
+
+    font-size:38px;
+
+    line-height:1.2;
+
+    margin-bottom:10px;
+}
+
+.section-title p{
+
+    color:#777;
+
+    font-size:16px;
+}
+
+
+/* =====================================================
+   NEWS GRID
+===================================================== */
+
+.news-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(300px,1fr)
+    );
+
+    gap:25px;
+}
+
+
+/* =====================================================
+   NEWS CARD
+===================================================== */
+
+.news-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 6px 25px rgba(0,0,0,.07);
+
+    transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.news-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.13);
+}
+
+
+/* IMAGE */
+
+.news-image{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    display:block;
+
+    background:#eee;
+}
+
+
+/* CONTENT */
+
+.news-content{
+
+    padding:24px;
+}
+
+.news-category{
+
+    display:inline-block;
+
+    background:#fff0eb;
+
+    color:#f4511e;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    margin-bottom:12px;
+}
+
+.news-content h3{
+
+    font-size:22px;
+
+    line-height:1.45;
+
+    margin-bottom:10px;
+}
+
+.news-content p{
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-bottom:18px;
+}
+
+.read-more{
+
+    color:#f4511e;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+}
+
+.read-more:hover{
+    text-decoration:underline;
+}
+
+
+/* =====================================================
+   FEATURED NEWS
+===================================================== */
+
+.featured{
+
+    margin-bottom:55px;
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 7px 30px rgba(0,0,0,.08);
+
+    display:grid;
+
+    grid-template-columns:1.15fr 1fr;
+}
+
+.featured-image{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:330px;
+
+    object-fit:cover;
+}
+
+.featured-content{
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.featured-badge{
+
+    display:inline-block;
+
+    width:max-content;
+
+    background:#ff5722;
+
+    color:white;
+
+    padding:6px 13px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+.featured-content h2{
+
+    font-size:32px;
+
+    line-height:1.35;
+
+    margin-bottom:15px;
+}
+
+.featured-content p{
+
+    color:#666;
+
+    font-size:16px;
+
+    margin-bottom:22px;
+}
+
+.featured-button{
+
+    display:inline-flex;
+
+    width:max-content;
+
+    background:#ff5722;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.featured-button:hover{
+
+    background:#e64a19;
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   NO RESULT
+===================================================== */
+
+.no-result{
+
+    display:none;
+
+    text-align:center;
+
+    background:white;
+
+    padding:45px 20px;
+
+    border-radius:18px;
+
+    color:#777;
+}
+
+.no-result h3{
+
+    color:#222;
+
+    margin-bottom:7px;
+}
+
+
+/* =====================================================
+   BACK HOME
+===================================================== */
+
+.back-home{
+
+    text-align:center;
+
+    margin-top:55px;
+}
+
+.back-home a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#0d0d0d;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:13px 22px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.back-home a:hover{
+
+    background:#ff5722;
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#0d0d0d;
+
+    color:#aaa;
+
+    padding:55px 20px;
+
+    text-align:center;
+}
+
+footer h2{
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:10px;
+}
+
+footer h2 span{
+    color:#ff5722;
+}
+
+footer p{
+
+    margin:7px 0;
+
+    font-size:14px;
+}
+
+.footer-line{
+
+    max-width:500px;
+
+    height:1px;
+
+    background:#333;
+
+    margin:25px auto;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:800px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        align-items:center;
+    }
+
+    nav{
+
+        width:100%;
+
+        justify-content:flex-start;
+    }
+
+    .page-hero{
+
+        min-height:330px;
+    }
+
+    .page-hero h1{
+
+        font-size:43px;
+    }
+
+    .featured{
+
+        grid-template-columns:1fr;
+    }
+
+    .featured-image{
+
+        height:250px;
+
+        min-height:250px;
+    }
+
+    .featured-content{
+
+        padding:28px;
+    }
+
+    .featured-content h2{
+
+        font-size:27px;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .navbar{
+        padding:12px 15px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav{
+        gap:18px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .page-hero{
+
+        min-height:360px;
+
+        background:
+
+        linear-gradient(
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.58)
+        ),
+
+        url("jalgaon.jpg");
+
+        background-size:cover;
+
+        background-position:center;
+    }
+
+    .page-hero-content{
+
+        padding:55px 20px;
+    }
+
+    .page-label{
+        font-size:14px;
+    }
+
+    .page-hero h1{
+
+        font-size:38px;
+    }
+
+    .page-hero p{
+
+        font-size:15px;
+    }
+
+    .search-wrapper{
+
+        margin:-28px auto 0;
+
+        padding:0 14px;
+    }
+
+    .search-box input{
+
+        font-size:14px;
+
+        padding:14px 12px;
+    }
+
+    .search-button{
+
+        width:48px;
+
+        height:48px;
+    }
+
+    main{
+
+        padding:55px 15px;
+    }
+
+    .section-title h2{
+
+        font-size:30px;
+    }
+
+    .section-title p{
+
+        font-size:14px;
+    }
+
+    .news-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+    .news-image{
+
+        height:210px;
+    }
+
+    .news-content{
+
+        padding:20px;
+    }
+
+    .news-content h3{
+
+        font-size:20px;
+    }
+
+    .featured-image{
+
+        height:210px;
+
+        min-height:210px;
+    }
+
+    .featured-content{
+
+        padding:22px;
+    }
+
+    .featured-content h2{
+
+        font-size:23px;
+    }
+
+    .featured-content p{
+
+        font-size:14px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="navbar">
+
+    <div class="logo">
+
+        Jalgaon <span>Zone</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="news.html" class="active">
+            News
+        </a>
+
+        <a href="agriculture.html">
+            Agriculture
+        </a>
+
+        <a href="history.html">
+            History
+        </a>
+
+        <a href="places.html">
+            Places
+        </a>
+
+        <a href="blogs.html">
+            Blogs
+        </a>
+
+        <a href="index.html#about">
+            About
+        </a>
+
+    </nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="page-hero">
+
+<div class="page-hero-content">
+
+    <div class="page-label">
+        📰 Jalgaon News
+    </div>
+
+    <h1>
+        जळगावच्या <span>ताज्या बातम्या</span>
+    </h1>
+
+    <p>
+        जळगाव जिल्ह्यातील स्थानिक घडामोडी,
+        महत्त्वाच्या बातम्या आणि उपयोगी माहिती
+        एका ठिकाणी.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<div class="search-wrapper">
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="newsSearch"
+        placeholder="बातमी शोधा..."
+        onkeyup="searchNews()"
+    >
+
+    <button
+        class="search-button"
+        onclick="focusNewsSearch()"
+    >
+        🔍
+    </button>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     FEATURED NEWS
+===================================================== -->
+
+<div class="section-title">
+
+    <div class="section-label">
+        Featured News
+    </div>
+
+    <h2>
+        आजची महत्त्वाची बातमी
+    </h2>
+
+</div>
+
+
+<div class="featured news-item">
+
+
+    <img
+        src="oxygen-park-newspng.jpg"
+        class="featured-image"
+        alt="पाळधीत ऑक्सिजन पार्कचे भूमीपूजन"
+    >
+
+
+    <div class="featured-content">
+
+        <span class="featured-badge">
+            Jalgaon News
+        </span>
+
+        <h2>
+            पाळधीत ऑक्सिजन पार्कचे भूमीपूजन
+        </h2>
+
+        <p>
+            पाळधी खुर्द येथे ऑक्सिजन पार्क
+            निर्मितीच्या उपक्रमाची सुरुवात
+            करण्यात आली. या उपक्रमाबाबत
+            सविस्तर माहिती वाचा.
+        </p>
+
+        <a
+            href="article.html?id=oxygen"
+            class="featured-button"
+        >
+            Read Full News →
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     LATEST NEWS
+===================================================== -->
+
+<div class="section-title">
+
+    <div class="section-label">
+        Latest Updates
+    </div>
+
+    <h2>
+        Latest News
+    </h2>
+
+    <p>
+        जळगाव जिल्ह्यातील महत्त्वाच्या
+        स्थानिक बातम्या
+    </p>
+
+</div>
+
+
+<div
+    class="news-grid"
+    id="newsGrid"
+>
+
+
+<!-- NEWS 1 -->
+
+<article
+    class="news-card news-item"
+    data-search="पाळधी ऑक्सिजन पार्क जळगाव oxygen park jalgaon news"
+>
+
+    <img
+        src="oxygen-park-newspng.jpg"
+        class="news-image"
+        alt="पाळधीत ऑक्सिजन पार्कचे भूमीपूजन"
+    >
+
+    <div class="news-content">
+
+        <span class="news-category">
+            📰 Jalgaon News
+        </span>
+
+        <h3>
+            पाळधीत ऑक्सिजन पार्कचे भूमीपूजन
+        </h3>
+
+        <p>
+            पाळधी खुर्द येथे ऑक्सिजन पार्क
+            निर्मितीच्या उपक्रमाची सुरुवात
+            करण्यात आली.
+        </p>
+
+        <a
+            href="article.html?id=oxygen"
+            class="read-more"
+        >
+            Read More →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- NEWS 2 -->
+
+<article
+    class="news-card news-item"
+    data-search="शेतकरी सूक्ष्म सिंचन अनुदान 90 टक्के agriculture subsidy jalgaon"
+>
+
+    <img
+        src="agriculture.png"
+        class="news-image"
+        alt="शेतकरी आणि सूक्ष्म सिंचन"
+    >
+
+    <div class="news-content">
+
+        <span class="news-category">
+            🌱 Agriculture
+        </span>
+
+        <h3>
+            शेतकऱ्यांसाठी खुशखबर!
+            सूक्ष्म सिंचनासाठी मिळणार
+            ९०% पर्यंत अनुदान
+        </h3>
+
+        <p>
+            सूक्ष्म सिंचनासाठी उपलब्ध
+            अनुदान आणि अर्ज प्रक्रियेबाबत
+            महत्त्वाची माहिती.
+        </p>
+
+        <a
+            href="article.html?id=agriculture"
+            class="read-more"
+        >
+            Read More →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- NEWS 3 -->
+
+<article
+    class="news-card news-item"
+    data-search="जळगाव इतिहास खानदेश फैजपूर history jalgaon"
+>
+
+    <img
+        src="Jalgaon city.jpeg"
+        class="news-image"
+        alt="जळगाव शहराचा इतिहास"
+    >
+
+    <div class="news-content">
+
+        <span class="news-category">
+            🏛️ History
+        </span>
+
+        <h3>
+            जळगावचा इतिहास:
+            खानदेशाच्या मातीपासून
+            आधुनिक जळगावपर्यंत
+        </h3>
+
+        <p>
+            प्राचीन खानदेशापासून आधुनिक
+            जळगावपर्यंतचा ऐतिहासिक प्रवास,
+            संस्कृती आणि वारशाची माहिती.
+        </p>
+
+        <a
+            href="article.html?id=history"
+            class="read-more"
+        >
+            Read Full History →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- NEWS 4 -->
+
+<article
+    class="news-card news-item"
+    data-search="जळगाव शेती केळी कापूस मका agriculture banana cotton"
+>
+
+    <img
+        src="agriculture.png"
+        class="news-image"
+        alt="जळगाव शेती"
+    >
+
+    <div class="news-content">
+
+        <span class="news-category">
+            🌱 Agriculture
+        </span>
+
+        <h3>
+            जळगाव जिल्ह्यातील शेती आणि
+            प्रमुख पिकांची माहिती
+        </h3>
+
+        <p>
+            जळगाव जिल्ह्यातील केळी,
+            कापूस, ज्वारी, मका आणि इतर
+            प्रमुख पिकांबाबत माहिती.
+        </p>
+
+        <a
+            href="agriculture.html"
+            class="read-more"
+        >
+            Explore Agriculture →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- NEWS 5 -->
+
+<article
+    class="news-card news-item"
+    data-search="जळगाव पर्यटन unapdev padmalaya manudevi parola places tourism"
+>
+
+    <img
+        src="Jalgaon city.jpeg"
+        class="news-image"
+        alt="जळगाव पर्यटन"
+    >
+
+    <div class="news-content">
+
+        <span class="news-category">
+            📍 Tourism
+        </span>
+
+        <h3>
+            जळगाव जिल्ह्यातील प्रसिद्ध
+            पर्यटन स्थळे
+        </h3>
+
+        <p>
+            Unapdev, Padmalaya, Manudevi,
+            Parola Fort आणि इतर प्रसिद्ध
+            ठिकाणांची माहिती.
+        </p>
+
+        <a
+            href="places.html"
+            class="read-more"
+        >
+            Explore Places →
+        </a>
+
+    </div>
+
+</article>
+
+
+
+<!-- NEWS 6 -->
+
+<article
+    class="news-card news-item"
+    data-search="jalgaon blogs local stories जळगाव लेख कथा"
+>
+
+    <img
+        src="Jalgaon city.jpeg"
+        class="news-image"
+        alt="Jalgaon Blogs"
+    >
+
+    <div class="news-content">
+
+        <span class="news-category">
+            ✍️ Blogs
+        </span>
+
+        <h3>
+            जळगावविषयी माहिती,
+            स्थानिक कथा आणि विशेष लेख
+        </h3>
+
+        <p>
+            जळगावची ओळख, स्थानिक कथा,
+            माहिती आणि विशेष लेख
+            वाचा.
+        </p>
+
+        <a
+            href="blogs.html"
+            class="read-more"
+        >
+            Explore Blogs →
+        </a>
+
+    </div>
+
+</article>
+
+
+</div>
+
+
+<!-- NO RESULT -->
+
+<div
+    class="no-result"
+    id="noResult"
+>
+
+    <h3>
+        कोणतीही बातमी सापडली नाही
+    </h3>
+
+    <p>
+        दुसरा शब्द वापरून पुन्हा शोधा.
+    </p>
+
+</div>
+
+
+
+<!-- BACK HOME -->
+
+<div class="back-home">
+
+    <a href="index.html">
+        ← Back to Jalgaon Zone
+    </a>
+
+</div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <h2>
+        Jalgaon <span>Zone</span>
+    </h2>
+
+    <p>
+        Jalgaon News • Agriculture • History • Tourism • Blogs
+    </p>
+
+    <div class="footer-line"></div>
+
+    <p>
+        © 2026 Jalgaon Zone. All Rights Reserved.
+    </p>
+
+    <p>
+        Jalgaon • Maharashtra • India
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     SEARCH SCRIPT
+===================================================== -->
+
+<script>
+
+function searchNews(){
+
+    const input =
+        document
+        .getElementById("newsSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const cards =
+        document
+        .querySelectorAll(".news-card");
+
+
+    let visibleCount = 0;
+
+
+    cards.forEach(function(card){
+
+        const text =
+            (
+                card.innerText +
+                " " +
+                card.dataset.search
+            )
+            .toLowerCase();
+
+
+        if(
+            input === "" ||
+            text.includes(input)
+        ){
+
+            card.style.display = "";
+
+            visibleCount++;
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    const noResult =
+        document.getElementById("noResult");
+
+
+    if(visibleCount === 0){
+
+        noResult.style.display = "block";
+
+    }else{
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+
+function focusNewsSearch(){
+
+    document
+    .getElementById("newsSearch")
+    .focus();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
