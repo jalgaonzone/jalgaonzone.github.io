@@ -5,10 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<!-- GOOGLE SEARCH CONSOLE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta
 name="google-site-verification"
@@ -29,7 +26,6 @@ name="keywords"
 content="Jalgaon News, Jalgaon, जळगाव बातम्या, Jalgaon Agriculture, Jalgaon History, Jalgaon Tourism"
 >
 
-
 <style>
 
 /* =====================================================
@@ -42,25 +38,15 @@ content="Jalgaon News, Jalgaon, जळगाव बातम्या, Jalgaon A
     box-sizing:border-box;
 }
 
-
 html{
     scroll-behavior:smooth;
 }
 
-
 body{
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+    font-family:Arial, Helvetica, sans-serif;
     background:#f5f5f5;
-
     color:#222;
-
     line-height:1.6;
-
 }
 
 
@@ -69,93 +55,51 @@ body{
 ===================================================== */
 
 header{
-
     background:#111;
-
     color:white;
-
     position:sticky;
-
     top:0;
-
     z-index:999;
-
-    box-shadow:
-    0 2px 10px
-    rgba(0,0,0,0.3);
-
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
 }
-
 
 .navbar{
-
     max-width:1200px;
-
     margin:auto;
-
     padding:15px 20px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     gap:20px;
-
 }
-
 
 .logo{
-
     font-size:25px;
-
     font-weight:bold;
-
     color:#f4511e;
-
     text-decoration:none;
-
 }
-
 
 .logo span{
-
     color:white;
-
 }
-
 
 nav{
-
     display:flex;
-
     gap:20px;
-
     flex-wrap:wrap;
-
     justify-content:center;
-
 }
-
 
 nav a{
-
     color:white;
-
     text-decoration:none;
-
     font-size:15px;
-
     transition:0.3s;
-
 }
 
-
 nav a:hover{
-
     color:#f4511e;
-
 }
 
 
@@ -179,81 +123,55 @@ nav a:hover{
 
     padding:40px 20px;
 
-    background:
+    background-image:
 
     linear-gradient(
         rgba(0,0,0,0.45),
         rgba(0,0,0,0.45)
     ),
 
-    url("Images/jalgaon-hero.jpg");
+    url("./jalgaon-hero.jpg");
 
     background-size:cover;
 
-    background-position:center;
+    background-position:center center;
+
+    background-repeat:no-repeat;
 
 }
-
 
 .hero-content{
-
     max-width:900px;
-
 }
-
 
 .hero h1{
-
     font-size:48px;
-
     margin-bottom:15px;
-
 }
-
 
 .hero p{
-
     font-size:19px;
-
     margin-bottom:25px;
-
 }
-
 
 .hero-buttons{
-
     display:flex;
-
     justify-content:center;
-
     gap:12px;
-
     flex-wrap:wrap;
-
 }
-
 
 .hero-buttons a{
-
     text-decoration:none;
-
     padding:12px 22px;
-
     background:#f4511e;
-
     color:white;
-
     border-radius:6px;
-
     font-weight:bold;
-
 }
 
-
 .hero-buttons a:hover{
-
     background:#d84315;
-
 }
 
 
@@ -262,69 +180,38 @@ nav a:hover{
 ===================================================== */
 
 .search-section{
-
     max-width:1000px;
-
     margin:30px auto;
-
     padding:0 20px;
-
 }
-
 
 .search-box{
-
     display:flex;
-
     background:white;
-
     border-radius:8px;
-
     overflow:hidden;
-
-    box-shadow:
-    0 2px 10px
-    rgba(0,0,0,0.1);
-
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
-
 
 .search-box input{
-
     flex:1;
-
     padding:15px;
-
     border:none;
-
     outline:none;
-
     font-size:16px;
-
 }
-
 
 .search-box button{
-
     border:none;
-
     background:#f4511e;
-
     color:white;
-
     padding:0 25px;
-
     cursor:pointer;
-
     font-size:16px;
-
 }
 
-
 .search-box button:hover{
-
     background:#d84315;
-
 }
 
 
@@ -333,40 +220,24 @@ nav a:hover{
 ===================================================== */
 
 section{
-
     max-width:1200px;
-
     margin:60px auto;
-
     padding:0 20px;
-
 }
-
 
 .section-title{
-
     text-align:center;
-
     margin-bottom:35px;
-
 }
-
 
 .section-title h2{
-
     font-size:32px;
-
     color:#111;
-
     margin-bottom:8px;
-
 }
 
-
 .section-title p{
-
     color:#666;
-
 }
 
 
@@ -375,64 +246,34 @@ section{
 ===================================================== */
 
 .category-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(200px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:20px;
-
 }
-
 
 .category-card{
-
     background:white;
-
     padding:30px 20px;
-
     text-align:center;
-
     border-radius:10px;
-
     text-decoration:none;
-
     color:#222;
-
-    box-shadow:
-    0 3px 12px
-    rgba(0,0,0,0.08);
-
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
     transition:0.3s;
-
 }
-
 
 .category-card:hover{
-
     transform:translateY(-5px);
-
-    box-shadow:
-    0 8px 20px
-    rgba(0,0,0,0.15);
-
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
-
 
 .category-icon{
-
     font-size:40px;
-
     margin-bottom:10px;
-
 }
 
-
 .category-card h3{
-
     margin-bottom:5px;
-
 }
 
 
@@ -441,111 +282,60 @@ section{
 ===================================================== */
 
 .cards{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
-
 }
-
 
 .card{
-
     background:white;
-
     border-radius:10px;
-
     overflow:hidden;
-
-    box-shadow:
-    0 3px 12px
-    rgba(0,0,0,0.1);
-
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
     transition:0.3s;
-
 }
-
 
 .card:hover{
-
     transform:translateY(-5px);
-
-    box-shadow:
-    0 8px 20px
-    rgba(0,0,0,0.15);
-
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
-
 
 .card img{
-
     width:100%;
-
     height:210px;
-
     object-fit:cover;
-
 }
-
 
 .card-content{
-
     padding:20px;
-
 }
-
 
 .category{
-
     display:inline-block;
-
     color:#f4511e;
-
     font-size:14px;
-
     font-weight:bold;
-
     margin-bottom:8px;
-
 }
-
 
 .card h3{
-
     font-size:21px;
-
     margin-bottom:10px;
-
 }
-
 
 .card p{
-
     color:#666;
-
     margin-bottom:15px;
-
 }
-
 
 .read-more{
-
     color:#f4511e;
-
     text-decoration:none;
-
     font-weight:bold;
-
 }
 
-
 .read-more:hover{
-
     text-decoration:underline;
-
 }
 
 
@@ -554,26 +344,15 @@ section{
 ===================================================== */
 
 .agriculture-box{
-
     background:white;
-
     padding:30px;
-
     border-radius:10px;
-
-    box-shadow:
-    0 3px 12px
-    rgba(0,0,0,0.08);
-
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
-
 .agriculture-box h3{
-
     color:#f4511e;
-
     margin-bottom:10px;
-
 }
 
 
@@ -582,24 +361,15 @@ section{
 ===================================================== */
 
 .history-box{
-
     background:#111;
-
     color:white;
-
     padding:35px;
-
     border-radius:10px;
-
 }
 
-
 .history-box h3{
-
     color:#f4511e;
-
     margin-bottom:12px;
-
 }
 
 
@@ -608,38 +378,21 @@ section{
 ===================================================== */
 
 .places-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
-
 }
-
 
 .place{
-
     background:white;
-
     padding:25px;
-
     border-radius:10px;
-
-    box-shadow:
-    0 3px 12px
-    rgba(0,0,0,0.08);
-
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
-
 .place h3{
-
     margin-bottom:8px;
-
     color:#f4511e;
-
 }
 
 
@@ -648,24 +401,14 @@ section{
 ===================================================== */
 
 .blog-box{
-
     background:white;
-
     padding:30px;
-
     border-radius:10px;
-
-    box-shadow:
-    0 3px 12px
-    rgba(0,0,0,0.08);
-
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
-
 .blog-box h3{
-
     margin-bottom:10px;
-
 }
 
 
@@ -674,20 +417,13 @@ section{
 ===================================================== */
 
 .about-box{
-
     text-align:center;
-
     max-width:850px;
-
     margin:auto;
-
 }
 
-
 .about-box p{
-
     color:#555;
-
 }
 
 
@@ -696,72 +432,40 @@ section{
 ===================================================== */
 
 footer{
-
     background:#111;
-
     color:white;
-
     padding:40px 20px;
-
     margin-top:70px;
-
 }
-
 
 .footer-container{
-
     max-width:1200px;
-
     margin:auto;
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:30px;
-
 }
-
 
 footer h3{
-
     color:#f4511e;
-
     margin-bottom:10px;
-
 }
-
 
 footer a{
-
     color:#ddd;
-
     text-decoration:none;
-
 }
-
 
 footer a:hover{
-
     color:#f4511e;
-
 }
 
-
 .copyright{
-
     text-align:center;
-
     margin-top:30px;
-
     padding-top:20px;
-
-    border-top:
-    1px solid #333;
-
+    border-top:1px solid #333;
     color:#aaa;
-
 }
 
 
@@ -772,46 +476,28 @@ footer a:hover{
 @media(max-width:768px){
 
     .navbar{
-
         flex-direction:column;
-
     }
-
 
     nav{
-
         gap:12px;
-
     }
-
 
     .hero{
-
         min-height:430px;
-
-        background-position:center;
-
+        background-position:center center;
     }
-
 
     .hero h1{
-
         font-size:34px;
-
     }
-
 
     .hero p{
-
         font-size:16px;
-
     }
 
-
     section{
-
         margin:45px auto;
-
     }
 
 }
@@ -832,52 +518,31 @@ footer a:hover{
 
 <div class="navbar">
 
-
-<a
-href="index.html"
-class="logo"
->
+<a href="index.html" class="logo">
 Jalgaon <span>Zone</span>
 </a>
 
-
 <nav>
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="news.html">
-News
-</a>
+<a href="news.html">News</a>
 
-<a href="agriculture.html">
-Agriculture
-</a>
+<a href="agriculture.html">Agriculture</a>
 
-<a href="history.html">
-History
-</a>
+<a href="history.html">History</a>
 
-<a href="places.html">
-Places
-</a>
+<a href="places.html">Places</a>
 
-<a href="blogs.html">
-Blogs
-</a>
+<a href="blogs.html">Blogs</a>
 
-<a href="about.html">
-About
-</a>
+<a href="about.html">About</a>
 
 </nav>
-
 
 </div>
 
 </header>
-
 
 
 <!-- =====================================================
@@ -886,14 +551,11 @@ About
 
 <section class="hero">
 
-
 <div class="hero-content">
-
 
 <h1>
 Jalgaon Zone
 </h1>
-
 
 <p>
 जळगाव जिल्ह्यातील News, Agriculture,
@@ -901,32 +563,25 @@ History, Tourism आणि Blogs
 एकाच ठिकाणी.
 </p>
 
-
 <div class="hero-buttons">
-
 
 <a href="news.html">
 Latest News
 </a>
 
-
 <a href="agriculture.html">
 Agriculture
 </a>
-
 
 <a href="#places">
 Explore Jalgaon
 </a>
 
-
 </div>
-
 
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -937,7 +592,6 @@ Explore Jalgaon
 
 <div class="search-box">
 
-
 <input
 type="text"
 id="searchInput"
@@ -945,16 +599,13 @@ placeholder="Search Jalgaon news, blogs, places..."
 onkeyup="searchArticles()"
 >
 
-
 <button onclick="focusSearch()">
 🔍 Search
 </button>
 
-
 </div>
 
 </div>
-
 
 
 <!-- =====================================================
@@ -963,148 +614,107 @@ onkeyup="searchArticles()"
 
 <section>
 
-
 <div class="section-title">
 
 <h2>
 Explore Jalgaon
 </h2>
 
-
 <p>
 जळगावबद्दल वेगवेगळ्या विषयांची माहिती
 </p>
 
-
 </div>
-
 
 <div class="category-grid">
 
-
-<a
-href="news.html"
-class="category-card"
->
+<a href="news.html" class="category-card">
 
 <div class="category-icon">
 📰
 </div>
 
-
 <h3>
 Jalgaon News
 </h3>
-
 
 <p>
 Latest local news
 </p>
 
-
 </a>
 
 
-
-<a
-href="agriculture.html"
-class="category-card"
->
+<a href="agriculture.html" class="category-card">
 
 <div class="category-icon">
 🌱
 </div>
 
-
 <h3>
 Agriculture
 </h3>
-
 
 <p>
 शेती आणि कृषी माहिती
 </p>
 
-
 </a>
 
 
-
-<a
-href="history.html"
-class="category-card"
->
+<a href="history.html" class="category-card">
 
 <div class="category-icon">
 🏛️
 </div>
 
-
 <h3>
 History
 </h3>
-
 
 <p>
 जळगावचा इतिहास
 </p>
 
-
 </a>
 
 
-
-<a
-href="places.html"
-class="category-card"
->
+<a href="places.html" class="category-card">
 
 <div class="category-icon">
 📍
 </div>
 
-
 <h3>
 Places
 </h3>
-
 
 <p>
 फिरण्यासाठी प्रसिद्ध ठिकाणे
 </p>
 
-
 </a>
 
 
-
-<a
-href="blogs.html"
-class="category-card"
->
+<a href="blogs.html" class="category-card">
 
 <div class="category-icon">
 ✍️
 </div>
 
-
 <h3>
 Blogs
 </h3>
-
 
 <p>
 Interesting local blogs
 </p>
 
-
 </a>
-
 
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1113,39 +723,28 @@ Interesting local blogs
 
 <section id="news">
 
-
 <div class="section-title">
-
 
 <h2>
 Latest News
 </h2>
 
-
 <p>
 जळगाव जिल्ह्यातील महत्त्वाच्या बातम्या आणि माहिती
 </p>
 
-
 </div>
 
 
-
-<div
-class="cards"
-id="articleCards"
->
+<div class="cards" id="articleCards">
 
 
-<!-- =================================================
-     EXISTING ARTICLE 1
-================================================= -->
+<!-- EXISTING ARTICLE 1 -->
 
 <div
 class="card article-card"
 data-article-id="oxygen"
 >
-
 
 <img
 src="oxygen-park-newspng.jpg"
@@ -1153,25 +752,20 @@ alt="पाळधीत ऑक्सिजन पार्कचे भूमि
 onerror="this.style.display='none'"
 >
 
-
 <div class="card-content">
-
 
 <span class="category">
 📰 Jalgaon News
 </span>
 
-
 <h3>
 पाळधीत ऑक्सिजन पार्कचे भूमिपूजन
 </h3>
-
 
 <p>
 जळगाव जिल्ह्यातील पाळधी येथे
 ऑक्सिजन पार्कच्या भूमिपूजनाची माहिती.
 </p>
-
 
 <a
 href="article.html?id=oxygen"
@@ -1180,22 +774,17 @@ class="read-more"
 Read More →
 </a>
 
-
 </div>
 
 </div>
 
 
-
-<!-- =================================================
-     EXISTING ARTICLE 2
-================================================= -->
+<!-- EXISTING ARTICLE 2 -->
 
 <div
 class="card article-card"
 data-article-id="agriculture"
 >
-
 
 <img
 src="agriculture.png"
@@ -1203,25 +792,20 @@ alt="कृषी अनुदान"
 onerror="this.style.display='none'"
 >
 
-
 <div class="card-content">
-
 
 <span class="category">
 🌱 Agriculture
 </span>
 
-
 <h3>
 शेतकऱ्यांसाठी कृषी अनुदानाची माहिती
 </h3>
-
 
 <p>
 जळगाव जिल्ह्यातील शेती आणि कृषी
 क्षेत्राशी संबंधित महत्त्वाची माहिती.
 </p>
-
 
 <a
 href="article.html?id=agriculture"
@@ -1230,22 +814,17 @@ class="read-more"
 Read More →
 </a>
 
-
 </div>
 
 </div>
 
 
-
-<!-- =================================================
-     EXISTING ARTICLE 3
-================================================= -->
+<!-- EXISTING ARTICLE 3 -->
 
 <div
 class="card article-card"
 data-article-id="history"
 >
-
 
 <img
 src="Jalgaon city.jpeg"
@@ -1253,25 +832,20 @@ alt="जळगाव जिल्हा"
 onerror="this.style.display='none'"
 >
 
-
 <div class="card-content">
-
 
 <span class="category">
 🏛️ History
 </span>
 
-
 <h3>
 जळगाव जिल्ह्याची माहिती आणि इतिहास
 </h3>
-
 
 <p>
 जळगाव जिल्ह्याचा इतिहास,
 भौगोलिक माहिती आणि महत्त्वाची माहिती.
 </p>
-
 
 <a
 href="article.html?id=history"
@@ -1280,21 +854,13 @@ class="read-more"
 Read More →
 </a>
 
-
 </div>
 
 </div>
-
-
-<!-- =================================================
-     NEW ARTICLES WILL COME HERE AUTOMATICALLY
-================================================= -->
-
 
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1303,31 +869,24 @@ Read More →
 
 <section id="agriculture">
 
-
 <div class="section-title">
-
 
 <h2>
 Agriculture
 </h2>
 
-
 <p>
 जळगावची शेती आणि कृषी क्षेत्र
 </p>
 
-
 </div>
-
 
 
 <div class="agriculture-box">
 
-
 <h3>
 जळगाव – Banana Capital of India
 </h3>
-
 
 <p>
 
@@ -1344,11 +903,9 @@ Jalgaon Zone वर उपलब्ध करून दिली जाईल.
 
 </p>
 
-
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1357,31 +914,24 @@ Jalgaon Zone वर उपलब्ध करून दिली जाईल.
 
 <section id="history">
 
-
 <div class="section-title">
-
 
 <h2>
 Jalgaon History
 </h2>
 
-
 <p>
 जळगाव जिल्ह्याचा इतिहास
 </p>
 
-
 </div>
-
 
 
 <div class="history-box">
 
-
 <h3>
 जळगाव जिल्हा
 </h3>
-
 
 <p>
 
@@ -1395,11 +945,9 @@ Jalgaon History
 
 </p>
 
-
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1408,138 +956,107 @@ Jalgaon History
 
 <section id="places">
 
-
 <div class="section-title">
-
 
 <h2>
 Famous Places in Jalgaon
 </h2>
 
-
 <p>
 जळगाव जिल्ह्यातील प्रसिद्ध ठिकाणे
 </p>
 
-
 </div>
-
 
 
 <div class="places-grid">
 
-
 <div class="place">
-
 
 <h3>
 Unapdev
 </h3>
-
 
 <p>
 निसर्गरम्य आणि प्रसिद्ध
 गरम पाण्याचे ठिकाण.
 </p>
 
-
 </div>
-
 
 
 <div class="place">
 
-
 <h3>
 Padmalaya
 </h3>
-
 
 <p>
 प्रसिद्ध गणपती मंदिर आणि
 धार्मिक पर्यटन स्थळ.
 </p>
 
-
 </div>
-
 
 
 <div class="place">
 
-
 <h3>
 Manudevi
 </h3>
-
 
 <p>
 जळगाव जिल्ह्यातील
 प्रसिद्ध धार्मिक स्थळ.
 </p>
 
-
 </div>
-
 
 
 <div class="place">
 
-
 <h3>
 Patanadevi
 </h3>
-
 
 <p>
 ऐतिहासिक आणि धार्मिक
 महत्त्व असलेले ठिकाण.
 </p>
 
-
 </div>
-
 
 
 <div class="place">
 
-
 <h3>
 Parola Fort
 </h3>
-
 
 <p>
 जळगाव जिल्ह्यातील
 महत्त्वाचा ऐतिहासिक किल्ला.
 </p>
 
-
 </div>
-
 
 
 <div class="place">
 
-
 <h3>
 Swinging Towers of Farkande
 </h3>
-
 
 <p>
 जळगाव जिल्ह्यातील
 विशेष ऐतिहासिक वास्तू.
 </p>
 
-
 </div>
-
 
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1548,31 +1065,24 @@ Swinging Towers of Farkande
 
 <section id="blogs">
 
-
 <div class="section-title">
-
 
 <h2>
 Jalgaon Blogs
 </h2>
 
-
 <p>
 जळगावशी संबंधित Interesting Blogs
 </p>
 
-
 </div>
-
 
 
 <div class="blog-box">
 
-
 <h3>
 Discover Jalgaon
 </h3>
-
 
 <p>
 
@@ -1584,11 +1094,9 @@ Discover Jalgaon
 
 </p>
 
-
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1597,21 +1105,16 @@ Discover Jalgaon
 
 <section id="about">
 
-
 <div class="section-title">
-
 
 <h2>
 About Jalgaon Zone
 </h2>
 
-
 </div>
 
 
-
 <div class="about-box">
-
 
 <p>
 
@@ -1627,11 +1130,9 @@ Tourism, Places आणि Blogs
 
 </p>
 
-
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1640,35 +1141,27 @@ Tourism, Places आणि Blogs
 
 <footer>
 
-
 <div class="footer-container">
 
-
 <div>
-
 
 <h3>
 Jalgaon Zone
 </h3>
-
 
 <p>
 Jalgaon News, Agriculture,
 History, Tourism & Blogs.
 </p>
 
-
 </div>
-
 
 
 <div>
 
-
 <h3>
 Quick Links
 </h3>
-
 
 <p>
 <a href="index.html">
@@ -1676,13 +1169,11 @@ Home
 </a>
 </p>
 
-
 <p>
 <a href="news.html">
 News
 </a>
 </p>
-
 
 <p>
 <a href="agriculture.html">
@@ -1690,25 +1181,20 @@ Agriculture
 </a>
 </p>
 
-
 <p>
 <a href="history.html">
 History
 </a>
 </p>
 
-
 </div>
-
 
 
 <div>
 
-
 <h3>
 Explore
 </h3>
-
 
 <p>
 <a href="places.html">
@@ -1716,13 +1202,11 @@ Places
 </a>
 </p>
 
-
 <p>
 <a href="blogs.html">
 Blogs
 </a>
 </p>
-
 
 <p>
 <a href="about.html">
@@ -1730,12 +1214,9 @@ About
 </a>
 </p>
 
-
 </div>
 
-
 </div>
-
 
 
 <div class="copyright">
@@ -1745,9 +1226,7 @@ All Rights Reserved.
 
 </div>
 
-
 </footer>
-
 
 
 <!-- =====================================================
@@ -1757,73 +1236,48 @@ All Rights Reserved.
 <script src="articles-data.js"></script>
 
 
-
 <!-- =====================================================
      HOMEPAGE ARTICLE SYSTEM + SEARCH
 ===================================================== -->
 
 <script>
 
-
-/* =====================================================
-   ADD NEW ARTICLES TO HOMEPAGE
-===================================================== */
-
 function loadNewArticles(){
 
     const container =
         document.getElementById("articleCards");
 
-
     if(!container){
         return;
     }
-
 
     if(
         typeof articles === "undefined" ||
         !Array.isArray(articles)
     ){
-
         return;
-
     }
 
-
     const existingIds = [
-
         "oxygen",
-
         "agriculture",
-
         "history"
-
     ];
-
 
     articles.forEach(function(article){
 
-
-        if(
-            existingIds.includes(article.id)
-        ){
-
+        if(existingIds.includes(article.id)){
             return;
-
         }
-
 
         const card =
             document.createElement("div");
 
-
         card.className =
             "card article-card";
 
-
         card.dataset.articleId =
             article.id;
-
 
         card.innerHTML = `
 
@@ -1833,9 +1287,7 @@ function loadNewArticles(){
                 onerror="this.style.display='none'"
             >
 
-
             <div class="card-content">
-
 
                 <span class="category">
 
@@ -1845,117 +1297,75 @@ function loadNewArticles(){
 
                 </span>
 
-
                 <h3>
-
                     ${article.title}
-
                 </h3>
 
-
                 <p>
-
                     ${article.description}
-
                 </p>
-
 
                 <a
                     href="${article.link}"
                     class="read-more"
                 >
-
                     Read More →
-
                 </a>
-
 
             </div>
 
         `;
 
-
         container.appendChild(card);
-
 
     });
 
 }
 
 
-
-/* =====================================================
-   CATEGORY ICON
-===================================================== */
-
 function getCategoryIcon(category){
 
-
     if(!category){
-
         return "📰";
-
     }
 
-
     const value =
-        category
-        .toLowerCase();
-
+        category.toLowerCase();
 
     if(
         value.includes("agriculture") ||
         value.includes("farm") ||
         value.includes("कृषी")
     ){
-
         return "🌱";
-
     }
-
 
     if(
         value.includes("history") ||
         value.includes("इतिहास")
     ){
-
         return "🏛️";
-
     }
-
 
     if(
         value.includes("tourism") ||
         value.includes("place") ||
         value.includes("tour")
     ){
-
         return "📍";
-
     }
-
 
     if(
         value.includes("blog")
     ){
-
         return "✍️";
-
     }
 
-
     return "📰";
-
 }
 
 
-
-/* =====================================================
-   SEARCH ARTICLES
-===================================================== */
-
 function searchArticles(){
-
 
     const input =
         document
@@ -1964,84 +1374,48 @@ function searchArticles(){
         .toLowerCase()
         .trim();
 
-
     const cards =
-        document
-        .querySelectorAll(
+        document.querySelectorAll(
             "#articleCards .article-card"
         );
 
-
     cards.forEach(function(card){
 
-
         const text =
-            card.innerText
-            .toLowerCase();
-
+            card.innerText.toLowerCase();
 
         if(
-
             input === "" ||
-
             text.includes(input)
-
         ){
-
             card.style.display = "";
-
         }
-
         else{
-
             card.style.display = "none";
-
         }
-
 
     });
 
 }
 
 
-
-/* =====================================================
-   SEARCH BUTTON
-===================================================== */
-
 function focusSearch(){
 
-
     const input =
-        document.getElementById(
-            "searchInput"
-        );
-
+        document.getElementById("searchInput");
 
     if(input){
-
         input.focus();
-
     }
 
 }
 
 
-
-/* =====================================================
-   LOAD ARTICLES WHEN PAGE LOADS
-===================================================== */
-
 document.addEventListener(
-
     "DOMContentLoaded",
-
     function(){
-
         loadNewArticles();
-
     }
-
 );
 
 </script>
