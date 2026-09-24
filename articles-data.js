@@ -4,94 +4,109 @@ const articles = [
         id: "oxygen",
         title: "पाळधीत ऑक्सिजन पार्कचे भूमिपूजन",
         category: "Jalgaon News",
+        date: "20 September 2026",
         image: "oxygen-park-newspng.jpg",
-        description: "जळगाव जिल्ह्यातील पाळधी येथे ऑक्सिजन पार्कच्या भूमिपूजनाची माहिती.",
+        description: "पाळधी येथे ऑक्सिजन पार्कच्या भूमिपूजनासंदर्भातील माहिती.",
+        file: "articles/oxygen-park.md",
         link: "article.html?id=oxygen"
     },
 
     {
         id: "agriculture",
-        title: "शेतकऱ्यांसाठी कृषी अनुदानाची माहिती",
+        title: "जळगावातील शेतीसाठी महत्त्वाची माहिती",
         category: "Agriculture",
+        date: "16 September 2026",
         image: "agriculture.png",
-        description: "जळगाव जिल्ह्यातील शेती आणि कृषी क्षेत्राशी संबंधित महत्त्वाची माहिती.",
+        description: "जळगाव जिल्ह्यातील शेती आणि कृषी योजनांशी संबंधित माहिती.",
+        file: "articles/agriculture.md",
         link: "article.html?id=agriculture"
     },
 
     {
         id: "history",
-        title: "जळगाव जिल्ह्याची माहिती आणि इतिहास",
+        title: "खानदेश आणि फैजपूर अधिवेशन 1936",
         category: "History",
+        date: "21 September 2026",
         image: "Jalgaon city.jpeg",
-        description: "जळगाव जिल्ह्याचा इतिहास, भौगोलिक माहिती आणि महत्त्वाची माहिती.",
+        description: "जळगाव आणि खानदेशच्या इतिहासातील महत्त्वपूर्ण घटना.",
+        file: "articles/jalgaon-history.md",
         link: "article.html?id=history"
     },
 
     {
         id: "banana-news",
-        title: "जळगावच्या केळी उत्पादकांसाठी नवीन माहिती",
+        title: "जळगाव केळी उत्पादनाची माहिती",
         category: "Agriculture",
+        date: "22 September 2026",
         image: "banana-news.jpg",
-        description: "जळगाव जिल्ह्यातील केळी उत्पादकांसाठी महत्त्वाची माहिती.",
+        description: "जळगाव जिल्ह्यातील केळी उत्पादन आणि शेतीविषयक माहिती.",
+        file: "articles/banana-news.md",
         link: "article.html?id=banana-news"
     },
 
     {
         id: "jalgaon-district-information",
-        title: "जळगाव जिल्ह्याची संपूर्ण माहिती: इतिहास, तालुके, शेती आणि पर्यटन",
-        category: "Jalgaon Information",
+        title: "जळगाव जिल्ह्याची संपूर्ण माहिती",
+        category: "Jalgaon",
+        date: "21 September 2026",
         image: "Jalgaon city.jpeg",
-        description: "जळगाव जिल्ह्याचा इतिहास, तालुके, शेती, नद्या, संस्कृती आणि पर्यटनाची माहिती.",
+        description: "जळगाव जिल्ह्याचा भूगोल, इतिहास, तालुके आणि महत्त्वाची माहिती.",
+        file: "articles/jalgaon-district-information.md",
         link: "article.html?id=jalgaon-district-information"
     },
-
-
-    /* =====================================================
-       5 NEW NEWS ARTICLES
-    ===================================================== */
 
     {
         id: "jalgaon-news-today",
         title: "जळगाव जिल्ह्यातील आजच्या प्रमुख बातम्या",
         category: "Jalgaon News",
+        date: "24 September 2026",
         image: "jalgaon-news-today.jpg",
-        description: "जळगाव जिल्ह्यातील आजच्या प्रमुख स्थानिक बातम्या, हवामान, प्रशासन, शिक्षण आणि शेतीविषयक अपडेट्स.",
+        description: "जळगाव जिल्ह्यातील आजच्या प्रमुख स्थानिक बातम्या.",
+        file: "articles/jalgaon-news-today.md",
         link: "article.html?id=jalgaon-news-today"
     },
 
     {
         id: "jalgaon-city-news",
-        title: "जळगाव शहरातील महत्त्वाच्या घडामोडी",
-        category: "Jalgaon City News",
-        image: "jalgaon-city-news.jpg",
-        description: "जळगाव शहरातील प्रशासन, वाहतूक, सुरक्षा, नागरी सुविधा आणि सामाजिक घडामोडींची माहिती.",
+        title: "जळगाव शहरातील ताज्या बातम्या",
+        category: "Jalgaon City",
+        date: "24 September 2026",
+        image: "Jalgaon city.jpeg",
+        description: "जळगाव शहरातील महत्त्वाच्या स्थानिक घडामोडी.",
+        file: "articles/jalgaon-city-news.md",
         link: "article.html?id=jalgaon-city-news"
     },
 
     {
         id: "jalgaon-government-schemes",
-        title: "जळगाव जिल्ह्यातील नवीन सरकारी योजना आणि निर्णय",
+        title: "जळगाव जिल्ह्यातील सरकारी योजना",
         category: "Government Schemes",
-        image: "jalgaon-government-schemes.jpg",
-        description: "जळगाव जिल्ह्यातील नागरिक, शेतकरी आणि ग्रामीण भागासाठी सरकारी योजना व प्रशासनिक निर्णयांची माहिती.",
+        date: "24 September 2026",
+        image: "Jalgaon city.jpeg",
+        description: "नागरिकांसाठी उपलब्ध सरकारी योजना आणि महत्त्वाची माहिती.",
+        file: "articles/jalgaon-government-schemes.md",
         link: "article.html?id=jalgaon-government-schemes"
     },
 
     {
         id: "jalgaon-education-job-news",
-        title: "जळगाव जिल्ह्यातील शिक्षण आणि रोजगाराच्या महत्त्वाच्या बातम्या",
+        title: "जळगाव शिक्षण आणि रोजगार अपडेट",
         category: "Education & Jobs",
-        image: "jalgaon-education-job-news.jpg",
-        description: "जळगाव जिल्ह्यातील शिक्षण, भरती, परीक्षा, रोजगार आणि विद्यार्थ्यांसाठी महत्त्वाच्या अपडेट्स.",
+        date: "24 September 2026",
+        image: "Jalgaon city.jpeg",
+        description: "जळगावमधील शिक्षण, परीक्षा आणि रोजगारविषयक अपडेट्स.",
+        file: "articles/jalgaon-education-job-news.md",
         link: "article.html?id=jalgaon-education-job-news"
     },
 
     {
         id: "jalgaon-weather-news",
-        title: "जळगाव जिल्ह्यातील हवामान आणि पावसाची माहिती",
-        category: "Jalgaon Weather",
-        image: "jalgaon-weather-news.jpg",
-        description: "जळगाव जिल्ह्यातील हवामान, पावसाचा अंदाज आणि हवामानाशी संबंधित महत्त्वाच्या सूचना.",
+        title: "जळगाव हवामान अपडेट",
+        category: "Weather",
+        date: "24 September 2026",
+        image: "Jalgaon city.jpeg",
+        description: "जळगाव जिल्ह्यातील हवामान आणि पावसासंबंधी माहिती.",
+        file: "articles/jalgaon-weather-news.md",
         link: "article.html?id=jalgaon-weather-news"
     }
 
