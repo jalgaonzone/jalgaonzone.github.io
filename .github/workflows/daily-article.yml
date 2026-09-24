@@ -1,0 +1,467 @@
+name: Daily Jalgaon Zone Articles
+
+on:
+  schedule:
+    - cron: "30 1 * * *"   # 07:00 AM IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  create-articles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate Articles and Images
+        run: |
+          python <<'PY'
+          import os
+          import json
+          import html
+          from datetime import datetime
+
+          today = datetime.now()
+          date_text = today.strftime("%d %B %Y")
+          date_file = today.strftime("%Y-%m-%d")
+
+          os.makedirs("articles", exist_ok=True)
+          os.makedirs("Images", exist_ok=True)
+
+          topics = [
+              {
+                  "category": "Agriculture",
+                  "slug": "jalgaon-agriculture",
+                  "title": "जळगाव जिल्ह्यातील शेतीविषयक महत्त्वाची माहिती",
+                  "image": "agriculture"
+              },
+              {
+                  "category": "Education & Jobs",
+                  "slug": "jalgaon-education-jobs",
+                  "title": "जळगाव जिल्ह्यातील शिक्षण आणि रोजगारविषयक माहिती",
+                  "image": "education"
+              },
+              {
+                  "category": "Government Schemes",
+                  "slug": "jalgaon-government-schemes",
+                  "title": "जळगाव जिल्ह्यातील सरकारी योजना आणि नागरिकांसाठी माहिती",
+                  "image": "government"
+              },
+              {
+                  "category": "History & Tourism",
+                  "slug": "jalgaon-history-tourism",
+                  "title": "जळगाव जिल्ह्याचा इतिहास आणि पर्यटनस्थळांची माहिती",
+                  "image": "tourism"
+              },
+              {
+                  "category": "Jalgaon Information",
+                  "slug": "jalgaon-district-information",
+                  "title": "जळगाव जिल्ह्याबद्दल जाणून घेण्यासारखी माहिती",
+                  "image": "jalgaon"
+              }
+          ]
+
+          index = today.toordinal()
+
+          new_articles = []
+
+          def wrap_text(text, max_chars=34):
+              words = text.split()
+              lines = []
+              current = ""
+
+              for word in words:
+                  test = (current + " " + word).strip()
+
+                  if len(test) <= max_chars:
+                      current = test
+                  else:
+                      if current:
+                          lines.append(current)
+                      current = word
+
+              if current:
+                  lines.append(current)
+
+              return lines[:3]
+
+          def create_svg(filename, title, category, color1, color2):
+              title_lines = wrap_text(title)
+
+              title_svg = ""
+              y = 285
+
+              for line in title_lines:
+                  title_svg += f'''
+          <text x="70"
+                y="{y}"
+                font-size="48"
+                font-weight="700"
+                fill="white"
+                font-family="Noto Sans Devanagari, Devanagari, Arial, sans-serif">
+              {html.escape(line)}
+          </text>
+          '''
+                  y += 65
+
+              svg = f'''<?xml version="1.0" encoding="UTF-8"?>
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="1200"
+               height="630"
+               viewBox="0 0 1200 630">
+
+            <defs>
+              <linearGradient id="bg"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="100%">
+                <stop offset="0%" stop-color="{color1}"/>
+                <stop offset="100%" stop-color="{color2}"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="1200"
+                  height="630"
+                  fill="url(#bg)"/>
+
+            <circle cx="1050"
+                    cy="90"
+                    r="180"
+                    fill="white"
+                    opacity="0.08"/>
+
+            <circle cx="1100"
+                    cy="560"
+                    r="230"
+                    fill="white"
+                    opacity="0.06"/>
+
+            <text x="70"
+                  y="85"
+                  font-size="30"
+                  font-weight="600"
+                  fill="white"
+                  font-family="Arial, sans-serif">
+              JALGAON ZONE
+            </text>
+
+            <rect x="70"
+                  y="125"
+                  width="330"
+                  height="52"
+                  rx="26"
+                  fill="white"
+                  opacity="0.18"/>
+
+            <text x="95"
+                  y="160"
+                  font-size="24"
+                  fill="white"
+                  font-family="Noto Sans Devanagari, Devanagari, Arial, sans-serif">
+              {html.escape(category)}
+            </text>
+
+            {title_svg}
+
+            <text x="70"
+                  y="560"
+                  font-size="24"
+                  fill="white"
+                  opacity="0.9"
+                  font-family="Arial, sans-serif">
+              {date_text}
+            </text>
+
+            <text x="1130"
+                  y="570"
+                  text-anchor="end"
+                  font-size="22"
+                  fill="white"
+                  opacity="0.8"
+                  font-family="Arial, sans-serif">
+              Jalgaon • Maharashtra
+            </text>
+
+          </svg>
+          '''
+
+              with open(filename, "w", encoding="utf-8") as f:
+                  f.write(svg)
+
+          colors = [
+              ("#0f766e", "#164e63"),
+              ("#2563eb", "#1e3a8a"),
+              ("#7c3aed", "#4c1d95"),
+              ("#b45309", "#78350f"),
+              ("#15803d", "#14532d")
+          ]
+
+          for i, topic in enumerate(topics):
+
+              topic_index = (index + i) % len(topics)
+
+              selected = topics[topic_index]
+
+              filename_base = f"{selected['slug']}-{date_file}"
+
+              article_file = f"articles/{filename_base}.md"
+              image_file = f"Images/{filename_base}.svg"
+
+              # Same-day duplicate protection
+              if os.path.exists(article_file):
+                  continue
+
+              title = selected["title"]
+
+              # -----------------------------
+              # ARTICLE CONTENT
+              # -----------------------------
+
+              if selected["category"] == "Agriculture":
+
+                  body = f"""# {title}
+
+          **दिनांक:** {date_text}
+
+          जळगाव जिल्ह्यात शेती हा ग्रामीण अर्थव्यवस्थेचा महत्त्वाचा आधार आहे. केळी, कापूस, मका, ज्वारी आणि विविध भाजीपाला पिकांची लागवड जिल्ह्यात केली जाते.
+
+          ## शेतीमध्ये आधुनिक तंत्रज्ञानाचा वापर
+
+          आधुनिक सिंचन पद्धती, ठिबक सिंचन, तुषार सिंचन आणि सुधारित शेती तंत्रज्ञानामुळे पाण्याचा कार्यक्षम वापर करण्यास मदत होते.
+
+          ## शेतकऱ्यांसाठी महत्त्वाची माहिती
+
+          शेतकऱ्यांनी शासनाच्या अधिकृत संकेतस्थळांवर उपलब्ध योजना, अनुदान, अर्ज प्रक्रिया आणि पात्रता यांची माहिती तपासावी.
+
+          ## हवामान आणि शेती
+
+          पिकांचे नियोजन करताना स्थानिक हवामान, पावसाची स्थिती, जमिनीचा प्रकार आणि पाण्याची उपलब्धता यांचा विचार करणे महत्त्वाचे आहे.
+
+          ## निष्कर्ष
+
+          जळगाव जिल्ह्यातील शेतीविषयक माहिती, योजना आणि कृषी तंत्रज्ञानाबद्दल अधिक माहितीसाठी Jalgaon Zone वरील पुढील लेख पाहत रहा.
+          """
+
+              elif selected["category"] == "Education & Jobs":
+
+                  body = f"""# {title}
+
+          **दिनांक:** {date_text}
+
+          जळगाव जिल्ह्यात महाविद्यालयीन शिक्षण, व्यावसायिक अभ्यासक्रम आणि विविध कौशल्याधारित शिक्षणाच्या संधी उपलब्ध आहेत.
+
+          ## विद्यार्थ्यांसाठी कौशल्य विकास
+
+          आजच्या रोजगार बाजारपेठेत संगणक कौशल्य, डेटा हाताळणी, संवाद कौशल्य आणि तांत्रिक प्रशिक्षण यांना महत्त्व आहे.
+
+          ## सरकारी नोकरीची तयारी
+
+          सरकारी नोकरीची तयारी करणाऱ्या विद्यार्थ्यांनी संबंधित भरतीची अधिकृत जाहिरात, पात्रता, अर्जाची अंतिम तारीख आणि परीक्षा पद्धती अधिकृत संकेतस्थळावर तपासावी.
+
+          ## स्थानिक रोजगाराच्या संधी
+
+          जळगाव शहर आणि जिल्ह्यात शिक्षण, सेवा, विक्री, कार्यालयीन काम, तंत्रज्ञान आणि विविध व्यवसायांमध्ये रोजगाराच्या संधी उपलब्ध होऊ शकतात.
+
+          ## विद्यार्थ्यांसाठी सूचना
+
+          कोणत्याही नोकरी किंवा भरतीसाठी अर्ज करण्यापूर्वी अधिकृत माहिती तपासणे आणि अनधिकृत माहितीवर अवलंबून न राहणे महत्त्वाचे आहे.
+
+          Jalgaon Zone वर शिक्षण आणि रोजगारविषयक माहितीचे पुढील अपडेट्स पाहत रहा.
+          """
+
+              elif selected["category"] == "Government Schemes":
+
+                  body = f"""# {title}
+
+          **दिनांक:** {date_text}
+
+          केंद्र आणि महाराष्ट्र शासनाकडून नागरिक, शेतकरी, विद्यार्थी, महिला आणि विविध सामाजिक घटकांसाठी अनेक योजना राबवल्या जातात.
+
+          ## योजना समजून घेणे
+
+          कोणत्याही सरकारी योजनेचा लाभ घेण्यापूर्वी पात्रता, आवश्यक कागदपत्रे, अर्ज प्रक्रिया आणि अधिकृत अंतिम तारीख तपासणे आवश्यक आहे.
+
+          ## अधिकृत माहिती कुठे तपासावी?
+
+          संबंधित विभागाचे अधिकृत संकेतस्थळ, सरकारी कार्यालये आणि अधिकृत सूचना यांचा आधार घ्यावा.
+
+          ## कागदपत्रांची तयारी
+
+          योजनेनुसार आधार, बँक खाते, रहिवासी पुरावा, उत्पन्न प्रमाणपत्र किंवा इतर कागदपत्रांची आवश्यकता असू शकते.
+
+          ## महत्त्वाची सूचना
+
+          सरकारी योजनेबद्दल सोशल मीडियावर फिरणारी माहिती लगेच खरी मानू नये. अर्ज करण्यापूर्वी संबंधित सरकारी विभागाची अधिकृत माहिती तपासा.
+
+          Jalgaon Zone वर सरकारी योजना आणि नागरिकांसाठी उपयुक्त माहिती पाहत रहा.
+          """
+
+              elif selected["category"] == "History & Tourism":
+
+                  body = f"""# {title}
+
+          **दिनांक:** {date_text}
+
+          जळगाव जिल्हा खानदेशाच्या इतिहास, संस्कृती आणि नैसर्गिक वैशिष्ट्यांसाठी ओळखला जातो.
+
+          ## ऐतिहासिक वारसा
+
+          जिल्ह्यात किल्ले, प्राचीन मंदिरे आणि ऐतिहासिक स्थळे आहेत. या ठिकाणांमुळे स्थानिक इतिहास समजून घेण्यास मदत होते.
+
+          ## पर्यटनस्थळे
+
+          उनपदेव, पद्मालय, मनुदेवी, पारोळा किल्ला आणि इतर परिसरातील ठिकाणे पर्यटकांसाठी आकर्षणाचे केंद्र आहेत.
+
+          ## स्थानिक पर्यटनाचे महत्त्व
+
+          स्थानिक पर्यटनामुळे छोट्या व्यवसायांना, हॉटेल्सना, वाहतूक सेवांना आणि स्थानिक विक्रेत्यांना आर्थिक संधी मिळू शकतात.
+
+          ## प्रवासापूर्वी
+
+          एखाद्या पर्यटनस्थळी जाण्यापूर्वी रस्त्याची स्थिती, हवामान, वेळा आणि स्थानिक नियम यांची माहिती तपासणे योग्य ठरते.
+
+          Jalgaon Zone वर जळगावच्या इतिहास आणि पर्यटनस्थळांविषयी अधिक माहिती वाचा.
+          """
+
+              else:
+
+                  body = f"""# {title}
+
+          **दिनांक:** {date_text}
+
+          जळगाव जिल्हा महाराष्ट्राच्या उत्तर भागातील महत्त्वाचा जिल्हा आहे. जळगाव शहर हे जिल्ह्याचे प्रमुख प्रशासकीय आणि व्यापारी केंद्र आहे.
+
+          ## जळगावची वैशिष्ट्ये
+
+          जिल्ह्यात शेती, व्यापार, शिक्षण, उद्योग आणि सेवा क्षेत्राचे महत्त्व आहे. केळी उत्पादनामुळे जळगावला विशेष ओळख मिळाली आहे.
+
+          ## शहर आणि जिल्हा
+
+          जळगाव शहरासोबतच जिल्ह्यात विविध तालुके, गावे आणि ग्रामीण भाग आहेत. प्रत्येक भागाची स्वतःची सामाजिक आणि आर्थिक वैशिष्ट्ये आहेत.
+
+          ## नागरिकांसाठी उपयुक्त माहिती
+
+          स्थानिक प्रशासन, सार्वजनिक सेवा, शिक्षण, वाहतूक आणि इतर नागरी सुविधांशी संबंधित अधिकृत माहिती नागरिकांसाठी उपयुक्त ठरते.
+
+          ## Jalgaon Zone
+
+          जळगाव जिल्ह्याशी संबंधित माहिती, इतिहास, शेती, पर्यटन, शिक्षण आणि स्थानिक विषयांवरील लेख Jalgaon Zone वर प्रकाशित केले जातील.
+          """
+
+              # -----------------------------
+              # IMAGE
+              # -----------------------------
+
+              color1, color2 = colors[i % len(colors)]
+
+              create_svg(
+                  image_file,
+                  title,
+                  selected["category"],
+                  color1,
+                  color2
+              )
+
+              # -----------------------------
+              # SAVE ARTICLE
+              # -----------------------------
+
+              with open(article_file, "w", encoding="utf-8") as f:
+                  f.write(body)
+
+              article_id = filename_base
+
+              metadata = {
+                  "id": article_id,
+                  "title": title,
+                  "category": selected["category"],
+                  "date": date_text,
+                  "image": image_file,
+                  "description": title + " — Jalgaon Zone वरील माहितीपूर्ण लेख.",
+                  "file": article_file,
+                  "link": "article.html?id=" + article_id
+              }
+
+              new_articles.append(metadata)
+
+          # -----------------------------
+          # UPDATE articles-data.js
+          # -----------------------------
+
+          if new_articles:
+
+              data_file = "articles-data.js"
+
+              if os.path.exists(data_file):
+                  with open(data_file, "r", encoding="utf-8") as f:
+                      old = f.read()
+              else:
+                  old = "const articles = [];"
+
+              start = old.find("[")
+              end = old.rfind("]")
+
+              if start == -1 or end == -1:
+                  raise Exception("articles-data.js format not recognized")
+
+              existing_text = old[start + 1:end].strip()
+
+              new_entries = []
+
+              for item in new_articles:
+                  new_entries.append(
+                      "  " + json.dumps(item, ensure_ascii=False, indent=2)
+                  )
+
+              additions = ",\n".join(new_entries)
+
+              if existing_text:
+                  combined = existing_text + ",\n" + additions
+              else:
+                  combined = additions
+
+              new_content = old[:start + 1] + "\n" + combined + "\n" + old[end:]
+
+              with open(data_file, "w", encoding="utf-8") as f:
+                  f.write(new_content)
+
+              print("Created articles:", len(new_articles))
+
+          else:
+              print("No new articles created.")
+
+          PY
+
+      - name: Show generated files
+        run: |
+          echo "Articles:"
+          ls -la articles/ | tail -20
+
+          echo ""
+          echo "Images:"
+          ls -la Images/ | tail -20
+
+      - name: Commit and Push
+        run: |
+          git config user.name "Jalgaon Zone Bot"
+          git config user.email "actions@github.com"
+
+          git add articles/ Images/ articles-data.js
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Daily Jalgaon Zone articles and images"
+
+          git push
