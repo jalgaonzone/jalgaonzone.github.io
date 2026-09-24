@@ -5,13 +5,14 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Jalgaon Zone</title>
 
 <meta name="description"
 content="Jalgaon Zone - Jalgaon News, Agriculture, History, Tourism and Local Information">
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <style>
 
@@ -103,22 +104,22 @@ h1{
     font-size:14px;
 }
 
-h2{
+.content h2{
     margin-top:25px;
     margin-bottom:8px;
     color:#111;
 }
 
-p{
+.content p{
     margin:12px 0;
 }
 
-ul{
+.content ul{
     margin:15px 0;
     padding-left:25px;
 }
 
-li{
+.content li{
     margin:6px 0;
 }
 
@@ -186,7 +187,7 @@ footer strong{
         font-size:27px;
     }
 
-    h2{
+    .content h2{
         font-size:21px;
     }
 
@@ -207,7 +208,6 @@ footer strong{
 
 <body>
 
-
 <header>
 
     <div class="nav">
@@ -227,7 +227,13 @@ footer strong{
 
 <div class="container">
 
-    <div id="article"></div>
+    <div id="article">
+
+        <div class="error">
+            Article loading...
+        </div>
+
+    </div>
 
 </div>
 
@@ -245,788 +251,52 @@ footer strong{
 
 <script>
 
-
 /* =====================================================
-   ALL ARTICLES
+   GET ARTICLE ID
 ===================================================== */
 
-const articles = {
+const params =
+    new URLSearchParams(window.location.search);
 
-
-/* =====================================================
-   1. AGRICULTURE
-===================================================== */
-
-"agriculture": {
-
-    title:
-    "शेतकऱ्यांसाठी खुशखबर! सूक्ष्म सिंचनासाठी मिळणार ९०% पर्यंत अनुदान",
-
-    category:
-    "Agriculture",
-
-    date:
-    "16 September 2026",
-
-    image:
-    "agriculture.png",
-
-    description:
-    "शेतकऱ्यांसाठी सूक्ष्म सिंचन आणि अनुदानाबाबत माहिती.",
-
-    content: `
-
-        <p>
-        सूक्ष्म सिंचनाचा वापर करणाऱ्या पात्र
-        शेतकऱ्यांसाठी अनुदानाची योजना उपलब्ध आहे.
-        </p>
-
-        <h2>किती अनुदान मिळू शकते?</h2>
-
-        <p>
-        पात्रता, प्रवर्ग आणि लागू योजनांनुसार
-        अनुदानाचे प्रमाण बदलू शकते.
-        </p>
-
-        <h2>सूक्ष्म सिंचन म्हणजे काय?</h2>
-
-        <p>
-        ठिबक सिंचन आणि तुषार सिंचन यांसारख्या
-        पद्धतींच्या माध्यमातून पिकांना आवश्यक
-        प्रमाणात पाणी देण्याची पद्धत म्हणजे
-        सूक्ष्म सिंचन.
-        </p>
-
-        <h2>अर्ज कुठे करायचा?</h2>
-
-        <p>
-        महाराष्ट्रातील संबंधित कृषी योजनांसाठी
-        MahaDBT Farmer Portal चा वापर केला जाऊ शकतो.
-        अर्ज करण्यापूर्वी अधिकृत माहिती तपासा.
-        </p>
-
-        <h2>आवश्यक कागदपत्रे</h2>
-
-        <ul>
-            <li>आधार कार्ड</li>
-            <li>7/12 उतारा</li>
-            <li>8-A उतारा</li>
-            <li>बँक पासबुक</li>
-            <li>Farmer ID</li>
-        </ul>
-
-        <h2>महत्त्वाची सूचना</h2>
-
-        <p>
-        अनुदानाची टक्केवारी, पात्रता आणि
-        कागदपत्रांचे नियम योजनेनुसार बदलू शकतात.
-        अर्ज करण्यापूर्वी संबंधित अधिकृत कृषी
-        विभागाची अद्ययावत माहिती तपासा.
-        </p>
-
-    `
-},
+const id =
+    params.get("id");
 
 
 /* =====================================================
-   2. OXYGEN PARK
+   ARTICLE FILE MAP
 ===================================================== */
 
-"oxygen": {
+const articleFiles = {
 
-    title:
-    "पाळधीत ऑक्सिजन पार्कचे भूमीपूजन",
+    "agriculture":
+        "articles/agriculture.md",
 
-    category:
-    "Jalgaon News",
+    "oxygen":
+        "articles/oxygen-park.md",
 
-    date:
-    "20 September 2026",
+    "history":
+        "articles/jalgaon-history.md",
 
-    image:
-    "oxygen-park-newspng.jpg",
+    "jalgaon-district-information":
+        "articles/jalgaon-district-information.md",
 
-    description:
-    "पाळधी खुर्द येथे ऑक्सिजन पार्क निर्मितीच्या उपक्रमाची माहिती.",
+    "jalgaon-news-today":
+        "articles/jalgaon-news-today.md",
 
-    content: `
+    "jalgaon-city-news":
+        "articles/jalgaon-city-news.md",
 
-        <p>
-        जळगाव जिल्ह्यातील पाळधी खुर्द येथे
-        ऑक्सिजन पार्क निर्मितीच्या उपक्रमाची
-        सुरुवात करण्यात आली.
-        </p>
+    "jalgaon-government-schemes":
+        "articles/jalgaon-government-schemes.md",
 
-        <h2>ऑक्सिजन पार्कचा उपक्रम</h2>
+    "jalgaon-education-job-news":
+        "articles/jalgaon-education-job-news.md",
 
-        <p>
-        GPS मित्र परिवाराच्या माध्यमातून
-        पर्यावरण संवर्धन आणि हरित परिसर
-        निर्माण करण्याच्या उद्देशाने हा
-        उपक्रम राबविण्यात येत आहे.
-        </p>
+    "jalgaon-weather-news":
+        "articles/jalgaon-weather-news.md",
 
-        <h2>पर्यावरण संवर्धनाचे महत्त्व</h2>
-
-        <p>
-        वृक्षारोपण आणि हरित क्षेत्र वाढवणे
-        पर्यावरणासाठी महत्त्वाचे आहे.
-        अशा उपक्रमांमुळे नागरिकांमध्ये
-        पर्यावरणाबाबत जागरूकता निर्माण
-        होण्यास मदत होऊ शकते.
-        </p>
-
-        <h2>स्थानिक सहभाग</h2>
-
-        <p>
-        अशा पर्यावरणपूरक उपक्रमांच्या
-        यशासाठी स्थानिक नागरिकांचा सहभाग,
-        वृक्षांची देखभाल आणि परिसराची
-        स्वच्छता महत्त्वाची ठरते.
-        </p>
-
-    `
-},
-
-
-/* =====================================================
-   3. JALGAON DISTRICT INFORMATION
-===================================================== */
-
-"jalgaon-district-information": {
-
-    title:
-    "जळगाव जिल्ह्याची संपूर्ण माहिती: इतिहास, तालुके, शेती आणि पर्यटन",
-
-    category:
-    "Jalgaon Information",
-
-    date:
-    "21 September 2026",
-
-    image:
-    "Jalgaon city.jpeg",
-
-    description:
-    "जळगाव जिल्ह्याची संपूर्ण माहिती: इतिहास, भौगोलिक स्थान, तालुके, शेती, पर्यटन आणि संस्कृती.",
-
-    content: `
-
-        <p>
-        जळगाव जिल्हा महाराष्ट्राच्या उत्तर भागात
-        वसलेला असून खानदेश प्रदेशाचा महत्त्वाचा
-        भाग आहे. शेती, केळी उत्पादन, व्यापार,
-        इतिहास, शिक्षण आणि पर्यटन या विविध
-        क्षेत्रांमुळे जळगावची वेगळी ओळख आहे.
-        </p>
-
-        <h2>जळगाव जिल्ह्याची ओळख</h2>
-
-        <p>
-        जळगाव जिल्ह्याचे मुख्यालय जळगाव शहर आहे.
-        जिल्ह्यात ग्रामीण आणि शहरी भागाचे महत्त्व
-        असून शेती हा अर्थव्यवस्थेतील एक महत्त्वाचा
-        आधार आहे.
-        </p>
-
-        <h2>जळगाव जिल्ह्याचा इतिहास</h2>
-
-        <p>
-        जळगावचा इतिहास खानदेशाच्या इतिहासाशी
-        जोडलेला आहे. या प्रदेशावर विविध काळात
-        वेगवेगळ्या राजवटींचा प्रभाव राहिला.
-        </p>
-
-        <h2>जळगाव जिल्ह्यातील शेती</h2>
-
-        <p>
-        जिल्ह्यात केळी, कापूस, ज्वारी, मका आणि
-        इतर पिकांची लागवड केली जाते.
-        </p>
-
-        <p>
-        <a href="article.html?id=agriculture">
-        शेतीविषयक माहिती वाचा →
-        </a>
-        </p>
-
-        <h2>जळगावची केळी शेती</h2>
-
-        <p>
-        जळगाव जिल्ह्याचे नाव केळी उत्पादनाशी
-        विशेषतः जोडले जाते.
-        </p>
-
-        <h2>जळगाव जिल्ह्यातील नद्या</h2>
-
-        <p>
-        तापी, गिरणा, वाघूर आणि इतर नद्या
-        जळगाव जिल्ह्याच्या भौगोलिक रचनेत
-        महत्त्वाच्या आहेत.
-        </p>
-
-        <h2>प्रसिद्ध पर्यटनस्थळे</h2>
-
-        <p>
-        परोळा किल्ला, पाटणादेवी, उनपदेव,
-        पद्मालय आणि मनुदेवी यांसारखी
-        विविध ठिकाणे जिल्ह्यात आहेत.
-        </p>
-
-        <h2>भाषा आणि संस्कृती</h2>
-
-        <p>
-        जळगावच्या सांस्कृतिक जीवनावर खानदेशी
-        परंपरा आणि अहिराणी भाषेचा प्रभाव दिसून
-        येतो.
-        </p>
-
-        <h2>निष्कर्ष</h2>
-
-        <p>
-        जळगाव जिल्हा इतिहास, शेती, केळी उत्पादन,
-        संस्कृती आणि पर्यटन या सर्व बाबतीत
-        वैशिष्ट्यपूर्ण आहे.
-        </p>
-
-    `
-},
-
-
-/* =====================================================
-   4. HISTORY
-===================================================== */
-
-"history": {
-
-    title:
-    "जळगावचा इतिहास: खानदेशाच्या मातीपासून आधुनिक जळगावपर्यंत",
-
-    category:
-    "Jalgaon History",
-
-    date:
-    "21 September 2026",
-
-    image:
-    "Jalgaon city.jpeg",
-
-    description:
-    "जळगावच्या इतिहासाची माहिती.",
-
-    content: `
-
-        <p>
-        जळगाव महाराष्ट्राच्या उत्तर भागातील
-        खानदेश प्रदेशाशी ऐतिहासिकदृष्ट्या
-        जोडलेले महत्त्वाचे शहर आणि जिल्हा आहे.
-        </p>
-
-        <h2>प्राचीन काळातील खानदेश</h2>
-
-        <p>
-        खानदेश प्रदेशावर वेगवेगळ्या काळात
-        विविध राजवटींचा प्रभाव राहिला.
-        </p>
-
-        <h2>मध्ययुगीन काळ</h2>
-
-        <p>
-        मध्ययुगात खानदेशाला स्वतंत्र
-        ऐतिहासिक ओळख मिळाली.
-        </p>
-
-        <h2>मराठा काळ</h2>
-
-        <p>
-        पुढील काळात खानदेश प्रदेशावर
-        मराठा सत्तेचा प्रभाव वाढला.
-        </p>
-
-        <h2>ब्रिटिश काळ</h2>
-
-        <p>
-        ब्रिटिश काळात प्रशासन आणि
-        वाहतूक व्यवस्थेत मोठे बदल झाले.
-        </p>
-
-        <h2>१९३६ चे फैजपूर अधिवेशन</h2>
-
-        <p>
-        १९३६ मध्ये फैजपूर येथे भारतीय
-        राष्ट्रीय काँग्रेसचे अधिवेशन झाले.
-        ग्रामीण भागात आयोजित करण्यात आलेले
-        हे अधिवेशन भारतीय स्वातंत्र्य
-        चळवळीच्या इतिहासातील महत्त्वाची
-        घटना म्हणून ओळखले जाते.
-        </p>
-
-        <h2>आधुनिक जळगाव</h2>
-
-        <p>
-        आज जळगाव शेती, व्यापार, शिक्षण
-        आणि उद्योगासाठी महत्त्वाचे केंद्र आहे.
-        </p>
-
-        <h2>जळगावची शेती</h2>
-
-        <p>
-        जळगाव जिल्हा विशेषतः केळी
-        उत्पादनासाठी प्रसिद्ध आहे.
-        </p>
-
-        <h2>जळगावची संस्कृती</h2>
-
-        <p>
-        जळगावची संस्कृती खानदेशी आणि
-        अहिराणी परंपरांशी जोडलेली आहे.
-        </p>
-
-        <h2>ऐतिहासिक आणि पर्यटन स्थळे</h2>
-
-        <ul>
-            <li>परोळा किल्ला</li>
-            <li>पद्मालय</li>
-            <li>मनुदेवी</li>
-            <li>उनपदेव</li>
-            <li>पाटणादेवी</li>
-            <li>फैजपूर</li>
-            <li>चांगदेव</li>
-        </ul>
-
-        <h2>निष्कर्ष</h2>
-
-        <p>
-        प्राचीन खानदेशापासून आधुनिक
-        जळगावपर्यंतचा प्रवास अनेक
-        ऐतिहासिक घटनांनी समृद्ध आहे.
-        </p>
-
-    `
-},
-
-
-/* =====================================================
-   5. JALGAON NEWS TODAY
-===================================================== */
-
-"jalgaon-news-today": {
-
-    title:
-    "जळगाव जिल्ह्यातील आजच्या प्रमुख बातम्या",
-
-    category:
-    "Jalgaon News",
-
-    date:
-    "24 September 2026",
-
-    image:
-    "jalgaon-news-today.jpg",
-
-    description:
-    "जळगाव जिल्ह्यातील आजच्या प्रमुख स्थानिक बातम्या, हवामान, प्रशासन, शिक्षण आणि शेतीविषयक अपडेट्स.",
-
-    content: `
-
-        <p>
-        जळगाव जिल्ह्यात आज विविध स्थानिक
-        घडामोडींना वेग आला आहे. प्रशासन,
-        हवामान, शेती, शिक्षण आणि शहरातील
-        नागरी प्रश्नांशी संबंधित बातम्यांकडे
-        नागरिकांचे लक्ष लागले आहे.
-        </p>
-
-        <h2>प्रशासनाची तयारी</h2>
-
-        <p>
-        संभाव्य टंचाईच्या पार्श्वभूमीवर
-        प्रशासनाकडून गावनिहाय आणि टप्प्यानुसार
-        कृती आराखडे तयार करण्यावर भर दिला
-        जात असल्याची माहिती समोर आली आहे.
-        </p>
-
-        <h2>पावसाचा अलर्ट</h2>
-
-        <p>
-        जळगाव जिल्ह्यात पुढील काळात पावसाची
-        शक्यता असून २४ आणि २५ सप्टेंबरसाठी
-        यलो अलर्ट असल्याची माहिती स्थानिक
-        वृत्तमाध्यमांनी दिली आहे.
-        </p>
-
-        <h2>शिक्षण क्षेत्रातील घडामोडी</h2>
-
-        <p>
-        गोदावरी अभियांत्रिकी महाविद्यालयात
-        ‘आविष्कार 2026’ची प्रथम फेरी पार
-        पडल्याची माहिती समोर आली आहे.
-        विद्यार्थ्यांच्या संशोधन आणि नवकल्पनांना
-        यामुळे व्यासपीठ मिळत आहे.
-        </p>
-
-        <h2>जळगावच्या ताज्या अपडेट्स</h2>
-
-        <p>
-        जळगाव जिल्ह्यातील हवामान, सरकारी
-        निर्णय, शिक्षण, रोजगार आणि शेतीविषयक
-        अपडेट्ससाठी Jalgaon Zone ला भेट देत रहा.
-        </p>
-
-    `
-},
-
-
-/* =====================================================
-   6. JALGAON CITY NEWS
-===================================================== */
-
-"jalgaon-city-news": {
-
-    title:
-    "जळगाव शहरातील महत्त्वाच्या घडामोडी",
-
-    category:
-    "Jalgaon City News",
-
-    date:
-    "24 September 2026",
-
-    image:
-    "jalgaon-city-news.jpg",
-
-    description:
-    "जळगाव शहरातील प्रशासन, वाहतूक, सुरक्षा, नागरी सुविधा आणि सामाजिक घडामोडींची माहिती.",
-
-    content: `
-
-        <p>
-        जळगाव शहरातील नागरिकांशी संबंधित
-        विविध घडामोडींवर प्रशासन आणि पोलिसांचे
-        लक्ष आहे. वाहतूक, कायदा-सुव्यवस्था,
-        सार्वजनिक सुविधा आणि सामाजिक उपक्रमांशी
-        संबंधित बातम्या चर्चेत आहेत.
-        </p>
-
-        <h2>शहरातील सुरक्षा व्यवस्था</h2>
-
-        <p>
-        गणेशोत्सवाच्या पार्श्वभूमीवर शहरातील
-        सुरक्षा व्यवस्थेला विशेष महत्त्व देण्यात
-        आले होते.
-        </p>
-
-        <h2>आधुनिक तंत्रज्ञानाचा वापर</h2>
-
-        <p>
-        जळगाव पोलिसांनी मिरवणुकीसाठी ड्रोन,
-        दामिनी पथक आणि सोशल मीडिया सेलसह
-        आधुनिक बंदोबस्ताची तयारी केली होती.
-        </p>
-
-        <h2>नागरी सुविधांशी संबंधित प्रश्न</h2>
-
-        <p>
-        शहरातील रस्ते, वाहतूक, सार्वजनिक व्यवस्था
-        आणि नागरी सुविधांशी संबंधित प्रश्न
-        नागरिकांसाठी महत्त्वाचे आहेत.
-        </p>
-
-        <h2>जळगाव शहरातील अपडेट्स</h2>
-
-        <p>
-        जळगाव शहरातील ताज्या आणि महत्त्वाच्या
-        घडामोडींसाठी Jalgaon Zone ला भेट देत रहा.
-        </p>
-
-    `
-},
-
-
-/* =====================================================
-   7. GOVERNMENT SCHEMES
-===================================================== */
-
-"jalgaon-government-schemes": {
-
-    title:
-    "जळगाव जिल्ह्यातील नवीन सरकारी योजना आणि निर्णय",
-
-    category:
-    "Government Schemes",
-
-    date:
-    "24 September 2026",
-
-    image:
-    "jalgaon-government-schemes.jpg",
-
-    description:
-    "जळगाव जिल्ह्यातील नागरिक, शेतकरी आणि ग्रामीण भागासाठी सरकारी योजना व प्रशासनिक निर्णयांची माहिती.",
-
-    content: `
-
-        <p>
-        जळगाव जिल्ह्यातील नागरिक, शेतकरी आणि
-        ग्रामीण भागासाठी सरकारी योजना व
-        प्रशासनिक निर्णय महत्त्वाचे ठरत आहेत.
-        </p>
-
-        <h2>टंचाईच्या पार्श्वभूमीवर प्रशासनाची तयारी</h2>
-
-        <p>
-        संभाव्य टंचाईच्या पार्श्वभूमीवर
-        गावनिहाय आणि टप्प्यानुसार कृती
-        आराखडे तयार करण्यावर प्रशासनाचा
-        भर असल्याचे स्थानिक वृत्तांतात
-        नमूद करण्यात आले आहे.
-        </p>
-
-        <h2>शेतीसाठी योजना</h2>
-
-        <p>
-        शेती क्षेत्रासाठी विविध योजनांची
-        माहिती उपलब्ध होत आहे. शेतकऱ्यांनी
-        कोणत्याही योजनेसाठी अर्ज करण्यापूर्वी
-        पात्रता आणि अधिकृत अटी तपासणे महत्त्वाचे आहे.
-        </p>
-
-        <h2>अधिकृत माहिती तपासा</h2>
-
-        <p>
-        सरकारी योजना किंवा अनुदानासाठी अर्ज
-        करण्यापूर्वी संबंधित विभागाची अधिकृत
-        वेबसाइट, कार्यालयीन सूचना आणि शासन
-        निर्णय तपासावा.
-        </p>
-
-        <h2>नागरिकांसाठी सूचना</h2>
-
-        <p>
-        सोशल मीडियावर फिरणाऱ्या अपूर्ण किंवा
-        चुकीच्या माहितीकडे नागरिकांनी
-        सावधगिरीने पाहावे.
-        </p>
-
-        <h2>Jalgaon Zone</h2>
-
-        <p>
-        जळगाव जिल्ह्यातील सरकारी योजना,
-        अनुदान, प्रशासनिक निर्णय आणि
-        नागरिकांसाठीच्या महत्त्वाच्या
-        घोषणांसाठी Jalgaon Zone ला भेट देत रहा.
-        </p>
-
-    `
-},
-
-
-/* =====================================================
-   8. EDUCATION & JOB NEWS
-===================================================== */
-
-"jalgaon-education-job-news": {
-
-    title:
-    "जळगाव जिल्ह्यातील शिक्षण आणि रोजगाराच्या महत्त्वाच्या बातम्या",
-
-    category:
-    "Education & Jobs",
-
-    date:
-    "24 September 2026",
-
-    image:
-    "jalgaon-education-job-news.jpg",
-
-    description:
-    "जळगाव जिल्ह्यातील शिक्षण, भरती, परीक्षा, रोजगार आणि विद्यार्थ्यांसाठी महत्त्वाच्या अपडेट्स.",
-
-    content: `
-
-        <p>
-        जळगाव जिल्ह्यात शिक्षण आणि रोजगार
-        क्षेत्रातील विविध घडामोडी विद्यार्थी
-        आणि नोकरीच्या शोधात असलेल्या तरुणांसाठी
-        महत्त्वाच्या ठरत आहेत.
-        </p>
-
-        <h2>आविष्कार 2026</h2>
-
-        <p>
-        गोदावरी अभियांत्रिकी महाविद्यालयात
-        ‘आविष्कार 2026’ची प्रथम फेरी पार
-        पडल्याची माहिती समोर आली आहे.
-        </p>
-
-        <h2>विद्यार्थ्यांसाठी संशोधनाची संधी</h2>
-
-        <p>
-        संशोधन आणि नवकल्पनांना प्रोत्साहन
-        देणाऱ्या अशा उपक्रमांमुळे विद्यार्थ्यांना
-        त्यांच्या प्रकल्पांचे सादरीकरण करण्याची
-        संधी मिळते.
-        </p>
-
-        <h2>शिक्षक भरती आणि परीक्षा</h2>
-
-        <p>
-        महाराष्ट्रातील शिक्षक भरती आणि
-        शैक्षणिक क्षेत्राशी संबंधित विविध
-        प्रक्रियांबाबत उमेदवारांनी अधिकृत
-        माहिती तपासणे आवश्यक आहे.
-        </p>
-
-        <h2>उमेदवारांसाठी महत्त्वाची सूचना</h2>
-
-        <p>
-        भरती, परीक्षा किंवा प्रवेशासंदर्भात
-        अर्ज करण्यापूर्वी संबंधित विभागाची
-        अधिकृत जाहिरात, पात्रता, अंतिम तारीख
-        आणि कागदपत्रांची माहिती तपासा.
-        </p>
-
-        <h2>Jalgaon Education Updates</h2>
-
-        <p>
-        जळगावमधील शिक्षण, भरती, सरकारी नोकरी,
-        खासगी रोजगार आणि परीक्षा अपडेट्ससाठी
-        Jalgaon Zone ला भेट देत रहा.
-        </p>
-
-    `
-},
-
-
-/* =====================================================
-   9. WEATHER NEWS
-===================================================== */
-
-"jalgaon-weather-news": {
-
-    title:
-    "जळगाव जिल्ह्यातील हवामान आणि पावसाची माहिती",
-
-    category:
-    "Jalgaon Weather",
-
-    date:
-    "24 September 2026",
-
-    image:
-    "jalgaon-weather-news.jpg",
-
-    description:
-    "जळगाव जिल्ह्यातील हवामान, पावसाचा अंदाज आणि हवामानाशी संबंधित महत्त्वाच्या सूचना.",
-
-    content: `
-
-        <p>
-        जळगाव जिल्ह्यात मान्सूनच्या परतीच्या
-        काळात पुन्हा पावसाचे वातावरण निर्माण
-        झाले आहे.
-        </p>
-
-        <h2>पावसाचा अंदाज</h2>
-
-        <p>
-        २४ आणि २५ सप्टेंबर रोजी जळगाव
-        जिल्ह्यासाठी यलो अलर्ट जारी केल्याची
-        माहिती स्थानिक वृत्तमाध्यमांनी दिली आहे.
-        </p>
-
-        <h2>आजचे वातावरण</h2>
-
-        <p>
-        काही भागात ढगाळ वातावरण आणि
-        सूर्यप्रकाश असे बदलते वातावरण
-        पाहायला मिळू शकते.
-        </p>
-
-        <h2>शेतकऱ्यांसाठी सूचना</h2>
-
-        <p>
-        पावसाच्या काळात शेतकऱ्यांनी पिकांची
-        स्थिती लक्षात घेऊन स्थानिक कृषी
-        विभागाच्या सूचनांचे पालन करावे.
-        </p>
-
-        <h2>नागरिकांनी घ्यावयाची काळजी</h2>
-
-        <p>
-        वीजांच्या कडकडाटासह पाऊस असल्यास
-        मोकळ्या मैदानात किंवा झाडाखाली
-        थांबणे टाळावे.
-        </p>
-
-        <h2>महत्त्वाची सूचना</h2>
-
-        <p>
-        हवामानाची परिस्थिती वेगाने बदलू शकते.
-        त्यामुळे ताज्या माहितीसाठी अधिकृत
-        हवामान विभागाचे अपडेट्स तपासा.
-        </p>
-
-    `
-},
-
-
-/* =====================================================
-   10. BANANA NEWS
-===================================================== */
-
-"banana-news": {
-
-    title:
-    "जळगावच्या केळी उत्पादकांसाठी नवीन माहिती",
-
-    category:
-    "Agriculture",
-
-    date:
-    "22 September 2026",
-
-    image:
-    "banana-news.jpg",
-
-    description:
-    "जळगाव जिल्ह्यातील केळी उत्पादकांसाठी महत्त्वाची माहिती.",
-
-    content: `
-
-        <p>
-        जळगाव जिल्ह्यात केळी हे महत्त्वाचे
-        नगदी पीक मानले जाते. केळी उत्पादनासाठी
-        योग्य सिंचन, हवामान आणि पीक व्यवस्थापन
-        महत्त्वाचे आहे.
-        </p>
-
-        <h2>केळी पिकाचे महत्त्व</h2>
-
-        <p>
-        जिल्ह्यातील अनेक शेतकरी केळी पिकावर
-        अवलंबून आहेत. त्यामुळे बाजारपेठ,
-        उत्पादन खर्च आणि पीक व्यवस्थापन
-        याकडे शेतकऱ्यांचे लक्ष असते.
-        </p>
-
-        <h2>सिंचनाचे महत्त्व</h2>
-
-        <p>
-        केळी पिकासाठी नियमित आणि योग्य
-        सिंचन व्यवस्थापन आवश्यक असते.
-        </p>
-
-        <h2>शेतकऱ्यांसाठी सूचना</h2>
-
-        <p>
-        कोणत्याही कृषी निर्णयापूर्वी स्थानिक
-        कृषी अधिकारी किंवा तज्ज्ञांचा सल्ला
-        घेणे उपयुक्त ठरू शकते.
-        </p>
-
-    `
-}
+    "banana-news":
+        "articles/banana-news.md"
 
 };
 
@@ -1035,177 +305,404 @@ const articles = {
    LOAD ARTICLE
 ===================================================== */
 
-function loadArticle(){
-
-    const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
-    const id =
-    params.get("id");
+async function loadArticle(){
 
     const box =
-    document.getElementById("article");
+        document.getElementById("article");
 
 
     if(!id){
 
-        box.innerHTML = `
-
-            <div class="error">
-
-                <h2>
-                    Article Not Found
-                </h2>
-
-                <p>
-                    URL मध्ये article ID नाही.
-                </p>
-
-                <a
-                    href="index.html"
-                    class="back"
-                >
-                    ← Home
-                </a>
-
-            </div>
-
-        `;
+        showError(
+            "Article Not Found",
+            "URL मध्ये article ID नाही."
+        );
 
         return;
     }
 
 
-    const data =
-    articles[id];
+    const file =
+        articleFiles[id];
 
 
-    if(!data){
+    if(!file){
 
-        box.innerHTML = `
-
-            <div class="error">
-
-                <h2>
-                    Article Not Found
-                </h2>
-
-                <p>
-                    हा article उपलब्ध नाही.
-                </p>
-
-                <a
-                    href="index.html"
-                    class="back"
-                >
-                    ← Home
-                </a>
-
-            </div>
-
-        `;
+        showError(
+            "Article Not Found",
+            "हा article उपलब्ध नाही."
+        );
 
         return;
     }
 
 
-    document.title =
-    data.title +
-    " | Jalgaon Zone";
+    try{
+
+        const response =
+            await fetch(file);
 
 
-    const metaDescription =
-    document.querySelector(
-        'meta[name="description"]'
-    );
+        if(!response.ok){
+
+            throw new Error(
+                "Article file not found"
+            );
+
+        }
 
 
-    if(metaDescription){
+        const markdown =
+            await response.text();
 
-        metaDescription.setAttribute(
-            "content",
-            data.description ||
+
+        const data =
+            parseMarkdown(markdown);
+
+
+        document.title =
             data.title +
+            " | Jalgaon Zone";
+
+
+        updateMeta(
+            data.description ||
+            data.title
+        );
+
+
+        box.innerHTML = `
+
+            <article class="article">
+
+                ${
+                    data.image
+                    ?
+                    `
+                    <img
+                        src="${data.image}"
+                        alt="${escapeHTML(data.title)}"
+                        id="articleImage"
+                    >
+                    `
+                    :
+                    ""
+                }
+
+                <div class="content">
+
+                    ${
+                        data.category
+                        ?
+                        `
+                        <div class="category">
+                            ${escapeHTML(data.category)}
+                        </div>
+                        `
+                        :
+                        ""
+                    }
+
+                    <h1>
+                        ${escapeHTML(data.title)}
+                    </h1>
+
+                    ${
+                        data.date
+                        ?
+                        `
+                        <div class="date">
+                            Published:
+                            ${escapeHTML(data.date)}
+                        </div>
+                        `
+                        :
+                        ""
+                    }
+
+                    <div class="article-body">
+
+                        ${marked.parse(data.content)}
+
+                    </div>
+
+                    <a
+                        href="index.html"
+                        class="back"
+                    >
+                        ← Back to Jalgaon Zone
+                    </a>
+
+                </div>
+
+            </article>
+
+        `;
+
+
+        const image =
+            document.getElementById(
+                "articleImage"
+            );
+
+
+        if(image){
+
+            image.onerror = function(){
+
+                this.style.display = "none";
+
+            };
+
+        }
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        showError(
+            "Article Load Error",
+            "Article load करताना समस्या आली."
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   MARKDOWN PARSER
+===================================================== */
+
+function parseMarkdown(markdown){
+
+    const lines =
+        markdown.split("\n");
+
+
+    const data = {
+
+        title:"",
+        category:"",
+        date:"",
+        image:"",
+        description:"",
+        content:""
+
+    };
+
+
+    let contentStart = 0;
+
+
+    for(
+        let i = 0;
+        i < lines.length;
+        i++
+    ){
+
+        const line =
+            lines[i].trim();
+
+
+        if(
+            line.startsWith("title:")
+        ){
+
+            data.title =
+                cleanValue(
+                    line.substring(6)
+                );
+
+            contentStart = i + 1;
+
+        }
+
+        else if(
+            line.startsWith("category:")
+        ){
+
+            data.category =
+                cleanValue(
+                    line.substring(9)
+                );
+
+            contentStart = i + 1;
+
+        }
+
+        else if(
+            line.startsWith("date:")
+        ){
+
+            data.date =
+                cleanValue(
+                    line.substring(5)
+                );
+
+            contentStart = i + 1;
+
+        }
+
+        else if(
+            line.startsWith("image:")
+        ){
+
+            data.image =
+                cleanValue(
+                    line.substring(6)
+                );
+
+            contentStart = i + 1;
+
+        }
+
+        else if(
+            line.startsWith("description:")
+        ){
+
+            data.description =
+                cleanValue(
+                    line.substring(12)
+                );
+
+            contentStart = i + 1;
+
+        }
+
+        else if(
+            line === "---"
+        ){
+
+            contentStart = i + 1;
+
+            break;
+
+        }
+
+    }
+
+
+    data.content =
+        lines
+        .slice(contentStart)
+        .join("\n");
+
+
+    return data;
+
+}
+
+
+/* =====================================================
+   CLEAN VALUE
+===================================================== */
+
+function cleanValue(value){
+
+    value =
+        value.trim();
+
+
+    if(
+        (
+            value.startsWith('"') &&
+            value.endsWith('"')
+        )
+        ||
+        (
+            value.startsWith("'") &&
+            value.endsWith("'")
+        )
+    ){
+
+        value =
+            value.substring(
+                1,
+                value.length - 1
+            );
+
+    }
+
+
+    return value;
+
+}
+
+
+/* =====================================================
+   META DESCRIPTION
+===================================================== */
+
+function updateMeta(description){
+
+    const meta =
+        document.querySelector(
+            'meta[name="description"]'
+        );
+
+
+    if(meta){
+
+        meta.setAttribute(
+            "content",
+            description +
             " | Jalgaon Zone"
         );
 
     }
 
+}
 
-    box.innerHTML = `
 
-        <article class="article">
+/* =====================================================
+   ERROR
+===================================================== */
 
-            <img
-                src="${data.image}"
-                alt="${data.title}"
-                id="articleImage"
+function showError(title,message){
+
+    document.getElementById(
+        "article"
+    ).innerHTML = `
+
+        <div class="error">
+
+            <h2>
+                ${escapeHTML(title)}
+            </h2>
+
+            <p>
+                ${escapeHTML(message)}
+            </p>
+
+            <a
+                href="index.html"
+                class="back"
             >
+                ← Home
+            </a>
 
-            <div class="content">
-
-                <div class="category">
-                    ${data.category}
-                </div>
-
-                <h1>
-                    ${data.title}
-                </h1>
-
-                <div class="date">
-                    Published:
-                    ${data.date}
-                </div>
-
-                ${data.content}
-
-                <a
-                    href="index.html"
-                    class="back"
-                >
-                    ← Back to Jalgaon Zone
-                </a>
-
-            </div>
-
-        </article>
+        </div>
 
     `;
 
-
-    const image =
-    document.getElementById(
-        "articleImage"
-    );
+}
 
 
-    image.onerror = function(){
+/* =====================================================
+   SECURITY
+===================================================== */
 
-        this.style.display = "none";
+function escapeHTML(text){
 
-        const error =
-        document.createElement("div");
-
-        error.style.padding = "25px";
-        error.style.textAlign = "center";
-        error.style.background = "#fff3f0";
-        error.style.color = "#d84315";
-        error.style.fontWeight = "bold";
-
-        error.innerHTML = `
-            Article image could not be loaded.
-            <br>
-            कृपया GitHub मध्ये image filename तपासा.
-        `;
-
-        this.parentNode.insertBefore(
-            error,
-            this
-        );
-
-    };
+    return String(text)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
 
 }
 
@@ -1217,7 +714,6 @@ function loadArticle(){
 loadArticle();
 
 </script>
-
 
 </body>
 
