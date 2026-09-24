@@ -5,198 +5,160 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Jalgaon Zone</title>
 
-<meta name="description"
-content="Jalgaon Zone - Jalgaon News, Agriculture, History, Tourism and Local Information">
+<meta name="description" content="Jalgaon Zone">
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script src="articles-data.js"></script>
 
 <style>
 
 *{
     box-sizing:border-box;
-    margin:0;
-    padding:0;
 }
 
 body{
+    margin:0;
     font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:#f5f5f5;
+    background:#f5f7fa;
     color:#222;
-    line-height:1.8;
 }
 
 header{
-    background:#111;
+    background:linear-gradient(135deg,#ff6a00,#111);
     color:white;
-    padding:18px 20px;
+    padding:25px 15px;
+    text-align:center;
 }
 
-.nav{
-    max-width:1000px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+header h1{
+    margin:0;
+    font-size:32px;
 }
 
-.logo{
-    font-size:25px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:#f4511e;
-}
-
-.home{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.home:hover{
-    color:#f4511e;
+header p{
+    margin:8px 0 0;
+    opacity:.9;
 }
 
 .container{
     max-width:900px;
-    margin:35px auto;
+    margin:30px auto;
     padding:0 15px;
 }
 
 .article{
     background:white;
-    border-radius:12px;
+    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 4px 20px rgba(0,0,0,.10);
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
 }
 
-.article img{
+.article-image{
     width:100%;
-    max-height:500px;
+    max-height:450px;
     object-fit:cover;
     display:block;
 }
 
-.content{
+.article-content{
     padding:30px;
 }
 
 .category{
-    color:#f4511e;
-    font-weight:bold;
-    font-size:15px;
+    display:inline-block;
+    background:#ff6a00;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:12px;
 }
 
-h1{
-    font-size:38px;
-    line-height:1.4;
-    margin:12px 0;
+.article-content h1{
+    font-size:34px;
+    line-height:1.3;
+    margin:10px 0;
 }
 
 .date{
     color:#777;
-    margin-bottom:25px;
     font-size:14px;
+    margin-bottom:25px;
 }
 
-.content h2{
-    margin-top:25px;
-    margin-bottom:8px;
-    color:#111;
+.article-body{
+    font-size:18px;
+    line-height:1.8;
 }
 
-.content p{
-    margin:12px 0;
+.article-body h2{
+    font-size:26px;
+    margin-top:30px;
+    color:#222;
 }
 
-.content ul{
+.article-body h3{
+    font-size:22px;
+}
+
+.article-body p{
     margin:15px 0;
+}
+
+.article-body ul,
+.article-body ol{
     padding-left:25px;
 }
 
-.content li{
-    margin:6px 0;
-}
-
-.content a{
-    color:#f4511e;
-    font-weight:bold;
+.article-body img{
+    max-width:100%;
+    border-radius:10px;
 }
 
 .back{
     display:inline-block;
     margin-top:30px;
-    color:#f4511e;
-    font-weight:bold;
+    padding:10px 18px;
+    background:#111;
+    color:white;
     text-decoration:none;
-}
-
-.back:hover{
-    text-decoration:underline;
+    border-radius:8px;
 }
 
 .error{
-    background:white;
-    padding:40px;
     text-align:center;
-    border-radius:12px;
-    box-shadow:0 4px 20px rgba(0,0,0,.08);
-}
-
-.error h2{
-    margin-top:0;
+    padding:60px 20px;
+    color:#b00020;
 }
 
 footer{
-    margin-top:50px;
-    background:#111;
-    color:#ccc;
     text-align:center;
-    padding:25px;
-}
-
-footer strong{
-    color:#f4511e;
+    padding:30px;
+    color:#777;
 }
 
 @media(max-width:600px){
 
-    .nav{
-        gap:15px;
+    header h1{
+        font-size:26px;
     }
 
-    .logo{
-        font-size:22px;
-    }
-
-    .home{
-        font-size:14px;
-    }
-
-    .container{
-        margin:20px auto;
-        padding:0 10px;
-    }
-
-    h1{
-        font-size:27px;
-    }
-
-    .content h2{
-        font-size:21px;
-    }
-
-    .content{
+    .article-content{
         padding:20px;
     }
 
-    .article img{
-        max-height:350px;
+    .article-content h1{
+        font-size:27px;
+    }
+
+    .article-body{
+        font-size:17px;
     }
 
 }
@@ -210,261 +172,261 @@ footer strong{
 
 <header>
 
-    <div class="nav">
+<h1>Jalgaon Zone</h1>
 
-        <div class="logo">
-            Jalgaon <span>Zone</span>
-        </div>
-
-        <a href="index.html" class="home">
-            ← Home
-        </a>
-
-    </div>
+<p>जळगावची बातमी • शेती • इतिहास • शिक्षण • रोजगार</p>
 
 </header>
 
 
-<div class="container">
+<main class="container">
 
-    <div id="article">
+<article class="article">
 
-        <div class="error">
-            Article loading...
-        </div>
+<img
+id="articleImage"
+class="article-image"
+alt=""
+>
 
-    </div>
+<div class="article-content">
+
+<div
+id="category"
+class="category">
+</div>
+
+<h1 id="title">
+लोड होत आहे...
+</h1>
+
+<div
+id="date"
+class="date">
+</div>
+
+<div
+id="description"
+class="date">
+</div>
+
+<div
+id="articleBody"
+class="article-body">
+लोड होत आहे...
+</div>
+
+<a
+href="index.html"
+class="back">
+← Jalgaon Zone वर परत जा
+</a>
 
 </div>
+
+</article>
+
+</main>
 
 
 <footer>
 
-    © 2026 <strong>Jalgaon Zone</strong>
-
-    <br>
-
-    Jalgaon • Maharashtra • India
+© 2026 Jalgaon Zone
 
 </footer>
 
 
 <script>
 
-/* =====================================================
-   GET ARTICLE ID
-===================================================== */
+function escapeHTML(value){
 
-const params =
-    new URLSearchParams(window.location.search);
+    return String(value || "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 
-const id =
-    params.get("id");
+}
 
-
-/* =====================================================
-   ARTICLE FILE MAP
-===================================================== */
-
-const articleFiles = {
-
-    "agriculture":
-        "articles/agriculture.md",
-
-    "oxygen":
-        "articles/oxygen-park.md",
-
-    "history":
-        "articles/jalgaon-history.md",
-
-    "jalgaon-district-information":
-        "articles/jalgaon-district-information.md",
-
-    "jalgaon-news-today":
-        "articles/jalgaon-news-today.md",
-
-    "jalgaon-city-news":
-        "articles/jalgaon-city-news.md",
-
-    "jalgaon-government-schemes":
-        "articles/jalgaon-government-schemes.md",
-
-    "jalgaon-education-job-news":
-        "articles/jalgaon-education-job-news.md",
-
-    "jalgaon-weather-news":
-        "articles/jalgaon-weather-news.md",
-
-    "banana-news":
-        "articles/banana-news.md"
-
-};
-
-
-/* =====================================================
-   LOAD ARTICLE
-===================================================== */
 
 async function loadArticle(){
 
-    const box =
-        document.getElementById("article");
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const id = params.get("id");
 
 
     if(!id){
 
-        showError(
-            "Article Not Found",
-            "URL मध्ये article ID नाही."
-        );
-
+        showError("Article ID सापडला नाही.");
         return;
+
     }
 
 
-    const file =
-        articleFiles[id];
+    const article =
+        articles.find(item => item.id === id);
 
 
-    if(!file){
+    if(!article){
 
-        showError(
-            "Article Not Found",
-            "हा article उपलब्ध नाही."
-        );
-
+        showError("Article सापडला नाही.");
         return;
+
+    }
+
+
+    document.title =
+        article.title + " | Jalgaon Zone";
+
+
+    document.querySelector(
+        'meta[name="description"]'
+    ).setAttribute(
+        "content",
+        article.description || article.title
+    );
+
+
+    document.getElementById("category")
+        .textContent =
+        article.category || "Jalgaon Zone";
+
+
+    document.getElementById("title")
+        .textContent =
+        article.title;
+
+
+    document.getElementById("date")
+        .textContent =
+        article.date || "";
+
+
+    document.getElementById("description")
+        .textContent =
+        article.description || "";
+
+
+    const image =
+        document.getElementById("articleImage");
+
+
+    if(article.image){
+
+        image.src = article.image;
+
+        image.alt = article.title;
+
+        image.onerror = function(){
+
+            image.style.display = "none";
+
+        };
+
+    }else{
+
+        image.style.display = "none";
+
     }
 
 
     try{
 
         const response =
-            await fetch(file);
+            await fetch(article.file);
 
 
         if(!response.ok){
 
             throw new Error(
-                "Article file not found"
+                "Markdown file not found"
             );
 
         }
 
 
-        const markdown =
+        let markdown =
             await response.text();
 
 
-        const data =
-            parseMarkdown(markdown);
+        /*
+        First H1 remove करा.
+        Example:
+
+        # जळगाव जिल्ह्यातील आजच्या प्रमुख बातम्या
+        */
+
+        let lines =
+            markdown.split(/\r?\n/);
 
 
-        document.title =
-            data.title +
-            " | Jalgaon Zone";
+        if(
+            lines.length > 0 &&
+            lines[0].trim().startsWith("# ")
+        ){
 
-
-        updateMeta(
-            data.description ||
-            data.title
-        );
-
-
-        box.innerHTML = `
-
-            <article class="article">
-
-                ${
-                    data.image
-                    ?
-                    `
-                    <img
-                        src="${data.image}"
-                        alt="${escapeHTML(data.title)}"
-                        id="articleImage"
-                    >
-                    `
-                    :
-                    ""
-                }
-
-                <div class="content">
-
-                    ${
-                        data.category
-                        ?
-                        `
-                        <div class="category">
-                            ${escapeHTML(data.category)}
-                        </div>
-                        `
-                        :
-                        ""
-                    }
-
-                    <h1>
-                        ${escapeHTML(data.title)}
-                    </h1>
-
-                    ${
-                        data.date
-                        ?
-                        `
-                        <div class="date">
-                            Published:
-                            ${escapeHTML(data.date)}
-                        </div>
-                        `
-                        :
-                        ""
-                    }
-
-                    <div class="article-body">
-
-                        ${marked.parse(data.content)}
-
-                    </div>
-
-                    <a
-                        href="index.html"
-                        class="back"
-                    >
-                        ← Back to Jalgaon Zone
-                    </a>
-
-                </div>
-
-            </article>
-
-        `;
-
-
-        const image =
-            document.getElementById(
-                "articleImage"
-            );
-
-
-        if(image){
-
-            image.onerror = function(){
-
-                this.style.display = "none";
-
-            };
+            lines.shift();
 
         }
 
-    }
 
-    catch(error){
+        /*
+        Date line remove करा.
+
+        **दिनांक:** 24 सप्टेंबर 2026
+        */
+
+        while(
+            lines.length &&
+            lines[0].trim() === ""
+        ){
+
+            lines.shift();
+
+        }
+
+
+        if(
+            lines.length &&
+            /^\*\*दिनांक:\*\*/.test(
+                lines[0].trim()
+            )
+        ){
+
+            lines.shift();
+
+        }
+
+
+        while(
+            lines.length &&
+            lines[0].trim() === ""
+        ){
+
+            lines.shift();
+
+        }
+
+
+        markdown =
+            lines.join("\n");
+
+
+        document.getElementById(
+            "articleBody"
+        ).innerHTML =
+            marked.parse(markdown);
+
+
+    }catch(error){
 
         console.error(error);
 
         showError(
-            "Article Load Error",
-            "Article load करताना समस्या आली."
+            "Article content load होत नाही."
         );
 
     }
@@ -472,215 +434,22 @@ async function loadArticle(){
 }
 
 
-/* =====================================================
-   MARKDOWN PARSER
-===================================================== */
+function showError(message){
 
-function parseMarkdown(markdown){
-
-    const lines =
-        markdown.split("\n");
-
-
-    const data = {
-
-        title:"",
-        category:"",
-        date:"",
-        image:"",
-        description:"",
-        content:""
-
-    };
-
-
-    let contentStart = 0;
-
-
-    for(
-        let i = 0;
-        i < lines.length;
-        i++
-    ){
-
-        const line =
-            lines[i].trim();
-
-
-        if(
-            line.startsWith("title:")
-        ){
-
-            data.title =
-                cleanValue(
-                    line.substring(6)
-                );
-
-            contentStart = i + 1;
-
-        }
-
-        else if(
-            line.startsWith("category:")
-        ){
-
-            data.category =
-                cleanValue(
-                    line.substring(9)
-                );
-
-            contentStart = i + 1;
-
-        }
-
-        else if(
-            line.startsWith("date:")
-        ){
-
-            data.date =
-                cleanValue(
-                    line.substring(5)
-                );
-
-            contentStart = i + 1;
-
-        }
-
-        else if(
-            line.startsWith("image:")
-        ){
-
-            data.image =
-                cleanValue(
-                    line.substring(6)
-                );
-
-            contentStart = i + 1;
-
-        }
-
-        else if(
-            line.startsWith("description:")
-        ){
-
-            data.description =
-                cleanValue(
-                    line.substring(12)
-                );
-
-            contentStart = i + 1;
-
-        }
-
-        else if(
-            line === "---"
-        ){
-
-            contentStart = i + 1;
-
-            break;
-
-        }
-
-    }
-
-
-    data.content =
-        lines
-        .slice(contentStart)
-        .join("\n");
-
-
-    return data;
-
-}
-
-
-/* =====================================================
-   CLEAN VALUE
-===================================================== */
-
-function cleanValue(value){
-
-    value =
-        value.trim();
-
-
-    if(
-        (
-            value.startsWith('"') &&
-            value.endsWith('"')
-        )
-        ||
-        (
-            value.startsWith("'") &&
-            value.endsWith("'")
-        )
-    ){
-
-        value =
-            value.substring(
-                1,
-                value.length - 1
-            );
-
-    }
-
-
-    return value;
-
-}
-
-
-/* =====================================================
-   META DESCRIPTION
-===================================================== */
-
-function updateMeta(description){
-
-    const meta =
-        document.querySelector(
-            'meta[name="description"]'
-        );
-
-
-    if(meta){
-
-        meta.setAttribute(
-            "content",
-            description +
-            " | Jalgaon Zone"
-        );
-
-    }
-
-}
-
-
-/* =====================================================
-   ERROR
-===================================================== */
-
-function showError(title,message){
-
-    document.getElementById(
-        "article"
-    ).innerHTML = `
+    document.querySelector(".article")
+    .innerHTML = `
 
         <div class="error">
 
-            <h2>
-                ${escapeHTML(title)}
-            </h2>
+            <h2>⚠️ ${escapeHTML(message)}</h2>
 
             <p>
-                ${escapeHTML(message)}
+                कृपया पुन्हा प्रयत्न करा.
             </p>
 
             <a
                 href="index.html"
-                class="back"
-            >
+                class="back">
                 ← Home
             </a>
 
@@ -690,26 +459,6 @@ function showError(title,message){
 
 }
 
-
-/* =====================================================
-   SECURITY
-===================================================== */
-
-function escapeHTML(text){
-
-    return String(text)
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
-
-}
-
-
-/* =====================================================
-   START
-===================================================== */
 
 loadArticle();
 
