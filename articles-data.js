@@ -34,6 +34,15 @@ const articles = [
         image: "banana-news.jpg",
         description: "जळगाव जिल्ह्यातील केळी उत्पादकांसाठी महत्त्वाची माहिती.",
         link: "article.html?id=banana-news"
+    },
+
+    {
+        id: "jalgaon-district-information",
+        title: "जळगाव जिल्ह्याची संपूर्ण माहिती: इतिहास, तालुके, शेती आणि पर्यटन",
+        category: "Jalgaon Information",
+        image: "jalgaon-district-information.png",
+        description: "जळगाव जिल्ह्याचा इतिहास, तालुके, शेती, नद्या, संस्कृती आणि प्रसिद्ध पर्यटनस्थळांची संपूर्ण माहिती.",
+        link: "article.html?id=jalgaon-district-information"
     }
 
 ];
