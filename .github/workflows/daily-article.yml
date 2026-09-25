@@ -33,8 +33,22 @@ jobs:
           date_text = today.strftime("%d %B %Y")
           date_file = today.strftime("%Y-%m-%d")
 
+          # -------------------------------------------------
+          # CREATE / FIX DIRECTORIES
+          # -------------------------------------------------
+
           os.makedirs("articles", exist_ok=True)
+
+          # Make sure Images is a real directory.
+          # If a file/symlink named Images exists, remove it.
+          if os.path.lexists("Images") and not os.path.isdir("Images"):
+              os.remove("Images")
+
           os.makedirs("Images", exist_ok=True)
+
+          # -------------------------------------------------
+          # ARTICLE TOPICS
+          # -------------------------------------------------
 
           topics = [
               {
@@ -70,8 +84,11 @@ jobs:
           ]
 
           index = today.toordinal()
-
           new_articles = []
+
+          # -------------------------------------------------
+          # TEXT WRAPPING FOR SVG
+          # -------------------------------------------------
 
           def wrap_text(text, max_chars=34):
               words = text.split()
@@ -93,13 +110,19 @@ jobs:
 
               return lines[:3]
 
+          # -------------------------------------------------
+          # CREATE SVG IMAGE
+          # -------------------------------------------------
+
           def create_svg(filename, title, category, color1, color2):
+
               title_lines = wrap_text(title)
 
               title_svg = ""
               y = 285
 
               for line in title_lines:
+
                   title_svg += f'''
           <text x="70"
                 y="{y}"
@@ -110,23 +133,32 @@ jobs:
               {html.escape(line)}
           </text>
           '''
+
                   y += 65
 
               svg = f'''<?xml version="1.0" encoding="UTF-8"?>
+
           <svg xmlns="http://www.w3.org/2000/svg"
                width="1200"
                height="630"
                viewBox="0 0 1200 630">
 
             <defs>
+
               <linearGradient id="bg"
                               x1="0%"
                               y1="0%"
                               x2="100%"
                               y2="100%">
-                <stop offset="0%" stop-color="{color1}"/>
-                <stop offset="100%" stop-color="{color2}"/>
+
+                <stop offset="0%"
+                      stop-color="{color1}"/>
+
+                <stop offset="100%"
+                      stop-color="{color2}"/>
+
               </linearGradient>
+
             </defs>
 
             <rect width="1200"
@@ -151,7 +183,9 @@ jobs:
                   font-weight="600"
                   fill="white"
                   font-family="Arial, sans-serif">
+
               JALGAON ZONE
+
             </text>
 
             <rect x="70"
@@ -167,7 +201,9 @@ jobs:
                   font-size="24"
                   fill="white"
                   font-family="Noto Sans Devanagari, Devanagari, Arial, sans-serif">
+
               {html.escape(category)}
+
             </text>
 
             {title_svg}
@@ -178,7 +214,9 @@ jobs:
                   fill="white"
                   opacity="0.9"
                   font-family="Arial, sans-serif">
+
               {date_text}
+
             </text>
 
             <text x="1130"
@@ -188,7 +226,9 @@ jobs:
                   fill="white"
                   opacity="0.8"
                   font-family="Arial, sans-serif">
+
               Jalgaon • Maharashtra
+
             </text>
 
           </svg>
@@ -197,6 +237,10 @@ jobs:
               with open(filename, "w", encoding="utf-8") as f:
                   f.write(svg)
 
+          # -------------------------------------------------
+          # IMAGE COLORS
+          # -------------------------------------------------
+
           colors = [
               ("#0f766e", "#164e63"),
               ("#2563eb", "#1e3a8a"),
@@ -204,6 +248,10 @@ jobs:
               ("#b45309", "#78350f"),
               ("#15803d", "#14532d")
           ]
+
+          # -------------------------------------------------
+          # GENERATE 5 ARTICLES
+          # -------------------------------------------------
 
           for i, topic in enumerate(topics):
 
@@ -214,17 +262,19 @@ jobs:
               filename_base = f"{selected['slug']}-{date_file}"
 
               article_file = f"articles/{filename_base}.md"
+
               image_file = f"Images/{filename_base}.svg"
 
               # Same-day duplicate protection
               if os.path.exists(article_file):
+                  print("Already exists:", article_file)
                   continue
 
               title = selected["title"]
 
-              # -----------------------------
-              # ARTICLE CONTENT
-              # -----------------------------
+              # -------------------------------------------------
+              # AGRICULTURE
+              # -------------------------------------------------
 
               if selected["category"] == "Agriculture":
 
@@ -250,6 +300,10 @@ jobs:
 
           जळगाव जिल्ह्यातील शेतीविषयक माहिती, योजना आणि कृषी तंत्रज्ञानाबद्दल अधिक माहितीसाठी Jalgaon Zone वरील पुढील लेख पाहत रहा.
           """
+
+              # -------------------------------------------------
+              # EDUCATION & JOBS
+              # -------------------------------------------------
 
               elif selected["category"] == "Education & Jobs":
 
@@ -278,6 +332,10 @@ jobs:
           Jalgaon Zone वर शिक्षण आणि रोजगारविषयक माहितीचे पुढील अपडेट्स पाहत रहा.
           """
 
+              # -------------------------------------------------
+              # GOVERNMENT SCHEMES
+              # -------------------------------------------------
+
               elif selected["category"] == "Government Schemes":
 
                   body = f"""# {title}
@@ -304,6 +362,10 @@ jobs:
 
           Jalgaon Zone वर सरकारी योजना आणि नागरिकांसाठी उपयुक्त माहिती पाहत रहा.
           """
+
+              # -------------------------------------------------
+              # HISTORY & TOURISM
+              # -------------------------------------------------
 
               elif selected["category"] == "History & Tourism":
 
@@ -332,6 +394,10 @@ jobs:
           Jalgaon Zone वर जळगावच्या इतिहास आणि पर्यटनस्थळांविषयी अधिक माहिती वाचा.
           """
 
+              # -------------------------------------------------
+              # JALGAON INFORMATION
+              # -------------------------------------------------
+
               else:
 
                   body = f"""# {title}
@@ -357,9 +423,9 @@ jobs:
           जळगाव जिल्ह्याशी संबंधित माहिती, इतिहास, शेती, पर्यटन, शिक्षण आणि स्थानिक विषयांवरील लेख Jalgaon Zone वर प्रकाशित केले जातील.
           """
 
-              # -----------------------------
-              # IMAGE
-              # -----------------------------
+              # -------------------------------------------------
+              # CREATE IMAGE
+              # -------------------------------------------------
 
               color1, color2 = colors[i % len(colors)]
 
@@ -371,12 +437,16 @@ jobs:
                   color2
               )
 
-              # -----------------------------
+              # -------------------------------------------------
               # SAVE ARTICLE
-              # -----------------------------
+              # -------------------------------------------------
 
               with open(article_file, "w", encoding="utf-8") as f:
                   f.write(body)
+
+              # -------------------------------------------------
+              # ARTICLE METADATA
+              # -------------------------------------------------
 
               article_id = filename_base
 
@@ -393,75 +463,134 @@ jobs:
 
               new_articles.append(metadata)
 
-          # -----------------------------
+              print("Created:", article_file)
+              print("Created:", image_file)
+
+          # -------------------------------------------------
           # UPDATE articles-data.js
-          # -----------------------------
+          # -------------------------------------------------
 
           if new_articles:
 
               data_file = "articles-data.js"
 
               if os.path.exists(data_file):
+
                   with open(data_file, "r", encoding="utf-8") as f:
                       old = f.read()
+
               else:
+
                   old = "const articles = [];"
 
               start = old.find("[")
               end = old.rfind("]")
 
               if start == -1 or end == -1:
-                  raise Exception("articles-data.js format not recognized")
+                  raise Exception(
+                      "articles-data.js format not recognized"
+                  )
 
               existing_text = old[start + 1:end].strip()
 
               new_entries = []
 
               for item in new_articles:
+
                   new_entries.append(
-                      "  " + json.dumps(item, ensure_ascii=False, indent=2)
+                      "  " +
+                      json.dumps(
+                          item,
+                          ensure_ascii=False,
+                          indent=2
+                      )
                   )
 
               additions = ",\n".join(new_entries)
 
               if existing_text:
-                  combined = existing_text + ",\n" + additions
+
+                  combined = (
+                      existing_text +
+                      ",\n" +
+                      additions
+                  )
+
               else:
+
                   combined = additions
 
-              new_content = old[:start + 1] + "\n" + combined + "\n" + old[end:]
+              new_content = (
+                  old[:start + 1] +
+                  "\n" +
+                  combined +
+                  "\n" +
+                  old[end:]
+              )
 
-              with open(data_file, "w", encoding="utf-8") as f:
+              with open(
+                  data_file,
+                  "w",
+                  encoding="utf-8"
+              ) as f:
+
                   f.write(new_content)
 
-              print("Created articles:", len(new_articles))
+              print("")
+              print(
+                  "Created articles:",
+                  len(new_articles)
+              )
 
           else:
+
+              print("")
               print("No new articles created.")
 
           PY
 
+      # -------------------------------------------------
+      # SHOW GENERATED FILES
+      # -------------------------------------------------
+
       - name: Show generated files
         run: |
+
+          echo "=============================="
           echo "Articles:"
+          echo "=============================="
+
           ls -la articles/ | tail -20
 
           echo ""
+          echo "=============================="
           echo "Images:"
+          echo "=============================="
+
           ls -la Images/ | tail -20
+
+      # -------------------------------------------------
+      # COMMIT AND PUSH
+      # -------------------------------------------------
 
       - name: Commit and Push
         run: |
+
           git config user.name "Jalgaon Zone Bot"
+
           git config user.email "actions@github.com"
 
           git add articles/ Images/ articles-data.js
 
           if git diff --cached --quiet; then
+
             echo "No changes to commit."
+
             exit 0
+
           fi
 
-          git commit -m "Daily Jalgaon Zone articles and images"
+          git commit \
+            -m "Daily Jalgaon Zone articles and images"
 
           git push
