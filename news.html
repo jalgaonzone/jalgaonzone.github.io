@@ -1068,11 +1068,11 @@ footer p{
 
 <div class="featured news-item">
 
-
     <img
         src="oxygen-park-newspng.jpg"
         class="featured-image"
         alt="पाळधीत ऑक्सिजन पार्कचे भूमीपूजन"
+        onerror="this.src='jalgaon.jpg'"
     >
 
 
@@ -1128,6 +1128,7 @@ footer p{
 </div>
 
 
+
 <!-- =====================================================
      DYNAMIC NEWS GRID
 ===================================================== -->
@@ -1139,7 +1140,9 @@ footer p{
 </div>
 
 
-<!-- NO RESULT -->
+<!-- =====================================================
+     NO RESULT
+===================================================== -->
 
 <div
     class="no-result"
@@ -1158,7 +1161,9 @@ footer p{
 
 
 
-<!-- BACK HOME -->
+<!-- =====================================================
+     BACK HOME
+===================================================== -->
 
 <div class="back-home">
 
@@ -1209,260 +1214,10 @@ footer p{
 
 
 <!-- =====================================================
-     DYNAMIC ARTICLE SCRIPT
+     CATEGORY LOADER
 ===================================================== -->
 
-<script>
-
-/* =====================================================
-   CREATE NEWS CARDS
-===================================================== */
-
-function loadArticles(){
-
-    const newsGrid =
-        document.getElementById("newsGrid");
-
-    if(!newsGrid){
-        return;
-    }
-
-
-    newsGrid.innerHTML = "";
-
-
-    /* Check articles-data.js */
-
-    if(
-        typeof articles === "undefined" ||
-        !Array.isArray(articles) ||
-        articles.length === 0
-    ){
-
-        document
-        .getElementById("noResult")
-        .style.display = "block";
-
-        return;
-    }
-
-
-    articles.forEach(function(article){
-
-        const card =
-            document.createElement("article");
-
-        card.className =
-            "news-card news-item";
-
-
-        /* Search text */
-
-        card.dataset.search =
-            (
-                article.title +
-                " " +
-                article.category +
-                " " +
-                article.description
-            )
-            .toLowerCase();
-
-
-        card.innerHTML = `
-
-            <img
-                src="${article.image}"
-                class="news-image"
-                alt="${article.title}"
-                onerror="this.style.display='none'"
-            >
-
-            <div class="news-content">
-
-                <span class="news-category">
-                    ${getCategoryIcon(article.category)}
-                    ${article.category}
-                </span>
-
-                <h3>
-                    ${article.title}
-                </h3>
-
-                <p>
-                    ${article.description}
-                </p>
-
-                <a
-                    href="${article.link}"
-                    class="read-more"
-                >
-                    Read More →
-                </a>
-
-            </div>
-
-        `;
-
-
-        newsGrid.appendChild(card);
-
-    });
-
-}
-
-
-/* =====================================================
-   CATEGORY ICON
-===================================================== */
-
-function getCategoryIcon(category){
-
-    if(!category){
-        return "📰";
-    }
-
-
-    const value =
-        category.toLowerCase();
-
-
-    if(
-        value.includes("agriculture") ||
-        value.includes("farm")
-    ){
-        return "🌱";
-    }
-
-
-    if(
-        value.includes("history")
-    ){
-        return "🏛️";
-    }
-
-
-    if(
-        value.includes("tourism") ||
-        value.includes("place")
-    ){
-        return "📍";
-    }
-
-
-    if(
-        value.includes("blog")
-    ){
-        return "✍️";
-    }
-
-
-    return "📰";
-
-}
-
-
-/* =====================================================
-   SEARCH NEWS
-===================================================== */
-
-function searchNews(){
-
-    const input =
-        document
-        .getElementById("newsSearch")
-        .value
-        .toLowerCase()
-        .trim();
-
-
-    const cards =
-        document
-        .querySelectorAll(
-            "#newsGrid .news-card"
-        );
-
-
-    let visibleCount = 0;
-
-
-    cards.forEach(function(card){
-
-        const text =
-            (
-                card.innerText +
-                " " +
-                (card.dataset.search || "")
-            )
-            .toLowerCase();
-
-
-        if(
-            input === "" ||
-            text.includes(input)
-        ){
-
-            card.style.display = "";
-
-            visibleCount++;
-
-        }else{
-
-            card.style.display = "none";
-
-        }
-
-    });
-
-
-    const noResult =
-        document.getElementById("noResult");
-
-
-    if(visibleCount === 0){
-
-        noResult.style.display = "block";
-
-    }else{
-
-        noResult.style.display = "none";
-
-    }
-
-}
-
-
-/* =====================================================
-   SEARCH BUTTON
-===================================================== */
-
-function focusNewsSearch(){
-
-    document
-    .getElementById("newsSearch")
-    .focus();
-
-}
-
-
-/* =====================================================
-   LOAD ARTICLES
-===================================================== */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function(){
-
-        loadArticles();
-
-    }
-);
-
-<script src="articles-data.js"></script>
 <script src="category-loader.js"></script>
-
-</body>
-</html>
 
 
 </body>
