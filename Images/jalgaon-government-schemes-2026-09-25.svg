@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="630"
+     viewBox="0 0 1200 630">
+
+  <defs>
+
+    <linearGradient id="bg"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%">
+
+      <stop offset="0%"
+            stop-color="#b45309"/>
+
+      <stop offset="100%"
+            stop-color="#78350f"/>
+
+    </linearGradient>
+
+  </defs>
+
+  <rect width="1200"
+        height="630"
+        fill="url(#bg)"/>
+
+  <circle cx="1050"
+          cy="90"
+          r="180"
+          fill="white"
+          opacity="0.08"/>
+
+  <circle cx="1100"
+          cy="560"
+          r="230"
+          fill="white"
+          opacity="0.06"/>
+
+  <text x="70"
+        y="85"
+        font-size="30"
+        font-weight="600"
+        fill="white"
+        font-family="Arial, sans-serif">
+
+    JALGAON ZONE
+
+  </text>
+
+  <rect x="70"
+        y="125"
+        width="330"
+        height="52"
+        rx="26"
+        fill="white"
+        opacity="0.18"/>
+
+  <text x="95"
+        y="160"
+        font-size="24"
+        fill="white"
+        font-family="Noto Sans Devanagari, Devanagari, Arial, sans-serif">
+
+    Government Schemes
+
+  </text>
+
+  
+<text x="70"
+      y="285"
+      font-size="48"
+      font-weight="700"
+      fill="white"
+      font-family="Noto Sans Devanagari, Devanagari, Arial, sans-serif">
+    जळगाव जिल्ह्यातील सरकारी योजना आणि
+</text>
+
+<text x="70"
+      y="350"
+      font-size="48"
+      font-weight="700"
+      fill="white"
+      font-family="Noto Sans Devanagari, Devanagari, Arial, sans-serif">
+    नागरिकांसाठी माहिती
+</text>
+
+
+  <text x="70"
+        y="560"
+        font-size="24"
+        fill="white"
+        opacity="0.9"
+        font-family="Arial, sans-serif">
+
+    25 September 2026
+
+  </text>
+
+  <text x="1130"
+        y="570"
+        text-anchor="end"
+        font-size="22"
+        fill="white"
+        opacity="0.8"
+        font-family="Arial, sans-serif">
+
+    Jalgaon • Maharashtra
+
+  </text>
+
+</svg>

@@ -1,6 +1,5 @@
 const articles = [
-
-    {
+{
         id: "oxygen",
         title: "पाळधीत ऑक्सिजन पार्कचे भूमिपूजन",
         category: "Jalgaon News",
@@ -108,6 +107,55 @@ const articles = [
         description: "जळगाव जिल्ह्यातील हवामान आणि पावसासंबंधी माहिती.",
         file: "articles/jalgaon-weather-news.md",
         link: "article.html?id=jalgaon-weather-news"
-    }
-
+    },
+  {
+  "id": "jalgaon-district-information-2026-09-25",
+  "title": "जळगाव जिल्ह्याबद्दल जाणून घेण्यासारखी माहिती",
+  "category": "Jalgaon Information",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-district-information-2026-09-25.svg",
+  "description": "जळगाव जिल्ह्याबद्दल जाणून घेण्यासारखी माहिती — Jalgaon Zone वरील माहितीपूर्ण लेख.",
+  "file": "articles/jalgaon-district-information-2026-09-25.md",
+  "link": "article.html?id=jalgaon-district-information-2026-09-25"
+},
+  {
+  "id": "jalgaon-agriculture-2026-09-25",
+  "title": "जळगाव जिल्ह्यातील शेतीविषयक महत्त्वाची माहिती",
+  "category": "Agriculture",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-agriculture-2026-09-25.svg",
+  "description": "जळगाव जिल्ह्यातील शेतीविषयक महत्त्वाची माहिती — Jalgaon Zone वरील माहितीपूर्ण लेख.",
+  "file": "articles/jalgaon-agriculture-2026-09-25.md",
+  "link": "article.html?id=jalgaon-agriculture-2026-09-25"
+},
+  {
+  "id": "jalgaon-education-jobs-2026-09-25",
+  "title": "जळगाव जिल्ह्यातील शिक्षण आणि रोजगारविषयक माहिती",
+  "category": "Education & Jobs",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-education-jobs-2026-09-25.svg",
+  "description": "जळगाव जिल्ह्यातील शिक्षण आणि रोजगारविषयक माहिती — Jalgaon Zone वरील माहितीपूर्ण लेख.",
+  "file": "articles/jalgaon-education-jobs-2026-09-25.md",
+  "link": "article.html?id=jalgaon-education-jobs-2026-09-25"
+},
+  {
+  "id": "jalgaon-government-schemes-2026-09-25",
+  "title": "जळगाव जिल्ह्यातील सरकारी योजना आणि नागरिकांसाठी माहिती",
+  "category": "Government Schemes",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-government-schemes-2026-09-25.svg",
+  "description": "जळगाव जिल्ह्यातील सरकारी योजना आणि नागरिकांसाठी माहिती — Jalgaon Zone वरील माहितीपूर्ण लेख.",
+  "file": "articles/jalgaon-government-schemes-2026-09-25.md",
+  "link": "article.html?id=jalgaon-government-schemes-2026-09-25"
+},
+  {
+  "id": "jalgaon-history-tourism-2026-09-25",
+  "title": "जळगाव जिल्ह्याचा इतिहास आणि पर्यटनस्थळांची माहिती",
+  "category": "History & Tourism",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-history-tourism-2026-09-25.svg",
+  "description": "जळगाव जिल्ह्याचा इतिहास आणि पर्यटनस्थळांची माहिती — Jalgaon Zone वरील माहितीपूर्ण लेख.",
+  "file": "articles/jalgaon-history-tourism-2026-09-25.md",
+  "link": "article.html?id=jalgaon-history-tourism-2026-09-25"
+}
 ];
