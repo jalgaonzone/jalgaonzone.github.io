@@ -157,5 +157,55 @@ const articles = [
   "description": "जळगाव जिल्ह्याचा इतिहास आणि पर्यटनस्थळांची माहिती — Jalgaon Zone वरील माहितीपूर्ण लेख.",
   "file": "articles/jalgaon-history-tourism-2026-09-25.md",
   "link": "article.html?id=jalgaon-history-tourism-2026-09-25"
+},
+  {
+  "id": "jalgaon-water-management-2026-09-25",
+  "title": "जळगाव जिल्ह्यातील शेतीसाठी पाणी व्यवस्थापन",
+  "category": "Agriculture",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-water-management-2026-09-25.svg",
+  "description": "जळगाव जिल्ह्यातील शेतीसाठी पाणी व्यवस्थापन — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-water-management-2026-09-25.md",
+  "link": "article.html?id=jalgaon-water-management-2026-09-25"
+},
+  {
+  "id": "jalgaon-apprenticeship-2026-09-25",
+  "title": "जळगावातील विद्यार्थ्यांसाठी अप्रेंटिसशिपची माहिती",
+  "category": "Education & Jobs",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-apprenticeship-2026-09-25.svg",
+  "description": "जळगावातील विद्यार्थ्यांसाठी अप्रेंटिसशिपची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-apprenticeship-2026-09-25.md",
+  "link": "article.html?id=jalgaon-apprenticeship-2026-09-25"
+},
+  {
+  "id": "jalgaon-housing-schemes-2026-09-25",
+  "title": "घरकुल आणि निवासाशी संबंधित सरकारी योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-housing-schemes-2026-09-25.svg",
+  "description": "घरकुल आणि निवासाशी संबंधित सरकारी योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-housing-schemes-2026-09-25.md",
+  "link": "article.html?id=jalgaon-housing-schemes-2026-09-25"
+},
+  {
+  "id": "jalgaon-history-khandesh-2026-09-25",
+  "title": "खानदेश आणि जळगावचा इतिहास समजून घेण्याचा प्रयत्न",
+  "category": "History & Tourism",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-history-khandesh-2026-09-25.svg",
+  "description": "खानदेश आणि जळगावचा इतिहास समजून घेण्याचा प्रयत्न — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-history-khandesh-2026-09-25.md",
+  "link": "article.html?id=jalgaon-history-khandesh-2026-09-25"
+},
+  {
+  "id": "jalgaon-transport-2026-09-25",
+  "title": "जळगाव जिल्ह्यातील वाहतूक आणि प्रवासाची माहिती",
+  "category": "Jalgaon Information",
+  "date": "25 September 2026",
+  "image": "Images/jalgaon-transport-2026-09-25.svg",
+  "description": "जळगाव जिल्ह्यातील वाहतूक आणि प्रवासाची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-transport-2026-09-25.md",
+  "link": "article.html?id=jalgaon-transport-2026-09-25"
 }
 ];
