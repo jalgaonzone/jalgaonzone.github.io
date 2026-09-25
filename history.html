@@ -78,6 +78,9 @@ nav a:hover{
     color:#f4511e;
 }
 
+
+/* HERO */
+
 .hero{
 
     min-height:380px;
@@ -117,6 +120,9 @@ nav a:hover{
     font-size:18px;
 }
 
+
+/* CONTAINER */
+
 .container{
     max-width:1100px;
     margin:50px auto;
@@ -136,6 +142,9 @@ nav a:hover{
 .section-title p{
     color:#666;
 }
+
+
+/* INFO */
 
 .info{
 
@@ -165,6 +174,9 @@ nav a:hover{
     color:#555;
 
 }
+
+
+/* FEATURE CARDS */
 
 .cards{
 
@@ -205,6 +217,9 @@ nav a:hover{
 
 }
 
+
+/* TIMELINE */
+
 .timeline{
 
     border-left:
@@ -237,6 +252,126 @@ nav a:hover{
 
 }
 
+
+/* AUTOMATIC ARTICLES */
+
+.history-articles{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+    margin-top:25px;
+
+    margin-bottom:40px;
+}
+
+.news-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 3px 12px
+    rgba(0,0,0,.10);
+
+    transition:.3s;
+
+}
+
+.news-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 8px 20px
+    rgba(0,0,0,.15);
+
+}
+
+.news-card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+}
+
+.news-content{
+
+    padding:22px;
+
+}
+
+.news-category{
+
+    display:inline-block;
+
+    background:#f4511e;
+
+    color:white;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    margin-bottom:10px;
+
+}
+
+.news-content h3{
+
+    color:#f4511e;
+
+    margin-bottom:8px;
+
+}
+
+.news-content p{
+
+    color:#555;
+
+    margin-bottom:15px;
+
+}
+
+.read-more{
+
+    display:inline-block;
+
+    background:#111;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:8px 14px;
+
+    border-radius:5px;
+
+    font-size:14px;
+
+}
+
+.read-more:hover{
+
+    background:#f4511e;
+
+}
+
+
+/* FOOTER */
+
 footer{
 
     background:#111;
@@ -255,6 +390,9 @@ footer p{
     margin:5px 0;
 
 }
+
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -376,6 +514,8 @@ About
 </div>
 
 
+
+<!-- INTRO -->
 
 <div class="info">
 
@@ -521,7 +661,7 @@ Historical Highlights
 
 फैजपूर अधिवेशन हे
 भारतीय स्वातंत्र्य चळवळीच्या
-इतिहासातील एक महत्त्वाचे
+इतिहासातील एक महत्त्वाची
 घटना म्हणून नोंदले जाते.
 
 </p>
@@ -553,6 +693,37 @@ Historical Highlights
 </div>
 
 
+
+<!-- =====================================
+     AUTOMATIC HISTORY ARTICLES
+===================================== -->
+
+<div class="section-title">
+
+<h2>
+📚 इतिहासाशी संबंधित नवीन लेख
+</h2>
+
+<p>
+Jalgaon Zone वर प्रकाशित झालेले इतिहासविषयक लेख
+</p>
+
+</div>
+
+
+<div class="history-articles news-grid" id="historyGrid">
+
+<!--
+    category-loader.js
+    History आणि History & Tourism
+    categories येथून automatic load होतील.
+-->
+
+</div>
+
+
+
+<!-- HERITAGE -->
 
 <div class="info">
 
@@ -597,6 +768,16 @@ Jalgaon News • Agriculture • History • Places • Blogs
 </p>
 
 </footer>
+
+
+
+<!-- =====================================
+     AUTOMATIC ARTICLE SYSTEM
+===================================== -->
+
+<script src="articles-data.js"></script>
+
+<script src="category-loader.js"></script>
 
 
 </body>
