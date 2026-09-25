@@ -44,9 +44,13 @@ header{
     max-width:1200px;
     margin:auto;
     padding:15px 20px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:20px;
 }
 
@@ -78,128 +82,357 @@ nav a:hover{
     color:#f4511e;
 }
 
+
+/* HERO */
+
 .hero{
+
     min-height:350px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-align:center;
+
     color:white;
+
     padding:40px 20px;
 
     background:
+
     linear-gradient(
         rgba(0,0,0,.65),
         rgba(0,0,0,.65)
     ),
+
     url("agriculture.png");
 
     background-size:cover;
+
     background-position:center;
 }
 
 .hero h1{
+
     font-size:45px;
+
     margin-bottom:10px;
+
 }
 
 .hero p{
+
     font-size:18px;
+
 }
 
+
+/* CONTAINER */
+
 .container{
+
     max-width:1100px;
+
     margin:50px auto;
+
     padding:0 20px;
+
 }
 
 .section-title{
+
     text-align:center;
+
     margin-bottom:30px;
+
 }
 
 .section-title h2{
+
     font-size:32px;
+
     margin-bottom:8px;
+
 }
 
 .section-title p{
+
     color:#666;
+
 }
 
+
+/* AGRICULTURE CARDS */
+
 .cards{
+
     display:grid;
+
     grid-template-columns:
     repeat(auto-fit,minmax(260px,1fr));
+
     gap:25px;
+
+    margin-bottom:35px;
+
 }
 
 .card{
+
     background:white;
+
     border-radius:10px;
+
     overflow:hidden;
+
     box-shadow:
-    0 3px 12px rgba(0,0,0,.1);
+    0 3px 12px
+    rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 8px 20px
+    rgba(0,0,0,.15);
+
 }
 
 .card img{
+
     width:100%;
+
     height:200px;
+
     object-fit:cover;
+
 }
 
 .card-content{
+
     padding:20px;
+
 }
 
 .card h3{
+
     color:#f4511e;
+
     margin-bottom:10px;
+
 }
 
 .card p{
+
     color:#555;
+
 }
 
+
+/* INFO */
+
 .info{
+
     background:white;
+
     padding:30px;
+
     border-radius:10px;
+
     box-shadow:
-    0 3px 12px rgba(0,0,0,.08);
+    0 3px 12px
+    rgba(0,0,0,.08);
+
     margin-bottom:30px;
+
 }
 
 .info h2{
+
     color:#f4511e;
+
     margin-bottom:12px;
+
 }
 
-footer{
-    background:#111;
+
+/* AUTOMATIC ARTICLES */
+
+.agriculture-articles{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+    margin-top:25px;
+
+    margin-bottom:40px;
+
+}
+
+.news-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 3px 12px
+    rgba(0,0,0,.10);
+
+    transition:.3s;
+
+}
+
+.news-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 8px 20px
+    rgba(0,0,0,.15);
+
+}
+
+.news-card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+}
+
+.news-content{
+
+    padding:22px;
+
+}
+
+.news-category{
+
+    display:inline-block;
+
+    background:#f4511e;
+
     color:white;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    margin-bottom:10px;
+
+}
+
+.news-content h3{
+
+    color:#f4511e;
+
+    margin-bottom:8px;
+
+}
+
+.news-content p{
+
+    color:#555;
+
+    margin-bottom:15px;
+
+}
+
+.read-more{
+
+    display:inline-block;
+
+    background:#111;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:8px 14px;
+
+    border-radius:5px;
+
+    font-size:14px;
+
+}
+
+.read-more:hover{
+
+    background:#f4511e;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
     text-align:center;
+
     padding:35px 20px;
+
     margin-top:60px;
+
 }
 
 footer a{
+
     color:#ddd;
+
     text-decoration:none;
+
 }
+
+footer p{
+
+    margin:5px 0;
+
+}
+
+
+/* MOBILE */
 
 @media(max-width:768px){
 
     .navbar{
+
         flex-direction:column;
+
     }
 
     nav{
+
         gap:12px;
+
     }
 
     .hero h1{
+
         font-size:34px;
+
     }
 
 }
@@ -212,29 +445,49 @@ footer a{
 <body>
 
 
+<!-- HEADER -->
+
 <header>
 
 <div class="navbar">
 
-<a href="index.html" class="logo">
+<a
+href="index.html"
+class="logo"
+>
 Jalgaon <span>Zone</span>
 </a>
 
+
 <nav>
 
-<a href="index.html">Home</a>
+<a href="index.html">
+Home
+</a>
 
-<a href="news.html">News</a>
+<a href="news.html">
+News
+</a>
 
-<a href="agriculture.html">Agriculture</a>
+<a href="agriculture.html">
+Agriculture
+</a>
 
-<a href="history.html">History</a>
+<a href="history.html">
+History
+</a>
 
-<a href="places.html">Places</a>
+<a href="places.html">
+Places
+</a>
 
-<a href="blogs.html">Blogs</a>
+<a href="blogs.html">
+Blogs
+</a>
 
-<a href="about.html">About</a>
+<a href="about.html">
+About
+</a>
 
 </nav>
 
@@ -243,6 +496,8 @@ Jalgaon <span>Zone</span>
 </header>
 
 
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -262,6 +517,8 @@ Jalgaon <span>Zone</span>
 
 
 
+<!-- MAIN -->
+
 <div class="container">
 
 
@@ -278,6 +535,8 @@ Jalgaon <span>Zone</span>
 </div>
 
 
+
+<!-- AGRICULTURE FEATURES -->
 
 <div class="cards">
 
@@ -296,9 +555,11 @@ alt="Jalgaon Agriculture"
 </h3>
 
 <p>
+
 जळगाव जिल्हा केळी उत्पादनासाठी
 प्रसिद्ध आहे. जिल्ह्यात मोठ्या
 प्रमाणावर केळीची लागवड केली जाते.
+
 </p>
 
 </div>
@@ -316,10 +577,12 @@ alt="Jalgaon Agriculture"
 </h3>
 
 <p>
+
 शेतकऱ्यांसाठी उपलब्ध असलेल्या
 विविध कृषी योजना, अनुदान आणि
 शासकीय योजनांची माहिती येथे
 प्रकाशित केली जाईल.
+
 </p>
 
 </div>
@@ -337,9 +600,11 @@ alt="Jalgaon Agriculture"
 </h3>
 
 <p>
+
 आधुनिक शेती तंत्रज्ञान,
 सिंचन पद्धती, पीक व्यवस्थापन
 आणि नवीन कृषी तंत्रांची माहिती.
+
 </p>
 
 </div>
@@ -351,10 +616,12 @@ alt="Jalgaon Agriculture"
 
 
 
+<!-- BANANA INFO -->
+
 <div class="info">
 
 <h2>
-जळगाव – Banana Capital of India
+Jalgaon – Banana Capital of India
 </h2>
 
 <p>
@@ -372,6 +639,42 @@ alt="Jalgaon Agriculture"
 </div>
 
 
+
+<!-- =====================================
+     AUTOMATIC AGRICULTURE ARTICLES
+===================================== -->
+
+<div class="section-title">
+
+<h2>
+🌱 नवीन कृषी लेख
+</h2>
+
+<p>
+Jalgaon Zone वर प्रकाशित झालेले शेतीविषयक लेख
+</p>
+
+</div>
+
+
+<div
+class="agriculture-articles news-grid"
+id="agricultureGrid"
+>
+
+<!--
+
+CMS मधून Agriculture category मध्ये
+article publish झाल्यावर तो इथे
+automatic दिसेल.
+
+-->
+
+</div>
+
+
+
+<!-- FARMER INFO -->
 
 <div class="info">
 
@@ -397,6 +700,8 @@ Jalgaon Zone वर भविष्यात
 
 
 
+<!-- FOOTER -->
+
 <footer>
 
 <p>
@@ -412,6 +717,16 @@ Jalgaon News • Agriculture • History • Places • Blogs
 </p>
 
 </footer>
+
+
+
+<!-- =====================================
+     AUTOMATIC ARTICLE SYSTEM
+===================================== -->
+
+<script src="articles-data.js"></script>
+
+<script src="category-loader.js"></script>
 
 
 </body>
