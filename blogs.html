@@ -165,9 +165,9 @@ nav a:hover{
 }
 
 
-/* BLOG CARD */
+/* ARTICLE CARD */
 
-.blog-card{
+.news-card{
 
     background:white;
 
@@ -182,7 +182,7 @@ nav a:hover{
     transition:.3s;
 }
 
-.blog-card:hover{
+.news-card:hover{
 
     transform:translateY(-5px);
 
@@ -192,7 +192,7 @@ nav a:hover{
 
 }
 
-.blog-card img{
+.news-card img{
 
     width:100%;
 
@@ -202,13 +202,13 @@ nav a:hover{
 
 }
 
-.blog-content{
+.news-content{
 
     padding:22px;
 
 }
 
-.blog-category{
+.news-category{
 
     display:inline-block;
 
@@ -222,7 +222,7 @@ nav a:hover{
 
 }
 
-.blog-content h3{
+.news-content h3{
 
     font-size:21px;
 
@@ -230,7 +230,7 @@ nav a:hover{
 
 }
 
-.blog-content p{
+.news-content p{
 
     color:#666;
 
@@ -239,6 +239,8 @@ nav a:hover{
 }
 
 .read-more{
+
+    display:inline-block;
 
     color:#f4511e;
 
@@ -255,7 +257,7 @@ nav a:hover{
 }
 
 
-/* BLOG INFO */
+/* INFO */
 
 .info{
 
@@ -278,6 +280,41 @@ nav a:hover{
     color:#f4511e;
 
     margin-bottom:12px;
+
+}
+
+
+/* EMPTY MESSAGE */
+
+.empty-message{
+
+    grid-column:1/-1;
+
+    background:white;
+
+    padding:50px 20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:
+    0 3px 12px
+    rgba(0,0,0,.08);
+
+}
+
+.empty-message h3{
+
+    margin-bottom:8px;
+
+    color:#f4511e;
+
+}
+
+.empty-message p{
+
+    color:#777;
 
 }
 
@@ -421,247 +458,22 @@ Latest Blogs
 
 
 
-<div class="blog-grid">
+<!-- =====================================
+     AUTOMATIC BLOG ARTICLES
+===================================== -->
 
-
-<!-- BLOG 1 -->
-
-<div class="blog-card">
-
-<img
-src="Jalgaon city.jpeg"
-alt="Jalgaon City"
+<div
+class="blog-grid news-grid"
+id="blogsGrid"
 >
 
-<div class="blog-content">
+<!--
 
-<span class="blog-category">
-🌆 Jalgaon Life
-</span>
+CMS मधून Blog / Blogs category मध्ये
+article publish झाल्यावर तो इथे
+automatic दिसेल.
 
-<h3>
-जळगाव शहरातील एक दिवस
-</h3>
-
-<p>
-
-जळगाव शहरातील दैनंदिन जीवन,
-लोकल ठिकाणे, बाजार आणि
-शहरातील वातावरणाचा अनुभव.
-
-</p>
-
-<a
-href="#"
-class="read-more"
->
-Read More →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- BLOG 2 -->
-
-<div class="blog-card">
-
-<img
-src="Jalgaon city.jpeg"
-alt="Jalgaon College Life"
->
-
-<div class="blog-content">
-
-<span class="blog-category">
-🎓 College Life
-</span>
-
-<h3>
-जळगावमधील College Life
-</h3>
-
-<p>
-
-कॉलेज, मित्र, कॅम्पस,
-फेस्टिव्हल आणि जळगावमधील
-student life चे अनुभव.
-
-</p>
-
-<a
-href="#"
-class="read-more"
->
-Read More →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- BLOG 3 -->
-
-<div class="blog-card">
-
-<img
-src="Jalgaon city.jpeg"
-alt="Jalgaon Food"
->
-
-<div class="blog-content">
-
-<span class="blog-category">
-🍴 Food
-</span>
-
-<h3>
-जळगावमधील Food आणि Local Taste
-</h3>
-
-<p>
-
-जळगावमधील प्रसिद्ध food,
-local snacks आणि
-खाण्याच्या ठिकाणांबद्दल माहिती.
-
-</p>
-
-<a
-href="#"
-class="read-more"
->
-Read More →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- BLOG 4 -->
-
-<div class="blog-card">
-
-<img
-src="Jalgaon city.jpeg"
-alt="Jalgaon Travel"
->
-
-<div class="blog-content">
-
-<span class="blog-category">
-📍 Travel
-</span>
-
-<h3>
-जळगावमधून One Day Trip
-</h3>
-
-<p>
-
-जळगावच्या आसपासची
-फिरण्यासारखी ठिकाणे आणि
-One Day Trip ideas.
-
-</p>
-
-<a
-href="#"
-class="read-more"
->
-Read More →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- BLOG 5 -->
-
-<div class="blog-card">
-
-<img
-src="Jalgaon city.jpeg"
-alt="Jalgaon Lifestyle"
->
-
-<div class="blog-content">
-
-<span class="blog-category">
-✨ Lifestyle
-</span>
-
-<h3>
-जळगावची Local Lifestyle
-</h3>
-
-<p>
-
-जळगावमधील लोकांचे जीवन,
-स्थानिक परंपरा आणि
-दैनंदिन अनुभव.
-
-</p>
-
-<a
-href="#"
-class="read-more"
->
-Read More →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- BLOG 6 -->
-
-<div class="blog-card">
-
-<img
-src="Jalgaon city.jpeg"
-alt="Jalgaon Stories"
->
-
-<div class="blog-content">
-
-<span class="blog-category">
-📖 Stories
-</span>
-
-<h3>
-Jalgaon Stories
-</h3>
-
-<p>
-
-जळगावशी संबंधित
-मनोरंजक कथा, अनुभव आणि
-स्थानिक गोष्टी.
-
-</p>
-
-<a
-href="#"
-class="read-more"
->
-Read More →
-</a>
-
-</div>
-
-</div>
-
+-->
 
 </div>
 
@@ -683,8 +495,8 @@ Local Lifestyle, Events आणि
 Interesting Stories प्रकाशित केले जातील.
 
 नवीन ब्लॉग प्रकाशित झाल्यानंतर
-तो पुढे Homepage आणि News section
-सोबत जोडता येईल.
+तो Homepage आणि संबंधित section
+मध्ये automatic दाखवला जाईल.
 
 </p>
 
@@ -712,6 +524,16 @@ Jalgaon News • Agriculture • History • Places • Blogs
 </p>
 
 </footer>
+
+
+
+<!-- =====================================
+     AUTOMATIC ARTICLE SYSTEM
+===================================== -->
+
+<script src="articles-data.js"></script>
+
+<script src="category-loader.js"></script>
 
 
 </body>
