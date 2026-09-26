@@ -207,5 +207,55 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील वाहतूक आणि प्रवासाची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-transport-2026-09-25.md",
   "link": "article.html?id=jalgaon-transport-2026-09-25"
+},
+  {
+  "id": "jalgaon-modern-farming-2026-09-26",
+  "title": "जळगावातील आधुनिक शेती तंत्रज्ञान आणि शेतकऱ्यांसाठी उपयोग",
+  "category": "Agriculture",
+  "date": "26 September 2026",
+  "image": "Images/jalgaon-modern-farming-2026-09-26.svg",
+  "description": "जळगावातील आधुनिक शेती तंत्रज्ञान आणि शेतकऱ्यांसाठी उपयोग — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-modern-farming-2026-09-26.md",
+  "link": "article.html?id=jalgaon-modern-farming-2026-09-26"
+},
+  {
+  "id": "jalgaon-computer-courses-2026-09-26",
+  "title": "जळगावातील विद्यार्थ्यांसाठी संगणक आणि डिजिटल कौशल्ये",
+  "category": "Education & Jobs",
+  "date": "26 September 2026",
+  "image": "Images/jalgaon-computer-courses-2026-09-26.svg",
+  "description": "जळगावातील विद्यार्थ्यांसाठी संगणक आणि डिजिटल कौशल्ये — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-computer-courses-2026-09-26.md",
+  "link": "article.html?id=jalgaon-computer-courses-2026-09-26"
+},
+  {
+  "id": "jalgaon-pension-schemes-2026-09-26",
+  "title": "ज्येष्ठ नागरिक आणि पात्र लाभार्थ्यांसाठी पेन्शन योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "26 September 2026",
+  "image": "Images/jalgaon-pension-schemes-2026-09-26.svg",
+  "description": "ज्येष्ठ नागरिक आणि पात्र लाभार्थ्यांसाठी पेन्शन योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-pension-schemes-2026-09-26.md",
+  "link": "article.html?id=jalgaon-pension-schemes-2026-09-26"
+},
+  {
+  "id": "jalgaon-faizpur-history-2026-09-26",
+  "title": "फैजपूर आणि जळगावच्या इतिहासातील महत्त्वाची माहिती",
+  "category": "History & Tourism",
+  "date": "26 September 2026",
+  "image": "Images/jalgaon-faizpur-history-2026-09-26.svg",
+  "description": "फैजपूर आणि जळगावच्या इतिहासातील महत्त्वाची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-faizpur-history-2026-09-26.md",
+  "link": "article.html?id=jalgaon-faizpur-history-2026-09-26"
+},
+  {
+  "id": "jalgaon-education-2026-09-26",
+  "title": "जळगाव जिल्ह्यातील शिक्षण क्षेत्राची माहिती",
+  "category": "Jalgaon Information",
+  "date": "26 September 2026",
+  "image": "Images/jalgaon-education-2026-09-26.svg",
+  "description": "जळगाव जिल्ह्यातील शिक्षण क्षेत्राची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-education-2026-09-26.md",
+  "link": "article.html?id=jalgaon-education-2026-09-26"
 }
 ];
