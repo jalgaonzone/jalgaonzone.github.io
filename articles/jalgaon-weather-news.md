@@ -6,273 +6,1123 @@
 
 ## जळगावमधील हवामान
 
-TOPIC 1: PROBLEMS BASED ON PROBABILITY-I
+PRACTICAL NO. 1
 
-Q1) A fair coin is tossed 6 times. Find the probability of getting exactly 4 heads.
+Roll No :- 190
 
-R CODE:
-dbinom(4, size=6, prob=0.5)
+Title :- Write a Python program to demonstrate the conditional statements.
 
-OUTPUT:
-[1] 0.234375
+# if Statement
 
+number = int(input("Enter the number:"))
+if number > 0:
+    print("The number is positive.")
 
-Q2) A fair coin is tossed 6 times. Find the probability of getting at least 3 heads.
-
-R CODE:
-p=sum(dbinom(3:6, size=6, prob=0.5))
-p
-
-OUTPUT:
-[1] 0.65625
+Output :-
+Enter the number: 93
+The number is positive.
 
 
-Q3) A dice is rolled 4 times. Find the probability of getting exactly 2 sixes.
+# if else statements
 
-R CODE:
-z=dbinom(2, size=4, prob=1/6)
-z
+num = int(input("Enter the number"))
 
-OUTPUT:
-[1] 0.1157407
+if num % 2 == 0:
+    print("The number is Even.")
+else:
+    print("The number is odd.")
+
+Output :-
+Enter the number: 13
+The number is odd.
 
 
-Q4) A dice is rolled 4 times. Find the probability of getting at most 1 six.
+# Age example
 
-R CODE:
-x=sum(dbinom(0:1, size=4, prob=1/6))
-x
+age = int(input("Enter your age:"))
 
-OUTPUT:
-[1] 0.8680556
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+Output :-
+Enter your age: 56
+Adult
+
+
+# Leap year Example
+
+year = int(input("Enter the year:"))
+
+if year % 4 == 0:
+    print("This a leap year.")
+else:
+    print("This not a leap year.")
+
+Output :-
+Enter the year: 2025
+This not a leap year.
+
+
+# if-elif-else statement (using AND)
+
+marks = int(input("Enter the marks:"))
+
+if marks > 100:
+    print("Error")
+elif marks <= 100 and marks >= 90:
+    print("Grade A")
+elif marks <= 89 and marks >= 60:
+    print("Grade B")
+elif marks <= 59 and marks >= 40:
+    print("Grade C")
+else:
+    print("Fail")
+
+Output :-
+Enter the marks: 45
+Grade C
+
+
+# if-else-else statement (using OR)
+
+marks = int(input("Enter the marks:"))
+
+if marks > 100:
+    print("Error")
+elif marks <= 100 or marks >= 90:
+    print("Grade A")
+elif marks <= 89 or marks >= 60:
+    print("Grade B")
+elif marks <= 59 or marks >= 40:
+    print("Grade C")
+else:
+    print("Fail")
+
+Output :-
+Enter the marks: 68
+Grade A
+-------------------------------------------------
+
+Practical No. 2
+
+Title:- Write a Python to demonstrate the looping statements.
+
+# Using for loop
+
+# print Numbers from 1 to 5 :-
+
+for i in range(1, 6):
+    print(i)
+
+Output:-
+1
+2
+3
+4
+5
+
+
+# Printing Even Numbers
+
+# print Even numbers from 1 to 20 :-
+
+for i in range(2, 10, 2):
+    print(i)
+
+Output:-
+2
+4
+6
+8
+
+
+# Sum of Numbers Using For Loop
+
+sum = 0
+
+for i in range(1, 11):
+    sum = sum + i
+
+print("Sum =", sum)
+
+Output:-
+Sum = 55
+
+
+# Multiplication Table Using For Loop
+
+num = 5
+
+print("Table of", num)
+
+for i in range(1, 6):
+    print(num, "x", i, "=", num * i)
+
+Output:-
+Table of 5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+
+
+# Using Break Statement
+
+for i in range(1, 11):
+    if i == 3:
+        break
+    print(i)
+
+Output:-
+1
+2
+
+
+# Using Continue Statement
+
+for i in range(1, 6):
+    if i == 5:
+        continue
+    print(i)
+
+Output:-
+1
+2
+3
+4
+
+
+# Nested For Loop
+
+for i in range(1, 3):
+    for j in range(1, 3):
+        print(i, j)
+
+Output:-
+1 1
+1 2
+2 1
+2 2
+
+
+# Program to Print Fibonacci series
+
+n = int(input("Enter number of terms:"))
+a = 0
+b = 1
+
+print("Fibonacci Series:")
+
+for i in range(n):
+    print(a, end=" ")
+    c = a + b
+    a = b
+    b = c
+
+Output:-
+Enter number of terms: 10
+Fibonacci Series:
+0 1 1 2 3 5 8 13 21 34
+
+
+# Program to check Armstrong number
+
+num = int(input("Enter a number :"))
+
+original = num
+sum = 0
+digits = len(str(num))
+
+while num > 0:
+    digit = num % 10
+    sum = sum + digit ** digits
+    num = num // 10
+
+if sum == original:
+    print("It is an Armstrong number")
+else:
+    print("It is not an Armstrong number")
+
+Output:-
+Enter a number : 153
+It is an Armstrong number
+
+
+# Factorial
+
+n = int(input("Enter a number:"))
+
+factorial = 1
+
+for i in range(1, n + 1):
+    factorial *= i
+
+print("Factorial =", factorial)
+
+Output:-
+Enter a number: 5
+Factorial = 120
+
+
+# palindrome
+
+no = int(input("Enter your number:"))
+
+rem = 0
+org = 0
+rev = 0
+
+while no > 0:
+    rem = no % 10
+    rev = (rev * 10) + rem
+    no = no // 10
+
+print("reverse is :", rev)
+
+if (org == rev):
+    print("number is palindrome")
+else:
+    print("not palindrome")
+
+Output:-
+Enter your number: 12
+reverse is : 21
+not palindrome
+--------------------------------------------------
+
+PRACTICAL NO. 3
+
+Roll No :- 190
+
+Title :- Write a Python program to demonstrate the concept of List.
+
+# Create a List using User Input
+
+numbers = []
+
+n = int(input("Enter Numbers: "))
+
+for i in range(n):
+    value = int(input("Enter numbers: "))
+    numbers.append(value)
+
+print("list :", numbers)
+
+Output :-
+Enter Numbers: 4
+Enter numbers : 10
+Enter numbers : 20
+Enter numbers : 30
+Enter numbers : 40
+list : [10, 20, 30, 40]
+
+
+# List Slicing
+
+print("First Three Elements:", numbers[:3])
+
+Output :-
+First Three Elements: [10, 20, 30]
+
+
+# Append
+
+value = int(input("Enter a number to append: "))
+numbers.append(value)
+print("After Append:", numbers)
+
+Output :-
+list : [10, 20, 30, 40]
+Enter a number to append: 50
+After Append: [10, 20, 30, 40, 50]
+
+
+# Insert
+
+value = int(input("Enter a number to insert: "))
+position = int(input("Enter position: "))
+numbers.insert(position, value)
+print("After Insert:", numbers)
+
+Output :-
+list : [10, 20, 30, 40]
+Enter a number to insert: 55
+Enter position: 3
+After Insert: [10, 20, 30, 55, 40]
+
+
+# Extend
+
+extra = list(map(int, input("Enter numbers to extend: ").split()))
+numbers.extend(extra)
+
+print("After Extend:", numbers)
+
+Output :-
+list : [10, 20, 30, 40]
+Enter numbers to extend: 60
+After Extend: [10, 20, 30, 40, 60]
+
+
+# Remove
+
+value = int(input("Enter value to remove: "))
+
+if value in numbers:
+    numbers.remove(value)
+
+print("After Remove:", numbers)
+
+Output :-
+list : [10, 20, 30, 40]
+Enter value to remove: 20
+After Remove: [10, 30, 40]
+
+
+# Pop
+
+numbers.pop()
+print("After Pop:", numbers)
+
+Output :-
+list : [10, 20, 30, 40]
+After Pop: [10, 20, 30]
 
 
 --------------------------------------------------
 
-TOPIC 3: MODEL SAMPLING OF BINOMIAL DISTRIBUTION
+PRACTICAL NO. 4
 
-Q1) Generate a random sample of size N=30 from a binomial distribution with parameter n=5 and p=0.4.
+Roll No :- 190
 
-R CODE:
-N=30
-n=5
-p=0.4
-rbinom(N, size=n, prob=p)
+Title :- Write a Python to demonstrate the concept of Tuple.
 
-OUTPUT:
-[1] 3 3 2 3 2 0 3 2 0 1 0 2 1 2 1 2 0 2 2 3 2 2 1 2 3 1 3 1 2 1
+#1. Creating Tuples
 
+fruits = ("Apple", "Banana", "Mango", "Orange", "Banana")
+single_fruit = ("Apple",)
+empty_tuple = ()
 
-Q2) A factory produces light bulbs each with a 10% probability of being defective. 8 bulbs are tested in each batch. Generate a random sample of 50 batches from B(8,0.1).
+print("Fruits Tuple:", fruits)
+print("Single Fruit Tuple:", single_fruit)
+print("Empty Tuple:", empty_tuple)
 
-R CODE:
-N=50
-n=8
-p=0.1
-rbinom(N, size=n, prob=p)
+Output :-
 
-OUTPUT:
-[1] 0 1 0 1 1 0 0 1 1 0 0 0 1 2 1 1 0 1 0 0 0 3 0 1 1 1 1 2 0 0 1 1 0 0 0 0 0 1 1 2 0 0 1 1 0 0 0 0 1 2
+Fruits Tuple: ('Apple', 'Banana', 'Mango', 'Orange', 'Banana')
+Single Fruit Tuple: ('Apple',)
+Empty Tuple: ()
 
 
-Q3) The probability that a student passes an exam is 0.7. If 15 students are selected for each group, generate a random sample of 25 groups.
+# First Fruit and Last Fruit
 
-R CODE:
-N=25
-n=15
-p=0.7
-rbinom(25, size=15, prob=0.7)
-
-OUTPUT:
-[1] 9 10 12 8 8 12 12 9 9 9 12 11 11 9 9 10 8 11 11 14 10 11 12 11 10
+print("First Fruit:", fruits[0])
+print("Last Fruit:", fruits[-1])
 
 
-Q4) A basketball player has a 75% probability of making a free throw. The player takes 10 shots in each session. Generate a random sample of 40 sessions.
+# Tuple Slicing
 
-R CODE:
-N=40
-n=10
-p=0.75
-rbinom(N, size=10, p=0.75)
+print("Slicing [1:4]:", fruits[1:4])
+print("Reverse Tuple:", fruits[::-1])
 
-OUTPUT:
-[1] 9 6 8 8 8 6 8 8 9 7 9 5 8 8 7 8 9 6 4 7 7 6 10 6 7 8 8 8 5 8 6 7 6 10 7 8 8 6
+Output :-
 
-
-Q5) The probability that a customer responds to an email is 0.4. If 10 customers are contacted in each campaign, generate a random sample of 35 campaigns.
-
-R CODE:
-N=35
-n=10
-p=0.4
-rbinom(N, size=10, prob=p)
-
-OUTPUT:
-[1] 3 5 4 7 5 4 4 3 5 4 5 4 4 4 5 3 3 2 3 4 6 2 6 3 5 2 3 2 4 7 1 4 6 2 2
+Slicing [1:4]: ('Banana', 'Mango', 'Orange')
+Reverse Tuple: ('Banana', 'Orange', 'Mango', 'Banana', 'Apple')
 
 
---------------------------------------------------
+# Repetition
 
-TOPIC 5: MODEL SAMPLING FROM NORMAL DISTRIBUTION
-
-Q1) Draw a random sample of size 8 from N(5,4) distribution. Calculate the mean and standard deviation of the sample so drawn.
-
-R CODE:
-x=rnorm(8,5,2)
-x
-
-mean=mean(x)
-mean
-
-sd=sd(x)
-sd
-
-OUTPUT:
-[1] 4.575872 6.665142 2.175048 4.400175 3.301878 4.205939 2.564800 8.375179
-
-[1] 4.161158
-
-[1] 1.906549
+print("Repetition:", fruits * 2)
 
 
-Q2) Draw a random sample of size 10 from N(56,16) distribution. Calculate the sample mean and sample median.
+# Nested Tuple
 
-R CODE:
-x1=rnorm(10,56,4)
-x1
+nested_tuple = (("Apple", "Banana"), ("Mango", "Orange"))
 
-mean=mean(x1)
-mean
+print("Nested Tuple:", nested_tuple)
+print("First Nested Fruit:", nested_tuple[0][0])
 
-med=median(x1)
-med
+Output :-
 
-OUTPUT:
-[1] 55.93599 60.29978 45.59320 54.18721 53.29807 51.10830 62.18644 50.33887 57.27356 59.38575
-
-[1] 54.96072
-
-[1] 55.0616
+Nested Tuple: (('Apple', 'Banana'), ('Mango', 'Orange'))
+First Nested Fruit: Apple
 
 
-Q3) Draw a random sample of size 6 from N(5,22). Calculate mean and standard deviation of sample so drawn.
+#13. Converting List to Tuple
 
-R CODE:
-x3=rnorm(6,5,sqrt(22))
-x3
+fruit_list = ["Apple", "Banana", "Mango"]
+new_tuple = tuple(fruit_list)
 
-mean=mean(x3)
-mean
+print("List to Tuple:", new_tuple)
 
-sd=sd(x3)
-sd
+Output :-
 
-OUTPUT:
-[1] 5.83578607 0.89468791 9.41445893 5.80012903 0.01175266 -1.51052713
-
-[1] 3.407715
-
-[1] 4.23644
+List to Tuple: ('Apple', 'Banana', 'Mango')
 
 
-Q4) Draw a random sample of size 8 from a normal distribution with mean 3.5 and variance 5. Calculate the median.
+#14. Converting Tuple to List
 
-R CODE:
-x4=rnorm(8,3.5,sqrt(5))
-x4
+new_list = list(fruits)
 
-med=median(x4)
-med
+print("Tuple to List:", new_list)
 
-OUTPUT:
-[1] 8.1660420 1.9828208 -0.6491844 4.6924042 4.1936959 0.4727344 -0.8445826 3.2399397
+Output :-
 
-[1] 2.61138
+Tuple to List: ['Apple', 'Banana', 'Mango', 'Orange', 'Banana']
+
+
+#15. Adding an Element
+
+new_fruits = fruits + ("Papaya",)
+
+print("After Adding Papaya:", new_fruits)
+
+Output :-
+
+After Adding Papaya:
+('Apple', 'Banana', 'Mango', 'Orange', 'Banana', 'Papaya')
+
+
+# Joining String Tuple
+
+print("Joined Fruits:", ", ".join(fruits))
+
+Output :-
+
+Joined Fruits: Apple, Banana, Mango, Orange, Banana
 
 
 --------------------------------------------------
 
-TOPIC 8: MULTIPLE LINEAR REGRESSION
+PRACTICAL NO. 5
 
-Q1) Suppose you wish to predict the income of university cafeterias on the basis of floor space and number of employees. A sample of 5 cafeterias gives the following data. Find the multiple regression equation of Y on X1 and X2.
+Roll No :- 190
 
-R CODE:
-y=c(20000,15000,10000,5000,10000)
-x1=c(10,5,10,3,2)
-x2=c(15,8,12,7,10)
+Title :- Write Python to demonstrate the concept of Dictionary.
 
-d=data.frame(y,x1,x2)
-d
+student = {
+    "name": "Rahul",
+    "age": 20,
+    "course": "BCA",
+    "marks": 85,
+    "name": "Sagar"
+}
 
-plot(d)
+# Display dictionary
 
-cor(d)
+print("Original Dictionary:")
+print(student)
 
-fit=lm(y~x1+x2)
-fit
+Output :-
 
-summary(fit)
-
-OUTPUT:
-
-  y    x1 x2
-1 20000 10 15
-2 15000 5 8
-3 10000 10 12
-4 5000  3 7
-5 10000  2 10
-
-          y        x1        x2
-y  1.0000000 0.5758168 0.6968670
-x1 0.5758168 1.0000000 0.7978146
-x2 0.6968670 0.7978146 1.0000000
-
-Call:
-lm(formula = y ~ x1 + x2)
-
-Coefficients:
-(Intercept)          x1          x2
-   -559.52        81.74     1160.49
-
-Call:
-lm(formula = y ~ x1 + x2)
-
-Residuals:
-     1      2      3      4      5
- 2335   5867  -4184  -2809  -1209
-
-Coefficients:
-             Estimate Std. Error t value Pr(>|t|)
-(Intercept)  -559.52  10846.83  -0.052    0.964
-x1             81.74   1257.99   0.065    0.954
-x2           1160.49   1492.60   0.777    0.518
-
-Residual standard error: 5776 on 2 degrees of freedom
-Multiple R-squared: 0.4867
-Adjusted R-squared: -0.02659
-
-F-statistic: 0.9482 on 2 and 2 DF
-p-value: 0.5133
+Original Dictionary:
+{'name': 'Rahul', 'age': 20, 'course': 'BCA', 'marks': 85}
 
 
-Q2) The yield of a chemical process is related to the concentration of reactant and the operating temperature. Fit a multiple linear regression equation y on X1 and X2. Estimate the yield when concentration is 1.5 and operating temperature is 165.
+# Access value
 
-R CODE:
-x1=c(81,89,83,91,79,87,84,90)
-x2=c(1,1,2,2,1,1,2,2)
-x3=c(150,180,150,180,150,180,150,180)
+print("Name:", student["name"])
+print("Age:", student["age"])
 
-d=data.frame(x1,x2,x3)
-d
+Output :-
 
-cor(d)
+Name: Rahul
+Age: 20
 
-OUTPUT:
 
-          x1        x2        x3
-x1 1.0000000 0.3638034 0.9095086
-x2 0.3638034 1.0000000 0.0000000
-x3 0.9095086 0.0000000 1.0000000
+# keys() method
+
+print("Keys:")
+print(student.keys())
+
+Output :-
+
+Keys:
+dict_keys(['name', 'age', 'course', 'marks'])
+
+
+# values() method
+
+print("Values:")
+print(student.values())
+
+Output :-
+
+Values:
+dict_values(['Rahul', 20, 'BCA', 85])
+
+
+# items() method
+
+print("Items:")
+print(student.items())
+
+Output :-
+
+Items:
+dict_items([('name', 'Rahul'), ('age', 20), ('course', 'BCA'), ('marks', 85)])
+
+
+# get() method
+
+print("Course:")
+print(student.get("course"))
+
+Output :-
+
+Course:
+BCA
+
+
+# Adding new item
+
+student["city"] = "Pune"
+
+print("After adding city:")
+print(student)
+
+Output :-
+
+After adding city:
+{'name': 'Rahul', 'age': 20, 'course': 'BCA', 'marks': 85, 'city': 'Pune'}
+
+
+# update() method
+
+student.update({"marks": 90})
+
+print("After updating marks:")
+print(student)
+
+Output :-
+
+After updating marks:
+{'name': 'Rahul', 'age': 20, 'course': 'BCA', 'marks': 90, 'city': 'Pune'}
+
+
+# pop() method
+
+student.pop("age")
+
+print("After deleting age:")
+print(student)
+
+Output :-
+
+After deleting age:
+{'name': 'Rahul', 'course': 'BCA', 'marks': 90, 'city': 'Pune'}
+
+
+# clear() method
+
+student.clear()
+
+print("After clear:")
+print(student)
+
+Output :-
+
+After clear:
+{}
+
+
+# Dictionary Length
+
+print(len(student))
+
+Output :-
+
+4
+
+
+# Delete age using del
+
+del student["name"]
+
+print("After using del:")
+print(student)
+
+Output :-
+
+After using del:
+{'course': 'BCA', 'marks': 90, 'city': 'Pune'}
+
+
+# popitem()
+
+student.popitem()
+print(student)
+
+
+# Copy the dictionary
+
+student_copy = student.copy()
+print(student_copy)
+
+Output :-
+
+{'course': 'BCA', 'marks': 90}
+
+
+#fromkeys() method
+
+keys = ("name", "age", "course", "marks")
+
+student = dict.fromkeys(keys, "Not Available")
+
+print("Dictionary:")
+print(student)
+
+Output :-
+
+Dictionary:
+{'name': 'Not Available', 'age': 'Not Available',
+'course': 'Not Available', 'marks': 'Not Available'}
+
+
+# Key does not exist, so it will be added
+
+student.setdefault("city", "Pune")
+
+print("After adding city:")
+print(student)
+
+Output :-
+
+After adding city:
+{'name': 'Not Available', 'age': 'Not Available',
+'course': 'Not Available', 'marks': 'Not Available',
+'city': 'Pune'}
+
+
+--------------------------------------------------
+
+PRACTICAL NO. 6
+
+Roll No :- 190
+
+Title :- Write a program for insertion and deletion operations in an array.
+
+# Code :-
+
+arr = [10,20,30,40,50]
+
+print("Original Array:", arr)
+
+# Insertion
+
+position = int(input("Enter the position for insertion: "))
+element = int(input("Enter element to insert: "))
+
+arr.append(0)
+
+for i in range(len(arr)-1, position, -1):
+    arr[i] = arr[i-1]
+
+arr[position] = element
+
+print("Array after insertion:", arr)
+
+
+# Deletion
+
+position = int(input("Enter position for deletion: "))
+
+for i in range(position, len(arr)-1):
+    arr[i] = arr[i+1]
+
+arr.pop()
+
+print("Array after deletion:", arr)
+
+
+# Output :-
+
+Original Array: [10, 20, 30, 40, 50]
+
+Enter the position for insertion: 2
+
+Enter element to insert: 11
+
+Array after insertion: [10, 20, 11, 30, 40, 50]
+
+Enter position for deletion: 2
+
+Array after deletion: [10, 20, 30, 40, 50]
+
+
+--------------------------------------------------
+
+PRACTICAL NO. 7 & 8
+
+Roll No :- 190
+
+Title :- Write A Program to Implement Stack Operations:
+Push, Pop, Peep, Change, Display
+
+top = -1
+max_size = 3
+
+while True:
+
+    print("\nChoose operation:")
+    print("1. Push")
+    print("2. Pop")
+    print("3. Peep")
+    print("4. Change")
+    print("5. Display")
+    print("6. Exit")
+
+    ch = input("Enter your choice (1-6): ")
+
+    if ch == "1":
+
+        if top >= max_size - 1:
+            print("Stack Overflow")
+        else:
+            item = input("Enter item to push:")
+            top += 1
+            stack[top] = item
+            print(f"{item} pushed to stack")
+
+    elif ch == "2":
+
+        if top == -1:
+            print("Stack Underflow")
+        else:
+            print(f"Popped item: {stack[top]}")
+            del stack[top]
+            top -= 1
+
+
+--------------------------------------------------
+
+PRACTICAL NO. 9
+
+Roll No :- 190
+
+Title :- Write a program to implement Linear Queue operations:
+Insert, Delete, Display
+
+CODE :-
+
+class LinearQueue:
+
+    def __init__(self, size):
+        self.size = size
+        self.queue = [None] * size
+        self.front = -1
+        self.rear = -1
+
+    def is_empty(self):
+        if self.front == -1 or self.front > self.rear:
+            return True
+        else:
+            return False
+
+    def is_full(self):
+        if self.rear == self.size - 1:
+            return True
+        else:
+            return False
+
+    def enqueue(self, value):
+        if self.is_full():
+            print("Queue is full, cannot enqueue.")
+        else:
+            if self.front == -1:
+                self.front = 0
+
+            self.rear += 1
+            self.queue[self.rear] = value
+            print(f"Inserted: {value}")
+
+    def dequeue(self):
+
+        if self.is_empty():
+            print("Queue is empty, cannot dequeue.")
+
+        elif self.front == self.rear:
+
+            value = self.queue[self.front]
+            self.front = -1
+            self.rear = -1
+            print(f"Deleted: {value}")
+
+        else:
+            value = self.queue[self.front]
+            self.front += 1
+            print(f"Deleted: {value}")
+
+    def display(self):
+
+        if self.is_empty():
+            print("Queue is empty.")
+
+        else:
+            print("Queue elements:", end="")
+
+            for i in range(self.front, self.rear + 1):
+                print(self.queue[i], end=" ")
+
+            print()
+
+
+def main():
+
+    queue = LinearQueue(3)
+
+    while True:
+
+        print("\nSelect operation:")
+        print("1. Insert")
+        print("2. Delete")
+        print("3. Display")
+        print("4. Exit")
+
+        choice = input("Enter your choice (1-4): ")
+
+
+# Output :-
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 1
+Enter value to insert: 16
+
+Inserted: 16
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 1
+Enter value to insert: 05
+
+Inserted: 05
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 1
+Enter value to insert: 24
+
+Queue is full, cannot enqueue.
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 3
+
+Queue elements: 16 05 24
+
+
+--------------------------------------------------
+
+# Circular Queue
+
+class CircularQueue:
+
+    def __init__(self, size):
+        self.size = size
+        self.queue = [None] * size
+        self.front = -1
+        self.rear = -1
+
+    def insert(self, data):
+
+        # Check if queue is full
+
+        if (self.rear + 1) % self.size == self.front:
+            print("Queue is full! Cannot insert", data)
+            return
+
+        # If queue is empty
+
+        if self.front == -1:
+            self.front = 0
+
+        self.rear = (self.rear + 1) % self.size
+        self.queue[self.rear] = data
+
+        print(f"Inserted {data}")
+
+    def delete(self):
+
+        # Check if queue is empty
+
+        if self.front == -1:
+            print("Queue is empty! Cannot delete.")
+            return
+
+        data = self.queue[self.front]
+
+        # If only one element was present
+
+        if self.front == self.rear:
+            self.front = -1
+            self.rear = -1
+
+        else:
+            self.front = (self.front + 1) % self.size
+
+        print(f"Deleted {data}")
+
+    def display(self):
+
+        # Check if queue is empty
+
+        if self.front == -1:
+            print("Queue is empty!")
+            return
+
+        print("Queue elements:", end="")
+
+        i = self.front
+
+        while True:
+            print(self.queue[i], end=" ")
+
+            if i == self.rear:
+                break
+
+            i = (i + 1) % self.size
+
+        print()
+
+
+def main():
+
+    queue = CircularQueue(3)
+
+    while True:
+
+        print("\nSelect operation:")
+        print("1. Insert")
+        print("2. Delete")
+        print("3. Display")
+        print("4. Exit")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == "1":
+            data = input("Enter value to insert: ")
+            queue.insert(data)
+
+        elif choice == "2":
+            queue.delete()
+
+        elif choice == "3":
+            queue.display()
+
+        elif choice == "4":
+            print("Exiting...")
+            break
+
+        else:
+            print("Invalid choice! Please try again.")
+
+
+if __name__ == "__main__":
+    main()
+
+
+# OUTPUT :-
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 2
+
+Queue is empty! Cannot delete.
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 1
+
+Enter value to insert: 16
+
+Inserted 16
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 1
+
+Enter value to insert: 05
+
+Inserted 05
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 1
+
+Enter value to insert: 24
+
+Inserted 24
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 1
+
+Enter value to insert: 14
+
+Queue is full! Cannot insert 14
+
+Select operation:
+
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice (1-4): 3
+
+Queue elements: 16 05 24
+
 
 ## नागरिकांनी खबरदारी घ्यावी
 
