@@ -257,5 +257,55 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील शिक्षण क्षेत्राची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-education-2026-09-26.md",
   "link": "article.html?id=jalgaon-education-2026-09-26"
+},
+  {
+  "id": "jalgaon-agriculture-market-2026-09-27",
+  "title": "जळगाव जिल्ह्यातील कृषी बाजारपेठ आणि शेतमाल विक्रीची माहिती",
+  "category": "Agriculture",
+  "date": "27 September 2026",
+  "image": "Images/jalgaon-agriculture-market-2026-09-27.svg",
+  "description": "जळगाव जिल्ह्यातील कृषी बाजारपेठ आणि शेतमाल विक्रीची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-agriculture-market-2026-09-27.md",
+  "link": "article.html?id=jalgaon-agriculture-market-2026-09-27"
+},
+  {
+  "id": "jalgaon-career-planning-2026-09-27",
+  "title": "जळगावातील विद्यार्थ्यांसाठी करिअर नियोजनाची संपूर्ण माहिती",
+  "category": "Education & Jobs",
+  "date": "27 September 2026",
+  "image": "Images/jalgaon-career-planning-2026-09-27.svg",
+  "description": "जळगावातील विद्यार्थ्यांसाठी करिअर नियोजनाची संपूर्ण माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-career-planning-2026-09-27.md",
+  "link": "article.html?id=jalgaon-career-planning-2026-09-27"
+},
+  {
+  "id": "jalgaon-digital-government-services-2026-09-27",
+  "title": "जळगावातील नागरिकांसाठी डिजिटल सरकारी सेवांची माहिती",
+  "category": "Government Schemes",
+  "date": "27 September 2026",
+  "image": "Images/jalgaon-digital-government-services-2026-09-27.svg",
+  "description": "जळगावातील नागरिकांसाठी डिजिटल सरकारी सेवांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-digital-government-services-2026-09-27.md",
+  "link": "article.html?id=jalgaon-digital-government-services-2026-09-27"
+},
+  {
+  "id": "jalgaon-tourism-guide-2026-09-27",
+  "title": "जळगाव जिल्ह्यातील पर्यटनासाठी महत्त्वाची माहिती",
+  "category": "History & Tourism",
+  "date": "27 September 2026",
+  "image": "Images/jalgaon-tourism-guide-2026-09-27.svg",
+  "description": "जळगाव जिल्ह्यातील पर्यटनासाठी महत्त्वाची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-tourism-guide-2026-09-27.md",
+  "link": "article.html?id=jalgaon-tourism-guide-2026-09-27"
+},
+  {
+  "id": "jalgaon-cities-villages-2026-09-27",
+  "title": "जळगाव जिल्ह्यातील शहरे, गावे आणि स्थानिक जीवन",
+  "category": "Jalgaon Information",
+  "date": "27 September 2026",
+  "image": "Images/jalgaon-cities-villages-2026-09-27.svg",
+  "description": "जळगाव जिल्ह्यातील शहरे, गावे आणि स्थानिक जीवन — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-cities-villages-2026-09-27.md",
+  "link": "article.html?id=jalgaon-cities-villages-2026-09-27"
 }
 ];
