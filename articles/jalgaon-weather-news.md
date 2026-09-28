@@ -1345,6 +1345,263 @@ Enter your choice (1-4): 3
 Queue elements: 16 05 24
 
 
+
+
+
+
+
+
+
+
+practical 12
+
+
+# 12.Program to Implement Singly Linked List with Operations
+
+# Singly Linked List
+
+linked_list = []
+
+# Insert at beginning
+def insert_at_beginning(value):
+    linked_list.insert(0, value)
+    print(f"{value} inserted at the beginning.")
+
+
+# Delete from beginning
+def delete_from_beginning():
+    if not linked_list:
+        print("Linked List is empty.")
+    else:
+        remove_ele = linked_list.pop(0)
+        print(f"{remove_ele} removed from the beginning.")
+
+
+# Display the linked list
+def display():
+    if not linked_list:
+        print("The list is empty.")
+    else:
+        print("Linked List:", " -> ".join(map(str, linked_list)), "-> None")
+
+
+# Create the linked list
+def create():
+    n = int(input("Enter number of elements: "))
+
+    for i in range(n):
+        value = input(f"Enter element {i + 1}: ")
+        linked_list.append(value)
+
+    print("Linked List created successfully.")
+
+
+# Main menu
+def main():
+    while True:
+        print("\n--- Singly Linked List Menu ---")
+        print("1. Create List")
+        print("2. Insert at Beginning")
+        print("3. Delete from Beginning")
+        print("4. Display List")
+        print("5. Exit")
+
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == "1":
+            create()
+
+        elif choice == "2":
+            value = input("Enter value to insert at beginning: ")
+            insert_at_beginning(value)
+
+        elif choice == "3":
+            delete_from_beginning()
+
+        elif choice == "4":
+            display()
+
+        elif choice == "5":
+            print("Exiting program.")
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
+
+practical 13
+
+#13 Write a program to implement singly linked list with operations : i)Create 
+#ii) insert at the end position 
+#ii)delete element from last position
+
+# Singly Linked List – Insert and Delete at End
+
+linked_list = []
+
+
+# Insert at End
+def insert_at_end(value):
+    linked_list.append(value)
+    print(f"{value} inserted at the end.")
+
+
+# Delete from End
+def delete_from_end():
+    if not linked_list:
+        print("Linked List is empty.")
+    else:
+        remove_ele = linked_list.pop()
+        print(f"{remove_ele} removed from the list.")
+
+
+# Display List
+def display():
+    if not linked_list:
+        print("The list is empty.")
+    else:
+        print("Linked List:", " -> ".join(map(str, linked_list)), "-> None")
+
+
+# Menu
+def main():
+    while True:
+        print("\n--- Singly Linked List Menu ---")
+        print("1. Insert at End")
+        print("2. Delete from End")
+        print("3. Display List")
+        print("4. Exit")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == "1":
+            value = input("Enter value to insert at end: ")
+            insert_at_end(value)
+
+        elif choice == "2":
+            delete_from_end()
+
+        elif choice == "3":
+            display()
+
+        elif choice == "4":
+            print("Exiting program.")
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+practical 14
+
+# 14.Singly Linked List Using List Methods
+
+# Singly linked list using list methods
+# Operations:
+# i) Create
+# ii) Insert at any position
+# iii) Delete element from given position
+# iv) Display
+
+linked_list = []
+
+
+# Create List
+def create_list(value):
+    linked_list.append(value)
+    print(f"{value} inserted.")
+
+
+# Insert at Any Position
+def insert_at_position(value):
+    pos = int(input("Enter position to insert element: "))
+
+    if pos < 1 or pos > len(linked_list) + 1:
+        print("Invalid position.")
+    else:
+        linked_list.insert(pos - 1, value)
+        print(f"{value} inserted at position {pos}.")
+
+
+# Delete from Given Position
+def delete_by_position():
+    if not linked_list:
+        print("Linked List is empty.")
+    else:
+        pos = int(input("Enter position to delete element: "))
+
+        if pos < 1 or pos > len(linked_list):
+            print("Invalid position.")
+        else:
+            remove_ele = linked_list.pop(pos - 1)
+            print(f"{remove_ele} removed from the list.")
+
+
+# Display List
+def display():
+    if not linked_list:
+        print("The list is empty.")
+    else:
+        print("Linked List:", " -> ".join(map(str, linked_list)), "-> None")
+
+
+# Main Menu
+def main():
+    while True:
+        print("\n--- Singly Linked List Menu ---")
+        print("1. Create")
+        print("2. Insert at Position")
+        print("3. Delete a Node by Position")
+        print("4. Display List")
+        print("5. Exit")
+
+        choice = input("Enter your choice (1-5): ")
+
+        match choice:
+            case "1":
+                value = input("Enter value: ")
+                create_list(value)
+
+            case "2":
+                value = input("Enter value to insert at position: ")
+                insert_at_position(value)
+
+            case "3":
+                delete_by_position()
+
+            case "4":
+                display()
+
+            case "5":
+                print("Exiting program.")
+                break
+
+            case _:
+                print("Invalid choice. Try again.")
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
 ## नागरिकांनी खबरदारी घ्यावी
 
 पावसाच्या काळात नागरिकांनी आवश्यक खबरदारी घ्यावी. शेतकऱ्यांनी पिकांची स्थिती लक्षात घेऊन स्थानिक कृषी विभागाच्या सूचनांचे पालन करावे.
