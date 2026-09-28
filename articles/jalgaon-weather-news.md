@@ -1124,6 +1124,150 @@ Enter your choice (1-4): 3
 Queue elements: 16 05 24
 
 
+Practical No :- 10
+Title:-(Write a program to implement Circular queue with its operations: Insert, Delete, Display)
+
+CODE :-
+
+class CircularQueue:
+    def __init__(self, size):
+        self.size = size
+        self.queue = [None] * size
+        self.front = -1
+        self.rear = -1
+
+    def insert(self, data):
+        # Check if queue is full
+        if (self.rear + 1) % self.size == self.front:
+            print("Queue is full! Cannot insert", data)
+            return
+
+        # If queue is empty
+        if self.front == -1:
+            self.front = 0
+
+        self.rear = (self.rear + 1) % self.size
+        self.queue[self.rear] = data
+        print(f"Inserted {data}")
+
+    def delete(self):
+        # Check if queue is empty
+        if self.front == -1:
+            print("Queue is empty! Cannot delete.")
+            return
+
+        data = self.queue[self.front]
+
+        # If only one element was present
+        if self.front == self.rear:
+            self.front = -1
+            self.rear = -1
+        else:
+            self.front = (self.front + 1) % self.size
+
+        print(f"Deleted {data}")
+
+    def display(self):
+        # Check if queue is empty
+        if self.front == -1:
+            print("Queue is empty!")
+            return
+
+        print("Queue elements:", end=" ")
+        i = self.front
+
+        while True:
+            print(self.queue[i], end=" ")
+            if i == self.rear:
+                break
+            i = (i + 1) % self.size
+
+        print()
+
+def main():
+    queue = CircularQueue(3)
+
+    while True:
+        print("\nSelect operation:")
+        print("1. Insert")
+        print("2. Delete")
+        print("3. Display")
+        print("4. Exit")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == '1':
+            data = input("Enter value to insert: ")
+            queue.insert(data)
+        elif choice == '2':
+            queue.delete()
+        elif choice == '3':
+            queue.display()
+        elif choice == '4':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice! Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
+OUT PUT :-
+
+Select operation:
+1. Insert
+2. Delete
+3. Display
+4. Exit
+Enter your choice (1-4): 2
+Queue is empty! Cannot delete.
+
+Select operation:
+1. Insert
+2. Delete
+3. Display
+4. Exit
+Enter your choice (1-4): 1
+Enter value to insert: 16
+Inserted 16
+
+Select operation:
+1. Insert
+2. Delete
+3. Display
+4. Exit
+Enter your choice (1-4): 1
+Enter value to insert: 05
+Inserted 05
+
+Select operation:
+1. Insert
+2. Delete
+3. Display
+4. Exit
+Enter your choice (1-4): 1
+Enter value to insert: 24
+Inserted 24
+
+Select operation:
+1. Insert
+2. Delete
+3. Display
+4. Exit
+Enter your choice (1-4): 1
+Enter value to insert: 14
+Queue is full! Cannot insert 14
+
+Select operation:
+1. Insert
+2. Delete
+3. Display
+4. Exit
+Enter your choice (1-4): 3
+Queue elements: 16 05 24
+
+
 ## नागरिकांनी खबरदारी घ्यावी
 
 पावसाच्या काळात नागरिकांनी आवश्यक खबरदारी घ्यावी. शेतकऱ्यांनी पिकांची स्थिती लक्षात घेऊन स्थानिक कृषी विभागाच्या सूचनांचे पालन करावे.
