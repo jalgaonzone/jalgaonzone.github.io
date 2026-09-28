@@ -787,13 +787,14 @@ Array after deletion: [10, 20, 30, 40, 50]
 
 --------------------------------------------------
 
-PRACTICAL NO. 7 & 8
+# PRACTICAL NO. 7 & 8
 
 Roll No :- 190
 
 Title :- Write A Program to Implement Stack Operations:
 Push, Pop, Peep, Change, Display
 
+stack = []
 top = -1
 max_size = 3
 
@@ -814,9 +815,9 @@ while True:
         if top >= max_size - 1:
             print("Stack Overflow")
         else:
-            item = input("Enter item to push:")
+            item = input("Enter item to push: ")
+            stack.append(item)
             top += 1
-            stack[top] = item
             print(f"{item} pushed to stack")
 
     elif ch == "2":
@@ -825,9 +826,46 @@ while True:
             print("Stack Underflow")
         else:
             print(f"Popped item: {stack[top]}")
-            del stack[top]
+            stack.pop()
             top -= 1
 
+    elif ch == "3":
+
+        if top == -1:
+            print("Stack Underflow")
+        else:
+            print(f"Top item: {stack[top]}")
+
+    elif ch == "4":
+
+        if top == -1:
+            print("Stack Underflow")
+        else:
+            position = int(input("Enter position to change: "))
+
+            if position < 0 or position > top:
+                print("Invalid position")
+            else:
+                item = input("Enter new item: ")
+                stack[position] = item
+                print("Stack item changed successfully")
+
+    elif ch == "5":
+
+        if top == -1:
+            print("Stack is empty")
+        else:
+            print("Stack elements:")
+            for i in range(top, -1, -1):
+                print(stack[i])
+
+    elif ch == "6":
+
+        print("Exiting...")
+        break
+
+    else:
+        print("Invalid choice! Please try again.")
 
 --------------------------------------------------
 
