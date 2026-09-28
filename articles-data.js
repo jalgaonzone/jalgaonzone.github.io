@@ -307,5 +307,55 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील शहरे, गावे आणि स्थानिक जीवन — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-cities-villages-2026-09-27.md",
   "link": "article.html?id=jalgaon-cities-villages-2026-09-27"
+},
+  {
+  "id": "jalgaon-banana-farming-2026-09-28",
+  "title": "जळगाव जिल्ह्यातील केळी शेतीची संपूर्ण माहिती",
+  "category": "Agriculture",
+  "date": "28 September 2026",
+  "image": "Images/jalgaon-banana-farming-2026-09-28.svg",
+  "description": "जळगाव जिल्ह्यातील केळी शेतीची संपूर्ण माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-banana-farming-2026-09-28.md",
+  "link": "article.html?id=jalgaon-banana-farming-2026-09-28"
+},
+  {
+  "id": "jalgaon-higher-education-2026-09-28",
+  "title": "जळगाव जिल्ह्यातील उच्च शिक्षणाच्या संधींची माहिती",
+  "category": "Education & Jobs",
+  "date": "28 September 2026",
+  "image": "Images/jalgaon-higher-education-2026-09-28.svg",
+  "description": "जळगाव जिल्ह्यातील उच्च शिक्षणाच्या संधींची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-higher-education-2026-09-28.md",
+  "link": "article.html?id=jalgaon-higher-education-2026-09-28"
+},
+  {
+  "id": "jalgaon-farmer-schemes-2026-09-28",
+  "title": "जळगाव जिल्ह्यातील शेतकऱ्यांसाठी सरकारी योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "28 September 2026",
+  "image": "Images/jalgaon-farmer-schemes-2026-09-28.svg",
+  "description": "जळगाव जिल्ह्यातील शेतकऱ्यांसाठी सरकारी योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-farmer-schemes-2026-09-28.md",
+  "link": "article.html?id=jalgaon-farmer-schemes-2026-09-28"
+},
+  {
+  "id": "jalgaon-unapdev-2026-09-28",
+  "title": "उनपदेव : जळगाव जिल्ह्यातील प्रसिद्ध गरम पाण्याचे झरे",
+  "category": "History & Tourism",
+  "date": "28 September 2026",
+  "image": "Images/jalgaon-unapdev-2026-09-28.svg",
+  "description": "उनपदेव : जळगाव जिल्ह्यातील प्रसिद्ध गरम पाण्याचे झरे — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-unapdev-2026-09-28.md",
+  "link": "article.html?id=jalgaon-unapdev-2026-09-28"
+},
+  {
+  "id": "jalgaon-geography-2026-09-28",
+  "title": "जळगाव जिल्ह्याचा भूगोल आणि नैसर्गिक वैशिष्ट्ये",
+  "category": "Jalgaon Information",
+  "date": "28 September 2026",
+  "image": "Images/jalgaon-geography-2026-09-28.svg",
+  "description": "जळगाव जिल्ह्याचा भूगोल आणि नैसर्गिक वैशिष्ट्ये — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-geography-2026-09-28.md",
+  "link": "article.html?id=jalgaon-geography-2026-09-28"
 }
 ];
