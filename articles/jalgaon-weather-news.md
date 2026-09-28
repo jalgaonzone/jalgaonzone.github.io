@@ -103,6 +103,10 @@ else:
 Output :-
 Enter the marks: 68
 Grade A
+
+
+
+
 -------------------------------------------------
 
 Practical No. 2
@@ -291,6 +295,11 @@ Output:-
 Enter your number: 12
 reverse is : 21
 not palindrome
+
+
+
+
+
 --------------------------------------------------
 
 PRACTICAL NO. 3
@@ -390,6 +399,10 @@ print("After Pop:", numbers)
 Output :-
 list : [10, 20, 30, 40]
 After Pop: [10, 20, 30]
+
+
+
+
 
 
 --------------------------------------------------
@@ -494,6 +507,12 @@ print("Joined Fruits:", ", ".join(fruits))
 Output :-
 
 Joined Fruits: Apple, Banana, Mango, Orange, Banana
+
+
+
+
+
+
 
 
 --------------------------------------------------
@@ -699,6 +718,11 @@ After adding city:
 'city': 'Pune'}
 
 
+
+
+
+
+
 --------------------------------------------------
 
 PRACTICAL NO. 6
@@ -753,6 +777,12 @@ Array after insertion: [10, 20, 11, 30, 40, 50]
 Enter position for deletion: 2
 
 Array after deletion: [10, 20, 30, 40, 50]
+
+
+
+
+
+
 
 
 --------------------------------------------------
@@ -1122,6 +1152,15 @@ Select operation:
 Enter your choice (1-4): 3
 
 Queue elements: 16 05 24
+
+
+
+
+
+
+
+
+
 
 
 Practical No :- 10
