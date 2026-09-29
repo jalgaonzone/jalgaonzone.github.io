@@ -357,5 +357,55 @@ const articles = [
   "description": "जळगाव जिल्ह्याचा भूगोल आणि नैसर्गिक वैशिष्ट्ये — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-geography-2026-09-28.md",
   "link": "article.html?id=jalgaon-geography-2026-09-28"
+},
+  {
+  "id": "jalgaon-drip-irrigation-2026-09-29",
+  "title": "जळगावातील ठिबक सिंचनाचे महत्त्व आणि शेतीतील उपयोग",
+  "category": "Agriculture",
+  "date": "29 September 2026",
+  "image": "Images/jalgaon-drip-irrigation-2026-09-29.svg",
+  "description": "जळगावातील ठिबक सिंचनाचे महत्त्व आणि शेतीतील उपयोग — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-drip-irrigation-2026-09-29.md",
+  "link": "article.html?id=jalgaon-drip-irrigation-2026-09-29"
+},
+  {
+  "id": "jalgaon-skill-development-2026-09-29",
+  "title": "जळगावातील विद्यार्थ्यांसाठी कौशल्य विकासाचे महत्त्व",
+  "category": "Education & Jobs",
+  "date": "29 September 2026",
+  "image": "Images/jalgaon-skill-development-2026-09-29.svg",
+  "description": "जळगावातील विद्यार्थ्यांसाठी कौशल्य विकासाचे महत्त्व — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-skill-development-2026-09-29.md",
+  "link": "article.html?id=jalgaon-skill-development-2026-09-29"
+},
+  {
+  "id": "jalgaon-student-scholarships-2026-09-29",
+  "title": "जळगावातील विद्यार्थ्यांसाठी शिष्यवृत्ती आणि शैक्षणिक योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "29 September 2026",
+  "image": "Images/jalgaon-student-scholarships-2026-09-29.svg",
+  "description": "जळगावातील विद्यार्थ्यांसाठी शिष्यवृत्ती आणि शैक्षणिक योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-student-scholarships-2026-09-29.md",
+  "link": "article.html?id=jalgaon-student-scholarships-2026-09-29"
+},
+  {
+  "id": "jalgaon-parola-fort-2026-09-29",
+  "title": "पारोळा किल्ला : जळगावच्या ऐतिहासिक वारशाची माहिती",
+  "category": "History & Tourism",
+  "date": "29 September 2026",
+  "image": "Images/jalgaon-parola-fort-2026-09-29.svg",
+  "description": "पारोळा किल्ला : जळगावच्या ऐतिहासिक वारशाची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-parola-fort-2026-09-29.md",
+  "link": "article.html?id=jalgaon-parola-fort-2026-09-29"
+},
+  {
+  "id": "jalgaon-talukas-2026-09-29",
+  "title": "जळगाव जिल्ह्यातील तालुक्यांची संपूर्ण माहिती",
+  "category": "Jalgaon Information",
+  "date": "29 September 2026",
+  "image": "Images/jalgaon-talukas-2026-09-29.svg",
+  "description": "जळगाव जिल्ह्यातील तालुक्यांची संपूर्ण माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-talukas-2026-09-29.md",
+  "link": "article.html?id=jalgaon-talukas-2026-09-29"
 }
 ];
