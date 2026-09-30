@@ -407,5 +407,55 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील तालुक्यांची संपूर्ण माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-talukas-2026-09-29.md",
   "link": "article.html?id=jalgaon-talukas-2026-09-29"
+},
+  {
+  "id": "jalgaon-cotton-farming-2026-09-30",
+  "title": "जळगाव जिल्ह्यातील कापूस शेतीविषयी महत्त्वाची माहिती",
+  "category": "Agriculture",
+  "date": "30 September 2026",
+  "image": "Images/jalgaon-cotton-farming-2026-09-30.svg",
+  "description": "जळगाव जिल्ह्यातील कापूस शेतीविषयी महत्त्वाची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-cotton-farming-2026-09-30.md",
+  "link": "article.html?id=jalgaon-cotton-farming-2026-09-30"
+},
+  {
+  "id": "jalgaon-government-exams-2026-09-30",
+  "title": "जळगावातील विद्यार्थ्यांसाठी सरकारी परीक्षेची तयारी",
+  "category": "Education & Jobs",
+  "date": "30 September 2026",
+  "image": "Images/jalgaon-government-exams-2026-09-30.svg",
+  "description": "जळगावातील विद्यार्थ्यांसाठी सरकारी परीक्षेची तयारी — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-government-exams-2026-09-30.md",
+  "link": "article.html?id=jalgaon-government-exams-2026-09-30"
+},
+  {
+  "id": "jalgaon-women-schemes-2026-09-30",
+  "title": "महिलांसाठी उपलब्ध सरकारी योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "30 September 2026",
+  "image": "Images/jalgaon-women-schemes-2026-09-30.svg",
+  "description": "महिलांसाठी उपलब्ध सरकारी योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-women-schemes-2026-09-30.md",
+  "link": "article.html?id=jalgaon-women-schemes-2026-09-30"
+},
+  {
+  "id": "jalgaon-padmalaya-2026-09-30",
+  "title": "पद्मालय : जळगाव जिल्ह्यातील धार्मिक आणि पर्यटनस्थळ",
+  "category": "History & Tourism",
+  "date": "30 September 2026",
+  "image": "Images/jalgaon-padmalaya-2026-09-30.svg",
+  "description": "पद्मालय : जळगाव जिल्ह्यातील धार्मिक आणि पर्यटनस्थळ — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-padmalaya-2026-09-30.md",
+  "link": "article.html?id=jalgaon-padmalaya-2026-09-30"
+},
+  {
+  "id": "jalgaon-economy-2026-09-30",
+  "title": "जळगाव जिल्ह्याची अर्थव्यवस्था आणि प्रमुख व्यवसाय",
+  "category": "Jalgaon Information",
+  "date": "30 September 2026",
+  "image": "Images/jalgaon-economy-2026-09-30.svg",
+  "description": "जळगाव जिल्ह्याची अर्थव्यवस्था आणि प्रमुख व्यवसाय — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-economy-2026-09-30.md",
+  "link": "article.html?id=jalgaon-economy-2026-09-30"
 }
 ];
