@@ -457,5 +457,55 @@ const articles = [
   "description": "जळगाव जिल्ह्याची अर्थव्यवस्था आणि प्रमुख व्यवसाय — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-economy-2026-09-30.md",
   "link": "article.html?id=jalgaon-economy-2026-09-30"
+},
+  {
+  "id": "jalgaon-soil-management-2026-10-01",
+  "title": "जळगावातील जमिनीची सुपीकता आणि मृदा व्यवस्थापन",
+  "category": "Agriculture",
+  "date": "01 October 2026",
+  "image": "Images/jalgaon-soil-management-2026-10-01.svg",
+  "description": "जळगावातील जमिनीची सुपीकता आणि मृदा व्यवस्थापन — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-soil-management-2026-10-01.md",
+  "link": "article.html?id=jalgaon-soil-management-2026-10-01"
+},
+  {
+  "id": "jalgaon-private-jobs-2026-10-01",
+  "title": "जळगाव शहरातील खासगी रोजगाराच्या संधी आणि तयारी",
+  "category": "Education & Jobs",
+  "date": "01 October 2026",
+  "image": "Images/jalgaon-private-jobs-2026-10-01.svg",
+  "description": "जळगाव शहरातील खासगी रोजगाराच्या संधी आणि तयारी — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-private-jobs-2026-10-01.md",
+  "link": "article.html?id=jalgaon-private-jobs-2026-10-01"
+},
+  {
+  "id": "jalgaon-health-schemes-2026-10-01",
+  "title": "नागरिकांसाठी सरकारी आरोग्य योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "01 October 2026",
+  "image": "Images/jalgaon-health-schemes-2026-10-01.svg",
+  "description": "नागरिकांसाठी सरकारी आरोग्य योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-health-schemes-2026-10-01.md",
+  "link": "article.html?id=jalgaon-health-schemes-2026-10-01"
+},
+  {
+  "id": "jalgaon-manudevi-2026-10-01",
+  "title": "मनुदेवी : जळगाव जिल्ह्यातील निसर्गरम्य धार्मिक स्थळ",
+  "category": "History & Tourism",
+  "date": "01 October 2026",
+  "image": "Images/jalgaon-manudevi-2026-10-01.svg",
+  "description": "मनुदेवी : जळगाव जिल्ह्यातील निसर्गरम्य धार्मिक स्थळ — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-manudevi-2026-10-01.md",
+  "link": "article.html?id=jalgaon-manudevi-2026-10-01"
+},
+  {
+  "id": "jalgaon-culture-2026-10-01",
+  "title": "जळगाव जिल्ह्याची संस्कृती, भाषा आणि स्थानिक जीवनशैली",
+  "category": "Jalgaon Information",
+  "date": "01 October 2026",
+  "image": "Images/jalgaon-culture-2026-10-01.svg",
+  "description": "जळगाव जिल्ह्याची संस्कृती, भाषा आणि स्थानिक जीवनशैली — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-culture-2026-10-01.md",
+  "link": "article.html?id=jalgaon-culture-2026-10-01"
 }
 ];
