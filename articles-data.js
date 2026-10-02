@@ -507,5 +507,55 @@ const articles = [
   "description": "जळगाव जिल्ह्याची संस्कृती, भाषा आणि स्थानिक जीवनशैली — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-culture-2026-10-01.md",
   "link": "article.html?id=jalgaon-culture-2026-10-01"
+},
+  {
+  "id": "jalgaon-agriculture-market-26b0ad2b-2026-10-02",
+  "title": "जळगावातील कृषी बाजारपेठ समजून घेण्याची पद्धत",
+  "category": "Agriculture",
+  "date": "02 October 2026",
+  "image": "Images/jalgaon-agriculture-market-26b0ad2b-2026-10-02.svg",
+  "description": "जळगावातील कृषी बाजारपेठ समजून घेण्याची पद्धत — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-agriculture-market-26b0ad2b-2026-10-02.md",
+  "link": "article.html?id=jalgaon-agriculture-market-26b0ad2b-2026-10-02"
+},
+  {
+  "id": "study-fa6f0777-2026-10-02",
+  "title": "अभ्यासात मोबाईलचा योग्य वापर कसा करावा",
+  "category": "Education & Jobs",
+  "date": "02 October 2026",
+  "image": "Images/study-fa6f0777-2026-10-02.svg",
+  "description": "अभ्यासात मोबाईलचा योग्य वापर कसा करावा — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/study-fa6f0777-2026-10-02.md",
+  "link": "article.html?id=study-fa6f0777-2026-10-02"
+},
+  {
+  "id": "schemes-information-44e7bb11-2026-10-02",
+  "title": "घरकुल योजनांची माहिती कशी तपासावी",
+  "category": "Government Schemes",
+  "date": "02 October 2026",
+  "image": "Images/schemes-information-44e7bb11-2026-10-02.svg",
+  "description": "घरकुल योजनांची माहिती कशी तपासावी — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/schemes-information-44e7bb11-2026-10-02.md",
+  "link": "article.html?id=schemes-information-44e7bb11-2026-10-02"
+},
+  {
+  "id": "jalgaon-tourism-662c3d7c-2026-10-02",
+  "title": "जळगावातील धार्मिक पर्यटन करताना घ्यावयाची काळजी",
+  "category": "History & Tourism",
+  "date": "02 October 2026",
+  "image": "Images/jalgaon-tourism-662c3d7c-2026-10-02.svg",
+  "description": "जळगावातील धार्मिक पर्यटन करताना घ्यावयाची काळजी — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-tourism-662c3d7c-2026-10-02.md",
+  "link": "article.html?id=jalgaon-tourism-662c3d7c-2026-10-02"
+},
+  {
+  "id": "jalgaon-information-f6e8a87b-2026-10-02",
+  "title": "जळगाव जिल्ह्याची सर्वसाधारण माहिती",
+  "category": "Jalgaon Information",
+  "date": "02 October 2026",
+  "image": "Images/jalgaon-information-f6e8a87b-2026-10-02.svg",
+  "description": "जळगाव जिल्ह्याची सर्वसाधारण माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-information-f6e8a87b-2026-10-02.md",
+  "link": "article.html?id=jalgaon-information-f6e8a87b-2026-10-02"
 }
 ];
