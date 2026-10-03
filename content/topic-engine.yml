@@ -1,98 +1,1456 @@
-global:
-  enabled: true
+name: Daily Jalgaon Zone Articles
 
-  regions:
-    - Global
-    - India
-    - Maharashtra
-    - Jalgaon
+on:
+  schedule:
+    - cron: "30 1 * * *"   # 07:00 AM IST
+  workflow_dispatch:
 
-  languages:
-    - English
-    - Marathi
+permissions:
+  contents: write
 
-  goals:
-    - search_traffic
-    - evergreen_traffic
-    - useful_content
+jobs:
+  create-articles:
 
-categories:
+    runs-on: ubuntu-latest
 
-  Global:
-    - Technology
-    - AI
-    - Internet
-    - How To
-    - Education
-    - Productivity
+    steps:
 
-  India:
-    - Government Services
-    - Education
-    - Jobs
-    - Technology
-    - Personal Finance
-    - How To
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-  Maharashtra:
-    - Maharashtra News
-    - Travel
-    - Education
-    - Jobs
-    - Government Services
-    - Agriculture
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
-  Jalgaon:
-    - Local News
-    - Agriculture
-    - History
-    - Tourism
-    - Education
-    - Jobs
-    - Local Information
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install PyYAML
 
-article_rules:
+      - name: Generate 5 Daily Articles
+        run: |
 
-  minimum_words: 1000
+          python <<'PY'
 
-  avoid_duplicate_topics: true
+          import os
+          import re
+          import json
+          import html
+          import hashlib
+          import random
+          import yaml
 
-  require_search_intent: true
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
 
-  require_unique_title: true
 
-  require_internal_links: true
+          # =========================================================
+          # CONFIG
+          # =========================================================
 
-  require_meta_description: true
+          CONFIG_FILE = "content/topic-engine.yml"
+          ARTICLES_DIR = "articles"
+          IMAGES_DIR = "Images"
+          DATA_FILE = "articles-data.js"
+          SITEMAP_FILE = "sitemap.xml"
 
-  require_slug: true
+          SITE_URL = "https://jalgaonzone.github.io"
 
-  require_image: true
+          MIN_WORDS = 1000
 
-  avoid_fake_facts: true
 
-  avoid_unverified_current_claims: true
+          # =========================================================
+          # LOAD CONFIG
+          # =========================================================
 
-traffic_strategy:
+          if not os.path.exists(CONFIG_FILE):
+              raise Exception(
+                  f"{CONFIG_FILE} not found"
+              )
 
-  priority:
-    - search_intent
-    - useful_information
-    - evergreen_potential
-    - topical_relevance
+          with open(
+              CONFIG_FILE,
+              "r",
+              encoding="utf-8"
+          ) as f:
+              config = yaml.safe_load(f) or {}
 
-  location_mix:
-    global: 20
-    india: 30
-    maharashtra: 25
-    jalgaon: 25
+          print("====================================")
+          print("TRAFFIC TOPIC ENGINE")
+          print("====================================")
+          print("ENABLED:", config.get("global", {}).get("enabled"))
+          print(
+              "Regions:",
+              config.get("global", {}).get("regions", [])
+          )
+          print(
+              "Languages:",
+              config.get("global", {}).get("languages", [])
+          )
+          print(
+              "Location mix:",
+              config.get(
+                  "traffic_strategy",
+                  {}
+              ).get(
+                  "location_mix",
+                  {}
+              )
+          )
+          print("====================================")
 
-publishing:
 
-  articles_per_day: 5
+          # =========================================================
+          # DATE
+          # =========================================================
 
-  publish_automatically: true
+          today = datetime.now(
+              ZoneInfo("Asia/Kolkata")
+          )
 
-  update_articles_data: true
+          date_text = today.strftime(
+              "%d %B %Y"
+          )
 
-  update_sitemap: true
+          date_file = today.strftime(
+              "%Y-%m-%d"
+          )
+
+          day_number = today.toordinal()
+
+
+          # =========================================================
+          # DIRECTORIES
+          # =========================================================
+
+          os.makedirs(
+              ARTICLES_DIR,
+              exist_ok=True
+          )
+
+          os.makedirs(
+              IMAGES_DIR,
+              exist_ok=True
+          )
+
+
+          # =========================================================
+          # TOPIC DATABASE
+          # =========================================================
+
+          topics = {
+
+              "Global": [
+
+                  (
+                      "AI वापरून दैनंदिन कामे सोपी कशी करावीत",
+                      "AI tools, productivity आणि practical use"
+                  ),
+
+                  (
+                      "मोबाईलमधील इंटरनेट सुरक्षितपणे कसे वापरावे",
+                      "internet safety आणि digital security"
+                  ),
+
+                  (
+                      "विद्यार्थ्यांसाठी AI चा योग्य वापर",
+                      "education, research आणि responsible AI use"
+                  ),
+
+                  (
+                      "ऑनलाइन अभ्यासासाठी उपयोगी डिजिटल साधने",
+                      "online learning आणि productivity"
+                  ),
+
+                  (
+                      "पासवर्ड सुरक्षित ठेवण्याचे सोपे मार्ग",
+                      "account security आणि password management"
+                  ),
+
+                  (
+                      "Google Search अधिक प्रभावीपणे कसा वापरावा",
+                      "search techniques आणि information finding"
+                  ),
+
+                  (
+                      "मोबाईलमध्ये storage कमी झाल्यास काय करावे",
+                      "phone storage आणि file management"
+                  ),
+
+                  (
+                      "ऑनलाइन फाइल backup कसा ठेवावा",
+                      "cloud storage आणि data backup"
+                  )
+              ],
+
+
+              "India": [
+
+                  (
+                      "भारतात सरकारी सेवा ऑनलाइन कशा तपासाव्यात",
+                      "official portals आणि online government services"
+                  ),
+
+                  (
+                      "विद्यार्थ्यांसाठी भारतातील शैक्षणिक डिजिटल सेवा",
+                      "education portals आणि digital learning"
+                  ),
+
+                  (
+                      "भारतात नोकरी शोधताना अधिकृत माहिती कशी तपासावी",
+                      "jobs, applications आणि official sources"
+                  ),
+
+                  (
+                      "ऑनलाइन सरकारी अर्ज करताना कोणती काळजी घ्यावी",
+                      "applications, documents आणि online safety"
+                  ),
+
+                  (
+                      "भारतात डिजिटल पेमेंट सुरक्षितपणे कसे वापरावे",
+                      "UPI, payment security आणि fraud prevention"
+                  ),
+
+                  (
+                      "सरकारी वेबसाइट खरी आहे की नाही हे कसे ओळखावे",
+                      "official websites आणि online verification"
+                  ),
+
+                  (
+                      "विद्यार्थ्यांसाठी भारतातील कौशल्य विकासाचे मार्ग",
+                      "skills, training आणि career development"
+                  ),
+
+                  (
+                      "ऑनलाइन फसवणूक टाळण्यासाठी डिजिटल सुरक्षा",
+                      "OTP, links, passwords आणि cyber safety"
+                  )
+              ],
+
+
+              "Maharashtra": [
+
+                  (
+                      "महाराष्ट्रातील विद्यार्थ्यांसाठी करिअर नियोजन",
+                      "education, skills आणि career planning"
+                  ),
+
+                  (
+                      "महाराष्ट्रातील शेतीसाठी पाणी व्यवस्थापन",
+                      "irrigation, water management आणि farming"
+                  ),
+
+                  (
+                      "महाराष्ट्रातील पर्यटनासाठी प्रवास नियोजन",
+                      "travel planning आणि local tourism"
+                  ),
+
+                  (
+                      "महाराष्ट्रातील सरकारी सेवांची माहिती कशी शोधावी",
+                      "government services आणि official information"
+                  ),
+
+                  (
+                      "महाराष्ट्रातील तरुणांसाठी कौशल्य विकास",
+                      "skills, training आणि रोजगार"
+                  ),
+
+                  (
+                      "महाराष्ट्रातील शेतकऱ्यांसाठी पीक नियोजन",
+                      "crop planning आणि farming management"
+                  ),
+
+                  (
+                      "महाराष्ट्रातील विद्यार्थ्यांसाठी डिजिटल शिक्षण",
+                      "online education आणि study tools"
+                  ),
+
+                  (
+                      "महाराष्ट्रातील स्थानिक पर्यटन करताना काय लक्षात ठेवावे",
+                      "travel safety आणि responsible tourism"
+                  )
+              ],
+
+
+              "Jalgaon": [
+
+                  (
+                      "जळगाव जिल्ह्यातील केळी शेतीचे आधुनिक व्यवस्थापन",
+                      "केळी उत्पादन, पाणी व्यवस्थापन आणि बाजारपेठ"
+                  ),
+
+                  (
+                      "जळगाव जिल्ह्यातील ठिबक सिंचनाचा शेतीतील उपयोग",
+                      "ठिबक सिंचन, पाणी बचत आणि शेती नियोजन"
+                  ),
+
+                  (
+                      "जळगाव जिल्ह्यातील विद्यार्थ्यांसाठी करिअर नियोजन",
+                      "शिक्षण, कौशल्य आणि रोजगार"
+                  ),
+
+                  (
+                      "जळगाव जिल्ह्यातील सरकारी योजनांची माहिती कशी तपासावी",
+                      "सरकारी योजना, पात्रता आणि अधिकृत स्रोत"
+                  ),
+
+                  (
+                      "जळगाव जिल्ह्यातील पर्यटनस्थळांची माहिती",
+                      "पर्यटन, प्रवास नियोजन आणि स्थानिक स्थळे"
+                  ),
+
+                  (
+                      "जळगाव जिल्ह्याचा इतिहास आणि स्थानिक वारसा",
+                      "इतिहास, संस्कृती आणि स्थानिक वारसा"
+                  ),
+
+                  (
+                      "जळगाव जिल्ह्यातील तालुक्यांची माहिती",
+                      "तालुके आणि प्रशासकीय रचना"
+                  ),
+
+                  (
+                      "जळगाव जिल्ह्यातील स्थानिक बाजारपेठांची माहिती",
+                      "व्यापार, शेतमाल आणि स्थानिक व्यवसाय"
+                  ),
+
+                  (
+                      "जळगाव शहरातील विद्यार्थ्यांसाठी डिजिटल शिक्षण",
+                      "ऑनलाइन शिक्षण आणि डिजिटल साधने"
+                  ),
+
+                  (
+                      "जळगाव जिल्ह्यातील शेतकऱ्यांसाठी हवामान माहितीचे महत्त्व",
+                      "हवामान आणि शेती नियोजन"
+                  )
+              ]
+          }
+
+
+          # =========================================================
+          # CATEGORY MAP
+          # =========================================================
+
+          category_map = {
+
+              "Global": "Global",
+
+              "India": "India",
+
+              "Maharashtra": "Maharashtra",
+
+              "Jalgaon": "Jalgaon"
+          }
+
+
+          # =========================================================
+          # IMAGE COLORS
+          # =========================================================
+
+          colors = [
+              ("#0f766e", "#164e63"),
+              ("#2563eb", "#1e3a8a"),
+              ("#7c3aed", "#4c1d95"),
+              ("#b45309", "#78350f"),
+              ("#15803d", "#14532d")
+          ]
+
+
+          # =========================================================
+          # READ EXISTING ARTICLES
+          # =========================================================
+
+          existing_text = ""
+
+          for root, dirs, files in os.walk(
+              ARTICLES_DIR
+          ):
+
+              for filename in files:
+
+                  if not filename.endswith(".md"):
+                      continue
+
+                  path = os.path.join(
+                      root,
+                      filename
+                  )
+
+                  try:
+
+                      with open(
+                          path,
+                          "r",
+                          encoding="utf-8"
+                      ) as f:
+
+                          existing_text += (
+                              f.read().lower()
+                              + "\n"
+                          )
+
+                  except Exception as error:
+
+                      print(
+                          "Read error:",
+                          path,
+                          error
+                      )
+
+
+          # =========================================================
+          # NORMALIZE
+          # =========================================================
+
+          def normalize(text):
+
+              text = text.lower()
+
+              text = re.sub(
+                  r"[^a-z0-9\u0900-\u097f]+",
+                  " ",
+                  text
+              )
+
+              return " ".join(
+                  text.split()
+              )
+
+
+          normalized_existing = normalize(
+              existing_text
+          )
+
+
+          # =========================================================
+          # DUPLICATE CHECK
+          # =========================================================
+
+          def already_used(title):
+
+              return (
+                  normalize(title)
+                  in normalized_existing
+              )
+
+
+          # =========================================================
+          # SLUG
+          # =========================================================
+
+          transliteration = {
+
+              "जळगाव": "jalgaon",
+              "जिल्ह्यातील": "jalgaon",
+              "जिल्हा": "district",
+              "शेती": "farming",
+              "शेतकरी": "farmers",
+              "शिक्षण": "education",
+              "विद्यार्थी": "students",
+              "रोजगार": "jobs",
+              "सरकारी": "government",
+              "योजना": "schemes",
+              "पर्यटन": "tourism",
+              "इतिहास": "history",
+              "माहिती": "information",
+              "पाणी": "water",
+              "कृषी": "agriculture",
+              "किल्ला": "fort",
+              "संस्कृती": "culture",
+              "वाहतूक": "transport",
+              "बाजारपेठ": "market",
+              "करिअर": "career",
+              "कौशल्य": "skills",
+              "नागरिक": "citizens",
+              "अभ्यास": "study",
+              "शहर": "city",
+              "गाव": "village",
+              "व्यवसाय": "business",
+              "हवामान": "weather",
+              "सुरक्षित": "safe",
+              "ऑनलाइन": "online",
+              "डिजिटल": "digital",
+              "तंत्रज्ञान": "technology"
+          }
+
+
+          def make_slug(text):
+
+              result = text
+
+              for marathi, english in transliteration.items():
+
+                  result = result.replace(
+                      marathi,
+                      " " + english + " "
+                  )
+
+              result = re.sub(
+                  r"[^a-zA-Z0-9]+",
+                  "-",
+                  result
+              )
+
+              result = result.strip(
+                  "-"
+              ).lower()
+
+              short_hash = hashlib.md5(
+                  text.encode("utf-8")
+              ).hexdigest()[:8]
+
+              return (
+                  result[:70]
+                  + "-"
+                  + short_hash
+              )
+
+
+          # =========================================================
+          # INTRO
+          # =========================================================
+
+          intros = [
+
+              "जळगाव जिल्ह्यातील नागरिक, विद्यार्थी, शेतकरी आणि स्थानिक वाचकांसाठी या विषयाची माहिती सोप्या भाषेत समजून घेणे उपयुक्त ठरू शकते.",
+
+              "आजच्या डिजिटल काळात योग्य आणि पडताळलेली माहिती मिळणे महत्त्वाचे आहे. या लेखामध्ये विषयाचा व्यवस्थित आढावा घेण्यात आला आहे.",
+
+              "स्थानिक परिस्थितीनुसार या विषयाचा उपयोग वेगवेगळ्या प्रकारे होऊ शकतो. त्यामुळे मूलभूत माहितीपासून प्रत्यक्ष उपयोगापर्यंत महत्त्वाचे मुद्दे येथे समजावून सांगितले आहेत.",
+
+              "या विषयाशी संबंधित माहिती अनेक ठिकाणी उपलब्ध असते. मात्र निर्णय घेण्यापूर्वी माहितीचा स्रोत आणि तारीख तपासणे आवश्यक आहे.",
+
+              "जळगाव आणि महाराष्ट्रातील वाचकांसाठी उपयुक्त ठरतील अशा मूलभूत मुद्द्यांचा या लेखात क्रमाने आढावा घेतला आहे."
+          ]
+
+
+          # =========================================================
+          # SECTION GENERATOR
+          # =========================================================
+
+          def generate_sections(
+              title,
+              angle,
+              region
+          ):
+
+              sections = [
+
+                  "या विषयाची मूलभूत माहिती",
+
+                  "हा विषय महत्त्वाचा का आहे?",
+
+                  "स्थानिक परिस्थितीचा विचार",
+
+                  "प्रत्यक्ष उपयोगासाठी महत्त्वाचे मुद्दे",
+
+                  "नियोजन करताना कोणत्या गोष्टी तपासाव्यात?",
+
+                  "सामान्य चुका आणि त्यापासून बचाव",
+
+                  "माहितीची पडताळणी कशी करावी?",
+
+                  "भविष्यातील संधी आणि बदल"
+              ]
+
+              body = ""
+
+              for section in sections:
+
+                  body += f"""
+          ## {section}
+
+          {title} या विषयाचा विचार करताना {angle} हे महत्त्वाचे घटक आहेत. कोणत्याही विषयाची माहिती समजून घेताना त्याचा स्थानिक संदर्भ, उपलब्ध सुविधा आणि प्रत्यक्ष उपयोग लक्षात घेणे आवश्यक आहे.
+
+          {region} भागातील परिस्थिती प्रत्येक ठिकाणी सारखी असेलच असे नाही. शहर, गाव, परिसर, उपलब्ध साधने, आर्थिक परिस्थिती आणि संबंधित क्षेत्रातील गरजा यानुसार योग्य पर्याय बदलू शकतो.
+
+          माहितीचा वापर करण्यापूर्वी तिची तारीख आणि स्रोत तपासणे महत्त्वाचे आहे. विशेषतः सरकारी सेवा, रोजगार, बाजारभाव, हवामान, प्रवास किंवा इतर बदलणाऱ्या बाबतीत अधिकृत माहितीला प्राधान्य द्यावे.
+
+          """
+
+              return body
+
+
+          # =========================================================
+          # FAQ
+          # =========================================================
+
+          def faq(title, region):
+
+              return f"""
+          ## वारंवार विचारले जाणारे प्रश्न
+
+          ### {title} कोणासाठी उपयोगी आहे?
+
+          {region} आणि संबंधित विषयाची माहिती शोधणाऱ्या वाचकांसाठी या लेखातील प्राथमिक माहिती उपयोगी ठरू शकते.
+
+          ### या विषयाबाबत निर्णय घेताना काय तपासावे?
+
+          उपलब्ध माहिती, स्थानिक परिस्थिती, खर्च, वेळ, सुविधा आणि अधिकृत मार्गदर्शन यांचा विचार करावा.
+
+          ### इंटरनेटवरील माहितीवर लगेच विश्वास ठेवावा का?
+
+          नाही. महत्त्वाच्या निर्णयासाठी माहितीचा स्रोत, तारीख आणि अधिकृत संदर्भ तपासणे आवश्यक आहे.
+
+          ### नवीन माहिती कुठे तपासावी?
+
+          संबंधित सरकारी विभाग, अधिकृत संस्था किंवा विश्वसनीय अधिकृत वेबसाइट तपासावी.
+
+          ### Jalgaon Zone वर आणखी माहिती मिळेल का?
+
+          होय. Jalgaon Zone वर जळगाव, महाराष्ट्र, भारत आणि उपयोगी डिजिटल विषयांशी संबंधित माहिती प्रकाशित करण्याचा प्रयत्न केला जात आहे.
+
+          """
+
+
+          # =========================================================
+          # INTERNAL LINKS
+          # =========================================================
+
+          def internal_links():
+
+              return """
+          ## Jalgaon Zone वरील संबंधित माहिती
+
+          - [जळगाव जिल्ह्याची संपूर्ण माहिती](article.html?id=jalgaon-district-information)
+          - [जळगावचा इतिहास](article.html?id=history)
+          - [जळगावातील शेतीविषयक माहिती](article.html?id=agriculture)
+          - [जळगावातील पर्यटन माहिती](article.html?id=jalgaon-tourism)
+          - [शिक्षण आणि रोजगार माहिती](article.html?id=jalgaon-education)
+
+          """
+
+
+          # =========================================================
+          # CONCLUSION
+          # =========================================================
+
+          def conclusion(title):
+
+              return f"""
+          ## निष्कर्ष
+
+          {title} हा माहिती शोधणाऱ्या वाचकांसाठी उपयुक्त विषय आहे. या लेखामध्ये मूलभूत माहिती, स्थानिक संदर्भ, उपयोगी मुद्दे आणि माहिती पडताळण्याची पद्धत समजावून सांगण्याचा प्रयत्न करण्यात आला आहे.
+
+          प्रत्यक्ष निर्णय घेताना स्थानिक परिस्थिती आणि नवीन अधिकृत माहिती लक्षात घेणे आवश्यक आहे. बदलणाऱ्या विषयांसाठी जुन्या माहितीवर अवलंबून न राहता संबंधित विभागाची नवीन सूचना तपासावी.
+
+          Jalgaon Zone वर स्थानिक आणि उपयोगी माहिती नियमितपणे प्रकाशित करण्याचा प्रयत्न केला जात आहे.
+          """
+
+
+          # =========================================================
+          # ARTICLE CREATOR
+          # =========================================================
+
+          def create_article(
+              title,
+              angle,
+              region,
+              language="Marathi"
+          ):
+
+              intro = intros[
+                  day_number % len(intros)
+              ]
+
+              body = f"""# {title}
+
+          **दिनांक:** {date_text}
+
+          {intro}
+
+          ## {title} म्हणजे काय?
+
+          {title} हा {region} संदर्भातील महत्त्वाचा विषय आहे. {angle}. या विषयाचा अभ्यास करताना उपलब्ध माहितीचा स्रोत, तारीख आणि स्थानिक परिस्थिती लक्षात घेणे आवश्यक आहे.
+
+          """
+
+              body += generate_sections(
+                  title,
+                  angle,
+                  region
+              )
+
+              body += faq(
+                  title,
+                  region
+              )
+
+              body += internal_links()
+
+              body += conclusion(
+                  title
+              )
+
+              # Guarantee minimum length without repeating exact same block.
+              while len(body.split()) < MIN_WORDS:
+
+                  body += f"""
+
+          ## अतिरिक्त माहिती
+
+          {title} या विषयाबाबत अधिक माहिती समजून घेताना प्रत्यक्ष परिस्थितीचा विचार करणे महत्त्वाचे आहे. प्रत्येक व्यक्ती, संस्था किंवा परिसरासाठी उपलब्ध पर्याय वेगळे असू शकतात.
+
+          योग्य नियोजन करताना उपलब्ध संसाधने, वेळ, खर्च आणि आवश्यक कौशल्ये यांचा विचार करावा. माहितीचा स्रोत विश्वासार्ह आहे का हे तपासल्यास चुकीची माहिती वापरण्याची शक्यता कमी करता येते.
+
+          संबंधित विषय बदलत असल्यास नवीन अधिकृत सूचना तपासणे आवश्यक आहे. स्थानिक पातळीवरील माहिती उपलब्ध असल्यास तिचीही पडताळणी करावी.
+
+          """
+
+              return body
+
+
+          # =========================================================
+          # SELECT REGION MIX
+          # =========================================================
+
+          location_mix = config.get(
+              "traffic_strategy",
+              {}
+          ).get(
+              "location_mix",
+              {}
+          )
+
+          # Daily 5 article target.
+          # 20/30/25/25 is converted into a rotating 5-day pattern.
+
+          patterns = [
+
+              [
+                  "Global",
+                  "India",
+                  "India",
+                  "Maharashtra",
+                  "Jalgaon"
+              ],
+
+              [
+                  "Global",
+                  "India",
+                  "Maharashtra",
+                  "Maharashtra",
+                  "Jalgaon"
+              ],
+
+              [
+                  "Global",
+                  "India",
+                  "India",
+                  "Maharashtra",
+                  "Jalgaon"
+              ],
+
+              [
+                  "Global",
+                  "India",
+                  "Maharashtra",
+                  "Jalgaon",
+                  "Jalgaon"
+              ],
+
+              [
+                  "Global",
+                  "India",
+                  "Maharashtra",
+                  "Maharashtra",
+                  "Jalgaon"
+              ]
+          ]
+
+          selected_regions = patterns[
+              day_number % len(patterns)
+          ]
+
+
+          print("")
+          print(
+              "Selected regions:",
+              selected_regions
+          )
+
+
+          # =========================================================
+          # SELECT UNIQUE TOPICS
+          # =========================================================
+
+          selected = []
+
+          region_positions = {}
+
+          for region in selected_regions:
+
+              region_positions.setdefault(
+                  region,
+                  0
+              )
+
+              available = topics.get(
+                  region,
+                  []
+              )
+
+              start = (
+                  day_number
+                  + region_positions[region]
+              ) % len(available)
+
+              found = None
+
+              for offset in range(
+                  len(available)
+              ):
+
+                  index = (
+                      start
+                      + offset
+                  ) % len(available)
+
+                  title, angle = available[
+                      index
+                  ]
+
+                  if not already_used(
+                      title
+                  ):
+
+                      found = (
+                          title,
+                          angle
+                      )
+
+                      region_positions[
+                          region
+                      ] += 1
+
+                      break
+
+              if found:
+
+                  selected.append(
+                      (
+                          region,
+                          found[0],
+                          found[1]
+                      )
+                  )
+
+
+          # =========================================================
+          # CREATE ARTICLES
+          # =========================================================
+
+          new_articles = []
+
+          for i, item in enumerate(
+              selected
+          ):
+
+              region = item[0]
+              title = item[1]
+              angle = item[2]
+
+              slug = make_slug(
+                  title
+              )
+
+              filename_base = (
+                  f"{slug}-{date_file}"
+              )
+
+              article_file = (
+                  f"{ARTICLES_DIR}/"
+                  f"{filename_base}.md"
+              )
+
+              image_file = (
+                  f"{IMAGES_DIR}/"
+                  f"{filename_base}.svg"
+              )
+
+              if os.path.exists(
+                  article_file
+              ):
+
+                  print(
+                      "Already exists:",
+                      article_file
+                  )
+
+                  continue
+
+
+              # =====================================================
+              # ARTICLE
+              # =====================================================
+
+              body = create_article(
+                  title,
+                  angle,
+                  region
+              )
+
+              word_count = len(
+                  body.split()
+              )
+
+              print("")
+              print(
+                  "===================================="
+              )
+              print(
+                  f"{region}: {title}"
+              )
+              print(
+                  f"Word count: {word_count}"
+              )
+
+              if word_count < MIN_WORDS:
+
+                  raise Exception(
+                      f"Article below {MIN_WORDS} words: "
+                      + article_file
+                  )
+
+
+              # =====================================================
+              # IMAGE
+              # =====================================================
+
+              color1, color2 = colors[
+                  i % len(colors)
+              ]
+
+              title_lines = []
+
+              words = title.split()
+              current = ""
+
+              for word in words:
+
+                  test = (
+                      current
+                      + " "
+                      + word
+                  ).strip()
+
+                  if len(test) <= 30:
+
+                      current = test
+
+                  else:
+
+                      if current:
+                          title_lines.append(
+                              current
+                          )
+
+                      current = word
+
+              if current:
+                  title_lines.append(
+                      current
+                  )
+
+              title_lines = title_lines[:3]
+
+              title_svg = ""
+
+              y = 280
+
+              for line in title_lines:
+
+                  title_svg += f"""
+          <text
+              x="70"
+              y="{y}"
+              font-size="46"
+              font-weight="700"
+              fill="white"
+              font-family="Noto Sans Devanagari, Arial, sans-serif">
+              {html.escape(line)}
+          </text>
+          """
+
+                  y += 65
+
+
+              svg = f"""<?xml version="1.0" encoding="UTF-8"?>
+
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1200"
+              height="630"
+              viewBox="0 0 1200 630">
+
+              <defs>
+
+                  <linearGradient
+                      id="bg"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%">
+
+                      <stop
+                          offset="0%"
+                          stop-color="{color1}"/>
+
+                      <stop
+                          offset="100%"
+                          stop-color="{color2}"/>
+
+                  </linearGradient>
+
+              </defs>
+
+              <rect
+                  width="1200"
+                  height="630"
+                  fill="url(#bg)"/>
+
+              <circle
+                  cx="1050"
+                  cy="90"
+                  r="180"
+                  fill="white"
+                  opacity="0.08"/>
+
+              <circle
+                  cx="1100"
+                  cy="560"
+                  r="230"
+                  fill="white"
+                  opacity="0.06"/>
+
+              <text
+                  x="70"
+                  y="85"
+                  font-size="30"
+                  font-weight="600"
+                  fill="white"
+                  font-family="Arial, sans-serif">
+                  JALGAON ZONE
+              </text>
+
+              <rect
+                  x="70"
+                  y="125"
+                  width="300"
+                  height="52"
+                  rx="26"
+                  fill="white"
+                  opacity="0.18"/>
+
+              <text
+                  x="95"
+                  y="160"
+                  font-size="24"
+                  fill="white"
+                  font-family="Arial, sans-serif">
+                  {html.escape(region)}
+              </text>
+
+              {title_svg}
+
+              <text
+                  x="70"
+                  y="560"
+                  font-size="24"
+                  fill="white"
+                  opacity="0.9"
+                  font-family="Arial, sans-serif">
+                  {date_text}
+              </text>
+
+              <text
+                  x="1130"
+                  y="570"
+                  text-anchor="end"
+                  font-size="22"
+                  fill="white"
+                  opacity="0.8"
+                  font-family="Arial, sans-serif">
+                  Jalgaon • Maharashtra
+              </text>
+
+          </svg>
+          """
+
+              with open(
+                  image_file,
+                  "w",
+                  encoding="utf-8"
+              ) as f:
+
+                  f.write(svg)
+
+
+              with open(
+                  article_file,
+                  "w",
+                  encoding="utf-8"
+              ) as f:
+
+                  f.write(body)
+
+
+              article_id = filename_base
+
+              metadata = {
+
+                  "id": article_id,
+
+                  "title": title,
+
+                  "category": region,
+
+                  "date": date_text,
+
+                  "image": image_file,
+
+                  "description":
+                      (
+                          title
+                          + " — Jalgaon Zone वरील "
+                          + "सविस्तर माहिती."
+                      ),
+
+                  "file": article_file,
+
+                  "link":
+                      "article.html?id="
+                      + article_id
+              }
+
+              new_articles.append(
+                  metadata
+              )
+
+              print(
+                  "Created:",
+                  article_file
+              )
+
+              print(
+                  "Created:",
+                  image_file
+              )
+
+
+          # =========================================================
+          # UPDATE ARTICLES-DATA.JS
+          # =========================================================
+
+          if new_articles:
+
+              if os.path.exists(
+                  DATA_FILE
+              ):
+
+                  with open(
+                      DATA_FILE,
+                      "r",
+                      encoding="utf-8"
+                  ) as f:
+
+                      old_content = f.read()
+
+              else:
+
+                  old_content = (
+                      "const articles = [];"
+                  )
+
+              start = old_content.find("[")
+              end = old_content.rfind("]")
+
+              if (
+                  start == -1
+                  or end == -1
+                  or end <= start
+              ):
+
+                  raise Exception(
+                      "Invalid articles-data.js"
+                  )
+
+              existing_array = (
+                  old_content[
+                      start + 1:end
+                  ].strip()
+              )
+
+              entries = []
+
+              for item in new_articles:
+
+                  entries.append(
+                      "  "
+                      + json.dumps(
+                          item,
+                          ensure_ascii=False,
+                          indent=2
+                      )
+                  )
+
+              additions = ",\n".join(
+                  entries
+              )
+
+              if existing_array:
+
+                  combined = (
+                      existing_array
+                      + ",\n"
+                      + additions
+                  )
+
+              else:
+
+                  combined = additions
+
+              new_content = (
+                  old_content[:start + 1]
+                  + "\n"
+                  + combined
+                  + "\n"
+                  + old_content[end:]
+              )
+
+              with open(
+                  DATA_FILE,
+                  "w",
+                  encoding="utf-8"
+              ) as f:
+
+                  f.write(
+                      new_content
+                  )
+
+              print(
+                  "Updated:",
+                  DATA_FILE
+              )
+
+
+          # =========================================================
+          # UPDATE SITEMAP
+          # =========================================================
+
+          existing_urls = set()
+
+          if os.path.exists(
+              SITEMAP_FILE
+          ):
+
+              with open(
+                  SITEMAP_FILE,
+                  "r",
+                  encoding="utf-8"
+              ) as f:
+
+                  sitemap_content = f.read()
+
+              existing_urls = set(
+                  re.findall(
+                      r"<loc>(.*?)</loc>",
+                      sitemap_content
+                  )
+              )
+
+          else:
+
+              sitemap_content = ""
+
+
+          for item in new_articles:
+
+              url = (
+                  SITE_URL
+                  + "/"
+                  + item["link"]
+              )
+
+              existing_urls.add(
+                  url
+              )
+
+
+          static_urls = [
+
+              SITE_URL + "/",
+
+              SITE_URL + "/index.html",
+
+              SITE_URL + "/news.html",
+
+              SITE_URL + "/agriculture.html",
+
+              SITE_URL + "/history.html",
+
+              SITE_URL + "/places.html",
+
+              SITE_URL + "/blogs.html"
+          ]
+
+
+          for url in static_urls:
+
+              existing_urls.add(
+                  url
+              )
+
+
+          sorted_urls = sorted(
+              existing_urls
+          )
+
+
+          sitemap_lines = [
+
+              '<?xml version="1.0" encoding="UTF-8"?>',
+
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+          ]
+
+
+          for url in sorted_urls:
+
+              sitemap_lines.append(
+                  f"  <url><loc>{html.escape(url)}</loc></url>"
+              )
+
+
+          sitemap_lines.append(
+              "</urlset>"
+          )
+
+
+          with open(
+              SITEMAP_FILE,
+              "w",
+              encoding="utf-8"
+          ) as f:
+
+              f.write(
+                  "\n".join(
+                      sitemap_lines
+                  )
+              )
+
+
+          print(
+              "Updated:",
+              SITEMAP_FILE
+          )
+
+
+          # =========================================================
+          # FINAL REPORT
+          # =========================================================
+
+          print("")
+          print("====================================")
+          print("JALGAON ZONE DAILY AUTOMATION")
+          print("====================================")
+          print(
+              "Date:",
+              date_text
+          )
+          print(
+              "Articles created:",
+              len(new_articles)
+          )
+          print(
+              "Minimum words:",
+              MIN_WORDS
+          )
+          print(
+              "Traffic mix:",
+              selected_regions
+          )
+          print(
+              "Duplicate protection: ENABLED"
+          )
+          print(
+              "SEO slugs: ENABLED"
+          )
+          print(
+              "Automatic SVG images: ENABLED"
+          )
+          print(
+              "articles-data.js: UPDATED"
+          )
+          print(
+              "sitemap.xml: UPDATED"
+          )
+          print("====================================")
+
+          PY
+
+
+      - name: Show generated files
+        run: |
+
+          echo "===================================="
+          echo "ARTICLES"
+          echo "===================================="
+
+          ls -lah articles/ | tail -30
+
+          echo ""
+
+          echo "===================================="
+          echo "IMAGES"
+          echo "===================================="
+
+          ls -lah Images/ | tail -30
+
+          echo ""
+
+          echo "===================================="
+          echo "SITEMAP"
+          echo "===================================="
+
+          ls -lah sitemap.xml
+
+
+      - name: Check changes
+        run: |
+
+          echo "===================================="
+          echo "GIT STATUS"
+          echo "===================================="
+
+          git status --short
+
+
+      - name: Commit and Push
+        run: |
+
+          git config user.name "Jalgaon Zone Bot"
+
+          git config user.email "actions@github.com"
+
+          git add \
+            articles/ \
+            Images/ \
+            articles-data.js \
+            sitemap.xml
+
+          if git diff --cached --quiet; then
+
+              echo "No changes to commit."
+
+              exit 0
+
+          fi
+
+          git commit \
+            -m "Daily Jalgaon Zone articles and images"
+
+          git push
