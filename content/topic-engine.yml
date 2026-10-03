@@ -1,0 +1,98 @@
+global:
+  enabled: true
+
+  regions:
+    - Global
+    - India
+    - Maharashtra
+    - Jalgaon
+
+  languages:
+    - English
+    - Marathi
+
+  goals:
+    - search_traffic
+    - evergreen_traffic
+    - useful_content
+
+categories:
+
+  Global:
+    - Technology
+    - AI
+    - Internet
+    - How To
+    - Education
+    - Productivity
+
+  India:
+    - Government Services
+    - Education
+    - Jobs
+    - Technology
+    - Personal Finance
+    - How To
+
+  Maharashtra:
+    - Maharashtra News
+    - Travel
+    - Education
+    - Jobs
+    - Government Services
+    - Agriculture
+
+  Jalgaon:
+    - Local News
+    - Agriculture
+    - History
+    - Tourism
+    - Education
+    - Jobs
+    - Local Information
+
+article_rules:
+
+  minimum_words: 1000
+
+  avoid_duplicate_topics: true
+
+  require_search_intent: true
+
+  require_unique_title: true
+
+  require_internal_links: true
+
+  require_meta_description: true
+
+  require_slug: true
+
+  require_image: true
+
+  avoid_fake_facts: true
+
+  avoid_unverified_current_claims: true
+
+traffic_strategy:
+
+  priority:
+    - search_intent
+    - useful_information
+    - evergreen_potential
+    - topical_relevance
+
+  location_mix:
+    global: 20
+    india: 30
+    maharashtra: 25
+    jalgaon: 25
+
+publishing:
+
+  articles_per_day: 5
+
+  publish_automatically: true
+
+  update_articles_data: true
+
+  update_sitemap: true
