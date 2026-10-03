@@ -557,5 +557,55 @@ const articles = [
   "description": "जळगाव जिल्ह्याची सर्वसाधारण माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-information-f6e8a87b-2026-10-02.md",
   "link": "article.html?id=jalgaon-information-f6e8a87b-2026-10-02"
+},
+  {
+  "id": "jalgaon-weather-farming-cf218c75-2026-10-03",
+  "title": "जळगाव जिल्ह्यातील हवामानाचा शेतीवर परिणाम",
+  "category": "Agriculture",
+  "date": "03 October 2026",
+  "image": "Images/jalgaon-weather-farming-cf218c75-2026-10-03.svg",
+  "description": "जळगाव जिल्ह्यातील हवामानाचा शेतीवर परिणाम — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-weather-farming-cf218c75-2026-10-03.md",
+  "link": "article.html?id=jalgaon-weather-farming-cf218c75-2026-10-03"
+},
+  {
+  "id": "jalgaon-career-82a1aae3-2026-10-03",
+  "title": "जळगावातील विद्यार्थ्यांसाठी करिअर मार्गदर्शन",
+  "category": "Education & Jobs",
+  "date": "03 October 2026",
+  "image": "Images/jalgaon-career-82a1aae3-2026-10-03.svg",
+  "description": "जळगावातील विद्यार्थ्यांसाठी करिअर मार्गदर्शन — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-career-82a1aae3-2026-10-03.md",
+  "link": "article.html?id=jalgaon-career-82a1aae3-2026-10-03"
+},
+  {
+  "id": "government-953534f4-2026-10-03",
+  "title": "सरकारी योजनेसाठी पात्रता कशी तपासावी",
+  "category": "Government Schemes",
+  "date": "03 October 2026",
+  "image": "Images/government-953534f4-2026-10-03.svg",
+  "description": "सरकारी योजनेसाठी पात्रता कशी तपासावी — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/government-953534f4-2026-10-03.md",
+  "link": "article.html?id=government-953534f4-2026-10-03"
+},
+  {
+  "id": "jalgaon-tourism-08ccac60-2026-10-03",
+  "title": "जळगाव जिल्ह्यातील पर्यटनाचा स्थानिक अर्थव्यवस्थेवर परिणाम",
+  "category": "History & Tourism",
+  "date": "03 October 2026",
+  "image": "Images/jalgaon-tourism-08ccac60-2026-10-03.svg",
+  "description": "जळगाव जिल्ह्यातील पर्यटनाचा स्थानिक अर्थव्यवस्थेवर परिणाम — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-tourism-08ccac60-2026-10-03.md",
+  "link": "article.html?id=jalgaon-tourism-08ccac60-2026-10-03"
+},
+  {
+  "id": "jalgaon-information-733331f8-2026-10-03",
+  "title": "जळगाव जिल्ह्यातील तालुक्यांची माहिती",
+  "category": "Jalgaon Information",
+  "date": "03 October 2026",
+  "image": "Images/jalgaon-information-733331f8-2026-10-03.svg",
+  "description": "जळगाव जिल्ह्यातील तालुक्यांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-information-733331f8-2026-10-03.md",
+  "link": "article.html?id=jalgaon-information-733331f8-2026-10-03"
 }
 ];
