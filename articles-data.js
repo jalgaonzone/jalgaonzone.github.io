@@ -607,5 +607,55 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील तालुक्यांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-information-733331f8-2026-10-03.md",
   "link": "article.html?id=jalgaon-information-733331f8-2026-10-03"
+},
+  {
+  "id": "jalgaon-agriculture-1eb10a37-2026-10-04",
+  "title": "जळगावातील शेतकऱ्यांसाठी कृषी यंत्रांचा वापर",
+  "category": "Agriculture",
+  "date": "04 October 2026",
+  "image": "Images/jalgaon-agriculture-1eb10a37-2026-10-04.svg",
+  "description": "जळगावातील शेतकऱ्यांसाठी कृषी यंत्रांचा वापर — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-agriculture-1eb10a37-2026-10-04.md",
+  "link": "article.html?id=jalgaon-agriculture-1eb10a37-2026-10-04"
+},
+  {
+  "id": "jalgaon-skills-514415de-2026-10-04",
+  "title": "जळगावातील विद्यार्थ्यांसाठी संगणक कौशल्यांचे महत्त्व",
+  "category": "Education & Jobs",
+  "date": "04 October 2026",
+  "image": "Images/jalgaon-skills-514415de-2026-10-04.svg",
+  "description": "जळगावातील विद्यार्थ्यांसाठी संगणक कौशल्यांचे महत्त्व — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-skills-514415de-2026-10-04.md",
+  "link": "article.html?id=jalgaon-skills-514415de-2026-10-04"
+},
+  {
+  "id": "government-schemes-9a14188d-2026-10-04",
+  "title": "सरकारी योजनांसाठी आवश्यक कागदपत्रे",
+  "category": "Government Schemes",
+  "date": "04 October 2026",
+  "image": "Images/government-schemes-9a14188d-2026-10-04.svg",
+  "description": "सरकारी योजनांसाठी आवश्यक कागदपत्रे — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/government-schemes-9a14188d-2026-10-04.md",
+  "link": "article.html?id=government-schemes-9a14188d-2026-10-04"
+},
+  {
+  "id": "jalgaon-875f1384-2026-10-04",
+  "title": "जळगावच्या खानदेशी सांस्कृतिक वारशाची ओळख",
+  "category": "History & Tourism",
+  "date": "04 October 2026",
+  "image": "Images/jalgaon-875f1384-2026-10-04.svg",
+  "description": "जळगावच्या खानदेशी सांस्कृतिक वारशाची ओळख — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-875f1384-2026-10-04.md",
+  "link": "article.html?id=jalgaon-875f1384-2026-10-04"
+},
+  {
+  "id": "jalgaon-culture-0d705a2d-2026-10-04",
+  "title": "जळगाव जिल्ह्याची संस्कृती आणि स्थानिक जीवनशैली",
+  "category": "Jalgaon Information",
+  "date": "04 October 2026",
+  "image": "Images/jalgaon-culture-0d705a2d-2026-10-04.svg",
+  "description": "जळगाव जिल्ह्याची संस्कृती आणि स्थानिक जीवनशैली — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-culture-0d705a2d-2026-10-04.md",
+  "link": "article.html?id=jalgaon-culture-0d705a2d-2026-10-04"
 }
 ];
