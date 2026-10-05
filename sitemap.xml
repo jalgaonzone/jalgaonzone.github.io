@@ -1,35 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <!-- Homepage -->
     <url>
         <loc>https://jalgaonzone.github.io/</loc>
     </url>
-
-    <!-- Main Pages -->
     <url>
         <loc>https://jalgaonzone.github.io/news.html</loc>
     </url>
-
     <url>
         <loc>https://jalgaonzone.github.io/agriculture.html</loc>
     </url>
-
     <url>
         <loc>https://jalgaonzone.github.io/history.html</loc>
     </url>
-
     <url>
         <loc>https://jalgaonzone.github.io/places.html</loc>
     </url>
-
     <url>
         <loc>https://jalgaonzone.github.io/blogs.html</loc>
     </url>
-
     <url>
         <loc>https://jalgaonzone.github.io/about.html</loc>
     </url>
-
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=government-953534f4-2026-10-03</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=government-schemes-9a14188d-2026-10-04</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-469d6c9a-2026-10-05</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-875f1384-2026-10-04</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-agriculture-1eb10a37-2026-10-04</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-agriculture-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-agriculture-d1e0b640-2026-10-05</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-agriculture-market-2026-09-27</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-agriculture-market-26b0ad2b-2026-10-02</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-apprenticeship-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-article-922d762c-2026-10-05</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-banana-farming-2026-09-28</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-career-82a1aae3-2026-10-03</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-career-planning-2026-09-27</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-cities-villages-2026-09-27</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-city-news</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-computer-courses-2026-09-26</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-cotton-farming-2026-09-30</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-culture-0d705a2d-2026-10-04</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-culture-2026-10-01</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-digital-government-services-2026-09-27</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-district-information</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-district-information-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-drip-irrigation-2026-09-29</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-economy-2026-09-30</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-education-2026-09-26</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-education-job-news</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-education-jobs-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-faizpur-history-2026-09-26</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-farmer-schemes-2026-09-28</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-geography-2026-09-28</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-government-exams-2026-09-30</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-government-scheme-information-25539edb-2026-10-05</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-government-schemes</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-government-schemes-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-health-schemes-2026-10-01</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-higher-education-2026-09-28</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-history</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-history-khandesh-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-history-tourism-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-housing-schemes-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-information-733331f8-2026-10-03</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-information-f6e8a87b-2026-10-02</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-manudevi-2026-10-01</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-modern-farming-2026-09-26</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-news-today</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-padmalaya-2026-09-30</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-parola-fort-2026-09-29</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-pension-schemes-2026-09-26</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-private-jobs-2026-10-01</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-skill-development-2026-09-29</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-skills-514415de-2026-10-04</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-soil-management-2026-10-01</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-student-scholarships-2026-09-29</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-talukas-2026-09-29</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-tourism-08ccac60-2026-10-03</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-tourism-36624630-2026-10-05</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-tourism-662c3d7c-2026-10-02</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-tourism-guide-2026-09-27</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-transport-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-unapdev-2026-09-28</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-water-management-2026-09-25</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-weather-farming-cf218c75-2026-10-03</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-weather-news</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=jalgaon-women-schemes-2026-09-30</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=oxygen-park</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=schemes-information-44e7bb11-2026-10-02</loc>
+    </url>
+    <url>
+        <loc>https://jalgaonzone.github.io/article.html?id=study-fa6f0777-2026-10-02</loc>
+    </url>
 </urlset>

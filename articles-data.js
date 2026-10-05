@@ -657,5 +657,55 @@ const articles = [
   "description": "जळगाव जिल्ह्याची संस्कृती आणि स्थानिक जीवनशैली — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-culture-0d705a2d-2026-10-04.md",
   "link": "article.html?id=jalgaon-culture-0d705a2d-2026-10-04"
+},
+  {
+  "id": "jalgaon-agriculture-d1e0b640-2026-10-05",
+  "title": "जळगाव जिल्ह्यातील कृषी बाजारातील बदल",
+  "category": "Agriculture",
+  "date": "05 October 2026",
+  "image": "Images/jalgaon-agriculture-d1e0b640-2026-10-05.svg",
+  "description": "जळगाव जिल्ह्यातील कृषी बाजारातील बदल — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-agriculture-d1e0b640-2026-10-05.md",
+  "link": "article.html?id=jalgaon-agriculture-d1e0b640-2026-10-05"
+},
+  {
+  "id": "jalgaon-article-922d762c-2026-10-05",
+  "title": "नोकरी शोधताना विद्यार्थ्यांनी कोणत्या चुका टाळाव्यात",
+  "category": "Education & Jobs",
+  "date": "05 October 2026",
+  "image": "Images/jalgaon-article-922d762c-2026-10-05.svg",
+  "description": "नोकरी शोधताना विद्यार्थ्यांनी कोणत्या चुका टाळाव्यात — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-article-922d762c-2026-10-05.md",
+  "link": "article.html?id=jalgaon-article-922d762c-2026-10-05"
+},
+  {
+  "id": "jalgaon-government-scheme-information-25539edb-2026-10-05",
+  "title": "जळगाव जिल्ह्यातील सरकारी योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "05 October 2026",
+  "image": "Images/jalgaon-government-scheme-information-25539edb-2026-10-05.svg",
+  "description": "जळगाव जिल्ह्यातील सरकारी योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-government-scheme-information-25539edb-2026-10-05.md",
+  "link": "article.html?id=jalgaon-government-scheme-information-25539edb-2026-10-05"
+},
+  {
+  "id": "jalgaon-tourism-36624630-2026-10-05",
+  "title": "जळगाव जिल्ह्यातील पर्यटन स्थळे",
+  "category": "History & Tourism",
+  "date": "05 October 2026",
+  "image": "Images/jalgaon-tourism-36624630-2026-10-05.svg",
+  "description": "जळगाव जिल्ह्यातील पर्यटन स्थळे — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-tourism-36624630-2026-10-05.md",
+  "link": "article.html?id=jalgaon-tourism-36624630-2026-10-05"
+},
+  {
+  "id": "jalgaon-469d6c9a-2026-10-05",
+  "title": "जळगाव जिल्ह्यातील प्रमुख तालुके",
+  "category": "Jalgaon Information",
+  "date": "05 October 2026",
+  "image": "Images/jalgaon-469d6c9a-2026-10-05.svg",
+  "description": "जळगाव जिल्ह्यातील प्रमुख तालुके — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-469d6c9a-2026-10-05.md",
+  "link": "article.html?id=jalgaon-469d6c9a-2026-10-05"
 }
 ];
