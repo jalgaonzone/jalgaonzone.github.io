@@ -150,9 +150,6 @@ jobs:
 
           # =====================================================
           # TOPICS
-          #
-          # IMPORTANT:
-          # Keep your existing full topic list here.
           # =====================================================
 
           topics = {
@@ -1138,29 +1135,40 @@ jobs:
 
                       content = f.read()
 
-                  start = content.find("[")
 
-                  end = content.rfind("]")
-
-                  if (
-                      start == -1
-                      or end == -1
-                      or end <= start
-                  ):
-
-                      return []
-
-                  array_text = content[
-                      start:end + 1
-                  ]
-
-                  data = json.loads(
-                      array_text
+                  ids = re.findall(
+                      r'\bid\s*:\s*["\']([^"\']+)["\']',
+                      content
                   )
 
-                  if isinstance(data, list):
+                  titles = re.findall(
+                      r'\btitle\s*:\s*["\']([^"\']*)["\']',
+                      content
+                  )
 
-                      return data
+
+                  articles = []
+
+
+                  for index, article_id in enumerate(ids):
+
+                      title = ""
+
+                      if index < len(titles):
+
+                          title = titles[index]
+
+
+                      articles.append(
+                          {
+                              "id": article_id,
+                              "title": title
+                          }
+                      )
+
+
+                  return articles
+
 
               except Exception as error:
 
@@ -1169,7 +1177,7 @@ jobs:
                       error
                   )
 
-              return []
+                  return []
 
 
           def internal_links():
@@ -1767,50 +1775,32 @@ jobs:
               ]
 
 
-              try:
-
-                  existing_data = json.loads(
-                      array_text
-                  )
-
-                  if not isinstance(
-                      existing_data,
-                      list
-                  ):
-
-                      raise Exception(
-                          "Articles data is not a list"
-                      )
-
-              except Exception as error:
-
-                  raise Exception(
-                      "Invalid articles-data.js array: "
-                      + str(error)
-                  )
-
+              # =================================================
+              # FIX:
+              # articles-data.js is JavaScript, not strict JSON
+              # =================================================
 
               existing_ids = set()
 
-              for item in existing_data:
+              existing_ids.update(
+                  re.findall(
+                      r'\bid\s*:\s*["\']([^"\']+)["\']',
+                      array_text
+                  )
+              )
 
-                  if isinstance(
-                      item,
-                      dict
-                  ):
+              existing_ids.update(
+                  re.findall(
+                      r'"id"\s*:\s*"([^"]+)"',
+                      array_text
+                  )
+              )
 
-                      item_id = str(
-                          item.get(
-                              "id",
-                              ""
-                          )
-                      ).strip()
 
-                      if item_id:
-
-                          existing_ids.add(
-                              item_id
-                          )
+              print(
+                  "Existing article metadata IDs:",
+                  len(existing_ids)
+              )
 
 
               new_entries = []
@@ -1826,6 +1816,7 @@ jobs:
                       )
 
                       continue
+
 
                   json_item = json.dumps(
                       item,
@@ -1952,7 +1943,10 @@ jobs:
           echo "===================================="
           echo "IMAGES"
           echo "===================================="
-          find Images -maxdepth 1 -type f -name "*.svg" | sort | tail -30      # =====================================================
+          find Images -maxdepth 1 -type f -name "*.svg" | sort | tail -30
+
+
+      # =====================================================
       # AUTO UPDATE SITEMAP
       # =====================================================
 
@@ -1978,8 +1972,6 @@ jobs:
           main_pages = [
 
               "/",
-
-              "/index.html",
 
               "/news.html",
 
@@ -2384,9 +2376,24 @@ jobs:
               )
 
 
+          # =====================================================
+          # SUPPORT JAVASCRIPT + JSON STYLE IDS
+          # =====================================================
+
           ids = re.findall(
+              r'\bid\s*:\s*["\']([^"\']+)["\']',
+              articles_js
+          )
+
+          ids_json = re.findall(
               r'"id"\s*:\s*"([^"]+)"',
               articles_js
+          )
+
+          ids = list(
+              dict.fromkeys(
+                  ids + ids_json
+              )
           )
 
 
