@@ -707,5 +707,55 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील प्रमुख तालुके — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-469d6c9a-2026-10-05.md",
   "link": "article.html?id=jalgaon-469d6c9a-2026-10-05"
+},
+  {
+  "id": "agriculture-aee45116-2026-10-06",
+  "title": "शेतकऱ्यांसाठी डिजिटल कृषी सेवा",
+  "category": "Agriculture",
+  "date": "06 October 2026",
+  "image": "Images/agriculture-aee45116-2026-10-06.svg",
+  "description": "शेतकऱ्यांसाठी डिजिटल कृषी सेवा — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/agriculture-aee45116-2026-10-06.md",
+  "link": "article.html?id=agriculture-aee45116-2026-10-06"
+},
+  {
+  "id": "jalgaon-education-87a44491-2026-10-06",
+  "title": "जळगावमधील विद्यार्थ्यांसाठी शिक्षणाच्या संधी",
+  "category": "Education & Jobs",
+  "date": "06 October 2026",
+  "image": "Images/jalgaon-education-87a44491-2026-10-06.svg",
+  "description": "जळगावमधील विद्यार्थ्यांसाठी शिक्षणाच्या संधी — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-education-87a44491-2026-10-06.md",
+  "link": "article.html?id=jalgaon-education-87a44491-2026-10-06"
+},
+  {
+  "id": "government-scheme-information-56fd127d-2026-10-06",
+  "title": "महिलांसाठी सरकारी योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "06 October 2026",
+  "image": "Images/government-scheme-information-56fd127d-2026-10-06.svg",
+  "description": "महिलांसाठी सरकारी योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/government-scheme-information-56fd127d-2026-10-06.md",
+  "link": "article.html?id=government-scheme-information-56fd127d-2026-10-06"
+},
+  {
+  "id": "jalgaon-0edfef72-2026-10-06",
+  "title": "जळगावमधील ऐतिहासिक स्थळे",
+  "category": "History & Tourism",
+  "date": "06 October 2026",
+  "image": "Images/jalgaon-0edfef72-2026-10-06.svg",
+  "description": "जळगावमधील ऐतिहासिक स्थळे — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-0edfef72-2026-10-06.md",
+  "link": "article.html?id=jalgaon-0edfef72-2026-10-06"
+},
+  {
+  "id": "jalgaon-20c8aa66-2026-10-06",
+  "title": "जळगाव जिल्ह्यातील प्रमुख नद्या",
+  "category": "Jalgaon Information",
+  "date": "06 October 2026",
+  "image": "Images/jalgaon-20c8aa66-2026-10-06.svg",
+  "description": "जळगाव जिल्ह्यातील प्रमुख नद्या — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-20c8aa66-2026-10-06.md",
+  "link": "article.html?id=jalgaon-20c8aa66-2026-10-06"
 }
 ];
