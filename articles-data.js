@@ -757,5 +757,55 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील प्रमुख नद्या — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-20c8aa66-2026-10-06.md",
   "link": "article.html?id=jalgaon-20c8aa66-2026-10-06"
+},
+  {
+  "id": "jalgaon-banana-information-eed85b5d-2026-10-07",
+  "title": "जळगाव जिल्ह्यातील केळी उत्पादनाची संपूर्ण माहिती",
+  "category": "Agriculture",
+  "date": "07 October 2026",
+  "image": "Images/jalgaon-banana-information-eed85b5d-2026-10-07.svg",
+  "description": "जळगाव जिल्ह्यातील केळी उत्पादनाची संपूर्ण माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-banana-information-eed85b5d-2026-10-07.md",
+  "link": "article.html?id=jalgaon-banana-information-eed85b5d-2026-10-07"
+},
+  {
+  "id": "jalgaon-data-science-8578b483-2026-10-07",
+  "title": "जळगावमध्ये Data Science करिअर",
+  "category": "Education & Jobs",
+  "date": "07 October 2026",
+  "image": "Images/jalgaon-data-science-8578b483-2026-10-07.svg",
+  "description": "जळगावमध्ये Data Science करिअर — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-data-science-8578b483-2026-10-07.md",
+  "link": "article.html?id=jalgaon-data-science-8578b483-2026-10-07"
+},
+  {
+  "id": "scheme-c8f85798-2026-10-07",
+  "title": "विद्यार्थ्यांसाठी शिष्यवृत्ती योजना",
+  "category": "Government Schemes",
+  "date": "07 October 2026",
+  "image": "Images/scheme-c8f85798-2026-10-07.svg",
+  "description": "विद्यार्थ्यांसाठी शिष्यवृत्ती योजना — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/scheme-c8f85798-2026-10-07.md",
+  "link": "article.html?id=scheme-c8f85798-2026-10-07"
+},
+  {
+  "id": "jalgaon-d55defe6-2026-10-07",
+  "title": "जळगाव जिल्ह्यातील किल्ले",
+  "category": "History & Tourism",
+  "date": "07 October 2026",
+  "image": "Images/jalgaon-d55defe6-2026-10-07.svg",
+  "description": "जळगाव जिल्ह्यातील किल्ले — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-d55defe6-2026-10-07.md",
+  "link": "article.html?id=jalgaon-d55defe6-2026-10-07"
+},
+  {
+  "id": "jalgaon-96252227-2026-10-07",
+  "title": "जळगावमधील वाहतूक व्यवस्था",
+  "category": "Jalgaon Information",
+  "date": "07 October 2026",
+  "image": "Images/jalgaon-96252227-2026-10-07.svg",
+  "description": "जळगावमधील वाहतूक व्यवस्था — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-96252227-2026-10-07.md",
+  "link": "article.html?id=jalgaon-96252227-2026-10-07"
 }
 ];
