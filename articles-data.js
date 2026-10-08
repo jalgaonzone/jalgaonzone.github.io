@@ -807,5 +807,55 @@ const articles = [
   "description": "जळगावमधील वाहतूक व्यवस्था — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-96252227-2026-10-07.md",
   "link": "article.html?id=jalgaon-96252227-2026-10-07"
+},
+  {
+  "id": "jalgaon-da10fad6-2026-10-08",
+  "title": "जळगावमध्ये ठिबक सिंचनाचे फायदे",
+  "category": "Agriculture",
+  "date": "08 October 2026",
+  "image": "Images/jalgaon-da10fad6-2026-10-08.svg",
+  "description": "जळगावमध्ये ठिबक सिंचनाचे फायदे — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-da10fad6-2026-10-08.md",
+  "link": "article.html?id=jalgaon-da10fad6-2026-10-08"
+},
+  {
+  "id": "jalgaon-government-f3f39d52-2026-10-08",
+  "title": "जळगावमधील सरकारी नोकरीची तयारी",
+  "category": "Education & Jobs",
+  "date": "08 October 2026",
+  "image": "Images/jalgaon-government-f3f39d52-2026-10-08.svg",
+  "description": "जळगावमधील सरकारी नोकरीची तयारी — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-government-f3f39d52-2026-10-08.md",
+  "link": "article.html?id=jalgaon-government-f3f39d52-2026-10-08"
+},
+  {
+  "id": "jalgaon-scheme-information-d6c20f91-2026-10-08",
+  "title": "जळगावमध्ये घरकुल योजनांची माहिती",
+  "category": "Government Schemes",
+  "date": "08 October 2026",
+  "image": "Images/jalgaon-scheme-information-d6c20f91-2026-10-08.svg",
+  "description": "जळगावमध्ये घरकुल योजनांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-scheme-information-d6c20f91-2026-10-08.md",
+  "link": "article.html?id=jalgaon-scheme-information-d6c20f91-2026-10-08"
+},
+  {
+  "id": "jalgaon-tourism-7c5cc07d-2026-10-08",
+  "title": "जळगावमधील धार्मिक पर्यटन",
+  "category": "History & Tourism",
+  "date": "08 October 2026",
+  "image": "Images/jalgaon-tourism-7c5cc07d-2026-10-08.svg",
+  "description": "जळगावमधील धार्मिक पर्यटन — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-tourism-7c5cc07d-2026-10-08.md",
+  "link": "article.html?id=jalgaon-tourism-7c5cc07d-2026-10-08"
+},
+  {
+  "id": "jalgaon-information-a4f128f6-2026-10-08",
+  "title": "जळगावमधील बाजारपेठांची माहिती",
+  "category": "Jalgaon Information",
+  "date": "08 October 2026",
+  "image": "Images/jalgaon-information-a4f128f6-2026-10-08.svg",
+  "description": "जळगावमधील बाजारपेठांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-information-a4f128f6-2026-10-08.md",
+  "link": "article.html?id=jalgaon-information-a4f128f6-2026-10-08"
 }
 ];
