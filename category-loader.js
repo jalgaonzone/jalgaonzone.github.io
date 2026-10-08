@@ -1,338 +1,428 @@
-/* =========================================
+/* =========================================================
    JALGAON ZONE - CATEGORY ARTICLE LOADER
-========================================= */
+   Automatic category filtering + latest-first sorting
+   ========================================================= */
 
-function getPageCategory() {
+(function () {
+    "use strict";
 
-    const page = window.location.pathname
-        .split("/")
-        .pop()
-        .toLowerCase();
+    const CATEGORY_CONFIG = {
+        news: {
+            categories: [
+                "jalgaon news",
+                "jalgaon city",
+                "weather"
+            ]
+        },
 
-    if (page === "news.html") {
-        return "news";
+        agriculture: {
+            categories: [
+                "agriculture"
+            ]
+        },
+
+        "education-jobs": {
+            categories: [
+                "education & jobs",
+                "education",
+                "jobs"
+            ]
+        },
+
+        "government-schemes": {
+            categories: [
+                "government schemes"
+            ]
+        },
+
+        history: {
+            categories: [
+                "history",
+                "history & tourism"
+            ]
+        },
+
+        places: {
+            categories: [
+                "history & tourism",
+                "tourism",
+                "places"
+            ]
+        },
+
+        "jalgaon-information": {
+            categories: [
+                "jalgaon",
+                "jalgaon information"
+            ]
+        },
+
+        blogs: {
+            categories: [
+                "blog",
+                "blogs"
+            ]
+        }
+    };
+
+    /* ---------------------------------------------------------
+       Detect current page
+       --------------------------------------------------------- */
+
+    function getPageKey() {
+
+        const file =
+            (window.location.pathname.split("/").pop() ||
+                "index.html").toLowerCase();
+
+        if (file === "news.html")
+            return "news";
+
+        if (file === "agriculture.html")
+            return "agriculture";
+
+        if (
+            file === "education.html" ||
+            file === "education-jobs.html"
+        )
+            return "education-jobs";
+
+        if (file === "government-schemes.html")
+            return "government-schemes";
+
+        if (file === "history.html")
+            return "history";
+
+        if (file === "places.html")
+            return "places";
+
+        if (file === "jalgaon-information.html")
+            return "jalgaon-information";
+
+        if (file === "blogs.html")
+            return "blogs";
+
+        return "all";
     }
 
-    if (page === "agriculture.html") {
-        return "agriculture";
+    /* ---------------------------------------------------------
+       Date parser
+       --------------------------------------------------------- */
+
+    function parseDate(value) {
+
+        if (!value)
+            return 0;
+
+        const timestamp = Date.parse(value);
+
+        return Number.isNaN(timestamp)
+            ? 0
+            : timestamp;
     }
 
-    if (page === "history.html") {
-        return "history";
+    /* ---------------------------------------------------------
+       Category matching
+       --------------------------------------------------------- */
+
+    function matchesCategory(article, pageKey) {
+
+        if (pageKey === "all")
+            return true;
+
+        const config = CATEGORY_CONFIG[pageKey];
+
+        if (!config)
+            return false;
+
+        const category =
+            String(article.category || "")
+                .trim()
+                .toLowerCase();
+
+        return config.categories.includes(category);
     }
 
-    if (page === "places.html") {
-        return "places";
+    /* ---------------------------------------------------------
+       Find correct grid
+       --------------------------------------------------------- */
+
+    function getTargetGrid(pageKey) {
+
+        const grids = {
+
+            news:
+                "newsGrid",
+
+            agriculture:
+                "agricultureGrid",
+
+            "education-jobs":
+                "educationJobsGrid",
+
+            "government-schemes":
+                "governmentSchemesGrid",
+
+            history:
+                "historyGrid",
+
+            places:
+                "placesGrid",
+
+            "jalgaon-information":
+                "jalgaonInformationGrid",
+
+            blogs:
+                "blogsGrid"
+        };
+
+        if (grids[pageKey]) {
+
+            const element =
+                document.getElementById(grids[pageKey]);
+
+            if (element)
+                return element;
+        }
+
+        return document.querySelector(".news-grid");
     }
 
-    if (page === "blogs.html") {
-        return "blogs";
+    /* ---------------------------------------------------------
+       Escape HTML
+       --------------------------------------------------------- */
+
+    function escapeHTML(value) {
+
+        return String(value || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
     }
 
-    return "all";
-}
+    /* ---------------------------------------------------------
+       Category icons
+       --------------------------------------------------------- */
 
+    function getCategoryIcon(category) {
 
-/* =========================================
-   CATEGORY MAPPING
-========================================= */
+        const value =
+            String(category || "").toLowerCase();
 
-function matchesCategory(article, pageCategory) {
+        if (value.includes("agriculture"))
+            return "🌱";
 
-    const category =
-        (article.category || "").toLowerCase().trim();
+        if (
+            value.includes("education") ||
+            value.includes("job")
+        )
+            return "🎓";
 
+        if (value.includes("government"))
+            return "🏛️";
 
-    if (pageCategory === "all") {
-        return true;
+        if (value.includes("history"))
+            return "🏛️";
+
+        if (
+            value.includes("tourism") ||
+            value.includes("place")
+        )
+            return "📍";
+
+        if (value.includes("blog"))
+            return "✍️";
+
+        if (value.includes("weather"))
+            return "🌦️";
+
+        return "📰";
     }
 
+    /* ---------------------------------------------------------
+       Render article card
+       --------------------------------------------------------- */
 
-    /* NEWS */
+    function renderArticle(article) {
 
-    if (pageCategory === "news") {
-
-        return (
-            category === "jalgaon news" ||
-            category === "jalgaon city" ||
-            category === "weather" ||
-            category === "government schemes" ||
-            category === "education & jobs"
-        );
-
-    }
-
-
-    /* AGRICULTURE */
-
-    if (pageCategory === "agriculture") {
-
-        return category === "agriculture";
-
-    }
-
-
-    /* HISTORY */
-
-    if (pageCategory === "history") {
-
-        return (
-            category === "history" ||
-            category === "history & tourism"
-        );
-
-    }
-
-
-    /* PLACES */
-
-    if (pageCategory === "places") {
-
-        return (
-            category === "places" ||
-            category === "tourism"
-        );
-
-    }
-
-
-    /* BLOGS */
-
-    if (pageCategory === "blogs") {
-
-        return (
-            category === "blog" ||
-            category === "blogs"
-        );
-
-    }
-
-
-    return false;
-}
-
-
-/* =========================================
-   LOAD ARTICLES
-========================================= */
-
-function loadCategoryArticles() {
-
-    const grid =
-        document.querySelector(".news-grid");
-
-
-    if (!grid) {
-        return;
-    }
-
-
-    grid.innerHTML = "";
-
-
-    if (
-        typeof articles === "undefined" ||
-        !Array.isArray(articles)
-    ) {
-
-        console.error(
-            "articles-data.js not loaded"
-        );
-
-        return;
-
-    }
-
-
-    const pageCategory =
-        getPageCategory();
-
-
-    const filteredArticles =
-        articles.filter(function(article) {
-
-            return matchesCategory(
-                article,
-                pageCategory
+        const image =
+            escapeHTML(
+                article.image || "jalgaon.jpg"
             );
 
-        });
+        const title =
+            escapeHTML(
+                article.title || "Jalgaon Article"
+            );
 
+        const description =
+            escapeHTML(
+                article.description || ""
+            );
 
-    /* =====================================
-       NO ARTICLES
-    ===================================== */
+        const category =
+            escapeHTML(
+                article.category || "Jalgaon"
+            );
 
-    if (filteredArticles.length === 0) {
+        const link =
+            escapeHTML(
+                article.link || "#"
+            );
 
-        grid.innerHTML = `
-            <div style="
-                grid-column:1/-1;
-                text-align:center;
-                padding:50px 20px;
-                background:white;
-                border-radius:20px;
-            ">
-                <h3>सध्या कोणतेही लेख उपलब्ध नाहीत.</h3>
-                <p style="color:#777;margin-top:8px;">
-                    या विभागात नवीन माहिती लवकरच प्रकाशित केली जाईल.
-                </p>
-            </div>
-        `;
+        return `
+            <article class="news-card news-item">
 
-        return;
-
-    }
-
-
-    /* =====================================
-       CREATE CARDS
-    ===================================== */
-
-    filteredArticles.forEach(function(article) {
-
-        const card =
-            document.createElement("article");
-
-
-        card.className =
-            "news-card news-item";
-
-
-        card.dataset.search = (
-
-            (article.title || "") +
-            " " +
-            (article.category || "") +
-            " " +
-            (article.description || "")
-
-        ).toLowerCase();
-
-
-        card.innerHTML = `
-
-            <img
-                src="${article.image || "jalgaon.jpg"}"
-                class="news-image"
-                alt="${article.title || ""}"
-                onerror="this.src='jalgaon.jpg'"
-            >
-
-            <div class="news-content">
-
-                <span class="news-category">
-
-                    ${getCategoryIcon(article.category)}
-
-                    ${article.category || "Jalgaon"}
-
-                </span>
-
-
-                <h3>
-                    ${article.title || ""}
-                </h3>
-
-
-                <p>
-                    ${article.description || ""}
-                </p>
-
-
-                <a
-                    href="${article.link}"
-                    class="read-more"
+                <img
+                    src="${image}"
+                    class="news-image"
+                    alt="${title}"
+                    loading="lazy"
+                    onerror="this.style.display='none'"
                 >
-                    Read More →
-                </a>
 
-            </div>
+                <div class="news-content">
 
+                    <span class="news-category">
+                        ${getCategoryIcon(category)}
+                        ${category}
+                    </span>
+
+                    <h3>${title}</h3>
+
+                    <p>${description}</p>
+
+                    <a
+                        href="${link}"
+                        class="read-more"
+                    >
+                        Read More →
+                    </a>
+
+                </div>
+
+            </article>
         `;
-
-
-        grid.appendChild(card);
-
-    });
-
-}
-
-
-/* =========================================
-   CATEGORY ICON
-========================================= */
-
-function getCategoryIcon(category) {
-
-    const value =
-        (category || "").toLowerCase();
-
-
-    if (
-        value.includes("agriculture")
-    ) {
-        return "🌱";
     }
 
+    /* ---------------------------------------------------------
+       Load category articles
+       --------------------------------------------------------- */
 
-    if (
-        value.includes("history")
-    ) {
-        return "🏛️";
+    function loadCategoryArticles() {
+
+        const pageKey =
+            getPageKey();
+
+        const grid =
+            getTargetGrid(pageKey);
+
+        if (!grid)
+            return;
+
+        if (
+            !Array.isArray(window.articles)
+        ) {
+
+            grid.innerHTML = `
+                <div
+                    style="
+                        grid-column:1/-1;
+                        text-align:center;
+                        padding:40px;
+                    "
+                >
+                    Articles unavailable.
+                </div>
+            `;
+
+            return;
+        }
+
+        const filteredArticles =
+            window.articles
+
+                .filter(function (article) {
+
+                    return (
+                        article &&
+                        matchesCategory(
+                            article,
+                            pageKey
+                        )
+                    );
+
+                })
+
+                .sort(function (a, b) {
+
+                    return (
+                        parseDate(b.date) -
+                        parseDate(a.date)
+                    );
+
+                });
+
+        /* -----------------------------------------------------
+           No articles
+           ----------------------------------------------------- */
+
+        if (!filteredArticles.length) {
+
+            grid.innerHTML = `
+                <div
+                    class="empty-message"
+                    style="
+                        grid-column:1/-1;
+                        text-align:center;
+                        padding:40px;
+                    "
+                >
+
+                    <h3>
+                        सध्या कोणतेही लेख उपलब्ध नाहीत.
+                    </h3>
+
+                    <p>
+                        या विभागात नवीन माहिती
+                        लवकरच प्रकाशित केली जाईल.
+                    </p>
+
+                </div>
+            `;
+
+            return;
+        }
+
+        /* -----------------------------------------------------
+           Render
+           ----------------------------------------------------- */
+
+        grid.innerHTML =
+            filteredArticles
+                .map(renderArticle)
+                .join("");
     }
 
+    /* ---------------------------------------------------------
+       Global functions
+       --------------------------------------------------------- */
 
-    if (
-        value.includes("tourism") ||
-        value.includes("place")
-    ) {
-        return "📍";
-    }
+    window.loadCategoryArticles =
+        loadCategoryArticles;
 
+    window.getCategoryIcon =
+        getCategoryIcon;
 
-    if (
-        value.includes("education") ||
-        value.includes("job")
-    ) {
-        return "🎓";
-    }
+    /* ---------------------------------------------------------
+       Start
+       --------------------------------------------------------- */
 
+    document.addEventListener(
+        "DOMContentLoaded",
+        loadCategoryArticles
+    );
 
-    if (
-        value.includes("government")
-    ) {
-        return "🏛️";
-    }
-
-
-    if (
-        value.includes("blog")
-    ) {
-        return "✍️";
-    }
-
-
-    if (
-        value.includes("weather")
-    ) {
-        return "🌦️";
-    }
-
-
-    return "📰";
-}
-
-
-/* =========================================
-   START
-========================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function() {
-
-        loadCategoryArticles();
-
-    }
-);
+})();
