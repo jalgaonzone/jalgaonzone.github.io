@@ -907,5 +907,58 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील प्रमुख उद्योग — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-b59b6fa6-2026-10-09.md",
   "link": "article.html?id=jalgaon-b59b6fa6-2026-10-09"
+},
+{
+  "id": "jalgaon-agriculture-90fc340c-2026-10-09",
+  "title": "जळगाव जिल्ह्यातील आधुनिक शेती",
+  "category": "Agriculture",
+  "date": "09 October 2026",
+  "image": "Images/jalgaon-agriculture-90fc340c-2026-10-09.svg",
+  "description": "जळगाव जिल्ह्यातील आधुनिक शेती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-agriculture-90fc340c-2026-10-09.md",
+  "link": "article.html?id=jalgaon-agriculture-90fc340c-2026-10-09"
+},
+{
+  "id": "jalgaon-e9749445-2026-10-09",
+  "title": "जळगावमधील विद्यार्थ्यांसाठी कौशल्य विकास",
+  "category": "Education & Jobs",
+  "date": "09 October 2026",
+  "image": "Images/jalgaon-e9749445-2026-10-09.svg",
+  "description": "जळगावमधील विद्यार्थ्यांसाठी कौशल्य विकास — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-e9749445-2026-10-09.md",
+  "link": "article.html?id=jalgaon-e9749445-2026-10-09"
+},
+{
+  "id": "government-d25798f1-2026-10-09",
+  "title": "महिला बचत गटांसाठी सरकारी मदत",
+  "category": "Government Schemes",
+  "date": "09 October 2026",
+  "image": "Images/government-d25798f1-2026-10-09.svg",
+  "description": "महिला बचत गटांसाठी सरकारी मदत — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-d25798f1-2026-10-09.md",
+  "link": "article.html?id=government-d25798f1-2026-10-09"
+},
+{
+  "id": "jalgaon-3cee8f66-2026-10-09",
+  "title": "जळगावचा खानदेशी सांस्कृतिक वारसा",
+  "category": "History & Tourism",
+  "date": "09 October 2026",
+  "image": "Images/jalgaon-3cee8f66-2026-10-09.svg",
+  "description": "जळगावचा खानदेशी सांस्कृतिक वारसा — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-3cee8f66-2026-10-09.md",
+  "link": "article.html?id=jalgaon-3cee8f66-2026-10-09"
+},
+{
+  "id": "jalgaon-weather-a4673d7f-2026-10-09",
+  "title": "जळगावमधील हवामान",
+  "category": "Jalgaon Information",
+  "date": "09 October 2026",
+  "image": "Images/jalgaon-weather-a4673d7f-2026-10-09.svg",
+  "description": "जळगावमधील हवामान — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-weather-a4673d7f-2026-10-09.md",
+  "link": "article.html?id=jalgaon-weather-a4673d7f-2026-10-09"
 }
 ];
+
+
+if (typeof articles !== 'undefined') { window.articles = articles; }
