@@ -857,5 +857,55 @@ const articles = [
   "description": "जळगावमधील बाजारपेठांची माहिती — Jalgaon Zone वरील सविस्तर माहिती.",
   "file": "articles/jalgaon-information-a4f128f6-2026-10-08.md",
   "link": "article.html?id=jalgaon-information-a4f128f6-2026-10-08"
+},
+  {
+  "id": "jalgaon-agriculture-5ccb8c97-2026-10-09",
+  "title": "जळगाव जिल्ह्यातील शेतीसाठी आधुनिक तंत्रज्ञान",
+  "category": "Agriculture",
+  "date": "09 October 2026",
+  "image": "Images/jalgaon-agriculture-5ccb8c97-2026-10-09.svg",
+  "description": "जळगाव जिल्ह्यातील शेतीसाठी आधुनिक तंत्रज्ञान — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-agriculture-5ccb8c97-2026-10-09.md",
+  "link": "article.html?id=jalgaon-agriculture-5ccb8c97-2026-10-09"
+},
+  {
+  "id": "jalgaon-1198b5b9-2026-10-09",
+  "title": "जळगावमधील विद्यार्थ्यांसाठी स्किल डेव्हलपमेंट",
+  "category": "Education & Jobs",
+  "date": "09 October 2026",
+  "image": "Images/jalgaon-1198b5b9-2026-10-09.svg",
+  "description": "जळगावमधील विद्यार्थ्यांसाठी स्किल डेव्हलपमेंट — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-1198b5b9-2026-10-09.md",
+  "link": "article.html?id=jalgaon-1198b5b9-2026-10-09"
+},
+  {
+  "id": "government-scheme-64a1a097-2026-10-09",
+  "title": "ज्येष्ठ नागरिकांसाठी सरकारी योजना",
+  "category": "Government Schemes",
+  "date": "09 October 2026",
+  "image": "Images/government-scheme-64a1a097-2026-10-09.svg",
+  "description": "ज्येष्ठ नागरिकांसाठी सरकारी योजना — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/government-scheme-64a1a097-2026-10-09.md",
+  "link": "article.html?id=government-scheme-64a1a097-2026-10-09"
+},
+  {
+  "id": "jalgaon-tourism-adde5c23-2026-10-09",
+  "title": "जळगावमधील निसर्ग पर्यटन",
+  "category": "History & Tourism",
+  "date": "09 October 2026",
+  "image": "Images/jalgaon-tourism-adde5c23-2026-10-09.svg",
+  "description": "जळगावमधील निसर्ग पर्यटन — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-tourism-adde5c23-2026-10-09.md",
+  "link": "article.html?id=jalgaon-tourism-adde5c23-2026-10-09"
+},
+  {
+  "id": "jalgaon-b59b6fa6-2026-10-09",
+  "title": "जळगाव जिल्ह्यातील प्रमुख उद्योग",
+  "category": "Jalgaon Information",
+  "date": "09 October 2026",
+  "image": "Images/jalgaon-b59b6fa6-2026-10-09.svg",
+  "description": "जळगाव जिल्ह्यातील प्रमुख उद्योग — Jalgaon Zone वरील सविस्तर माहिती.",
+  "file": "articles/jalgaon-b59b6fa6-2026-10-09.md",
+  "link": "article.html?id=jalgaon-b59b6fa6-2026-10-09"
 }
 ];
