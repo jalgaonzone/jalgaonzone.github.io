@@ -957,6 +957,56 @@ const articles = [
   "description": "जळगावमधील हवामान — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-weather-a4673d7f-2026-10-09.md",
   "link": "article.html?id=jalgaon-weather-a4673d7f-2026-10-09"
+},
+{
+  "id": "jalgaon-6b91c7f3-2026-10-10",
+  "title": "जळगाव जिल्ह्यातील खरीप हंगामाची तयारी",
+  "category": "Agriculture",
+  "date": "10 October 2026",
+  "image": "Images/jalgaon-6b91c7f3-2026-10-10.svg",
+  "description": "जळगाव जिल्ह्यातील खरीप हंगामाची तयारी — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-6b91c7f3-2026-10-10.md",
+  "link": "article.html?id=jalgaon-6b91c7f3-2026-10-10"
+},
+{
+  "id": "jalgaon-1a38badf-2026-10-10",
+  "title": "जळगावमध्ये पार्ट टाइम जॉबच्या संधी",
+  "category": "Education & Jobs",
+  "date": "10 October 2026",
+  "image": "Images/jalgaon-1a38badf-2026-10-10.svg",
+  "description": "जळगावमध्ये पार्ट टाइम जॉबच्या संधी — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-1a38badf-2026-10-10.md",
+  "link": "article.html?id=jalgaon-1a38badf-2026-10-10"
+},
+{
+  "id": "government-jobs-scheme-a94cd7bf-2026-10-10",
+  "title": "तरुणांसाठी सरकारी रोजगार योजना",
+  "category": "Government Schemes",
+  "date": "10 October 2026",
+  "image": "Images/government-jobs-scheme-a94cd7bf-2026-10-10.svg",
+  "description": "तरुणांसाठी सरकारी रोजगार योजना — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-jobs-scheme-a94cd7bf-2026-10-10.md",
+  "link": "article.html?id=government-jobs-scheme-a94cd7bf-2026-10-10"
+},
+{
+  "id": "jalgaon-cb65f01e-2026-10-10",
+  "title": "जळगावमधील प्रसिद्ध मंदिरे",
+  "category": "History & Tourism",
+  "date": "10 October 2026",
+  "image": "Images/jalgaon-cb65f01e-2026-10-10.svg",
+  "description": "जळगावमधील प्रसिद्ध मंदिरे — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-cb65f01e-2026-10-10.md",
+  "link": "article.html?id=jalgaon-cb65f01e-2026-10-10"
+},
+{
+  "id": "jalgaon-education-d0547792-2026-10-10",
+  "title": "जळगावमधील शिक्षण व्यवस्था",
+  "category": "Jalgaon Information",
+  "date": "10 October 2026",
+  "image": "Images/jalgaon-education-d0547792-2026-10-10.svg",
+  "description": "जळगावमधील शिक्षण व्यवस्था — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-education-d0547792-2026-10-10.md",
+  "link": "article.html?id=jalgaon-education-d0547792-2026-10-10"
 }
 ];
 
