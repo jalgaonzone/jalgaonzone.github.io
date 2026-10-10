@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="google-site-verification" content="M8SUbEfVOxDh0vv7-_6nKxhNki2UtmO4cIYjf5lH6-o">
+
+    <!-- Existing Google AdSense connection preserved -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3460507273608850" crossorigin="anonymous"></script>
+
+    <title>Jalgaon Zone | जळगाव न्यूज, शेती, इतिहास, पर्यटन आणि माहिती</title>
+    <meta name="description" content="Jalgaon Zone वर जळगाव जिल्ह्यातील बातम्या, शेती, शिक्षण, नोकरी, सरकारी योजना, इतिहास, पर्यटन आणि उपयुक्त माहिती मिळवा.">
+    <meta name="keywords" content="Jalgaon Zone, Jalgaon news, जळगाव बातम्या, Jalgaon agriculture, Jalgaon jobs, Jalgaon tourism, Jalgaon history, government schemes">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jalgaonzone.github.io/">
+    <meta name="theme-color" content="#071e32">
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #071e32;
+            --navy-2: #0b2b43;
+            --orange: #ff681f;
+            --orange-dark: #e9510b;
+            --ink: #10263b;
+            --muted: #647386;
+            --paper: #f5f8fc;
+            --card: #ffffff;
+            --border: #dce5ef;
+            --shadow: 0 12px 32px rgba(7, 30, 50, .09);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+        body {
+            font-family: "Noto Sans Devanagari", Arial, Helvetica, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
+            line-height: 1.65;
+            transition: background .25s, color .25s;
+        }
+        body.dark {
+            --paper: #081725;
+            --card: #10283a;
+            --ink: #edf5fc;
+            --muted: #b2c0ce;
+            --border: #254256;
+            --shadow: 0 12px 32px rgba(0, 0, 0, .22);
+        }
+        img { max-width: 100%; }
+        a { color: inherit; -webkit-tap-highlight-color: transparent; }
+        button, input { font: inherit; }
+        button { cursor: pointer; }
+        .container { width: min(1200px, calc(100% - 36px)); margin-inline: auto; }
+
+        /* Header: all original page destinations retained */
+        .site-header {
+            position: sticky; top: 0; z-index: 1000;
+            color: #fff; background: rgba(5, 25, 42, .97);
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            box-shadow: 0 5px 22px rgba(0,0,0,.14);
+            backdrop-filter: blur(14px);
+        }
+        .nav-wrap {
+            width: min(1400px, calc(100% - 32px)); min-height: 76px;
+            margin: auto; display: flex; align-items: center;
+            justify-content: space-between; gap: 22px;
+        }
+        .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+        .brand-pin { color: var(--orange); font-size: 36px; line-height: 1; }
+        .brand-name { font: 800 25px/1.15 Arial, sans-serif; letter-spacing: -.7px; white-space: nowrap; }
+        .brand-name span { color: var(--orange); }
+        .brand-tagline { display: block; margin-top: 4px; color: #c5d3df; font-size: 10px; letter-spacing: .4px; }
+        .nav-links { display: flex; align-items: stretch; gap: 3px; }
+        .nav-links a {
+            min-height: 76px; padding: 12px 10px; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; gap: 3px;
+            color: #e4edf5; text-decoration: none; font-size: 11px;
+            border-bottom: 3px solid transparent; transition: .2s;
+        }
+        .nav-links a .nav-icon { font-size: 20px; line-height: 1.1; }
+        .nav-links a:hover, .nav-links a:focus-visible, .nav-links a.active {
+            color: var(--orange); border-bottom-color: var(--orange);
+        }
+        .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .icon-btn {
+            width: 38px; height: 38px; display: inline-grid; place-items: center;
+            border: 1px solid rgba(255,255,255,.2); border-radius: 50%;
+            color: #fff; background: rgba(255,255,255,.08);
+        }
+        .menu-toggle { display: none; }
+
+        /* Hero */
+        .hero {
+            position: relative; min-height: 445px; display: grid; place-items: center;
+            overflow: hidden; color: #fff; text-align: center; isolation: isolate;
+            background: #0b2b43 url("Images/Jalgaon%20city.jpeg") center 48% / cover no-repeat;
+        }
+        .hero::before {
+            content: ""; position: absolute; inset: 0; z-index: -1;
+            background: linear-gradient(90deg, rgba(4,22,38,.66), rgba(4,22,38,.42) 52%, rgba(4,22,38,.28)),
+                        linear-gradient(0deg, rgba(4,22,38,.72), transparent 65%);
+        }
+        .hero-inner { width: min(900px, calc(100% - 32px)); padding: 54px 0 66px; }
+        .eyebrow { color: #fff; text-transform: uppercase; letter-spacing: 3px; font: 600 14px/1.5 Arial, sans-serif; }
+        .eyebrow b { color: var(--orange); padding: 0 5px; }
+        .hero h1 { margin: 8px 0 12px; font: 800 clamp(42px, 7vw, 76px)/1.12 Arial, sans-serif; letter-spacing: -2px; }
+        .hero h1 span { color: var(--orange); }
+        .hero-copy { max-width: 760px; margin: 0 auto 24px; font-size: clamp(16px, 2vw, 21px); font-weight: 600; }
+        .trust-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+        .trust-pill {
+            display: flex; align-items: center; gap: 10px; padding: 10px 17px;
+            border: 1px solid rgba(255,255,255,.14); border-radius: 40px;
+            background: rgba(6,28,47,.62); backdrop-filter: blur(10px); text-align: left;
+        }
+        .trust-pill strong { display: block; font: 700 12px Arial, sans-serif; }
+        .trust-pill small { display: block; color: #d4e0e9; font-size: 10px; }
+        .trust-emoji { font-size: 22px; }
+
+        /* Search */
+        .search-shell { position: relative; z-index: 2; margin: -28px auto 0; width: min(850px, calc(100% - 32px)); }
+        .search-box {
+            display: flex; gap: 8px; padding: 7px 8px 7px 18px;
+            background: var(--card); border: 1px solid rgba(10,30,50,.08);
+            border-radius: 50px; box-shadow: 0 12px 32px rgba(0,0,0,.16);
+        }
+        .search-symbol { align-self: center; color: var(--muted); font-size: 21px; }
+        .search-box input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); padding: 10px 4px; font-size: 14px; }
+        .search-box button {
+            border: 0; border-radius: 40px; padding: 11px 23px; flex-shrink: 0;
+            color: #fff; background: linear-gradient(135deg, var(--orange), #f04c08);
+            font-weight: 800; box-shadow: 0 5px 13px rgba(255,104,31,.25);
+        }
+        .search-box button:hover { filter: brightness(.95); transform: translateY(-1px); }
+        .search-status { color: var(--muted); text-align: center; font-size: 13px; margin-top: 10px; }
+
+        /* Sections */
+        .section { padding: 58px 0 12px; }
+        .section-heading { text-align: center; margin-bottom: 30px; }
+        .section-kicker { color: var(--orange); font: 800 13px Arial, sans-serif; letter-spacing: 1.2px; text-transform: uppercase; }
+        .section-kicker::before { content: ""; display: inline-block; width: 24px; height: 2px; margin: 0 10px 4px 0; background: var(--orange); }
+        .section-heading h2 { font-size: clamp(27px, 4vw, 35px); line-height: 1.3; margin-top: 7px; }
+        .section-heading p { margin-top: 7px; color: var(--muted); font-size: 14px; }
+
+        /* Category tiles */
+        .category-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+        .category-card {
+            --accent: #1479d0; --tint: #eaf5ff;
+            min-height: 185px; position: relative; isolation: isolate; overflow: hidden;
+            display: flex; flex-direction: column; align-items: flex-start; text-align: left;
+            padding: 20px; border-radius: 14px; border: 1px solid var(--border);
+            color: var(--ink); background: var(--card); text-decoration: none;
+            box-shadow: var(--shadow); transition: transform .22s, box-shadow .22s, border-color .22s;
+        }
+        .category-card::before {
+            content: ""; position: absolute; z-index: -1; right: -20px; top: 0;
+            width: 68%; height: 105px; opacity: .58;
+            background: radial-gradient(ellipse at top right, var(--tint), transparent 70%);
+        }
+        .category-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 16px 30px rgba(7,30,50,.13); }
+        .category-icon { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: white; font-size: 23px; margin-bottom: 10px; box-shadow: 0 5px 12px color-mix(in srgb, var(--accent) 25%, transparent); }
+        .category-card h3 { font: 800 16px/1.4 Arial, "Noto Sans Devanagari", sans-serif; margin-bottom: 5px; }
+        .category-card p { color: var(--muted); font-size: 12px; line-height: 1.65; padding-right: 18px; }
+        .category-arrow { position: absolute; bottom: 15px; right: 15px; width: 27px; height: 27px; display: grid; place-items: center; border-radius: 50%; color: white; background: var(--accent); font-size: 16px; }
+
+        /* Latest article area */
+        .latest-section {
+            margin-top: 56px; padding: 36px 0 48px; color: white;
+            background: linear-gradient(110deg, rgba(4,28,47,.97), rgba(4,28,47,.86)),
+                        url("Images/Jalgaon%20city.jpeg") center / cover fixed;
+        }
+        .latest-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+        .latest-top .section-kicker { color: #ff8b50; }
+        .latest-top h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.3; margin-top: 7px; }
+        .latest-top p { color: #d0dce6; font-size: 13px; margin-top: 4px; }
+        .all-articles { display: inline-flex; align-items: center; gap: 9px; padding: 11px 18px; border-radius: 40px; color: #fff; background: var(--orange); text-decoration: none; font-size: 12px; font-weight: 800; white-space: nowrap; }
+        .all-articles:hover { background: var(--orange-dark); }
+        .cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+        .card { min-width: 0; overflow: hidden; border-radius: 13px; background: var(--card); color: var(--ink); border: 1px solid rgba(255,255,255,.25); box-shadow: 0 9px 22px rgba(0,0,0,.14); transition: transform .2s, box-shadow .2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(0,0,0,.22); }
+        .card-image-wrap { position: relative; height: 150px; overflow: hidden; background: #d8e2eb; }
+        .card img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .35s; }
+        .card:hover img { transform: scale(1.04); }
+        .card-badge { position: absolute; top: 10px; left: 10px; border-radius: 20px; padding: 3px 10px; color: white; background: var(--orange); font-size: 10px; font-weight: 800; }
+        .card-content { padding: 14px 16px 13px; }
+        .card h3 { font-size: 16px; line-height: 1.55; margin-bottom: 9px; overflow-wrap: anywhere; }
+        .card p { color: var(--muted); font-size: 12px; line-height: 1.65; margin-bottom: 12px; overflow-wrap: anywhere; }
+        .card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 9px; color: var(--muted); font: 11px Arial, sans-serif; }
+        .read-more { display: inline-block; margin-top: 10px; color: var(--orange); text-decoration: none; font-weight: 800; font-size: 12px; }
+        .read-more:hover { text-decoration: underline; }
+        .no-results { grid-column: 1 / -1; text-align: center; padding: 28px; border: 1px solid var(--border); border-radius: 12px; color: var(--muted); background: var(--card); }
+        .about-section { padding-bottom: 58px; }
+        .about-box { max-width: 850px; margin: auto; padding: 25px; text-align: center; border: 1px solid var(--border); border-radius: 16px; background: var(--card); box-shadow: var(--shadow); }
+        .about-box p { color: var(--muted); font-size: 14px; }
+        .about-box p + p { margin-top: 12px; }
+
+        /* Footer */
+        .site-footer { background: #061827; color: #d8e3ec; padding: 36px 0 16px; }
+        .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 28px; }
+        .site-footer h3 { color: #ff8246; font-size: 15px; margin-bottom: 11px; }
+        .site-footer p, .site-footer a { color: #d0dce5; font-size: 12px; }
+        .site-footer p { margin-bottom: 6px; }
+        .site-footer a { text-decoration: none; }
+        .site-footer a:hover { color: #ff8246; }
+        .footer-brand { font: 800 23px Arial, sans-serif; color: white; margin-bottom: 10px; }
+        .footer-brand span { color: var(--orange); }
+        .copyright { text-align: center; color: #9fb0bf; font: 11px Arial, sans-serif; margin-top: 26px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,.13); }
+
+        @media (max-width: 1100px) {
+            .nav-wrap { flex-wrap: wrap; padding: 12px 0; gap: 10px; }
+            .nav-links { order: 3; width: 100%; overflow-x: auto; justify-content: flex-start; }
+            .nav-links a { min-height: 54px; min-width: 76px; }
+            .nav-actions { margin-left: auto; }
+            .category-grid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 13px; }
+            .category-card { padding: 16px; }
+        }
+        @media (max-width: 760px) {
+            .container { width: min(100% - 28px, 560px); }
+            .nav-wrap { width: calc(100% - 26px); min-height: 66px; flex-wrap: nowrap; }
+            .brand-name { font-size: 22px; }
+            .brand-pin { font-size: 30px; }
+            .brand-tagline { font-size: 9px; }
+            .menu-toggle { display: inline-grid; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                width: auto; max-height: calc(100vh - 80px); overflow-y: auto;
+                padding: 8px 14px 14px; background: #061827; border-top: 1px solid rgba(255,255,255,.12);
+                grid-template-columns: repeat(2, minmax(0,1fr)); gap: 5px;
+            }
+            .nav-links.open { display: grid; }
+            .nav-links a { min-height: 48px; flex-direction: row; justify-content: flex-start; gap: 10px; padding: 9px 12px; border: 1px solid rgba(255,255,255,.08); border-radius: 8px; font-size: 12px; }
+            .nav-links a .nav-icon { font-size: 17px; }
+            .icon-btn { width: 34px; height: 34px; }
+            .hero { min-height: 430px; background-position: center; }
+            .hero-inner { padding: 52px 0 60px; }
+            .hero h1 { letter-spacing: -1px; }
+            .hero-copy { font-size: 15px; }
+            .eyebrow { font-size: 11px; letter-spacing: 2px; }
+            .trust-row { gap: 8px; }
+            .trust-pill { padding: 8px 11px; gap: 7px; }
+            .trust-pill strong { font-size: 10px; }
+            .trust-pill small { font-size: 9px; }
+            .trust-emoji { font-size: 18px; }
+            .search-shell { margin-top: -25px; width: calc(100% - 26px); }
+            .search-box { padding: 5px 6px 5px 13px; gap: 4px; }
+            .search-box input { font-size: 12px; }
+            .search-box button { padding: 9px 13px; font-size: 12px; }
+            .section { padding-top: 44px; }
+            .section-heading { margin-bottom: 22px; }
+            .category-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 11px; }
+            .category-card { min-height: 178px; padding: 14px; border-radius: 12px; }
+            .category-icon { width: 42px; height: 42px; font-size: 20px; }
+            .category-card h3 { font-size: 13px; }
+            .category-card p { font-size: 11px; padding-right: 0; }
+            .category-arrow { width: 24px; height: 24px; bottom: 10px; right: 10px; }
+            .latest-section { margin-top: 40px; padding: 30px 0 34px; background-attachment: scroll; }
+            .latest-top { align-items: flex-start; flex-direction: column; gap: 14px; }
+            .cards { grid-template-columns: 1fr; gap: 15px; }
+            .card { display: grid; grid-template-columns: 36% minmax(0,1fr); }
+            .card-image-wrap { height: 100%; min-height: 175px; }
+            .card-content { padding: 12px; }
+            .card h3 { font-size: 14px; }
+            .card p { font-size: 11px; }
+            .card-meta { gap: 8px; font-size: 10px; }
+            .footer-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 23px 18px; }
+            .about-box { padding: 20px 16px; }
+        }
+        @media (max-width: 390px) {
+            .brand-name { font-size: 19px; }
+            .brand-tagline { font-size: 8px; }
+            .nav-actions { gap: 5px; }
+            .category-card { min-height: 185px; padding: 12px; }
+            .card { grid-template-columns: 1fr; }
+            .card-image-wrap { height: 160px; min-height: 0; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+        }
+    </style>
+</head>
+
+<body>
+<header class="site-header">
+    <div class="nav-wrap">
+        <a href="index.html" class="brand" aria-label="Jalgaon Zone Home">
+            <span class="brand-pin" aria-hidden="true">📍</span>
+            <span>
+                <span class="brand-name">Jalgaon<span>Zone</span></span>
+                <span class="brand-tagline">Jalgaon | News | Information | Development</span>
+            </span>
+        </a>
+
+        <nav class="nav-links" id="mainNav" aria-label="Main navigation">
+            <a class="active" href="index.html"><span class="nav-icon">⌂</span>Home</a>
+            <a href="news.html"><span class="nav-icon">▤</span>News</a>
+            <a href="agriculture.html"><span class="nav-icon">🌱</span>Agriculture</a>
+            <a href="education-jobs.html"><span class="nav-icon">🎓</span>Education &amp; Jobs</a>
+            <a href="government-schemes.html"><span class="nav-icon">🏛️</span>Government Schemes</a>
+            <a href="history.html"><span class="nav-icon">▤</span>History</a>
+            <a href="places.html"><span class="nav-icon">⛰️</span>Tourism</a>
+            <a href="jalgaon-information.html"><span class="nav-icon">ℹ</span>Jalgaon Info</a>
+            <a href="blogs.html"><span class="nav-icon">✍</span>Blogs</a>
+            <a href="about.html"><span class="nav-icon">ⓘ</span>About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" type="button" id="navSearchBtn" aria-label="Focus search">⌕</button>
+            <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+            <button class="icon-btn menu-toggle" type="button" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-inner">
+            <div class="eyebrow">Explore <b>•</b> Learn <b>•</b> Grow</div>
+            <h1 id="heroTitle">Jalgaon <span>Zone</span></h1>
+            <p class="hero-copy">जळगावची बातमी, माहिती, शेती, इतिहास, पर्यटन,<br class="desktop-break"> शिक्षण आणि सरकारी योजनांची माहिती — एकाच ठिकाणी.</p>
+            <div class="trust-row">
+                <div class="trust-pill"><span class="trust-emoji">▤</span><span><strong>Latest News</strong><small>Local updates</small></span></div>
+                <div class="trust-pill"><span class="trust-emoji">🛡️</span><span><strong>Useful Information</strong><small>Helpful resources</small></span></div>
+                <div class="trust-pill"><span class="trust-emoji">👥</span><span><strong>For a Better</strong><small>Jalgaon</small></span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="search-shell" id="searchArea">
+        <form class="search-box" id="searchForm" role="search">
+            <span class="search-symbol" aria-hidden="true">⌕</span>
+            <input type="search" id="searchInput" placeholder="Search Jalgaon articles..." aria-label="Search Jalgaon articles" autocomplete="off">
+            <button type="submit">⌕ &nbsp; Search</button>
+        </form>
+        <p class="search-status" id="searchStatus" aria-live="polite"></p>
+    </div>
+
+    <section class="section container" aria-labelledby="categoriesTitle">
+        <div class="section-heading">
+            <div class="section-kicker">Explore Jalgaon</div>
+            <h2 id="categoriesTitle">Choose Your Category</h2>
+            <p>तुमच्या आवडीच्या विषयानुसार सहजपणे माहिती मिळवा</p>
+        </div>
+
+        <div class="category-grid">
+            <a href="news.html" class="category-card" style="--accent:#0878d1;--tint:#d9edff">
+                <span class="category-icon">▤</span><h3>Jalgaon News</h3><p>जळगावातील ताज्या बातम्या आणि घडामोडी.</p><span class="category-arrow">➜</span>
+            </a>
+            <a href="agriculture.html" class="category-card" style="--accent:#32945b;--tint:#dff6e6">
+                <span class="category-icon">🌱</span><h3>Agriculture</h3><p>शेती, पिके, हवामान आणि कृषी संबंधित माहिती.</p><span class="category-arrow">➜</span>
+            </a>
+            <a href="education-jobs.html" class="category-card" style="--accent:#7435c5;--tint:#eee1ff">
+                <span class="category-icon">🎓</span><h3>Education &amp; Jobs</h3><p>शिक्षण, परीक्षा, नोकरी, भरती आणि करिअर मार्गदर्शन.</p><span class="category-arrow">➜</span>
+            </a>
+            <a href="government-schemes.html" class="category-card" style="--accent:#f36b21;--tint:#ffeadb">
+                <span class="category-icon">🏛️</span><h3>Government Schemes</h3><p>शासकीय योजना, अनुदान, पात्रता आणि अर्ज प्रक्रिया.</p><span class="category-arrow">➜</span>
+            </a>
+            <a href="history.html" class="category-card" style="--accent:#1254a5;--tint:#dceaff">
+                <span class="category-icon">🏛️</span><h3>History</h3><p>जळगावचा इतिहास, संस्कृती आणि वारसा.</p><span class="category-arrow">➜</span>
+            </a>
+            <a href="places.html" class="category-card" style="--accent:#e83e54;--tint:#ffe0e5">
+                <span class="category-icon">📍</span><h3>Tourism &amp; Places</h3><p>जळगावातील पर्यटन स्थळे आणि भेट देण्यासारखी ठिकाणे.</p><span class="category-arrow">➜</span>
+            </a>
+            <a href="jalgaon-information.html" class="category-card" style="--accent:#11a3bd;--tint:#d9f7fb">
+                <span class="category-icon">ℹ</span><h3>Jalgaon Information</h3><p>जळगावची महत्त्वाची माहिती, उपयोगी संपर्क आणि अपडेट्स.</p><span class="category-arrow">➜</span>
+            </a>
+            <a href="blogs.html" class="category-card" style="--accent:#f0a600;--tint:#fff1cb">
+                <span class="category-icon">✍️</span><h3>Jalgaon Blogs</h3><p>विचार, अनुभव, लेख आणि मनोरंजक माहिती.</p><span class="category-arrow">➜</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="latest-section" id="articles" aria-labelledby="latestTitle">
+        <div class="container">
+            <div class="latest-top">
+                <div>
+                    <div class="section-kicker">Latest Jalgaon Articles</div>
+                    <h2 id="latestTitle">सर्वात नवीन लेख</h2>
+                    <p>ताज्या घडामोडी, उपयुक्त माहिती आणि प्रेरणादायी लेख वाचा.</p>
+                </div>
+                <a class="all-articles" href="blogs.html">View All Articles <span aria-hidden="true">➜</span></a>
+            </div>
+            <div class="cards" id="articleCards" aria-live="polite">
+                <p class="no-results">लेख लोड होत आहेत...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section container">
+        <div class="section-heading">
+            <div class="section-kicker">About Us</div>
+            <h2>About Jalgaon Zone</h2>
+            <p>जळगाव जिल्ह्यासाठी उपयुक्त माहिती एकाच ठिकाणी.</p>
+        </div>
+        <div class="about-box">
+            <p><strong>Jalgaon Zone</strong> is a local information platform focused on Jalgaon district and Khandesh. We publish information related to Jalgaon news, agriculture, education, jobs, government schemes, history, tourism, local places and practical information.</p>
+            <p>Our goal is to make useful Jalgaon-related information easier to discover in one place. Readers should verify time-sensitive information with the relevant official source before making important decisions.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">Jalgaon<span>Zone</span></div>
+                <p>जळगाव जिल्ह्याची बातमी, माहिती आणि उपयोगी कंटेंट एकाच ठिकाणी.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p><a href="news.html">Jalgaon News</a></p>
+                <p><a href="agriculture.html">Agriculture</a></p>
+                <p><a href="education-jobs.html">Education &amp; Jobs</a></p>
+                <p><a href="government-schemes.html">Government Schemes</a></p>
+            </div>
+            <div>
+                <h3>Discover</h3>
+                <p><a href="history.html">History</a></p>
+                <p><a href="places.html">Tourism &amp; Places</a></p>
+                <p><a href="jalgaon-information.html">Jalgaon Information</a></p>
+                <p><a href="blogs.html">Blogs</a></p>
+                <p><a href="about.html">About</a></p>
+            </div>
+            <div>
+                <h3>Important</h3>
+                <p><a href="contact.html">Contact</a></p>
+                <p><a href="privacy.html">Privacy Policy</a></p>
+                <p><a href="terms.html">Terms &amp; Conditions</a></p>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Jalgaon Zone. All Rights Reserved.</div>
+    </div>
+</footer>
+
+<!-- Keep this existing data file name/path unchanged. -->
+<script src="articles-data.js"></script>
+
+<script>
+"use strict";
+
+/* Escape article-provided text before rendering it into HTML. */
+function escapeHTML(value) {
+    return String(value == null ? "" : value)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+/* Preserve safe local relative links and HTTPS links. */
+function safeLink(value) {
+    const link = String(value || "").trim();
+    if (!link || /^(javascript|data|vbscript):/i.test(link) || link.startsWith("//")) return "#";
+    if (/^https:\/\//i.test(link)) {
+        try { return new URL(link).protocol === "https:" ? link : "#"; }
+        catch (error) { return "#"; }
+    }
+    if (link.startsWith("/") || link.startsWith("./") || link.startsWith("../") ||
+        /^[a-zA-Z0-9_.?=&%#/-]+$/.test(link)) return link;
+    return "#";
+}
+
+function getCategoryIcon(category) {
+    const value = String(category || "").toLowerCase();
+    if (value.includes("agriculture") || value.includes("farm") || value.includes("कृषी") || value.includes("शेती")) return "🌱";
+    if (value.includes("education") || value.includes("study") || value.includes("शिक्षण")) return "🎓";
+    if (value.includes("job") || value.includes("career") || value.includes("नोकरी") || value.includes("भरती")) return "💼";
+    if (value.includes("government") || value.includes("scheme") || value.includes("योजना") || value.includes("सरकार")) return "🏛️";
+    if (value.includes("history") || value.includes("इतिहास")) return "🏛️";
+    if (value.includes("tourism") || value.includes("place") || value.includes("travel") || value.includes("पर्यटन")) return "📍";
+    if (value.includes("weather") || value.includes("हवामान") || value.includes("पाऊस")) return "🌦️";
+    if (value.includes("blog")) return "✍️";
+    if (value.includes("jalgaon") || value.includes("जळगाव")) return "📍";
+    return "📰";
+}
+
+function formatArticleDate(value) {
+    if (!value) return "";
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return String(value);
+    return new Intl.DateTimeFormat("en-IN", { day: "2-digit", month: "short", year: "numeric" }).format(date);
+}
+
+function createArticleCard(article) {
+    const title = escapeHTML(article.title || "Jalgaon Article");
+    const description = escapeHTML(article.description || "");
+    const categoryText = String(article.category || "Jalgaon Information");
+    const category = escapeHTML(categoryText);
+    const image = safeLink(article.image || "Images/Jalgaon%20city.jpeg");
+    const link = safeLink(article.link || "#");
+    const date = escapeHTML(formatArticleDate(article.date));
+    const readTimeRaw = article.readTime || article.readingTime || article.reading_time || "";
+    const readTime = escapeHTML(readTimeRaw ? (String(readTimeRaw).toLowerCase().includes("min") ? readTimeRaw : readTimeRaw + " min read") : "");
+
+    const card = document.createElement("article");
+    card.className = "card article-card";
+    card.dataset.search = [article.title || "", article.description || "", categoryText || ""].join(" ").toLowerCase();
+
+    card.innerHTML = `
+        <div class="card-image-wrap">
+            <img src="${image}" alt="${title}" loading="lazy">
+            <span class="card-badge">${getCategoryIcon(categoryText)} ${category}</span>
+        </div>
+        <div class="card-content">
+            <h3>${title}</h3>
+            ${description ? `<p>${description}</p>` : ""}
+            <div class="card-meta">
+                ${date ? `<span>▦ ${date}</span>` : ""}
+                ${readTime ? `<span>◷ ${readTime}</span>` : ""}
+            </div>
+            <a href="${link}" class="read-more">Read Article →</a>
+        </div>`;
+
+    const imageElement = card.querySelector("img");
+    imageElement.addEventListener("error", function () {
+        this.style.display = "none";
+        this.parentElement.style.background = "linear-gradient(135deg,#d8e6f0,#a8c4d7)";
+    });
+    return card;
+}
+
+function loadNewArticles() {
+    const container = document.getElementById("articleCards");
+    if (!container) return;
+
+    /*
+      Compatible with the existing articles-data.js global:
+      window.articles is the primary expected format.
+      Also support common alternate global names without changing the data file.
+    */
+    let source = window.articles;
+    if (!Array.isArray(source) && Array.isArray(window.articlesData)) source = window.articlesData;
+    if (!Array.isArray(source) && Array.isArray(window.ARTICLES)) source = window.ARTICLES;
+
+    if (!Array.isArray(source)) {
+        container.innerHTML = '<p class="no-results">लेख सध्या उपलब्ध नाहीत. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा.</p>';
+        return;
+    }
+
+    const sortedArticles = source
+        .filter(article => article && typeof article === "object")
+        .slice()
+        .sort((a, b) => (Date.parse(b.date || "") || 0) - (Date.parse(a.date || "") || 0));
+
+    container.innerHTML = "";
+    if (!sortedArticles.length) {
+        container.innerHTML = '<p class="no-results">अजून लेख उपलब्ध नाहीत.</p>';
+        return;
+    }
+
+    const fragment = document.createDocumentFragment();
+    sortedArticles.forEach(article => fragment.appendChild(createArticleCard(article)));
+    container.appendChild(fragment);
+    searchArticles();
+}
+
+function searchArticles() {
+    const input = document.getElementById("searchInput");
+    const container = document.getElementById("articleCards");
+    const status = document.getElementById("searchStatus");
+    if (!input || !container) return;
+
+    const query = input.value.toLowerCase().trim();
+    const cards = container.querySelectorAll(".article-card");
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+        const matches = !query || (card.dataset.search || "").includes(query);
+        card.style.display = matches ? "" : "none";
+        if (matches) visibleCount++;
+    });
+
+    let message = document.getElementById("searchNoResults");
+    if (query && visibleCount === 0 && cards.length > 0) {
+        if (!message) {
+            message = document.createElement("p");
+            message.id = "searchNoResults";
+            message.className = "no-results";
+            message.textContent = "या शब्दासाठी लेख सापडला नाही. दुसरा शब्द वापरून पाहा.";
+            container.appendChild(message);
+        }
+    } else if (message) {
+        message.remove();
+    }
+
+    if (status) {
+        status.textContent = query ? `${visibleCount} matching article(s)` : "";
+    }
+}
+
+function focusSearch() {
+    const input = document.getElementById("searchInput");
+    if (!input) return;
+    input.focus();
+    input.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+/* Theme preference is stored locally in this browser only. */
+function initTheme() {
+    const button = document.getElementById("themeToggle");
+    if (!button) return;
+    let saved = null;
+    try { saved = localStorage.getItem("jalgaonzone-theme"); } catch (error) {}
+    if (saved === "dark") document.body.classList.add("dark");
+    button.textContent = document.body.classList.contains("dark") ? "☀" : "☾";
+    button.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
+        const dark = document.body.classList.contains("dark");
+        button.textContent = dark ? "☀" : "☾";
+        try { localStorage.setItem("jalgaonzone-theme", dark ? "dark" : "light"); } catch (error) {}
+    });
+}
+
+function initNavigation() {
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("mainNav");
+    if (toggle && nav) {
+        toggle.addEventListener("click", function () {
+            const open = nav.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", String(open));
+            toggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+            toggle.textContent = open ? "✕" : "☰";
+        });
+        nav.querySelectorAll("a").forEach(link => link.addEventListener("click", function () {
+            nav.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "Open navigation menu");
+            toggle.textContent = "☰";
+        }));
+    }
+}
+
+function initSearch() {
+    const input = document.getElementById("searchInput");
+    const form = document.getElementById("searchForm");
+    const button = document.getElementById("navSearchBtn");
+    if (input) input.addEventListener("input", searchArticles);
+    if (form) form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        focusSearch();
+        searchArticles();
+        document.getElementById("articles").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    if (button) button.addEventListener("click", focusSearch);
+}
+
+function initPage() {
+    initTheme();
+    initNavigation();
+    initSearch();
+    loadNewArticles();
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPage);
+} else {
+    initPage();
+}
+</script>
+</body>
+</html>
