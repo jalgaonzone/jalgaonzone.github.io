@@ -1,0 +1,152 @@
+name: Jalgaon Zone Website Repair
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "articles/**"
+      - "Images/**"
+      - "articles-data.js"
+      - "*.html"
+      - "sitemap.xml"
+      - "robots.txt"
+      - ".github/workflows/website-repair.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jalgaon-zone-website-repair
+  cancel-in-progress: false
+
+jobs:
+  repair-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Repair GitHub Pages publishing
+        run: |
+          # Prevent GitHub Pages/Jekyll from processing or skipping static files.
+          touch .nojekyll
+
+          python <<'PY'
+          from pathlib import Path
+
+          base = "https://jalgaonzone.github.io"
+          robots_path = Path("robots.txt")
+          sitemap_line = f"Sitemap: {base}/sitemap.xml"
+
+          if robots_path.exists():
+              lines = robots_path.read_text(encoding="utf-8").splitlines()
+          else:
+              lines = ["User-agent: *", "Allow: /"]
+
+          lines = [line for line in lines if not line.lower().startswith("sitemap:")]
+          lines.append(sitemap_line)
+          robots_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+          print("Created/confirmed .nojekyll")
+          print("Repaired robots.txt sitemap declaration")
+          PY
+
+      - name: Validate website and article references
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+
+          base = "https://jalgaonzone.github.io"
+          errors = []
+          warnings = []
+
+          required = [
+              "index.html", "article.html", "articles-data.js",
+              "sitemap.xml", "robots.txt", "news.html",
+              "agriculture.html", "history.html", "places.html",
+              "blogs.html", "about.html"
+          ]
+          for name in required:
+              if not Path(name).is_file():
+                  errors.append(f"Missing required file: {name}")
+
+          data_path = Path("articles-data.js")
+          data = data_path.read_text(encoding="utf-8") if data_path.exists() else ""
+
+          article_paths = set(re.findall(
+              r"""(?<!\w)file\s*:\s*["']([^"']+\.md)["']""", data
+          ))
+          image_paths = set(re.findall(
+              r"""(?<!\w)image\s*:\s*["']([^"']+)["']""", data
+          ))
+
+          for rel in sorted(article_paths):
+              path = Path(rel.lstrip("/"))
+              if not path.is_file():
+                  warnings.append(f"Markdown file referenced but missing: {rel}")
+
+          for rel in sorted(image_paths):
+              if rel.startswith(("http://", "https://", "data:")):
+                  continue
+              path = Path(rel.lstrip("/"))
+              if not path.is_file() and not (Path("Images") / path.name).is_file():
+                  warnings.append(f"Image referenced but missing: {rel}")
+
+          if Path("articles").is_dir():
+              for md in sorted(Path("articles").glob("*.md")):
+                  if not md.read_text(encoding="utf-8").strip():
+                      errors.append(f"Empty Markdown article: {md.as_posix()}")
+
+          sitemap = Path("sitemap.xml")
+          sitemap_urls = set()
+          if sitemap.exists():
+              try:
+                  root = ET.parse(sitemap).getroot()
+                  sitemap_urls = {
+                      el.text.strip() for el in root.iter()
+                      if el.tag.endswith("loc") and el.text and el.text.strip()
+                  }
+              except ET.ParseError as exc:
+                  errors.append(f"sitemap.xml is invalid XML: {exc}")
+
+          for page in ["index.html", "news.html", "agriculture.html",
+                       "history.html", "places.html", "blogs.html", "about.html"]:
+              url = f"{base}/{page}"
+              if sitemap.exists() and url not in sitemap_urls:
+                  warnings.append(f"Page not listed in sitemap: {url}")
+
+          robots = Path("robots.txt").read_text(encoding="utf-8") if Path("robots.txt").exists() else ""
+          if f"{base}/sitemap.xml" not in robots:
+              errors.append("robots.txt is missing the sitemap declaration")
+
+          print(f"Markdown references checked: {len(article_paths)}")
+          print(f"Image references checked: {len(image_paths)}")
+          print(f"Sitemap URLs found: {len(sitemap_urls)}")
+          for item in warnings:
+              print("WARNING:", item)
+          for item in errors:
+              print("ERROR:", item)
+
+          # Warnings do not stop publishing. Core configuration/XML errors do.
+          if errors:
+              raise SystemExit("Core website checks failed; review errors above.")
+          print("Core website checks passed.")
+          PY
+
+      - name: Commit automatic repairs
+        run: |
+          git config user.name "Jalgaon Zone Repair Bot"
+          git config user.email "actions@github.com"
+          git add .nojekyll robots.txt
+          if git diff --cached --quiet; then
+            echo "No automatic repairs needed."
+          else
+            git commit -m "Repair GitHub Pages publishing configuration"
+            git push
+          fi
