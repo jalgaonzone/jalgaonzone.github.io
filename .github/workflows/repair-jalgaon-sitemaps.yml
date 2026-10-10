@@ -1,0 +1,105 @@
+name: Repair Jalgaon Zone Sitemaps
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild-sitemaps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Rebuild XML and text sitemaps
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          from urllib.parse import quote
+          import xml.etree.ElementTree as ET
+
+          BASE_URL = "https://jalgaonzone.github.io"
+          ROOT = Path(".")
+          ARTICLES_DIR = ROOT / "articles"
+
+          # Public HTML pages that actually belong in the sitemap.
+          pages = [
+              "/",
+              "/news.html",
+              "/agriculture.html",
+              "/history.html",
+              "/places.html",
+              "/blogs.html",
+              "/about.html",
+              "/education-jobs.html",
+              "/government-schemes.html",
+              "/jalgaon-information.html",
+              "/article.html",
+          ]
+
+          urls = [BASE_URL + p for p in pages if p == "/" or (ROOT / p.lstrip("/")).is_file()]
+
+          # article.html uses the id query parameter to display each Markdown article.
+          # Keep these URLs because they are the public URLs used by the website.
+          if ARTICLES_DIR.is_dir():
+              for md in sorted(ARTICLES_DIR.glob("*.md")):
+                  article_id = md.stem
+                  # IDs are URL-encoded to prevent malformed XML/URLs.
+                  urls.append(f"{BASE_URL}/article.html?id={quote(article_id, safe='-._~')}")
+
+          # De-duplicate while preserving order.
+          urls = list(dict.fromkeys(urls))
+
+          if not urls:
+              raise SystemExit("No URLs found; refusing to write an empty sitemap.")
+
+          # Write a standards-compliant XML sitemap, formatted for easy inspection.
+          namespace = "http://www.sitemaps.org/schemas/sitemap/0.9"
+          ET.register_namespace("", namespace)
+          root = ET.Element(f"{{{namespace}}}urlset")
+
+          for url in urls:
+              url_el = ET.SubElement(root, f"{{{namespace}}}url")
+              loc = ET.SubElement(url_el, f"{{{namespace}}}loc")
+              loc.text = url
+
+          tree = ET.ElementTree(root)
+          ET.indent(tree, space="  ")
+          tree.write("sitemap.xml", encoding="utf-8", xml_declaration=True)
+
+          # Google also supports a plain-text sitemap: one complete URL per line.
+          Path("sitemap.txt").write_text("\n".join(urls) + "\n", encoding="utf-8")
+
+          # Verify XML is parseable and that both files contain the same URL set.
+          parsed = ET.parse("sitemap.xml")
+          xml_urls = [
+              el.text.strip()
+              for el in parsed.getroot().iter()
+              if el.tag.endswith("loc") and el.text
+          ]
+          text_urls = Path("sitemap.txt").read_text(encoding="utf-8").splitlines()
+
+          if xml_urls != text_urls:
+              raise SystemExit("Validation failed: XML and text sitemap URLs differ.")
+          if any(not u.startswith(BASE_URL) for u in xml_urls):
+              raise SystemExit("Validation failed: a URL is outside the site domain.")
+
+          print(f"Created and validated sitemap.xml with {len(xml_urls)} URLs.")
+          print(f"Created and validated sitemap.txt with {len(text_urls)} URLs.")
+          PY
+
+      - name: Commit updated sitemaps
+        run: |
+          if git diff --quiet -- sitemap.xml sitemap.txt; then
+            echo "Sitemaps are already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml sitemap.txt
+          git commit -m "Repair and validate XML and text sitemaps"
+          git push
