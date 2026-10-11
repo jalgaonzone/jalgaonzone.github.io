@@ -1007,6 +1007,56 @@ const articles = [
   "description": "जळगावमधील शिक्षण व्यवस्था — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-education-d0547792-2026-10-10.md",
   "link": "article.html?id=jalgaon-education-d0547792-2026-10-10"
+},
+{
+  "id": "jalgaon-a8267160-2026-10-11",
+  "title": "जळगावच्या शेतकऱ्यांसाठी पीक नियोजन",
+  "category": "Agriculture",
+  "date": "11 October 2026",
+  "image": "Images/jalgaon-a8267160-2026-10-11.svg",
+  "description": "जळगावच्या शेतकऱ्यांसाठी पीक नियोजन — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-a8267160-2026-10-11.md",
+  "link": "article.html?id=jalgaon-a8267160-2026-10-11"
+},
+{
+  "id": "jalgaon-data-entry-job-30b67139-2026-10-11",
+  "title": "जळगावमध्ये Data Entry Job साठी कौशल्ये",
+  "category": "Education & Jobs",
+  "date": "11 October 2026",
+  "image": "Images/jalgaon-data-entry-job-30b67139-2026-10-11.svg",
+  "description": "जळगावमध्ये Data Entry Job साठी कौशल्ये — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-data-entry-job-30b67139-2026-10-11.md",
+  "link": "article.html?id=jalgaon-data-entry-job-30b67139-2026-10-11"
+},
+{
+  "id": "jalgaon-agriculture-scheme-25ec6dda-2026-10-11",
+  "title": "जळगाव जिल्ह्यातील कृषी अनुदान योजना",
+  "category": "Government Schemes",
+  "date": "11 October 2026",
+  "image": "Images/jalgaon-agriculture-scheme-25ec6dda-2026-10-11.svg",
+  "description": "जळगाव जिल्ह्यातील कृषी अनुदान योजना — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-agriculture-scheme-25ec6dda-2026-10-11.md",
+  "link": "article.html?id=jalgaon-agriculture-scheme-25ec6dda-2026-10-11"
+},
+{
+  "id": "jalgaon-tourism-48f0d3de-2026-10-11",
+  "title": "जळगाव जिल्ह्यातील पर्यटन विकास",
+  "category": "History & Tourism",
+  "date": "11 October 2026",
+  "image": "Images/jalgaon-tourism-48f0d3de-2026-10-11.svg",
+  "description": "जळगाव जिल्ह्यातील पर्यटन विकास — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-tourism-48f0d3de-2026-10-11.md",
+  "link": "article.html?id=jalgaon-tourism-48f0d3de-2026-10-11"
+},
+{
+  "id": "jalgaon-67a7246a-2026-10-11",
+  "title": "जळगावमधील आरोग्य सुविधा",
+  "category": "Jalgaon Information",
+  "date": "11 October 2026",
+  "image": "Images/jalgaon-67a7246a-2026-10-11.svg",
+  "description": "जळगावमधील आरोग्य सुविधा — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-67a7246a-2026-10-11.md",
+  "link": "article.html?id=jalgaon-67a7246a-2026-10-11"
 }
 ];
 
