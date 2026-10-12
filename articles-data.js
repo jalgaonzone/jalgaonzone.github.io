@@ -1057,6 +1057,56 @@ const articles = [
   "description": "जळगावमधील आरोग्य सुविधा — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-67a7246a-2026-10-11.md",
   "link": "article.html?id=jalgaon-67a7246a-2026-10-11"
+},
+{
+  "id": "jalgaon-49001970-2026-10-12",
+  "title": "जळगावमध्ये कांदा लागवड",
+  "category": "Agriculture",
+  "date": "12 October 2026",
+  "image": "Images/jalgaon-49001970-2026-10-12.svg",
+  "description": "जळगावमध्ये कांदा लागवड — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-49001970-2026-10-12.md",
+  "link": "article.html?id=jalgaon-49001970-2026-10-12"
+},
+{
+  "id": "jalgaon-article-308b0573-2026-10-12",
+  "title": "कॉलेज विद्यार्थ्यांसाठी करिअर प्लॅन",
+  "category": "Education & Jobs",
+  "date": "12 October 2026",
+  "image": "Images/jalgaon-article-308b0573-2026-10-12.svg",
+  "description": "कॉलेज विद्यार्थ्यांसाठी करिअर प्लॅन — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-article-308b0573-2026-10-12.md",
+  "link": "article.html?id=jalgaon-article-308b0573-2026-10-12"
+},
+{
+  "id": "government-5b13a490-2026-10-12",
+  "title": "सरकारी योजनेसाठी ऑनलाइन अर्ज",
+  "category": "Government Schemes",
+  "date": "12 October 2026",
+  "image": "Images/government-5b13a490-2026-10-12.svg",
+  "description": "सरकारी योजनेसाठी ऑनलाइन अर्ज — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-5b13a490-2026-10-12.md",
+  "link": "article.html?id=government-5b13a490-2026-10-12"
+},
+{
+  "id": "jalgaon-e3b7c7bf-2026-10-12",
+  "title": "जळगावमध्ये एक दिवसाची सहल",
+  "category": "History & Tourism",
+  "date": "12 October 2026",
+  "image": "Images/jalgaon-e3b7c7bf-2026-10-12.svg",
+  "description": "जळगावमध्ये एक दिवसाची सहल — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-e3b7c7bf-2026-10-12.md",
+  "link": "article.html?id=jalgaon-e3b7c7bf-2026-10-12"
+},
+{
+  "id": "jalgaon-084753bc-2026-10-12",
+  "title": "जळगाव शहरातील प्रमुख भाग",
+  "category": "Jalgaon Information",
+  "date": "12 October 2026",
+  "image": "Images/jalgaon-084753bc-2026-10-12.svg",
+  "description": "जळगाव शहरातील प्रमुख भाग — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-084753bc-2026-10-12.md",
+  "link": "article.html?id=jalgaon-084753bc-2026-10-12"
 }
 ];
 
