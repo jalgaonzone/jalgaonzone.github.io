@@ -1107,6 +1107,56 @@ const articles = [
   "description": "जळगाव शहरातील प्रमुख भाग — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-084753bc-2026-10-12.md",
   "link": "article.html?id=jalgaon-084753bc-2026-10-12"
+},
+{
+  "id": "jalgaon-agriculture-7cd26fce-2026-10-13",
+  "title": "जळगाव जिल्ह्यातील कापूस शेती",
+  "category": "Agriculture",
+  "date": "13 October 2026",
+  "image": "Images/jalgaon-agriculture-7cd26fce-2026-10-13.svg",
+  "description": "जळगाव जिल्ह्यातील कापूस शेती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-agriculture-7cd26fce-2026-10-13.md",
+  "link": "article.html?id=jalgaon-agriculture-7cd26fce-2026-10-13"
+},
+{
+  "id": "jalgaon-2a01f7df-2026-10-13",
+  "title": "जळगावमधील स्पर्धा परीक्षांची तयारी",
+  "category": "Education & Jobs",
+  "date": "13 October 2026",
+  "image": "Images/jalgaon-2a01f7df-2026-10-13.svg",
+  "description": "जळगावमधील स्पर्धा परीक्षांची तयारी — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-2a01f7df-2026-10-13.md",
+  "link": "article.html?id=jalgaon-2a01f7df-2026-10-13"
+},
+{
+  "id": "government-2ad0d7f4-2026-10-13",
+  "title": "विद्यार्थ्यांसाठी डिजिटल सरकारी सुविधा",
+  "category": "Government Schemes",
+  "date": "13 October 2026",
+  "image": "Images/government-2ad0d7f4-2026-10-13.svg",
+  "description": "विद्यार्थ्यांसाठी डिजिटल सरकारी सुविधा — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-2ad0d7f4-2026-10-13.md",
+  "link": "article.html?id=government-2ad0d7f4-2026-10-13"
+},
+{
+  "id": "jalgaon-tourism-024559b4-2026-10-13",
+  "title": "जळगावमधील कुटुंबासाठी पर्यटन स्थळे",
+  "category": "History & Tourism",
+  "date": "13 October 2026",
+  "image": "Images/jalgaon-tourism-024559b4-2026-10-13.svg",
+  "description": "जळगावमधील कुटुंबासाठी पर्यटन स्थळे — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-tourism-024559b4-2026-10-13.md",
+  "link": "article.html?id=jalgaon-tourism-024559b4-2026-10-13"
+},
+{
+  "id": "jalgaon-d55aa808-2026-10-13",
+  "title": "जळगाव जिल्ह्यातील लोकसंख्या आणि समाज",
+  "category": "Jalgaon Information",
+  "date": "13 October 2026",
+  "image": "Images/jalgaon-d55aa808-2026-10-13.svg",
+  "description": "जळगाव जिल्ह्यातील लोकसंख्या आणि समाज — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-d55aa808-2026-10-13.md",
+  "link": "article.html?id=jalgaon-d55aa808-2026-10-13"
 }
 ];
 
