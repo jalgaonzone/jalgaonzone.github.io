@@ -1157,6 +1157,56 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील लोकसंख्या आणि समाज — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-d55aa808-2026-10-13.md",
   "link": "article.html?id=jalgaon-d55aa808-2026-10-13"
+},
+{
+  "id": "jalgaon-information-d8c929af-2026-10-14",
+  "title": "जळगावमध्ये मका पिकाची माहिती",
+  "category": "Agriculture",
+  "date": "14 October 2026",
+  "image": "Images/jalgaon-information-d8c929af-2026-10-14.svg",
+  "description": "जळगावमध्ये मका पिकाची माहिती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-information-d8c929af-2026-10-14.md",
+  "link": "article.html?id=jalgaon-information-d8c929af-2026-10-14"
+},
+{
+  "id": "jalgaon-30856282-2026-10-14",
+  "title": "जळगावमध्ये डिजिटल मार्केटिंग करिअर",
+  "category": "Education & Jobs",
+  "date": "14 October 2026",
+  "image": "Images/jalgaon-30856282-2026-10-14.svg",
+  "description": "जळगावमध्ये डिजिटल मार्केटिंग करिअर — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-30856282-2026-10-14.md",
+  "link": "article.html?id=jalgaon-30856282-2026-10-14"
+},
+{
+  "id": "government-4f5ec97b-2026-10-14",
+  "title": "लघुउद्योजकांसाठी सरकारी मदत",
+  "category": "Government Schemes",
+  "date": "14 October 2026",
+  "image": "Images/government-4f5ec97b-2026-10-14.svg",
+  "description": "लघुउद्योजकांसाठी सरकारी मदत — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-4f5ec97b-2026-10-14.md",
+  "link": "article.html?id=government-4f5ec97b-2026-10-14"
+},
+{
+  "id": "jalgaon-history-4680d2eb-2026-10-14",
+  "title": "जळगावच्या इतिहासातील महत्त्वाच्या घटना",
+  "category": "History & Tourism",
+  "date": "14 October 2026",
+  "image": "Images/jalgaon-history-4680d2eb-2026-10-14.svg",
+  "description": "जळगावच्या इतिहासातील महत्त्वाच्या घटना — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-history-4680d2eb-2026-10-14.md",
+  "link": "article.html?id=jalgaon-history-4680d2eb-2026-10-14"
+},
+{
+  "id": "jalgaon-7119b16d-2026-10-14",
+  "title": "जळगावची अर्थव्यवस्था",
+  "category": "Jalgaon Information",
+  "date": "14 October 2026",
+  "image": "Images/jalgaon-7119b16d-2026-10-14.svg",
+  "description": "जळगावची अर्थव्यवस्था — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-7119b16d-2026-10-14.md",
+  "link": "article.html?id=jalgaon-7119b16d-2026-10-14"
 }
 ];
 
