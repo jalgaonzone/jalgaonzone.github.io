@@ -1207,6 +1207,56 @@ const articles = [
   "description": "जळगावची अर्थव्यवस्था — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-7119b16d-2026-10-14.md",
   "link": "article.html?id=jalgaon-7119b16d-2026-10-14"
+},
+{
+  "id": "jalgaon-water-5f3a027b-2026-10-15",
+  "title": "जळगाव जिल्ह्यातील पाणी व्यवस्थापन",
+  "category": "Agriculture",
+  "date": "15 October 2026",
+  "image": "Images/jalgaon-water-5f3a027b-2026-10-15.svg",
+  "description": "जळगाव जिल्ह्यातील पाणी व्यवस्थापन — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-water-5f3a027b-2026-10-15.md",
+  "link": "article.html?id=jalgaon-water-5f3a027b-2026-10-15"
+},
+{
+  "id": "jalgaon-87bac335-2026-10-15",
+  "title": "जळगावमध्ये फ्रीलान्सिंग कसे सुरू करावे",
+  "category": "Education & Jobs",
+  "date": "15 October 2026",
+  "image": "Images/jalgaon-87bac335-2026-10-15.svg",
+  "description": "जळगावमध्ये फ्रीलान्सिंग कसे सुरू करावे — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-87bac335-2026-10-15.md",
+  "link": "article.html?id=jalgaon-87bac335-2026-10-15"
+},
+{
+  "id": "scheme-4c95d901-2026-10-15",
+  "title": "महिला उद्योजकांसाठी योजना",
+  "category": "Government Schemes",
+  "date": "15 October 2026",
+  "image": "Images/scheme-4c95d901-2026-10-15.svg",
+  "description": "महिला उद्योजकांसाठी योजना — Jalgaon Zone वरील माहिती.",
+  "file": "articles/scheme-4c95d901-2026-10-15.md",
+  "link": "article.html?id=scheme-4c95d901-2026-10-15"
+},
+{
+  "id": "history-4b065c4b-2026-10-15",
+  "title": "फैजपूर काँग्रेस अधिवेशनाचा इतिहास",
+  "category": "History & Tourism",
+  "date": "15 October 2026",
+  "image": "Images/history-4b065c4b-2026-10-15.svg",
+  "description": "फैजपूर काँग्रेस अधिवेशनाचा इतिहास — Jalgaon Zone वरील माहिती.",
+  "file": "articles/history-4b065c4b-2026-10-15.md",
+  "link": "article.html?id=history-4b065c4b-2026-10-15"
+},
+{
+  "id": "jalgaon-business-9becf9e0-2026-10-15",
+  "title": "जळगावमधील स्थानिक व्यवसाय",
+  "category": "Jalgaon Information",
+  "date": "15 October 2026",
+  "image": "Images/jalgaon-business-9becf9e0-2026-10-15.svg",
+  "description": "जळगावमधील स्थानिक व्यवसाय — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-business-9becf9e0-2026-10-15.md",
+  "link": "article.html?id=jalgaon-business-9becf9e0-2026-10-15"
 }
 ];
 
