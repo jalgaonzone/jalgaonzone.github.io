@@ -1257,6 +1257,56 @@ const articles = [
   "description": "जळगावमधील स्थानिक व्यवसाय — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-business-9becf9e0-2026-10-15.md",
   "link": "article.html?id=jalgaon-business-9becf9e0-2026-10-15"
+},
+{
+  "id": "jalgaon-article-4c89b1d6-2026-10-16",
+  "title": "शेतकऱ्यांसाठी माती परीक्षणाचे महत्त्व",
+  "category": "Agriculture",
+  "date": "16 October 2026",
+  "image": "Images/jalgaon-article-4c89b1d6-2026-10-16.svg",
+  "description": "शेतकऱ्यांसाठी माती परीक्षणाचे महत्त्व — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-article-4c89b1d6-2026-10-16.md",
+  "link": "article.html?id=jalgaon-article-4c89b1d6-2026-10-16"
+},
+{
+  "id": "jalgaon-it-f533b241-2026-10-16",
+  "title": "जळगावमधील IT क्षेत्रातील नोकऱ्या",
+  "category": "Education & Jobs",
+  "date": "16 October 2026",
+  "image": "Images/jalgaon-it-f533b241-2026-10-16.svg",
+  "description": "जळगावमधील IT क्षेत्रातील नोकऱ्या — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-it-f533b241-2026-10-16.md",
+  "link": "article.html?id=jalgaon-it-f533b241-2026-10-16"
+},
+{
+  "id": "scheme-0f350c77-2026-10-16",
+  "title": "शेतकऱ्यांसाठी सिंचन योजना",
+  "category": "Government Schemes",
+  "date": "16 October 2026",
+  "image": "Images/scheme-0f350c77-2026-10-16.svg",
+  "description": "शेतकऱ्यांसाठी सिंचन योजना — Jalgaon Zone वरील माहिती.",
+  "file": "articles/scheme-0f350c77-2026-10-16.md",
+  "link": "article.html?id=scheme-0f350c77-2026-10-16"
+},
+{
+  "id": "jalgaon-9425ea5d-2026-10-16",
+  "title": "जळगाव जिल्ह्यातील नद्या आणि जलस्रोत",
+  "category": "History & Tourism",
+  "date": "16 October 2026",
+  "image": "Images/jalgaon-9425ea5d-2026-10-16.svg",
+  "description": "जळगाव जिल्ह्यातील नद्या आणि जलस्रोत — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-9425ea5d-2026-10-16.md",
+  "link": "article.html?id=jalgaon-9425ea5d-2026-10-16"
+},
+{
+  "id": "jalgaon-business-e591930b-2026-10-16",
+  "title": "जळगावमध्ये नवीन व्यवसाय सुरू करणे",
+  "category": "Jalgaon Information",
+  "date": "16 October 2026",
+  "image": "Images/jalgaon-business-e591930b-2026-10-16.svg",
+  "description": "जळगावमध्ये नवीन व्यवसाय सुरू करणे — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-business-e591930b-2026-10-16.md",
+  "link": "article.html?id=jalgaon-business-e591930b-2026-10-16"
 }
 ];
 
