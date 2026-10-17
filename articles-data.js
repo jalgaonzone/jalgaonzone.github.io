@@ -1307,6 +1307,56 @@ const articles = [
   "description": "जळगावमध्ये नवीन व्यवसाय सुरू करणे — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-business-e591930b-2026-10-16.md",
   "link": "article.html?id=jalgaon-business-e591930b-2026-10-16"
+},
+{
+  "id": "jalgaon-agriculture-5213e032-2026-10-17",
+  "title": "जळगावमध्ये सेंद्रिय शेती",
+  "category": "Agriculture",
+  "date": "17 October 2026",
+  "image": "Images/jalgaon-agriculture-5213e032-2026-10-17.svg",
+  "description": "जळगावमध्ये सेंद्रिय शेती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-agriculture-5213e032-2026-10-17.md",
+  "link": "article.html?id=jalgaon-agriculture-5213e032-2026-10-17"
+},
+{
+  "id": "resume-16d4cbf5-2026-10-17",
+  "title": "विद्यार्थ्यांसाठी Resume तयार करणे",
+  "category": "Education & Jobs",
+  "date": "17 October 2026",
+  "image": "Images/resume-16d4cbf5-2026-10-17.svg",
+  "description": "विद्यार्थ्यांसाठी Resume तयार करणे — Jalgaon Zone वरील माहिती.",
+  "file": "articles/resume-16d4cbf5-2026-10-17.md",
+  "link": "article.html?id=resume-16d4cbf5-2026-10-17"
+},
+{
+  "id": "jalgaon-jobs-information-75c04d79-2026-10-17",
+  "title": "जळगावमधील रोजगार मेळाव्यांची माहिती",
+  "category": "Government Schemes",
+  "date": "17 October 2026",
+  "image": "Images/jalgaon-jobs-information-75c04d79-2026-10-17.svg",
+  "description": "जळगावमधील रोजगार मेळाव्यांची माहिती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-jobs-information-75c04d79-2026-10-17.md",
+  "link": "article.html?id=jalgaon-jobs-information-75c04d79-2026-10-17"
+},
+{
+  "id": "jalgaon-tourism-58fef389-2026-10-17",
+  "title": "जळगावमधील ग्रामीण पर्यटन",
+  "category": "History & Tourism",
+  "date": "17 October 2026",
+  "image": "Images/jalgaon-tourism-58fef389-2026-10-17.svg",
+  "description": "जळगावमधील ग्रामीण पर्यटन — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-tourism-58fef389-2026-10-17.md",
+  "link": "article.html?id=jalgaon-tourism-58fef389-2026-10-17"
+},
+{
+  "id": "jalgaon-54bea642-2026-10-17",
+  "title": "जळगाव जिल्ह्यातील महत्त्वाची ठिकाणे",
+  "category": "Jalgaon Information",
+  "date": "17 October 2026",
+  "image": "Images/jalgaon-54bea642-2026-10-17.svg",
+  "description": "जळगाव जिल्ह्यातील महत्त्वाची ठिकाणे — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-54bea642-2026-10-17.md",
+  "link": "article.html?id=jalgaon-54bea642-2026-10-17"
 }
 ];
 
