@@ -1357,6 +1357,56 @@ const articles = [
   "description": "जळगाव जिल्ह्यातील महत्त्वाची ठिकाणे — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-54bea642-2026-10-17.md",
   "link": "article.html?id=jalgaon-54bea642-2026-10-17"
+},
+{
+  "id": "jalgaon-weather-information-bac6c86a-2026-10-18",
+  "title": "जळगावच्या शेतकऱ्यांसाठी हवामान माहिती",
+  "category": "Agriculture",
+  "date": "18 October 2026",
+  "image": "Images/jalgaon-weather-information-bac6c86a-2026-10-18.svg",
+  "description": "जळगावच्या शेतकऱ्यांसाठी हवामान माहिती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-weather-information-bac6c86a-2026-10-18.md",
+  "link": "article.html?id=jalgaon-weather-information-bac6c86a-2026-10-18"
+},
+{
+  "id": "jalgaon-internship-5bdc8396-2026-10-18",
+  "title": "जळगावमधील विद्यार्थ्यांसाठी Internship",
+  "category": "Education & Jobs",
+  "date": "18 October 2026",
+  "image": "Images/jalgaon-internship-5bdc8396-2026-10-18.svg",
+  "description": "जळगावमधील विद्यार्थ्यांसाठी Internship — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-internship-5bdc8396-2026-10-18.md",
+  "link": "article.html?id=jalgaon-internship-5bdc8396-2026-10-18"
+},
+{
+  "id": "government-933960a0-2026-10-18",
+  "title": "डिजिटल सरकारी सेवांचा वापर",
+  "category": "Government Schemes",
+  "date": "18 October 2026",
+  "image": "Images/government-933960a0-2026-10-18.svg",
+  "description": "डिजिटल सरकारी सेवांचा वापर — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-933960a0-2026-10-18.md",
+  "link": "article.html?id=government-933960a0-2026-10-18"
+},
+{
+  "id": "jalgaon-article-058024f1-2026-10-18",
+  "title": "खानदेशी खाद्यसंस्कृती",
+  "category": "History & Tourism",
+  "date": "18 October 2026",
+  "image": "Images/jalgaon-article-058024f1-2026-10-18.svg",
+  "description": "खानदेशी खाद्यसंस्कृती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-article-058024f1-2026-10-18.md",
+  "link": "article.html?id=jalgaon-article-058024f1-2026-10-18"
+},
+{
+  "id": "jalgaon-1d98a2f5-2026-10-18",
+  "title": "जळगावमधील डिजिटल सेवा",
+  "category": "Jalgaon Information",
+  "date": "18 October 2026",
+  "image": "Images/jalgaon-1d98a2f5-2026-10-18.svg",
+  "description": "जळगावमधील डिजिटल सेवा — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-1d98a2f5-2026-10-18.md",
+  "link": "article.html?id=jalgaon-1d98a2f5-2026-10-18"
 }
 ];
 
