@@ -1407,6 +1407,56 @@ const articles = [
   "description": "जळगावमधील डिजिटल सेवा — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-1d98a2f5-2026-10-18.md",
   "link": "article.html?id=jalgaon-1d98a2f5-2026-10-18"
+},
+{
+  "id": "jalgaon-3eac336f-2026-10-19",
+  "title": "जळगावमध्ये फळबाग लागवड",
+  "category": "Agriculture",
+  "date": "19 October 2026",
+  "image": "Images/jalgaon-3eac336f-2026-10-19.svg",
+  "description": "जळगावमध्ये फळबाग लागवड — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-3eac336f-2026-10-19.md",
+  "link": "article.html?id=jalgaon-3eac336f-2026-10-19"
+},
+{
+  "id": "jalgaon-excel-9d28e65b-2026-10-19",
+  "title": "जळगावमध्ये Excel शिकण्याचे फायदे",
+  "category": "Education & Jobs",
+  "date": "19 October 2026",
+  "image": "Images/jalgaon-excel-9d28e65b-2026-10-19.svg",
+  "description": "जळगावमध्ये Excel शिकण्याचे फायदे — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-excel-9d28e65b-2026-10-19.md",
+  "link": "article.html?id=jalgaon-excel-9d28e65b-2026-10-19"
+},
+{
+  "id": "government-91221068-2026-10-19",
+  "title": "सरकारी योजनेचा लाभ घेताना काळजी",
+  "category": "Government Schemes",
+  "date": "19 October 2026",
+  "image": "Images/government-91221068-2026-10-19.svg",
+  "description": "सरकारी योजनेचा लाभ घेताना काळजी — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-91221068-2026-10-19.md",
+  "link": "article.html?id=government-91221068-2026-10-19"
+},
+{
+  "id": "jalgaon-3e008102-2026-10-19",
+  "title": "जळगावमधील स्थानिक उत्सव",
+  "category": "History & Tourism",
+  "date": "19 October 2026",
+  "image": "Images/jalgaon-3e008102-2026-10-19.svg",
+  "description": "जळगावमधील स्थानिक उत्सव — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-3e008102-2026-10-19.md",
+  "link": "article.html?id=jalgaon-3e008102-2026-10-19"
+},
+{
+  "id": "jalgaon-360cfce7-2026-10-19",
+  "title": "जळगाव शहरातील दैनंदिन जीवन",
+  "category": "Jalgaon Information",
+  "date": "19 October 2026",
+  "image": "Images/jalgaon-360cfce7-2026-10-19.svg",
+  "description": "जळगाव शहरातील दैनंदिन जीवन — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-360cfce7-2026-10-19.md",
+  "link": "article.html?id=jalgaon-360cfce7-2026-10-19"
 }
 ];
 
