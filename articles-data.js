@@ -1457,6 +1457,56 @@ const articles = [
   "description": "जळगाव शहरातील दैनंदिन जीवन — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-360cfce7-2026-10-19.md",
   "link": "article.html?id=jalgaon-360cfce7-2026-10-19"
+},
+{
+  "id": "jalgaon-2f0dfbe6-2026-10-20",
+  "title": "जळगाव जिल्ह्यातील शेतमाल बाजारपेठ",
+  "category": "Agriculture",
+  "date": "20 October 2026",
+  "image": "Images/jalgaon-2f0dfbe6-2026-10-20.svg",
+  "description": "जळगाव जिल्ह्यातील शेतमाल बाजारपेठ — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-2f0dfbe6-2026-10-20.md",
+  "link": "article.html?id=jalgaon-2f0dfbe6-2026-10-20"
+},
+{
+  "id": "jalgaon-jobs-c24c6cb9-2026-10-20",
+  "title": "जळगावमधील रोजगार क्षेत्र",
+  "category": "Education & Jobs",
+  "date": "20 October 2026",
+  "image": "Images/jalgaon-jobs-c24c6cb9-2026-10-20.svg",
+  "description": "जळगावमधील रोजगार क्षेत्र — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-jobs-c24c6cb9-2026-10-20.md",
+  "link": "article.html?id=jalgaon-jobs-c24c6cb9-2026-10-20"
+},
+{
+  "id": "jalgaon-scheme-cff0ef71-2026-10-20",
+  "title": "जळगाव जिल्ह्यातील ग्रामीण विकास योजना",
+  "category": "Government Schemes",
+  "date": "20 October 2026",
+  "image": "Images/jalgaon-scheme-cff0ef71-2026-10-20.svg",
+  "description": "जळगाव जिल्ह्यातील ग्रामीण विकास योजना — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-scheme-cff0ef71-2026-10-20.md",
+  "link": "article.html?id=jalgaon-scheme-cff0ef71-2026-10-20"
+},
+{
+  "id": "jalgaon-tourism-209f9d73-2026-10-20",
+  "title": "जळगाव पर्यटनासाठी प्रवास नियोजन",
+  "category": "History & Tourism",
+  "date": "20 October 2026",
+  "image": "Images/jalgaon-tourism-209f9d73-2026-10-20.svg",
+  "description": "जळगाव पर्यटनासाठी प्रवास नियोजन — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-tourism-209f9d73-2026-10-20.md",
+  "link": "article.html?id=jalgaon-tourism-209f9d73-2026-10-20"
+},
+{
+  "id": "jalgaon-e23401cf-2026-10-20",
+  "title": "जळगाव जिल्ह्याचा विकास",
+  "category": "Jalgaon Information",
+  "date": "20 October 2026",
+  "image": "Images/jalgaon-e23401cf-2026-10-20.svg",
+  "description": "जळगाव जिल्ह्याचा विकास — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-e23401cf-2026-10-20.md",
+  "link": "article.html?id=jalgaon-e23401cf-2026-10-20"
 }
 ];
 
