@@ -1507,6 +1507,56 @@ const articles = [
   "description": "जळगाव जिल्ह्याचा विकास — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-e23401cf-2026-10-20.md",
   "link": "article.html?id=jalgaon-e23401cf-2026-10-20"
+},
+{
+  "id": "agriculture-agriculture-6791adcf-2026-10-21",
+  "title": "कृषी यंत्रांचा शेतीमध्ये वापर",
+  "category": "Agriculture",
+  "date": "21 October 2026",
+  "image": "Images/agriculture-agriculture-6791adcf-2026-10-21.svg",
+  "description": "कृषी यंत्रांचा शेतीमध्ये वापर — Jalgaon Zone वरील माहिती.",
+  "file": "articles/agriculture-agriculture-6791adcf-2026-10-21.md",
+  "link": "article.html?id=agriculture-agriculture-6791adcf-2026-10-21"
+},
+{
+  "id": "jalgaon-a4602aa0-2026-10-21",
+  "title": "जळगावमध्ये ऑनलाइन कामाच्या संधी",
+  "category": "Education & Jobs",
+  "date": "21 October 2026",
+  "image": "Images/jalgaon-a4602aa0-2026-10-21.svg",
+  "description": "जळगावमध्ये ऑनलाइन कामाच्या संधी — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-a4602aa0-2026-10-21.md",
+  "link": "article.html?id=jalgaon-a4602aa0-2026-10-21"
+},
+{
+  "id": "government-6e8e1291-2026-10-21",
+  "title": "नागरिकांसाठी डिजिटल सरकारी सेवा",
+  "category": "Government Schemes",
+  "date": "21 October 2026",
+  "image": "Images/government-6e8e1291-2026-10-21.svg",
+  "description": "नागरिकांसाठी डिजिटल सरकारी सेवा — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-6e8e1291-2026-10-21.md",
+  "link": "article.html?id=government-6e8e1291-2026-10-21"
+},
+{
+  "id": "jalgaon-tourism-3cc6084d-2026-10-21",
+  "title": "जळगावमधील पर्यटनाच्या संधी",
+  "category": "History & Tourism",
+  "date": "21 October 2026",
+  "image": "Images/jalgaon-tourism-3cc6084d-2026-10-21.svg",
+  "description": "जळगावमधील पर्यटनाच्या संधी — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-tourism-3cc6084d-2026-10-21.md",
+  "link": "article.html?id=jalgaon-tourism-3cc6084d-2026-10-21"
+},
+{
+  "id": "jalgaon-ce0a2720-2026-10-21",
+  "title": "जळगावची स्थानिक ओळख",
+  "category": "Jalgaon Information",
+  "date": "21 October 2026",
+  "image": "Images/jalgaon-ce0a2720-2026-10-21.svg",
+  "description": "जळगावची स्थानिक ओळख — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-ce0a2720-2026-10-21.md",
+  "link": "article.html?id=jalgaon-ce0a2720-2026-10-21"
 }
 ];
 
