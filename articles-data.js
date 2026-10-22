@@ -1557,6 +1557,56 @@ const articles = [
   "description": "जळगावची स्थानिक ओळख — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-ce0a2720-2026-10-21.md",
   "link": "article.html?id=jalgaon-ce0a2720-2026-10-21"
+},
+{
+  "id": "jalgaon-a6d6d055-2026-10-22",
+  "title": "जळगावमध्ये सूक्ष्म सिंचन",
+  "category": "Agriculture",
+  "date": "22 October 2026",
+  "image": "Images/jalgaon-a6d6d055-2026-10-22.svg",
+  "description": "जळगावमध्ये सूक्ष्म सिंचन — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-a6d6d055-2026-10-22.md",
+  "link": "article.html?id=jalgaon-a6d6d055-2026-10-22"
+},
+{
+  "id": "communication-skills-0f69b882-2026-10-22",
+  "title": "कॉलेज विद्यार्थ्यांसाठी Communication Skills",
+  "category": "Education & Jobs",
+  "date": "22 October 2026",
+  "image": "Images/communication-skills-0f69b882-2026-10-22.svg",
+  "description": "कॉलेज विद्यार्थ्यांसाठी Communication Skills — Jalgaon Zone वरील माहिती.",
+  "file": "articles/communication-skills-0f69b882-2026-10-22.md",
+  "link": "article.html?id=communication-skills-0f69b882-2026-10-22"
+},
+{
+  "id": "government-scheme-529dd8bb-2026-10-22",
+  "title": "शेतकऱ्यांसाठी सरकारी योजना",
+  "category": "Government Schemes",
+  "date": "22 October 2026",
+  "image": "Images/government-scheme-529dd8bb-2026-10-22.svg",
+  "description": "शेतकऱ्यांसाठी सरकारी योजना — Jalgaon Zone वरील माहिती.",
+  "file": "articles/government-scheme-529dd8bb-2026-10-22.md",
+  "link": "article.html?id=government-scheme-529dd8bb-2026-10-22"
+},
+{
+  "id": "jalgaon-c8e6d2f8-2026-10-22",
+  "title": "जळगाव जिल्ह्याचा सांस्कृतिक परिचय",
+  "category": "History & Tourism",
+  "date": "22 October 2026",
+  "image": "Images/jalgaon-c8e6d2f8-2026-10-22.svg",
+  "description": "जळगाव जिल्ह्याचा सांस्कृतिक परिचय — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-c8e6d2f8-2026-10-22.md",
+  "link": "article.html?id=jalgaon-c8e6d2f8-2026-10-22"
+},
+{
+  "id": "jalgaon-information-0ee595bd-2026-10-22",
+  "title": "जळगाव जिल्ह्याची संपूर्ण माहिती",
+  "category": "Jalgaon Information",
+  "date": "22 October 2026",
+  "image": "Images/jalgaon-information-0ee595bd-2026-10-22.svg",
+  "description": "जळगाव जिल्ह्याची संपूर्ण माहिती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-information-0ee595bd-2026-10-22.md",
+  "link": "article.html?id=jalgaon-information-0ee595bd-2026-10-22"
 }
 ];
 
