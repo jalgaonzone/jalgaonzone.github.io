@@ -1607,6 +1607,46 @@ const articles = [
   "description": "जळगाव जिल्ह्याची संपूर्ण माहिती — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-information-0ee595bd-2026-10-22.md",
   "link": "article.html?id=jalgaon-information-0ee595bd-2026-10-22"
+},
+{
+  "id": "information-660ea8af-2026-10-23",
+  "title": "शेतकऱ्यांसाठी पीक विम्याची माहिती",
+  "category": "Agriculture",
+  "date": "23 October 2026",
+  "image": "Images/information-660ea8af-2026-10-23.svg",
+  "description": "शेतकऱ्यांसाठी पीक विम्याची माहिती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/information-660ea8af-2026-10-23.md",
+  "link": "article.html?id=information-660ea8af-2026-10-23"
+},
+{
+  "id": "jalgaon-business-656a1c1d-2026-10-23",
+  "title": "जळगावमध्ये व्यवसाय सुरू करणे",
+  "category": "Education & Jobs",
+  "date": "23 October 2026",
+  "image": "Images/jalgaon-business-656a1c1d-2026-10-23.svg",
+  "description": "जळगावमध्ये व्यवसाय सुरू करणे — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-business-656a1c1d-2026-10-23.md",
+  "link": "article.html?id=jalgaon-business-656a1c1d-2026-10-23"
+},
+{
+  "id": "jalgaon-history-6e5f5b02-2026-10-23",
+  "title": "जळगावचा इतिहास आणि सांस्कृतिक वारसा",
+  "category": "History & Tourism",
+  "date": "23 October 2026",
+  "image": "Images/jalgaon-history-6e5f5b02-2026-10-23.svg",
+  "description": "जळगावचा इतिहास आणि सांस्कृतिक वारसा — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-history-6e5f5b02-2026-10-23.md",
+  "link": "article.html?id=jalgaon-history-6e5f5b02-2026-10-23"
+},
+{
+  "id": "jalgaon-information-f7f80029-2026-10-23",
+  "title": "जळगाव शहराची माहिती",
+  "category": "Jalgaon Information",
+  "date": "23 October 2026",
+  "image": "Images/jalgaon-information-f7f80029-2026-10-23.svg",
+  "description": "जळगाव शहराची माहिती — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-information-f7f80029-2026-10-23.md",
+  "link": "article.html?id=jalgaon-information-f7f80029-2026-10-23"
 }
 ];
 
