@@ -1647,6 +1647,26 @@ const articles = [
   "description": "जळगाव शहराची माहिती — Jalgaon Zone वरील माहिती.",
   "file": "articles/jalgaon-information-f7f80029-2026-10-23.md",
   "link": "article.html?id=jalgaon-information-f7f80029-2026-10-23"
+},
+{
+  "id": "jalgaon-78a9e780-2026-10-24",
+  "title": "जळगावमध्ये कमी पाण्यात येणारी पिके",
+  "category": "Agriculture",
+  "date": "24 October 2026",
+  "image": "Images/jalgaon-78a9e780-2026-10-24.svg",
+  "description": "जळगावमध्ये कमी पाण्यात येणारी पिके — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-78a9e780-2026-10-24.md",
+  "link": "article.html?id=jalgaon-78a9e780-2026-10-24"
+},
+{
+  "id": "jalgaon-74273f21-2026-10-24",
+  "title": "जळगावमधील तरुणांसाठी करिअर पर्याय",
+  "category": "Education & Jobs",
+  "date": "24 October 2026",
+  "image": "Images/jalgaon-74273f21-2026-10-24.svg",
+  "description": "जळगावमधील तरुणांसाठी करिअर पर्याय — Jalgaon Zone वरील माहिती.",
+  "file": "articles/jalgaon-74273f21-2026-10-24.md",
+  "link": "article.html?id=jalgaon-74273f21-2026-10-24"
 }
 ];
 
